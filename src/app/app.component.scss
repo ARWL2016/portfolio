@@ -1,0 +1,43 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  background-color: #111;
+  background-image: url('../assets/splash-wide.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  min-height: 1000px;
+}
+
+.titlebar {
+  padding: 25px;
+  width: 960px;
+  margin: 0 auto;
+  border: 1px dotted yellow;
+}
+
+.titlebar-logo {
+  width: 200px;
+}
+
+// CONTENT
+
+.content {
+  display: flex;
+  flex-grow: 1;
+  background-color: lightgreen;
+  min-height: 1000px;
+}
+.footer {
+  display: flex;
+  background-color: grey;
+  min-height: 100px;
+}
