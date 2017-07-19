@@ -1,4 +1,3 @@
-
 .header {
   display: flex;
   flex-direction: column;
@@ -15,33 +14,66 @@
 }
 
 .titlebar {
-  padding: 25px;
+  display: flex;
+  flex-direction: row;
+  // padding: 25px;
   width: 80%;
+  height: 50px;
   margin: 0 auto;
+  margin-top: 20px;
   border: 1px dotted yellow;
 }
 
 .titlebar-logo {
   width: 200px;
+  height: 50px;
+  flex-grow: 0;
+}
+
+.titlebar-list {
+  display: flex;
+  margin: 0;
+  flex-grow: 1;
+  align-items: center;
+  height: 50px;
+  border: 1px dotted white;
+  justify-content: flex-end;
+}
+
+.titlebar-list-item {
+  list-style-type: none;
+  display: inline-block;
+  color: white;
+  margin-left: 20px;
+  border: 1px dotted white;
+  padding: 10px;
 }
 
 .banner {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: 100px;
+
   align-items: center;
   border: 1px dotted blue;
   color: #FFF;
   flex-grow: 1;
 }
 
+.banner-text {
+  border: 1px dotted green;
+  margin-bottom: 100px;
+}
+
 .banner-header {
   border: 1px dotted white;
   margin-bottom: 0;
   letter-spacing: 3px;
+  font-size: 3.2rem;
 }
 
 .banner-text {
   border: 1px dotted white;
+  font-size: 1.5rem;
+  margin-top: 0;
 }
