@@ -1,3 +1,5 @@
+@import '../shared/variables.scss';
+
 .header {
   display: flex;
   flex-direction: column;
@@ -16,8 +18,8 @@
 .titlebar {
   display: flex;
   flex-direction: row;
-  // padding: 25px;
   width: 80%;
+  max-width: $max-content-width;
   height: 50px;
   margin: 0 auto;
   margin-top: 20px;
@@ -40,13 +42,30 @@
   justify-content: flex-end;
 }
 
-.titlebar-list-item {
+@mixin titlebar-list-item() {
   list-style-type: none;
   display: inline-block;
   color: white;
   margin-left: 20px;
   border: 1px dotted white;
+  margin-bottom: 4px;
   padding: 10px;
+}
+
+.titlebar-list-item {
+  @include titlebar-list-item();
+}
+
+.titlebar-list-item_selected {
+  @include titlebar-list-item();
+  border-bottom: 4px solid $highlight-color;
+  margin-bottom: 0;
+}
+
+.titlebar-anchor {
+  text-decoration: none;
+  color: #FFF;
+  font-size: 0.9rem;
 }
 
 .banner {
