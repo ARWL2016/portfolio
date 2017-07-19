@@ -1,0 +1,47 @@
+
+.header {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 0;
+  background-color: red;
+  background-image: url('../assets/splash-wide.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
+  min-height: 600px;
+  width: 100%;
+  border: 1px dotted green;
+}
+
+.titlebar {
+  padding: 25px;
+  width: 80%;
+  margin: 0 auto;
+  border: 1px dotted yellow;
+}
+
+.titlebar-logo {
+  width: 200px;
+}
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 100px;
+  align-items: center;
+  border: 1px dotted blue;
+  color: #FFF;
+  flex-grow: 1;
+}
+
+.banner-header {
+  border: 1px dotted white;
+  margin-bottom: 0;
+  letter-spacing: 3px;
+}
+
+.banner-text {
+  border: 1px dotted white;
+}
