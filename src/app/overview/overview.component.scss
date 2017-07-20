@@ -1,20 +1,9 @@
 @import '../../shared/variables.scss';
-
+@import 'overview.component.layout.scss';
 
 
 // SKILLS SECTION
 // *********************************************
-
-.skills-section {
-  display: flex;
-  flex-direction: row;
-  max-width: $max-content-width;
-  width: 80%;
-  margin: 0 auto;
-  margin-top: 50px;
-  margin-bottom: 30px;
-  // border: 1px dotted blue;
-}
 
 .skill-card {
   align-items: center;
@@ -43,23 +32,6 @@
 // PORTFOLIO SECTION
 // *********************************************
 
-.portfolio-section {
-  width: 100%;
-  background-color: #f2f2f2;
-  // height: 500px;
-}
-
-.portfolio-content {
-  display: flex;
-  flex-direction: column;
-  max-width: $max-content-width;
-  width: 80%;
-  margin: 0 auto;
-  margin-top: 50px;
-  margin-bottom: 30px;
-
-}
-
 .section-heading {
   margin: 0 auto;
   margin-top: 75px;
@@ -69,27 +41,26 @@
   padding: 5px 30px 5px 30px;
 }
 
-.projects {
-
-}
-
 .project {
+  background-color: #fff;
+  border-radius: 3px;
   display: flex;
   flex-direction: row;
-  width: 100%;
-  // height: 400px;
-  background-color: #fff;
   margin-top: 50px;
-  // temp
-  margin-bottom: 50px;
+  width: 100%;
+  &:last-child {
+    margin-bottom: 50px;
+  }
 }
 
 .project-image {
   order: 2;
   flex-grow: 0;
-  height: 300px;
-  width: 300px;
-  padding: 30px;
+  height: 250px;
+  width: 250px;
+  margin: 30px;
+  border: 1px solid #222;
+  border-radius: 3px;
 }
 
 .project-description {
@@ -100,7 +71,7 @@
 }
 
 .project-heading {
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
 .project-text {
@@ -113,17 +84,7 @@
 
 .project-link {
   @include project-buttons($highlight-color);
-
 }
 
 
-// MEDIA QUERIES
-// *********************************************
 
-@media (max-width: 800px) {
-
-  .skills {
-    flex-direction: column;
-  }
-
-}

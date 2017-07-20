@@ -1,0 +1,39 @@
+@import '../../shared/variables.scss';
+
+.skills-section {
+  display: flex;
+  flex-direction: row;
+  max-width: $max-content-width;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  // border: 1px dotted blue;
+}
+
+.portfolio-section {
+  width: 100%;
+  background-color: #f2f2f2;
+  // to cover a mysterious gap
+  margin-bottom: -30px;
+}
+
+.portfolio-content {
+  display: flex;
+  flex-direction: column;
+  max-width: $max-content-width;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+// MEDIA QUERIES
+// *********************************************
+
+@media (max-width: 800px) {
+
+  .skills {
+    flex-direction: column;
+  }
+}
