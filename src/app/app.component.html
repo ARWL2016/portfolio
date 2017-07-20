@@ -1,4 +1,5 @@
-<header class="header">
+<header class="header"
+  [ngStyle]="{'background-image': backgroundImage, 'min-height': minHeight}">
 
   <div class="header-content">
 
@@ -11,7 +12,7 @@
       </ul>
   </nav>
 
-  <div class="banner">
+  <div *ngIf="view==='overview'" class="banner">
       <h1 class="banner-header">Full Stack Web Developer</h1>
       <p class="banner-text">HTML | SASS | JAVASCRIPT | TYPESCRIPT | ANGULAR | NODE | EXPRESS | MONGODB | MYSQL</p>
   </div>

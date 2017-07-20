@@ -4,12 +4,13 @@
   display: flex;
   flex-direction: column;
   flex-grow: 0;
-  background-color: red;
-  background-image: url('../assets/splash-wide.png');
+  background-color: #222;
+  // background-image: url('../assets/splash-wide.png');
+  // background-image: none;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  min-height: 600px;
+  // min-height: 600px;
   width: 100%;
   // border: 1px dotted green;
 }
