@@ -91,21 +91,42 @@
 }
 
 .project-image {
+  order: 2;
+  flex-grow: 0;
   height: 300px;
   width: 300px;
   padding: 30px;
-  // border-radius: 100%;
 }
 
 .project-description {
+  display: flex; 
+  flex-direction: column;
   padding: 30px;
   line-height: 2rem;
 }
 
+.project-heading {
+  margin-top: 20px;
+}
+
+.project-text {
+  margin-top: 20px;
+}
+
+.project-links {
+  margin-top: 40px;
+}
+
+.project-link {
+  @include project-buttons($highlight-color);
+
+}
+
+
 // MEDIA QUERIES
 // *********************************************
 
-@media (max-width: 750px) {
+@media (max-width: 800px) {
 
   .skills {
     flex-direction: column;

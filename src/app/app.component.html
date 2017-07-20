@@ -46,17 +46,20 @@
     <div class="portfolio-content">
     <h2 class="section-heading">PORTFOLIO</h2>
     <div class="projects">
-      <article class="project">
-        <img src="../assets/votogo-sm.png" class="project-image">
+
+      <article *ngFor="let data of projectData" class="project">
+        <img src={{data.image_url}} class="project-image" [ngStyle]="{'order': data.image_order}" >
         <div class="project-description">
-          <h3 class="project-heading">VOTOGO</h3>
-          <p class="project-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sapien leo, iaculis et augue sed, maximus porttitor nisl. Quisque mattis leo eu tortor vehicula, at commodo sem porttitor. Proin in sodales sem. Fusce magna quam, congue a malesuada a, mattis vel magna.</p>
+          <h3 class="project-heading">{{ data.name | uppercase }}</h3>
+          <p  class="project-text">{{data.short_description}}</p>
           <div class="project-links">
-            <button>Live Site</button>
-            <button>Repo</button>
+            <button class="project-link">DETAILS</button>
+            <button class="project-link">VIEW WEBSITE</button>
+
             </div>
         </div>
       </article>
+
     </div>
     </div>
   </section>
