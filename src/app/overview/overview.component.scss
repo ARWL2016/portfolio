@@ -5,7 +5,7 @@
 // SKILLS SECTION
 // *********************************************
 
-.skills {
+.skills-section {
   display: flex;
   flex-direction: row;
   max-width: $max-content-width;
@@ -62,6 +62,7 @@
 
 .section-heading {
   margin: 0 auto;
+  margin-top: 75px;
   letter-spacing: 2px;
   background-color: #FFF;
   opacity: 0.7;
