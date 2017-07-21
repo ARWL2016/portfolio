@@ -1,28 +1,28 @@
-# Portfolio
+## Portfolio 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.1.
+#### About this Project 
+This project is a portfolio website created to showcase my personal web development projects and document my technical skills. 
 
-## Development server
+#### Technology 
+- Angular 4.0.0 using Typescript 2.2.0 
+- Created with the Angular CLI 
+- Styling written in Sass and using flexbox to create a responsive layout 
+- Code style is written in accordance with the Angular CLI default TSLint configuration 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Methodology: Content Management
+- Content: For ease of editing this webpage, the written content is stored in an Angular data service and loaded into the webpage dymanically at runtime. 
+For the sake of quick loading, the data is stored on the client side. However, post deployment, it may be preferable to move the data
+to the server so that the website can be edited without redeployment. Alternatively, a client side content management system can be implemented. 
 
-## Code scaffolding
+### Methodology 2: Modular Styling
+- Styles: Since Angular is a component based framework, it was decided to implement styles using a modular approach. This means using the module 
+and scoping capabilities of the Sass preprocessor to define style rules in the most appropriate place. A global stylesheet defines a few 
+universal rules, such as the font, the background color, and a limited number of resets to ease the design process. At the component level, css 
+rules are defined in a flat style. This means that each element is given a single class name and as far as possible, all style rules are written 
+using this classname and without complex selectors. In addition, class names are written using the BEM method, but with a slightly altered syntax. 
+The purpose of these practices is to bring clarity, simplcity and maintainability to stylesheets. In addition, DRY principles are followed by 
+extracting common sets of css rules to Sass mixins, and using variables for repeated properties. These mixins and variables are then extracted to 
+an application level variables.scss file which acts like a style configuration file. In this way, styles for the whole website can be changed 
+in a single location. 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
