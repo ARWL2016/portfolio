@@ -45,7 +45,7 @@
   justify-content: flex-end;
 }
 
-@mixin titlebar-list-item() {
+.titlebar-list-item {
   list-style-type: none;
   display: inline-block;
   color: white;
@@ -55,12 +55,7 @@
   padding: 10px;
 }
 
-.titlebar-list-item {
-  @include titlebar-list-item();
-}
-
 .titlebar-list-item_selected {
-  @include titlebar-list-item();
   border-bottom: 4px solid $highlight-color;
   margin-bottom: 0;
 }
@@ -69,6 +64,7 @@
   text-decoration: none;
   color: #FFF;
   font-size: 0.9rem;
+  padding: 5px 0 5px 0;
 }
 
 .banner {

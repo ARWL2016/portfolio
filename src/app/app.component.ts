@@ -1,22 +1,40 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, DoCheck } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
-
-  view = 'dfd';
+export class AppComponent implements DoCheck {
+  componentLoaded = '/overview';
   backgroundImage = 'url("../assets/splash-wide.png")';
   minHeight = '600px';
 
-  constructor () {}
 
-  ngOnInit() {
-    if (this.view !== 'overview') {
-      // this.backgroundImage = 'none';
-      this.minHeight = '350px';
-    }
+  constructor (private router: Router) {
+
   }
+
+  // ngOnInit() {
+
+  // }
+
+  ngDoCheck() {
+    console.log('DO CHECK');
+    console.log(this.router.url);
+    this.componentLoaded = this.router.url;
+    console.log(this.componentLoaded);
+    if (this.componentLoaded !== '/overview') {
+      console.log('IFFFFFFF');
+      this.backgroundImage = 'none';
+      this.minHeight = '350px';
+    } else {
+      this.backgroundImage = 'url("../assets/splash-wide.png")';
+      this.minHeight = '600px';
+    }
+    console.log(this.backgroundImage);
+  }
+
+
 }

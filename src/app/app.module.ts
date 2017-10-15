@@ -7,11 +7,15 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { ProjectDataService } from 'app/services/project-data.service';
 import { OverviewComponent } from './overview/overview.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
+import { SkillsComponent } from './skills/skills.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    OverviewComponent
+    OverviewComponent,
+    PortfolioComponent,
+    SkillsComponent
   ],
   imports: [
     BrowserModule,
@@ -19,6 +23,8 @@ import { OverviewComponent } from './overview/overview.component';
     HttpModule,
     RouterModule.forRoot([
       { path: 'overview', component: OverviewComponent },
+      { path: 'portfolio', component: PortfolioComponent },
+      { path: 'skills', component: SkillsComponent },
       { path: '', redirectTo: 'overview', pathMatch: 'full' },
     ])
   ],

@@ -4,17 +4,23 @@
   <div class="header-content">
 
   <nav class="titlebar">
-    <img class="titlebar-logo" src="../assets/logo-pink.png">
+    <img class="titlebar-logo" src="../assets/logo-pink.png" [routerLink]="['/overview']">
       <ul class="titlebar-list">
-        <li class="titlebar-list-item_selected"><a class="titlebar-anchor" href="/overview">OVERVIEW</a></li>
-        <li class="titlebar-list-item"><a class="titlebar-anchor" href="">PORTFOLIO</a></li>
-        <li class="titlebar-list-item"><a class="titlebar-anchor" href="">SKILLS</a></li>
+        <li class="titlebar-list-item">
+          <a class="titlebar-anchor" [routerLink]="['/overview']" routerLinkActive="titlebar-list-item_selected">OVERVIEW</a>
+        </li>
+        <li class="titlebar-list-item">
+          <a class="titlebar-anchor" [routerLink]="['/portfolio']" routerLinkActive="titlebar-list-item_selected">PORTFOLIO</a>
+        </li>
+        <li class="titlebar-list-item">
+          <a class="titlebar-anchor" [routerLink]="['/skills']" routerLinkActive="titlebar-list-item_selected">SKILLS</a>
+        </li>
       </ul>
   </nav>
 
-  <div *ngIf="view==='overview'" class="banner">
+  <div *ngIf="componentLoaded==='/overview'" class="banner">
       <h1 class="banner-header">Full Stack Web Developer</h1>
-      <p class="banner-text">HTML | SASS | JAVASCRIPT | TYPESCRIPT | ANGULAR | NODE | EXPRESS | MONGODB | MYSQL</p>
+      <p class="banner-text">HTML | CSS | JAVASCRIPT | TYPESCRIPT | ANGULAR | NODE | EXPRESS | MONGODB | MYSQL</p>
   </div>
 
   </div>
@@ -27,7 +33,7 @@
 <div class="content">
   <router-outlet></router-outlet>
 </div>
-  <!-- content -->
+
 
 
 
