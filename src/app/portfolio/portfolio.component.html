@@ -1,8 +1,8 @@
-<div class="page-wrapper">
+<div  class="page-wrapper">
 
 <section *ngIf="projectData" class="portfolio-content">
 
-  <article class="project-card" *ngFor="let project of projectData">
+  <article  class="project-card" *ngFor="let project of projectData">
     <h1 class="project-heading">{{ project.name }}</h1>
     <p class="project-tech">{{ project.tech | uppercase }}</p>
     <div class="project-image-row">

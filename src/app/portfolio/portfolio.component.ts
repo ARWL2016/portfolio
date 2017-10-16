@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProjectDataService } from 'app/services/project-data.service';
 import { Project } from 'app/services/project';
+import { pageTransition } from '../../animations';
 
 @Component({
   selector: 'app-portfolio',
