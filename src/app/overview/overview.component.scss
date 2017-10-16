@@ -53,6 +53,10 @@
   }
 }
 
+.project-heading {
+  margin-top: 15px;
+}
+
 .project-image {
   order: 2;
   flex-grow: 0;
@@ -68,10 +72,6 @@
   flex-direction: column;
   padding: 30px;
   line-height: 2rem;
-}
-
-.project-heading {
-  margin-top: 15px;
 }
 
 .project-text {

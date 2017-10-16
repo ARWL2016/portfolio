@@ -1,5 +1,10 @@
 ## Portfolio 
 
+
+#### To do 
+- create the footer 
+- add the portfolio page and model a single card 
+
 #### About this Project 
 This project is a portfolio website created to showcase my personal web development projects and document my technical skills. 
 

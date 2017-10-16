@@ -1,0 +1,82 @@
+@import '../../shared/variables.scss';
+
+// PORTFOLIO WRAPPER
+// *********************************************
+.page-wrapper {
+  background-color: #f2f2f2;
+  border: 1px dotted blue;
+}
+
+.portfolio-content {
+  max-width: $max-content-width;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+// PROJECT CARD
+// *********************************************
+
+.project-card {
+  background-color: #fff;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  padding: 30px;
+  width: 100%;
+  &:last-child {
+    margin-bottom: 50px;
+  }
+  box-shadow: 3px 3px 5px #444;
+
+}
+
+.project-heading {
+  margin-bottom: 10px;
+  font-size: 2em;
+}
+
+.project-tech {
+  font-size: 0.9em;
+  letter-spacing: 2px;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.project-image-row {
+  display: flex;
+  flex-direction: row;
+  // border: 1px solid green;
+  margin: 20px 0 20px 0;
+}
+
+.project-image {
+  order: 0;
+  flex-grow: 0;
+  height: 250px;
+  // width: 250px;
+  // margin: 30px;
+  border: 1px solid #222;
+  border-radius: 3px;
+}
+
+// this paragraph sits next to the image
+.project-features {
+  padding: 0 20px 0 20px;
+
+  line-height: 1.8em;
+
+}
+
+.project-links-wrapper {
+  flex-direction: row;
+
+}
+
+.project-link {
+  @include project-buttons($highlight-color);
+}
+
+

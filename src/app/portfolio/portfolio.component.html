@@ -1,3 +1,21 @@
-<p>
-  portfolio works!
-</p>
+<div class="page-wrapper">
+
+<section class="portfolio-content">
+
+  <article class="project-card" *ngFor="let data of projectData">
+    <h1 class="project-heading">{{ data.name }}</h1>
+    <p class="project-tech">{{ data.tech | uppercase }}</p>
+    <div class="project-image-row">
+      <img src={{data.image_url}} class="project-image" [ngStyle]="{'order': data.image_order}" >
+      <p class="project-features">{{ data.features }}</p>
+    </div>
+    <p class="project-discussion">{{ data.discussion }}</p>
+    <div class="project-links-wrapper">
+      <button class="project-link">SOURCE CODE</button>
+      <button class="project-link">VIEW WEBSITE</button>
+    </div>
+  </article>
+
+</section>
+
+</div>

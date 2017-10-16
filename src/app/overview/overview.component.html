@@ -18,7 +18,6 @@
 
 </section>
 
-
 <section class="portfolio-section">
   <div class="portfolio-content">
   <h2 class="section-heading">FEATURED PROJECTS</h2>
@@ -28,7 +27,7 @@
       <img src={{data.image_url}} class="project-image" [ngStyle]="{'order': data.image_order}" >
       <div class="project-description">
         <h3 class="project-heading">{{ data.name | uppercase }}</h3>
-        <p  class="project-text">{{data.short_description}}</p>
+        <p  class="project-text">{{data.summary}}</p>
         <div class="project-links">
           <button class="project-link">DETAILS</button>
           <button class="project-link">VIEW WEBSITE</button>

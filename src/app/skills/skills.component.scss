@@ -1,0 +1,36 @@
+@import '../../shared/variables.scss';
+
+.skills-section {
+  max-width: $max-content-width;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.skills-table {
+  border:1px solid green;
+  border-collapse:collapse;
+}
+
+.skills-table-cell {
+  padding: 10px;
+  font-weight: bold;
+  border-bottom:1px solid #555;
+  line-height: 1.5em;
+  font-size: 1.1em;
+}
+
+.skills-table-cell:first-child {
+  //  border:1px solid green;
+
+   background-color:#DDD;
+}
+
+.skills-table-cell:last-child {
+  //  border:1px solid blue;
+}
+
+
+
+

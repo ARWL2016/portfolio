@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ProjectDataService } from 'app/services/project-data.service';
+
 
 @Component({
   selector: 'app-portfolio',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PortfolioComponent implements OnInit {
 
-  constructor() { }
+  projectData: Object[];
+  constructor(
+    private _data: ProjectDataService
+  ) { }
 
   ngOnInit() {
+    console.log('portfolio loaded');
+    this.projectData = this._data.projectData;
   }
 
 }
