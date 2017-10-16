@@ -21,16 +21,16 @@ export class ProjectDataService {
     },
     {
       name: 'Stock Tracker',
-      tech: '',
+      tech: 'AngularJS 1.6, Node, Express, MySQL, Chart.js',
       summary: `
         Stock Tracker is an AngularJS application which charts time series data from the FTSE 100
         using the Quandl API. Data is cached once a day on a MySQL database, ensuring rapid load times.
         The back end is written in Node and Express.
         `,
-      eatures: ``,
+      features: ``,
       discussion: ``,
       image_url: 'assets/stocko.png',
-      image_order: 2
+      image_order: 0
     },
     {
       name: 'JS-Calculator',

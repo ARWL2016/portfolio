@@ -1,4 +1,4 @@
-@import '../../shared/variables.scss';
+@import '../../style-config.scss';
 
 .skills-section {
   display: flex;
@@ -13,7 +13,7 @@
 
 .portfolio-section {
   width: 100%;
-  background-color: #f2f2f2;
+  background-color: $light-grey-background;
   // to cover a mysterious gap
   margin-bottom: -30px;
 }

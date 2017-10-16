@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
-import { AppComponent } from './app.component';
+import { AppComponent } from 'app/app-component/app.component';
 import { ProjectDataService } from 'app/services/project-data.service';
 import { OverviewComponent } from './overview/overview.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
@@ -25,7 +25,7 @@ import { SkillsComponent } from './skills/skills.component';
       { path: 'overview', component: OverviewComponent },
       { path: 'portfolio', component: PortfolioComponent },
       { path: 'skills', component: SkillsComponent },
-      { path: '', redirectTo: 'portfolio', pathMatch: 'full' },
+      { path: '', redirectTo: 'overview', pathMatch: 'full' },
     ])
   ],
   providers: [

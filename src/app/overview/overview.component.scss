@@ -1,4 +1,4 @@
-@import '../../shared/variables.scss';
+@import '../../style-config.scss';
 @import 'overview.component.layout.scss';
 
 
@@ -32,13 +32,35 @@
 // PORTFOLIO SECTION
 // *********************************************
 
+.section-heading-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  // border: 1px dotted blue;
+}
+
+.project-icon {
+  width: 64px;
+  // display: block;
+  // margin: 0 auto;
+  // margin-top: 50px;
+}
+
 .section-heading {
-  margin: 0 auto;
-  margin-top: 75px;
+  // border: 1px dotted blue;
+  margin-left: 20px;
+  // border-radius: 3px;
+  // margin: 0 auto;
+  // margin-top: 30px;
   letter-spacing: 2px;
-  background-color: #FFF;
-  opacity: 0.7;
-  padding: 5px 30px 5px 30px;
+  font-size: 2.0em;
+  // width: 100%;
+  // text-align: center;
+  // background-color: #FFF;
+  // opacity: 0.7;
+  // padding: 10px 30px 10px 30px;
 }
 
 .project {
@@ -48,6 +70,7 @@
   flex-direction: row;
   margin-top: 50px;
   width: 100%;
+  box-shadow: 2px 2px 4px #444;
   &:last-child {
     margin-bottom: 50px;
   }

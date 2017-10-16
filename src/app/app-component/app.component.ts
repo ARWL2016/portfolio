@@ -28,7 +28,7 @@ export class AppComponent implements DoCheck {
     if (this.componentLoaded !== '/overview') {
       console.log('IFFFFFFF');
       this.backgroundImage = 'none';
-      this.minHeight = '350px';
+      this.minHeight = '90px';
     } else {
       this.backgroundImage = 'url("../assets/splash-wide.png")';
       this.minHeight = '600px';
