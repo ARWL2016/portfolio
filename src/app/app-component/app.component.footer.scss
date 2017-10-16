@@ -1,8 +1,39 @@
+@import '../../style-config.scss';
+
 .footer {
   display: flex;
+
   flex-grow: 0;
   background-color: #222;
-  min-height: 100px;
+  color: white;
+  min-height: 300px;
   bottom: 0;
 
+}
+
+.footer-content-wrapper {
+  display: flex;
+  flex-direction: row;
+  font-weight: 300;
+  max-width: $max-content-width;
+  margin: 0 auto;
+  padding: 30px;
+  line-height: 1.8em;
+  border: 1px dotted yellow;
+}
+
+.footer-column {
+  width: 33%;
+  padding: 20px;
+  border: 1px dotted yellow;
+}
+
+.footer-heading {
+
+  font-size: 0.9em;
+}
+
+.footer-text {
+  font-size: 0.9em;
+  margin-bottom: 10px;
 }
