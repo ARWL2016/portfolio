@@ -1,18 +1,18 @@
 <div class="page-wrapper">
 
-<section class="portfolio-content">
+<section *ngIf="projectData" class="portfolio-content">
 
-  <article class="project-card" *ngFor="let data of projectData">
-    <h1 class="project-heading">{{ data.name }}</h1>
-    <p class="project-tech">{{ data.tech | uppercase }}</p>
+  <article class="project-card" *ngFor="let project of projectData">
+    <h1 class="project-heading">{{ project.name }}</h1>
+    <p class="project-tech">{{ project.tech | uppercase }}</p>
     <div class="project-image-row">
-      <img src={{data.image_url}} class="project-image" [ngStyle]="{'order': data.image_order}" >
-      <p class="project-features">{{ data.user_stories }}</p>
+      <img src={{project.image_url}} class="project-image" [ngStyle]="{'order': project.image_order}" >
+      <p class="project-features">{{ project.user_stories }}</p>
     </div>
-    <p class="project-discussion">{{ data.discussion }}</p>
+    <p class="project-discussion">{{ project.discussion }}</p>
     <div class="project-links-wrapper">
-      <button class="project-link"><i class="project-link-icon fa fa-github" aria-hidden="true"></i> SOURCE CODE</button>
-      <button class="project-link"><i class="project-link-icon fa fa-external-link-square" aria-hidden="true"></i> VIEW WEBSITE</button>
+      <a class="project-link" target="_blank" href={{project.github_link}}><i class="project-link-icon fa fa-github" aria-hidden="true"></i> SOURCE CODE</a>
+      <a class="project-link" target="_blank" href={{project.website_link}}><i class="project-link-icon fa fa-external-link-square" aria-hidden="true"></i> VIEW WEBSITE</a>
     </div>
   </article>
 

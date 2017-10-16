@@ -20,7 +20,7 @@ export class ProjectDataService {
         requests. A messaging function is still to be implemented.
       `,
       discussion: ``,
-      image_url: 'assets/votogo-sm.png',
+      image_url: 'assets/book-exchange-min.png',
       image_order: 0,
       github_link: 'https://github.com/ARWL2016/book-trading-club',
       website_link: 'https://arwl-book-exchange.herokuapp.com/browse',
@@ -40,7 +40,7 @@ export class ProjectDataService {
         share and view the results of surveys. Topics can be serached by title, and voting results can be
         viewed in both table and chart format.
         `,
-      discussion: ``,
+      discussion: `uses angular animations`,
       image_url: 'assets/votogo-sm.png',
       image_order: 0,
       github_link: 'https://github.com/ARWL2016/voting-app',
@@ -104,23 +104,19 @@ export class ProjectDataService {
       page_speed_score: 0
     },
     {
-      name: 'Noughts and Crosses Game',
-      tech: 'HTML, Sass, ES6, JQuery, Babel, Webpack',
+      name: 'Game of Life Simulation',
+      tech: 'HTML, CSS, Foundation, JQuery',
       summary: `
-        This is a noughts-and-crosses implementation built with ES6, JQuery and Sass and using Webpack as a build tool
-        to run the Babel compiler and process the style declarations to CSS. The algorithm consists of three general
-        strategy functions augmented by a small number of hard-coded moves.
+
         `,
       user_stories: `
-        This is a noughts-and-crosses implementation with an unbeatable AI. Users can play against the computer
-        as O or X, play against another human, or watch a game between two computer players. The application will
-        keep score until the players change sides.
+
        `,
       discussion: ``,
-      image_url: 'assets/tictactoe.png',
+      image_url: 'assets/game-of-life-min.png',
       image_order: 0,
-      github_link: 'https://github.com/ARWL2016/nought-and-cross-app',
-      website_link: 'https://arwl-noughts-and-crosses.herokuapp.com/',
+      github_link: 'https://github.com/ARWL2016/game-of-life-jquery',
+      website_link: 'https://arwl-game-of-life.herokuapp.com/',
       page_speed_score: 0
     }
   ];

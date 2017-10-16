@@ -33,6 +33,9 @@
   width: 200px;
   height: 50px;
   flex-grow: 0;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .titlebar-list {

@@ -7,7 +7,8 @@ $light-grey-background: #ddd;
   background-color: #FFF;
   color: #222;
   letter-spacing: 1px;
-  font-size:  0.8rem;
+  font-size:  0.9rem;
+  
   padding: 8px 12px 8px 12px;
   border: 2px solid $colour;
   border-radius: 3px;
@@ -16,5 +17,6 @@ $light-grey-background: #ddd;
   font-weight: 500;
   &:hover {
     cursor: pointer;
+    background-color: $highlight-color;
   }
 }
