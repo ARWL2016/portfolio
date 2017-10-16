@@ -31,3 +31,4 @@ an application level variables.scss file which acts like a style configuration f
 in a single location. 
 
 
+"@angular/cli": "1.0.1",

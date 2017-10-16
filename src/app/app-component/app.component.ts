@@ -1,5 +1,6 @@
 import { Component, OnInit, DoCheck } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+// import { pageTransition } from '../../animations';
 
 @Component({
   selector: 'app-root',
