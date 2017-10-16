@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProjectDataService } from 'app/services/project-data.service';
+import { Project } from 'app/services/project';
 
 @Component({
   selector: 'app-overview',
@@ -8,7 +9,7 @@ import { ProjectDataService } from 'app/services/project-data.service';
 })
 export class OverviewComponent implements OnInit {
 
-  projectData: Object[];
+  projectData: Project[];
   constructor(
     private _data: ProjectDataService
   ) { }

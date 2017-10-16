@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProjectDataService } from 'app/services/project-data.service';
-
+import { Project } from 'app/services/project';
 
 @Component({
   selector: 'app-portfolio',
@@ -8,8 +8,8 @@ import { ProjectDataService } from 'app/services/project-data.service';
   styleUrls: ['./portfolio.component.scss']
 })
 export class PortfolioComponent implements OnInit {
+  projectData: Project[];
 
-  projectData: Object[];
   constructor(
     private _data: ProjectDataService
   ) { }
