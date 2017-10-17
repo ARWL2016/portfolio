@@ -52,21 +52,21 @@
 .section-heading {
   // border: 1px dotted blue;
   margin-left: 20px;
-  // border-radius: 3px;
+  border-radius: 30px;
   // margin: 0 auto;
   // margin-top: 30px;
   letter-spacing: 2px;
   font-size: 2.0em;
   // width: 100%;
   // text-align: center;
-  // background-color: #FFF;
+  background-color: #FFF;
   // opacity: 0.7;
-  // padding: 10px 30px 10px 30px;
+  padding: 5px 15px 5px 15px;
 }
 
 .project {
   background-color: #fff;
-  border-radius: 3px;
+  border-radius: 5px;
   display: flex;
   flex-direction: row;
   margin-top: 50px;
@@ -78,7 +78,7 @@
 }
 
 .project-heading {
-  margin-top: 15px;
+  // margin-top: 15px;
 }
 
 .project-image {
@@ -94,7 +94,7 @@
 .project-description {
   display: flex;
   flex-direction: column;
-  padding: 30px;
+  margin: 30px 30px 30px 0;
   line-height: 2rem;
 }
 

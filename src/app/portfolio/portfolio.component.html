@@ -5,15 +5,29 @@
   <article  class="project-card" *ngFor="let project of projectData">
     <h1 class="project-heading">{{ project.name }}</h1>
     <p class="project-tech">{{ project.tech | uppercase }}</p>
-    <div class="project-image-row">
-      <img src={{project.image_url}} class="project-image" [ngStyle]="{'order': project.image_order}" >
-      <p class="project-features">{{ project.user_stories }}</p>
+    <div class="project-columns">
+      <div class="project-image-column">
+        <img src={{project.image_url}} class="project-image" [ngStyle]="{'order': project.image_order}" >
+        <p class="project-stat">PAGE SIZE <span class="project-stat-badge">{{ project.page_size }}kb</span></p>
+        <p class="project-stat">LOAD TIME <span class="project-stat-badge">{{ project.page_load_time }}s</span></p>
+        <p class="project-stat">PAGE SPEED SCORE <span class="project-stat-badge">{{ project.page_speed_score }}%</span></p>
+      </div>
+
+      <div class="project-text-column">
+        <p class="project-text">{{ project.user_stories }}</p>
+        <p class="project-text">{{ project.discussion }}</p>
+
+      </div>
     </div>
-    <p class="project-discussion">{{ project.discussion }}</p>
     <div class="project-links-wrapper">
       <a class="project-link" target="_blank" href={{project.github_link}}><i class="project-link-icon fa fa-github" aria-hidden="true"></i> SOURCE CODE</a>
       <a class="project-link" target="_blank" href={{project.website_link}}><i class="project-link-icon fa fa-external-link-square" aria-hidden="true"></i> VIEW WEBSITE</a>
     </div>
+
+
+
+
+
   </article>
 
 </section>

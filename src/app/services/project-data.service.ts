@@ -24,7 +24,9 @@ export class ProjectDataService {
       image_order: 0,
       github_link: 'https://github.com/ARWL2016/book-trading-club',
       website_link: 'https://arwl-book-exchange.herokuapp.com/browse',
-      page_speed_score: 0
+      page_speed_score: 0,
+      page_size: 957,
+      page_load_time: 4.19
     },
     {
       name: 'Votogo',
@@ -45,7 +47,9 @@ export class ProjectDataService {
       image_order: 0,
       github_link: 'https://github.com/ARWL2016/voting-app',
       website_link: 'https://votogo.herokuapp.com/home',
-      page_speed_score: 0
+      page_speed_score: 0,
+      page_size: 530,
+      page_load_time: 4.11
     },
     {
       name: 'Stock Tracker',
@@ -61,7 +65,9 @@ export class ProjectDataService {
       image_order: 0,
       github_link: 'https://github.com/ARWL2016/stock-tracker',
       website_link: 'https://arwl-stock-tracker.herokuapp.com/main',
-      page_speed_score: 0
+      page_speed_score: 0,
+      page_size: 0,
+      page_load_time: 0
     },
     {
       name: 'JS-Calculator',
@@ -81,7 +87,9 @@ export class ProjectDataService {
       image_order: 0,
       github_link: 'https://github.com/ARWL2016/js-calculator',
       website_link: 'https://calculator-arwl.herokuapp.com/',
-      page_speed_score: 0
+      page_speed_score: 0,
+      page_size: 0,
+      page_load_time: 0
     },
     {
       name: 'Noughts and Crosses Game',
@@ -101,7 +109,9 @@ export class ProjectDataService {
       image_order: 0,
       github_link: 'https://github.com/ARWL2016/nought-and-cross-app',
       website_link: 'https://arwl-noughts-and-crosses.herokuapp.com/',
-      page_speed_score: 0
+      page_speed_score: 0,
+      page_size: 0,
+      page_load_time: 0
     },
     {
       name: 'Game of Life Simulation',
@@ -117,7 +127,9 @@ export class ProjectDataService {
       image_order: 0,
       github_link: 'https://github.com/ARWL2016/game-of-life-jquery',
       website_link: 'https://arwl-game-of-life.herokuapp.com/',
-      page_speed_score: 0
+      page_speed_score: 0,
+      page_size: 0,
+      page_load_time: 0
     }
   ];
 

@@ -21,8 +21,8 @@
 .project-card {
   background-color: #fff;
   border-radius: 5px;
-  display: flex;
-  flex-direction: column;
+  // display: flex;
+  // flex-direction: column;
   margin-top: 50px;
   padding: 30px;
   width: 100%;
@@ -45,33 +45,65 @@
   margin-bottom: 10px;
 }
 
-.project-image-row {
+.project-columns {
   display: flex;
   flex-direction: row;
-  // border: 1px solid green;
   margin: 20px 0 30px 0;
+
+}
+
+.project-image-column {
+  // display: flex;
+  // flex-direction: row;
+  // border: 1px solid green;
+  // margin: 20px 0 30px 0;
+  // border: 1px dotted blue;
+  float: left;
+}
+
+.project-text-column {
+  // border: 1px dotted blue;
+  float: left;
+  margin: 0 20px 0 20px;
 }
 
 .project-image {
-  order: 0;
-  flex-grow: 0;
-  height: 250px;
-  // width: 250px;
+  // order: 0;
+  // flex-grow: 0;
+  // height: 250px;
+  width: 300px;
   // margin: 30px;
   // border: 1px solid #222;
   border-radius: 3px;
 }
 
 // this paragraph sits next to the image
-.project-features {
-  padding: 0 20px 0 30px;
-
+.project-text {
   line-height: 1.8em;
+}
 
+.project-stat {
+  font-weight: bold;
+  font-size: 0.9em;
+  letter-spacing: 2px;
+  // color: red;
+
+  margin-top: 12px;
+  margin-left: 10px;
+}
+
+.project-stat-badge {
+  background-color: $highlight-color;
+  padding: 3px 8px 3px 8px;
+  border-radius: 10px;
+  color: white;
+  font-size: 0.9em;
+  text-align: right;
 }
 
 .project-links-wrapper {
-  flex-direction: row;
+  // flex-direction: row;
+  margin-left: 320px;
 
 }
 
@@ -79,6 +111,7 @@
   @include project-buttons($highlight-color);
   text-decoration: none;
   font-weight: 500;
+  // float: right;
 }
 
 .project-link-icon {

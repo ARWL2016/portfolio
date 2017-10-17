@@ -9,6 +9,8 @@ export interface Project {
   github_link: string;
   website_link: string;
   page_speed_score: number;
+  page_size: number;
+  page_load_time: number;
 
 
 

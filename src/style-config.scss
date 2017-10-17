@@ -8,13 +8,15 @@ $light-grey-background: #ddd;
   color: #222;
   letter-spacing: 1px;
   font-size:  0.9rem;
-  
+
   padding: 8px 12px 8px 12px;
   border: 2px solid $colour;
   border-radius: 3px;
   margin-right: 5px;
   margin-bottom: 5px;
   font-weight: 500;
+  -webkit-transition: background-color 300ms;
+  transition: background-color 300ms;
   &:hover {
     cursor: pointer;
     background-color: $highlight-color;
