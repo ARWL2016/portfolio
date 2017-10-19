@@ -35,7 +35,8 @@
 
 .project-heading {
   margin-bottom: 10px;
-  font-size: 2em;
+  font-size: 2.2em;
+  color: $highlight-color;
 }
 
 .project-tech {
@@ -43,6 +44,9 @@
   letter-spacing: 2px;
   color: #444;
   margin-bottom: 10px;
+  background-color: $light-grey-background;
+  padding: 8px;
+  border-radius: 3px;
 }
 
 .project-columns {
@@ -82,14 +86,27 @@
   line-height: 1.8em;
 }
 
+.project-list {
+  line-height: 1.8em;
+}
+
+// STATS ********************
+
+.project-stat-wrapper {
+  background-color: $light-grey-background;
+  padding: 4px 4px 10px 4px;
+  margin-top: 10px;
+  border-radius: 3px;
+  // margin-left: 12px;
+}
+
 .project-stat {
   font-weight: bold;
   font-size: 0.9em;
   letter-spacing: 2px;
-  // color: red;
-
   margin-top: 12px;
-  margin-left: 10px;
+  margin-left: 12px;
+  // color: red;
 }
 
 .project-stat-badge {
@@ -101,10 +118,11 @@
   text-align: right;
 }
 
+// LINKS ********************
+
 .project-links-wrapper {
   // flex-direction: row;
   margin-left: 320px;
-
 }
 
 .project-link {

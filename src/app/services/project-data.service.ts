@@ -19,7 +19,16 @@ export class ProjectDataService {
         Authenticated users can also create and manage their own book collection, make requests to other users, and see other users'
         requests. A messaging function is still to be implemented.
       `,
-      discussion: ``,
+      highlights: [
+        'UI implements progress bar, notifications, and background username check during registration',
+        'MaterializeCSS used for navbar and form components, plus icons',
+        'Google Books API basic searches need no API key so requests made from front end for speed',
+        'three entity data structure: user, book and request',
+        'Typescript interfaces used to enforce data structure on front end',
+        'authentication implemented with Bcrypt password encryption and JSON Web Tokens added to HTTP headers',
+        'REST api tested with Mocha and Expect, using Supertest for HTTP request mocking; separate test database with mock data',
+        'data persisted using MongoDB cloud provider MLab'
+      ],
       image_url: 'assets/book-exchange-min.png',
       image_order: 0,
       github_link: 'https://github.com/ARWL2016/book-trading-club',
@@ -42,7 +51,14 @@ export class ProjectDataService {
         share and view the results of surveys. Topics can be serached by title, and voting results can be
         viewed in both table and chart format.
         `,
-      discussion: `uses angular animations`,
+      highlights: [
+        'CRUD application with RESTful API',
+        'UI implemented using Bootstrap panels, buttons and navigation bar',
+        'Angular animations module used for smoothing transitions during data requests',
+        'Chart.js doughtnut chart implemented as Angular child component',
+        'two entity data structure: users and votes persisted with MongoDB using Mongoose schema',
+        'authentication module uses JSON Web Tokens to implement secure sessions'
+      ],
       image_url: 'assets/votogo-sm.png',
       image_order: 0,
       github_link: 'https://github.com/ARWL2016/voting-app',
@@ -59,15 +75,24 @@ export class ProjectDataService {
         using the Quandl API. Data is cached once a day on a MySQL database, ensuring rapid load times.
         The back end is written in Node and Express.
         `,
-      user_stories: ``,
-      discussion: ``,
+      user_stories: `
+        Stock tracking application which allows users to view stock data from the FTSE 100 over the last
+        five years. Users can select and compare different stocks, and alter the timescale between three months
+        and five years.
+      `,
+      highlights: [
+        'custom UI built without CSS framework',
+        'renders line graph from Chart.js using daily stock prices',
+        'back end makes daily series of requests to Quandl API to update stock data',
+        'data persisted on a MySQL database at JawsDB via Heroku'
+      ],
       image_url: 'assets/stocko.png',
       image_order: 0,
       github_link: 'https://github.com/ARWL2016/stock-tracker',
       website_link: 'https://arwl-stock-tracker.herokuapp.com/main',
       page_speed_score: 0,
-      page_size: 0,
-      page_load_time: 0
+      page_size: 264,
+      page_load_time: 3.35
     },
     {
       name: 'JS-Calculator',
@@ -79,17 +104,20 @@ export class ProjectDataService {
         `,
       user_stories: `
         Browser based calculator with basic arithmetic operators and a memory function. Operations can be chained
-        and the correct order of operations will be followed. The interface user_stories a skeuomorphic design which
-        allows keyboard or mouse input.
+        and the correct order of operations will be followed. The interface uses a skeuomorphic design and
+        permits keyboard or mouse input.
        `,
-      discussion: ``,
+      highlights: [
+        'custom UI design written in Sass with modular structure',
+        'uses Webpack to transpile ES6 and Sass; code splitting produces separate CSS bundle',
+        'DOM manipulation written in native Javascript; DOM selections cached for greater efficiency'],
       image_url: 'assets/calculator.png',
       image_order: 0,
       github_link: 'https://github.com/ARWL2016/js-calculator',
       website_link: 'https://calculator-arwl.herokuapp.com/',
       page_speed_score: 0,
-      page_size: 0,
-      page_load_time: 0
+      page_size: 56,
+      page_load_time: 0.79
     },
     {
       name: 'Noughts and Crosses Game',
@@ -104,14 +132,19 @@ export class ProjectDataService {
         as O or X, play against another human, or watch a game between two computer players. The application will
         keep score until the players change sides.
        `,
-      discussion: ``,
+      highlights: [
+        'JQuery and JQueryUI loaded via CDN',
+        'CSS3 transition effects create smooth game experience',
+        'Sass variables and color functions used to ensure consistent color design',
+        'uses Webpack to transpile Javascript to ES5 and Sass to CSS'
+      ],
       image_url: 'assets/tictactoe.png',
       image_order: 0,
       github_link: 'https://github.com/ARWL2016/nought-and-cross-app',
       website_link: 'https://arwl-noughts-and-crosses.herokuapp.com/',
-      page_speed_score: 0,
-      page_size: 0,
-      page_load_time: 0
+      page_speed_score: 97,
+      page_size: 185,
+      page_load_time: 2.96
     },
     {
       name: 'Game of Life Simulation',
@@ -120,16 +153,22 @@ export class ProjectDataService {
 
         `,
       user_stories: `
-
+        This application is an implementation of Conway's Game of Life, a grid of cells which follow a
+        few simple rules but produce complex and apparently life-life patterns. Users can start and stop
+        the simulation, add and remove cells, and change the speed.
        `,
-      discussion: ``,
+      highlights: [
+        'uses JQuery methods for handling user events and DOM manipulation',
+        'responsive navigation panel created with Foundation',
+        'object literals used for code encapsulation'
+        ],
       image_url: 'assets/game-of-life-min.png',
       image_order: 0,
       github_link: 'https://github.com/ARWL2016/game-of-life-jquery',
       website_link: 'https://arwl-game-of-life.herokuapp.com/',
       page_speed_score: 0,
-      page_size: 0,
-      page_load_time: 0
+      page_size: 73,
+      page_load_time: 2.65
     }
   ];
 

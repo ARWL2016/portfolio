@@ -3,7 +3,7 @@ export interface Project {
   tech: string;
   summary: string;
   user_stories: string;
-  discussion: string;
+  highlights: [string];
   image_url: string;
   image_order: number;
   github_link: string;

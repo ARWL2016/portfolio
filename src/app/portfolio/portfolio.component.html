@@ -8,14 +8,19 @@
     <div class="project-columns">
       <div class="project-image-column">
         <img src={{project.image_url}} class="project-image" [ngStyle]="{'order': project.image_order}" >
-        <p class="project-stat">PAGE SIZE <span class="project-stat-badge">{{ project.page_size }}kb</span></p>
-        <p class="project-stat">LOAD TIME <span class="project-stat-badge">{{ project.page_load_time }}s</span></p>
-        <p class="project-stat">PAGE SPEED SCORE <span class="project-stat-badge">{{ project.page_speed_score }}%</span></p>
+        <div class="project-stat-wrapper">
+          <p class="project-stat">PAGE SIZE <span class="project-stat-badge">{{ project.page_size }}kb</span></p>
+          <p class="project-stat">LOAD TIME <span class="project-stat-badge">{{ project.page_load_time }}s</span></p>
+          <p class="project-stat">PAGE SPEED SCORE <span class="project-stat-badge">{{ project.page_speed_score }}%</span></p>
+        </div>
       </div>
 
       <div class="project-text-column">
         <p class="project-text">{{ project.user_stories }}</p>
-        <p class="project-text">{{ project.discussion }}</p>
+        <ul class="project-list">
+          <li class="project-list-item" *ngFor="let highlight of project.highlights">{{ highlight }}</li>
+        </ul>
+
 
       </div>
     </div>
