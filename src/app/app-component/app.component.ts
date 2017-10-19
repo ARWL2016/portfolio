@@ -11,7 +11,8 @@ export class AppComponent implements DoCheck {
   componentLoaded = '/overview';
   backgroundImage = 'url("../assets/splash-wide.png")';
   minHeight = '600px';
-
+  username = 'alistairrwillis';
+  hostname = 'gmail.com';
 
   constructor (private router: Router) {
 

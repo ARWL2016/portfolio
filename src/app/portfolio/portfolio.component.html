@@ -2,7 +2,7 @@
 
 <section *ngIf="projectData" class="portfolio-content">
 
-  <article  class="project-card" *ngFor="let project of projectData">
+  <article class="project-card" *ngFor="let project of projectData">
     <h1 class="project-heading">{{ project.name }}</h1>
     <p class="project-tech">{{ project.tech | uppercase }}</p>
     <div class="project-columns">
@@ -28,10 +28,6 @@
       <a class="project-link" target="_blank" href={{project.github_link}}><i class="project-link-icon fa fa-github" aria-hidden="true"></i> SOURCE CODE</a>
       <a class="project-link" target="_blank" href={{project.website_link}}><i class="project-link-icon fa fa-external-link-square" aria-hidden="true"></i> VIEW WEBSITE</a>
     </div>
-
-
-
-
 
   </article>
 

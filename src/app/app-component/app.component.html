@@ -14,6 +14,7 @@
         </li>
         <li class="titlebar-list-item">
           <a class="titlebar-anchor" [routerLink]="['/skills']" routerLinkActive="titlebar-list-item_selected">SKILLS</a>
+
         </li>
       </ul>
   </nav>
@@ -21,6 +22,11 @@
   <div *ngIf="componentLoaded==='/overview'" class="banner">
       <h1 class="banner-header">Full Stack Web Developer</h1>
       <p class="banner-text">HTML | CSS | JAVASCRIPT | TYPESCRIPT | ANGULAR | NODE | EXPRESS | MONGODB | MYSQL</p>
+
+      <p>
+        <a href="https://github.com/{{name}}" target="_blank"><i class="banner-link project-link-icon fa fa-github" aria-hidden="true"></i></a>
+        <a href="mailto:{{username}}@{{hostname}}" target="_blank"><i class="banner-link fa fa-envelope" aria-hidden="true"></i></a>
+      </p>
   </div>
 
   </div>
