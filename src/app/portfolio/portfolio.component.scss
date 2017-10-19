@@ -83,11 +83,15 @@
 
 // this paragraph sits next to the image
 .project-text {
-  line-height: 1.8em;
+  line-height: $tall-line-height;
 }
 
 .project-list {
-  line-height: 1.8em;
+  line-height: $tall-line-height;
+}
+
+.project-list-item {
+  list-style-type: square;
 }
 
 // STATS ********************

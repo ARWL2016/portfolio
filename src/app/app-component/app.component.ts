@@ -7,20 +7,31 @@ import { pageTransition } from '../../animations';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements DoCheck {
+export class AppComponent implements DoCheck, OnInit {
   componentLoaded = '/overview';
   backgroundImage = 'url("../assets/splash-wide.png")';
   minHeight = '600px';
   username = 'alistairrwillis';
   hostname = 'gmail.com';
+  private fragment: string;
 
   constructor (private router: Router) {
 
   }
 
-  // ngOnInit() {
+  ngOnInit() {
 
-  // }
+  }
+
+  navigateTo(page) {
+    window.scroll({top: 0, left: 0, behavior: 'smooth' });
+    this.router.navigate([page]);
+  }
+
+  scrollToTop() {
+    console.log('scrolling');
+    window.scrollTo(0, 0);
+  }
 
   ngDoCheck() {
     console.log('DO CHECK');

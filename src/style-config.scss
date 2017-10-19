@@ -2,6 +2,7 @@ $max-content-width: 1000px;
 // $highlight-color: #f92561;
 $highlight-color: #2587ce;
 $light-grey-background: #ddd;
+$tall-line-height: 1.8em;
 
 @mixin project-buttons($colour) {
   background-color: #FFF;
@@ -20,5 +21,14 @@ $light-grey-background: #ddd;
   &:hover {
     cursor: pointer;
     background-color: $highlight-color;
+  }
+}
+
+@mixin project-links() {
+  color: $highlight-color;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
   }
 }

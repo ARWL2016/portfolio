@@ -19,21 +19,33 @@
   margin: 0 auto;
   padding: 30px;
   line-height: 1.8em;
-  border: 1px dotted yellow;
+  // border: 1px dotted yellow;
 }
 
 .footer-column {
   width: 33%;
   padding: 20px;
-  border: 1px dotted yellow;
+  // border: 1px dotted yellow;
 }
 
 .footer-heading {
-
   font-size: 0.9em;
 }
 
 .footer-text {
   font-size: 0.9em;
   margin-bottom: 10px;
+}
+
+.footer-link {
+  @include project-links();
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.footer-icon-link {
+  &:hover {
+    text-decoration: none;
+  }
 }

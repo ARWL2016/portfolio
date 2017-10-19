@@ -32,3 +32,26 @@ in a single location.
 
 
 "@angular/cli": "1.0.1",
+
+
+<p>
+    For full stack web application projects, I now use some variation of the MEAN stack: Angular, Node, Express
+    and MongoDB or MySQL. Angular's component-based architecture and the separation of concerns between view, model
+    and services makes it possible to develop and maintain applications in a modular style. Plus, the comprehensive
+    nature of the Angular platform means that most common application features are available out of the box.
+    I have also experimented with React and build a couple of small applications. However, I believe that Angular's
+    template model is more intuitive and cleaner than React's JSX syntax.
+  </p>
+  <p>
+    Before gravitating toward Angular, I built several front end projects using JQuery and JQueryUI. It is a convenient
+    library for simple front end applications, particularly ones which need a lot of DOM manipulation and UI effects.
+    However, the use cases for JQuery are probably getting fewer every day, thanks to more standardized web browsers,
+    CSS3 animation features, and the advent of Single Page Applications.
+  </p>
+  <p>
+    When it comes to front end styling and components, I find that using a CSS framework such as Bootstrap, Foundation
+    or MaterializeCSS can save a lot of development time and make it possible to prototype decent looking and responsive
+    applications quite quickly. However, these frameworks can produce very generic looking applications, and sometimes
+    clash unpredicatably with custom styles.
+  </p>
+  <p>When it comes to front end design, I strive to build applications </p>

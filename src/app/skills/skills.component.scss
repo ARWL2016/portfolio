@@ -1,16 +1,36 @@
 @import '../../style-config.scss';
 
 .skills-section {
-  max-width: $max-content-width;
-  width: 80%;
+  max-width: 700px;
+  // width: 60%;
   margin: 0 auto;
   margin-top: 50px;
   margin-bottom: 30px;
 }
 
+.skills-heading {
+  margin-bottom: 20px;
+}
+
+.skills-text {
+  margin-bottom: 20px;
+  line-height: $tall-line-height;
+  &:last-child {
+    margin-bottom: 100px;
+  }
+}
+
+.text-link {
+ @include project-links;
+}
+
+
+// STACK TABLE *********************
+
 .skills-table {
-  border:1px solid green;
+  border:1px solid $highlight-color;
   border-collapse:collapse;
+  margin-bottom: 50px;
 }
 
 .skills-table-cell {
