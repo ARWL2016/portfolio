@@ -1,8 +1,12 @@
-<div  class="page-wrapper">
+<div class="page-wrapper">
 
-  <div class="search-input-wrapper">
-    <input class="search-input" type="text" placeholder="search by technology">
-    <i class="search-icon fa fa-search" aria-hidden="true"></i>
+  <div class="search-input-wrapper" >
+    <form (keyup)="search()">
+      <input class="search-input" name="search" type="text" [(ngModel)]="searchTerm" placeholder="search by technology">
+      <i class="search-icon fa fa-search" aria-hidden="true"></i>
+      <p *ngIf="results !== 1" class="search-result">{{results}} results</p>
+      <p *ngIf="results === 1" class="search-result">{{results}} result</p>
+    </form>
   </div>
 
 <section *ngIf="projectData" class="portfolio-content">

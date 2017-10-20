@@ -29,24 +29,18 @@ export class AppComponent implements DoCheck, OnInit {
   }
 
   scrollToTop() {
-    console.log('scrolling');
     window.scrollTo(0, 0);
   }
 
   ngDoCheck() {
-    console.log('DO CHECK');
-    console.log(this.router.url);
     this.componentLoaded = this.router.url;
-    console.log(this.componentLoaded);
     if (this.componentLoaded !== '/overview') {
-      console.log('IFFFFFFF');
       this.backgroundImage = 'none';
       this.minHeight = '90px';
     } else {
       this.backgroundImage = 'url("../assets/splash-wide.png")';
       this.minHeight = '600px';
     }
-    console.log(this.backgroundImage);
   }
 
 

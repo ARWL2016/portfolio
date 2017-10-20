@@ -7,7 +7,8 @@ export class ProjectDataService {
   projectData: Project[] = [
     {
       name: 'Book Exchange',
-      tech: 'Angular 4.0, Typescript, MaterializeCSS, Node, Express, MongoDB, Mongoose, BCrypt, JSON Web Tokens, Google Books API',
+      tech: 'Angular 4.0, Typescript, MaterializeCSS, Node, Express, MongoDB, Mongoose, BCrypt, JSON Web Tokens',
+      tags: 'HTML, CSS, Javascript, Angular 4.0, Typescript, MaterializeCSS, Node, Express, MongoDB, Mongo, Mongoose, BCrypt, JSON Web Tokens',
       summary: `
         Book Exchange is a book trading application which allows authenticated users to search for books on the Google Books API,
         build a book collection, view other users' collections, and send and receive requests for books.
@@ -40,6 +41,7 @@ export class ProjectDataService {
     {
       name: 'Votogo',
       tech: 'Angular 4.0, Typescript, Bootstrap, Node, Express, MongoDB, Mongoose',
+      tags: 'HTML, CSS, Javascript, Angular 4.0, Typescript, Bootstrap, Node, Express, MongoDB, Mongo, Mongoose,',
       summary: `
         Votogo is a full stack CRUD application that allows users to create,
         share and view the results of surveys. It is built with Angular, Node, Express and MongoDB
@@ -70,6 +72,7 @@ export class ProjectDataService {
     {
       name: 'Stock Tracker',
       tech: 'AngularJS 1.6, CSS, Node, Express, MySQL, Chart.js',
+      tags: 'HTML, CSS, Javascript, AngularJS 1.6, CSS, Node, Express, MySQL, Chart.js,',
       summary: `
         Stock Tracker is an AngularJS application which charts time series data from the FTSE 100
         using the Quandl API. Data is cached once a day on a MySQL database, ensuring rapid load times.
@@ -97,6 +100,7 @@ export class ProjectDataService {
     {
       name: 'JS-Calculator',
       tech: 'HTML, Sass, ES6, Webpack',
+      tags: 'HTML, CSS, Javascript, HTML, Sass, ES6, Webpack,',
       summary: `
         This calculator was originally written in jQuery then refactored to native Javascript to reduce
         unnecessary dependencies. Webpack is used as a build tool to transpile ES6 and process the Sass stylesheets.
@@ -121,7 +125,8 @@ export class ProjectDataService {
     },
     {
       name: 'Noughts and Crosses Game',
-      tech: 'HTML, Sass, ES6, JQuery, Babel, Webpack',
+      tech: 'HTML, Sass, Javascript, JQuery, Babel, Webpack',
+      tags: 'HTML, CSS, Javascript, Sass, ES6, JQuery, Babel, Webpack,',
       summary: `
         This is a noughts-and-crosses implementation built with ES6, JQuery and Sass and using Webpack as a build tool
         to run the Babel compiler and process the style declarations to CSS. The algorithm consists of three general
@@ -148,7 +153,8 @@ export class ProjectDataService {
     },
     {
       name: 'Game of Life Simulation',
-      tech: 'HTML, CSS, Foundation, JQuery',
+      tech: 'HTML, CSS, Foundation, Javascript, JQuery',
+      tags: 'HTML, CSS, Javascript, Foundation, JQuery,',
       summary: `
 
         `,

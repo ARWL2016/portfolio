@@ -6,7 +6,7 @@ const chalk = require('chalk');
 const app = express();
 app.use(compression());
 
-let port = process.env.PORT || 3000;
+let port = process.env.PORT || 4200;
 
 app.use(express.static(path.join(__dirname, 'dist')));
 

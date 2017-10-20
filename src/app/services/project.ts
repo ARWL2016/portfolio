@@ -1,6 +1,7 @@
 export interface Project {
   name: string;
   tech: string;
+  tags: string;
   summary: string;
   user_stories: string;
   highlights: [string];
@@ -11,7 +12,4 @@ export interface Project {
   page_speed_score: number;
   page_size: number;
   page_load_time: number;
-
-
-
 }
