@@ -170,9 +170,10 @@
 }
 
 .project-link {
-  @include project-buttons($highlight-color);
-  text-decoration: none;
-  font-weight: 500;
+  @include project-button-link();
+  // @include project-buttons($highlight-color);
+  // text-decoration: none;
+  // font-weight: 500;
   // float: right;
 }
 

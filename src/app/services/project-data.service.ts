@@ -8,7 +8,10 @@ export class ProjectDataService {
     {
       name: 'Book Exchange',
       tech: 'Angular 4.0, Typescript, MaterializeCSS, Node, Express, MongoDB, Mongoose, BCrypt, JSON Web Tokens',
-      tags: 'HTML, CSS, Javascript, Angular 4.0, Typescript, MaterializeCSS, Node, Express, MongoDB, Mongo, Mongoose, BCrypt, JSON Web Tokens',
+      tags: `
+        HTML, CSS, Javascript, Angular 4.0, Typescript, MaterializeCSS,
+        Node, Express, MongoDB, Mongo, Mongoose, BCrypt, JSON Web Tokens,`,
+      featured: true,
       summary: `
         Book Exchange is a book trading application which allows authenticated users to search for books on the Google Books API,
         build a book collection, view other users' collections, and send and receive requests for books.
@@ -34,7 +37,7 @@ export class ProjectDataService {
       image_order: 0,
       github_link: 'https://github.com/ARWL2016/book-trading-club',
       website_link: 'https://arwl-book-exchange.herokuapp.com/browse',
-      page_speed_score: 0,
+      page_speed_score: 91,
       page_size: 957,
       page_load_time: 4.19
     },
@@ -42,6 +45,7 @@ export class ProjectDataService {
       name: 'Votogo',
       tech: 'Angular 4.0, Typescript, Bootstrap, Node, Express, MongoDB, Mongoose',
       tags: 'HTML, CSS, Javascript, Angular 4.0, Typescript, Bootstrap, Node, Express, MongoDB, Mongo, Mongoose,',
+      featured: true,
       summary: `
         Votogo is a full stack CRUD application that allows users to create,
         share and view the results of surveys. It is built with Angular, Node, Express and MongoDB
@@ -65,7 +69,7 @@ export class ProjectDataService {
       image_order: 0,
       github_link: 'https://github.com/ARWL2016/voting-app',
       website_link: 'https://votogo.herokuapp.com/home',
-      page_speed_score: 0,
+      page_speed_score: 91,
       page_size: 530,
       page_load_time: 4.11
     },
@@ -73,6 +77,7 @@ export class ProjectDataService {
       name: 'Stock Tracker',
       tech: 'AngularJS 1.6, CSS, Node, Express, MySQL, Chart.js',
       tags: 'HTML, CSS, Javascript, AngularJS 1.6, CSS, Node, Express, MySQL, Chart.js,',
+      featured: true,
       summary: `
         Stock Tracker is an AngularJS application which charts time series data from the FTSE 100
         using the Quandl API. Data is cached once a day on a MySQL database, ensuring rapid load times.
@@ -101,6 +106,7 @@ export class ProjectDataService {
       name: 'JS-Calculator',
       tech: 'HTML, Sass, ES6, Webpack',
       tags: 'HTML, CSS, Javascript, HTML, Sass, ES6, Webpack,',
+      featured: false,
       summary: `
         This calculator was originally written in jQuery then refactored to native Javascript to reduce
         unnecessary dependencies. Webpack is used as a build tool to transpile ES6 and process the Sass stylesheets.
@@ -119,7 +125,7 @@ export class ProjectDataService {
       image_order: 0,
       github_link: 'https://github.com/ARWL2016/js-calculator',
       website_link: 'https://calculator-arwl.herokuapp.com/',
-      page_speed_score: 0,
+      page_speed_score: 91,
       page_size: 56,
       page_load_time: 0.79
     },
@@ -127,6 +133,7 @@ export class ProjectDataService {
       name: 'Noughts and Crosses Game',
       tech: 'HTML, Sass, Javascript, JQuery, Babel, Webpack',
       tags: 'HTML, CSS, Javascript, Sass, ES6, JQuery, Babel, Webpack,',
+      featured: true,
       summary: `
         This is a noughts-and-crosses implementation built with ES6, JQuery and Sass and using Webpack as a build tool
         to run the Babel compiler and process the style declarations to CSS. The algorithm consists of three general
@@ -147,7 +154,7 @@ export class ProjectDataService {
       image_order: 0,
       github_link: 'https://github.com/ARWL2016/nought-and-cross-app',
       website_link: 'https://arwl-noughts-and-crosses.herokuapp.com/',
-      page_speed_score: 97,
+      page_speed_score: 92,
       page_size: 185,
       page_load_time: 2.96
     },
@@ -155,6 +162,7 @@ export class ProjectDataService {
       name: 'Game of Life Simulation',
       tech: 'HTML, CSS, Foundation, Javascript, JQuery',
       tags: 'HTML, CSS, Javascript, Foundation, JQuery,',
+      featured: true,
       summary: `
 
         `,

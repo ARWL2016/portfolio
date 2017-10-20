@@ -2,6 +2,7 @@ export interface Project {
   name: string;
   tech: string;
   tags: string;
+  featured: boolean;
   summary: string;
   user_stories: string;
   highlights: [string];

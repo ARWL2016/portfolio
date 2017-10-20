@@ -1,7 +1,9 @@
 $max-content-width: 1000px;
 // $highlight-color: #f92561;
 $highlight-color: #2587ce;
-$light-grey-background: #ddd;
+// $light-grey-background: #ddd;
+$light-grey-background: #ededed;
+
 $tall-line-height: 1.8em;
 
 @mixin project-buttons($colour) {
@@ -22,6 +24,12 @@ $tall-line-height: 1.8em;
     cursor: pointer;
     background-color: $highlight-color;
   }
+}
+
+@mixin project-button-link() {
+  @include project-buttons($highlight-color);
+  text-decoration: none;
+  font-weight: 500;
 }
 
 @mixin project-links() {

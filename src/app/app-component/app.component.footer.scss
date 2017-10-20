@@ -23,20 +23,16 @@
 }
 
 .footer-column {
-  width: 33%;
-  padding: 20px;
-  // border: 1px dotted yellow;
-   &:nth-child(2) {
-    padding-right: 50px;
-    // border: 1px dotted white;
+  padding: 20px 20px 20px 50px;
+  // border: 1px dotted white;
+   &:nth-child(1) {
+    width: 40%;
   }
   &:nth-child(2) {
-    padding-left: 50px;
-    // border: 1px dotted white;
+    width: 30%;
   }
   &:nth-child(3) {
-    padding-left: 50px;
-    // border: 1px dotted white;
+    width: 30%;
   }
 }
 
@@ -60,4 +56,14 @@
   &:hover {
     text-decoration: none;
   }
+}
+
+.footer-line {
+  color: $highlight-color;
+  background-color: $highlight-color;
+  height: 2px;
+  border: 0;
+  width: 50%;
+  text-align: left;
+  margin: 10px auto 10px 0;
 }

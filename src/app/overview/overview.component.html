@@ -26,15 +26,14 @@
     </div>
     <div class="projects">
 
-      <article *ngFor="let data of projectData" class="project">
-        <img src={{data.image_url}} class="project-image" [ngStyle]="{'order': data.image_order}" >
+      <article *ngFor="let project of projectData" class="project">
+        <img src={{project.image_url}} class="project-image" [ngStyle]="{'order': project.image_order}" >
         <div class="project-description">
-          <h3 class="project-heading">{{ data.name | uppercase }}</h3>
-          <p  class="project-text">{{data.summary}}</p>
+          <h3 class="project-heading">{{project.name | uppercase }}</h3>
+          <p class="project-text">{{project.summary}}</p>
           <div class="project-links">
-            <button class="project-link">DETAILS</button>
-            <button class="project-link">VIEW WEBSITE</button>
-
+              <a class="project-link" target="_blank" href={{project.github_link}}><i class="project-link-icon fa fa-github" aria-hidden="true"></i> SOURCE CODE</a>
+              <a class="project-link" target="_blank" href={{project.website_link}}><i class="project-link-icon fa fa-external-link-square" aria-hidden="true"></i> VIEW WEBSITE</a>
             </div>
         </div>
       </article>

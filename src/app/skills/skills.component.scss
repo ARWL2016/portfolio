@@ -1,22 +1,53 @@
 @import '../../style-config.scss';
 
+// LAYOUT STYLES ********
+
+.page-wrapper {
+  background-color: $light-grey-background;
+}
+
+.content-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: white;
+  // border anchors div in place
+  border: 1px solid white; // DO NOT DELETE
+}
+
 .skills-section {
   max-width: 700px;
-  // width: 60%;
+  // border: 1px solid green;
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+// HEADING STYLES ********
+
+.skills-heading-wrapper {
   margin-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  margin-top: 50px;
+}
+
+.skills-icon {
+  height: 36px;
 }
 
 .skills-heading {
-  margin-bottom: 20px;
+  margin-left: 18px;
 }
+
+// TEXT STYLES ********
 
 .skills-text {
   margin-bottom: 20px;
   line-height: $tall-line-height;
   &:last-child {
-    margin-bottom: 100px;
+    margin-bottom: 50px;
   }
 }
 
@@ -25,31 +56,27 @@
 }
 
 
-// STACK TABLE *********************
+// TABLE STYLES *********************
 
 .skills-table {
   border:1px solid $highlight-color;
   border-collapse:collapse;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 .skills-table-cell {
   padding: 10px;
   font-weight: bold;
-  border-bottom:1px solid #555;
+  border: 1px solid darken($highlight-color, 30%);
   line-height: 1.5em;
   font-size: 1.1em;
 }
 
 .skills-table-cell:first-child {
-  //  border:1px solid green;
-
-   background-color:#DDD;
+  color: white;
+  background-color: $highlight-color;
 }
 
-.skills-table-cell:last-child {
-  //  border:1px solid blue;
-}
 
 
 

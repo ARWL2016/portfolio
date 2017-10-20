@@ -10,13 +10,14 @@ import { Project } from 'app/services/project';
 export class OverviewComponent implements OnInit {
 
   projectData: Project[];
+
   constructor(
     private _data: ProjectDataService
   ) { }
 
   ngOnInit() {
     console.log('overview loaded');
-    this.projectData = this._data.projectData;
+    this.projectData = this._data.projectData.filter(project => project.featured);
   }
 
 }
