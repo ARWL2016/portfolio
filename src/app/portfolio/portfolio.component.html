@@ -1,5 +1,10 @@
 <div  class="page-wrapper">
 
+  <div class="search-input-wrapper">
+    <input class="search-input" type="text" placeholder="search by technology">
+    <i class="search-icon fa fa-search" aria-hidden="true"></i>
+  </div>
+
 <section *ngIf="projectData" class="portfolio-content">
 
   <article class="project-card" *ngFor="let project of projectData">

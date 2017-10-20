@@ -1,18 +1,57 @@
 @import '../../style-config.scss';
 
-// PORTFOLIO WRAPPER
+// PAGE LAYOUT
 // *********************************************
 .page-wrapper {
   background-color: $light-grey-background;
-  border: 1px dotted blue;
+  // border: 1px dotted blue;
 }
 
-.portfolio-content {
+.portfolio-content,
+.search-input-wrapper {
   max-width: $max-content-width;
   width: 80%;
   margin: 0 auto;
+
+  // margin-bottom: 30px;
+  // border: 1px dotted red;
+}
+
+.portfolio-content {
+  // margin-top: 50px;
+}
+
+.search-input-wrapper {
+  position: relative;
+  border: 1px dotted lightgreen;
+}
+
+.search-input {
+  height: 46px;
+  font-size: 1.2em;
+  border-radius: 10px;
+  padding: 10px;
+  padding-left: 44px;
+  width: 400px;
   margin-top: 50px;
-  margin-bottom: 30px;
+  border: 1px solid $highlight-color;
+  &:focus {
+    box-shadow: 0 0 1px 1px $highlight-color;
+    outline: none;
+  }
+}
+
+.search-icon {
+  position: absolute;
+  top: 64px;
+  left: 16px;
+  font-size: 1.2em;
+}
+
+.search-button {
+  @include project-buttons($highlight-color);
+  height: 46px;
+  margin-left: 0;
 }
 
 // PROJECT CARD
@@ -30,7 +69,12 @@
     margin-bottom: 50px;
   }
   box-shadow: 2px 2px 4px #444;
-
+  &:first-child {
+    margin-top: 30px;
+  }
+  &:last-child {
+    margin-bottom: 100px;
+  }
 }
 
 .project-heading {
