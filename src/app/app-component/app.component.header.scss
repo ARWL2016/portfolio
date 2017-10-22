@@ -108,6 +108,32 @@
 @media (max-width: 930px) {
   .header-content {
     width: 95%;
+  }
+}
 
+@media (max-width: 670px) {
+  .header-content {
+    width: 95%;
+  }
+
+  .titlebar {
+    flex-direction: column;
+  }
+
+  .titlebar-list {
+    margin-top: 30px;
+  }
+
+  .titlebar-list-item {
+    margin-left: 10px;
+  }
+
+  .banner-header {
+    font-size: 2em;
+    margin-top: 100px;
+  }
+
+  .banner-text {
+    font-size: 1em;
   }
 }

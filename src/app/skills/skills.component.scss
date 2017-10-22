@@ -77,6 +77,12 @@
   background-color: $highlight-color;
 }
 
+@media (max-width: 800px) {
+  .skills-section {
+    width: 90%;
+  }
+}
+
 
 
 

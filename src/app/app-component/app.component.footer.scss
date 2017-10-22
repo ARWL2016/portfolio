@@ -19,6 +19,7 @@
   margin: 0 auto;
   padding: 30px;
   line-height: 1.8em;
+  overflow: auto;
   // border: 1px dotted yellow;
 }
 
@@ -66,4 +67,29 @@
   width: 50%;
   text-align: left;
   margin: 10px auto 10px 0;
+}
+
+@media (max-width: 930px) {
+  .footer-content-wrapper {
+    padding: 10px;
+  }
+
+  .footer-column {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 670px) {
+
+
+  .footer-column:nth-child(1) {
+    display: none;
+  }
+  .footer-column:nth-child(2) {
+    width: 50%;
+  }
+  .footer-column:nth-child(3) {
+    width: 50%;
+  }
+
 }

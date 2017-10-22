@@ -13,7 +13,7 @@ export class AppComponent implements DoCheck, OnInit {
   minHeight = '600px';
   username = 'alistairrwillis';
   hostname = 'gmail.com';
-  private fragment: string;
+  // private fragment: string;
 
   constructor (private router: Router) {
 

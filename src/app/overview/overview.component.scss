@@ -12,7 +12,7 @@
   flex-direction: column;
   line-height: 2rem;
   padding: 25px;
-  border: 1px dotted yellow;
+  // border: 1px dotted yellow;
   transition: width 300ms;
 }
 
@@ -22,13 +22,13 @@
 }
 
 .skill-card-heading {
-  border: 1px dotted yellow;
+  // border: 1px dotted yellow;
   margin-bottom: 10px;
   text-align: center;
 }
 
 .skill-card-text {
-  border: 1px dotted yellow;
+  // border: 1px dotted yellow;
   text-align: center;
 }
 
@@ -46,23 +46,15 @@
 
 .project-icon {
   width: 64px;
-  // display: block;
-  // margin: 0 auto;
-  // margin-top: 50px;
 }
 
 .section-heading {
   // border: 1px dotted blue;
   margin-left: 20px;
   border-radius: 30px;
-  // margin: 0 auto;
-  // margin-top: 30px;
   letter-spacing: 2px;
   font-size: 2.0em;
-  // width: 100%;
-  // text-align: center;
   background-color: #FFF;
-  // opacity: 0.7;
   padding: 5px 15px 5px 15px;
 }
 
@@ -81,12 +73,12 @@
 
 .image-column {
   width: 310px;
-  border: 1px dotted green;
+  // border: 1px dotted green;
   float: left;
 }
 
 .text-column {
-  border: 1px dotted green;
+  // border: 1px dotted green;
   float: left;
 }
 
@@ -113,9 +105,6 @@
 
 .project-link {
   @include project-button-link()
-  // @include project-buttons($highlight-color);
-  // text-decoration: none;
-  // font-weight: 500;
 }
 
 .project-link-icon {
@@ -141,5 +130,17 @@
   }
 }
 
+@media (max-width: 610px) {
+  .project-image {
+    display: none;
+  }
 
+  .image-column {
+    width: 0px;
+  }
+
+  .text-wrapper {
+    margin: 30px 30px 30px 30px;
+  }
+}
 
