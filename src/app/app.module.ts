@@ -27,7 +27,7 @@ import { SkillsComponent } from './skills/skills.component';
       { path: 'overview', component: OverviewComponent },
       { path: 'portfolio', component: PortfolioComponent },
       { path: 'skills', component: SkillsComponent },
-      { path: '', redirectTo: 'skills', pathMatch: 'full' },
+      { path: '', redirectTo: 'overview', pathMatch: 'full' },
     ])
   ],
   providers: [

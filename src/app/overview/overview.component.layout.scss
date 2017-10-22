@@ -8,7 +8,7 @@
   margin: 0 auto;
   margin-top: 50px;
   margin-bottom: 30px;
-  // border: 1px dotted blue;
+  border: 1px dotted blue;
 }
 
 .portfolio-section {
@@ -16,24 +16,30 @@
   background-color: $light-grey-background;
   // to cover a mysterious gap
   margin-bottom: -30px;
+  overflow: auto;
 }
 
 .portfolio-content {
-  display: flex;
-  flex-direction: column;
   max-width: $max-content-width;
   width: 80%;
   margin: 0 auto;
   margin-top: 50px;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
+  &:last-child {
+    margin-bottom: 100px;
+  }
 }
 
 // MEDIA QUERIES
 // *********************************************
 
-@media (max-width: 800px) {
+@media (max-width: 890px) {
 
-  .skills {
+  .skills-section {
     flex-direction: column;
+  }
+
+  .portfolio-content {
+    width: 95%;
   }
 }

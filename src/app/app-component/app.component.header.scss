@@ -19,6 +19,7 @@
   width: 80%;
   max-width: $max-content-width;
   margin: 0 auto;
+  transition: width 300ms;
 }
 
 .titlebar {
@@ -30,8 +31,9 @@
 }
 
 .titlebar-logo {
-  width: 200px;
-  height: 50px;
+  width: 250px;
+  height: 45px;
+  padding-top: 8px;
   flex-grow: 0;
   &:hover {
     cursor: pointer;
@@ -101,4 +103,11 @@
   color: white;
   padding: 15px 20px 15px 0;
 
+}
+
+@media (max-width: 930px) {
+  .header-content {
+    width: 95%;
+
+  }
 }

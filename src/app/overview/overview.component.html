@@ -3,17 +3,26 @@
       <article class="skill-card">
         <i class="fa fa-laptop skill-icon" aria-hidden="true"></i>
         <h3 class="skill-card-heading">Fluid Design</h3>
-        <p class="skill-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sapien leo, iaculis et augue sed, maximus porttitor nisl. Quisque mattis leo eu tortor vehicula, at commodo sem porttitor. Proin in sodales sem. Fusce magna quam, congue a malesuada a, mattis vel magna.</p>
+        <p class="skill-card-text">
+          Using front end libraries like Twitter Bootstrap, as well as custom CSS written in fuctional style with CSS,
+          I create web applications with fluid, responsive and intuitive user interfaces.
+        </p>
       </article>
       <article class="skill-card">
         <i class="fa fa-industry skill-icon" aria-hidden="true"></i>
         <h3 class="skill-card-heading">Modern Frameworks</h3>
-        <p class="skill-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sapien leo, iaculis et augue sed, maximus porttitor nisl. Quisque mattis leo eu tortor vehicula, at commodo sem porttitor. Proin in sodales sem. Fusce magna quam, congue a malesuada a, mattis vel magna.</p>
+        <p class="skill-card-text">
+          Utilizing a modern, component based framework like AngularJS and Angular / Typescript, I build modular web applications which are easy to quick to develop
+          and easy to maintain.
+        </p>
       </article>
       <article class="skill-card">
         <i class="fa fa-database skill-icon" aria-hidden="true"></i>
         <h3 class="skill-card-heading">Full Stack Javascript</h3>
-        <p class="skill-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sapien leo, iaculis et augue sed, maximus porttitor nisl. Quisque mattis leo eu tortor vehicula, at commodo sem porttitor. Proin in sodales sem. Fusce magna quam, congue a malesuada a, mattis vel magna.</p>
+        <p class="skill-card-text">
+          Using Javascript-based back end technologies such as Node, Express, and MongoDB, I benefit from
+          increased efficiency by working in a single language across the whole stack.
+        </p>
       </article>
 
 </section>
@@ -27,14 +36,18 @@
     <div class="projects">
 
       <article *ngFor="let project of projectData" class="project">
-        <img src={{project.image_url}} class="project-image" [ngStyle]="{'order': project.image_order}" >
-        <div class="project-description">
+        <div class="image-column">
+          <img src={{project.image_url}} class="project-image" [ngStyle]="{'order': project.image_order}" >
+        </div>
+        <div class="text-column">
+          <div class="text-wrapper">
           <h3 class="project-heading">{{project.name | uppercase }}</h3>
           <p class="project-text">{{project.summary}}</p>
-          <div class="project-links">
-              <a class="project-link" target="_blank" href={{project.github_link}}><i class="project-link-icon fa fa-github" aria-hidden="true"></i> SOURCE CODE</a>
-              <a class="project-link" target="_blank" href={{project.website_link}}><i class="project-link-icon fa fa-external-link-square" aria-hidden="true"></i> VIEW WEBSITE</a>
+            <div class="project-links">
+              <a class="project-link" target="_blank" href={{project.github_link}}><i class="project-link-icon fa fa-github" aria-hidden="true"></i>&nbsp;SOURCE&nbsp;CODE</a>
+              <a class="project-link" target="_blank" href={{project.website_link}}><i class="project-link-icon fa fa-external-link-square" aria-hidden="true"></i>&nbsp;VIEW&nbsp;WEBSITE</a>
             </div>
+          </div>
         </div>
       </article>
 

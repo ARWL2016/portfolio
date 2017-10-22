@@ -164,7 +164,8 @@ export class ProjectDataService {
       tags: 'HTML, CSS, Javascript, Foundation, JQuery,',
       featured: true,
       summary: `
-
+        This front end web application is an implementation of Conway's game of life using JQuery and Foundation.
+        Users can start and stop the simulation, add and remove cells, and change the speed.
         `,
       user_stories: `
         This application is an implementation of Conway's Game of Life, a grid of cells which follow a
