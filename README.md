@@ -55,3 +55,6 @@ in a single location.
     clash unpredicatably with custom styles.
   </p>
   <p>When it comes to front end design, I strive to build applications </p>
+
+
+    [ngStyle]="{'background-image': backgroundImage, 'min-height': minHeight}"

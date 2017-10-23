@@ -190,8 +190,16 @@
     margin-left: 220px;
   }
 
+}
 
+@media (max-width: 595px) {
+  .project-image-column {
+    display: none;
+  }
 
+  .project-links-wrapper {
+    margin-left: 20px;
+  }
 }
 
 

@@ -8,6 +8,7 @@
   color: white;
   min-height: 300px;
   bottom: 0;
+  // overflow:auto;
 
 }
 
@@ -25,6 +26,7 @@
 
 .footer-column {
   padding: 20px 20px 20px 50px;
+
   // border: 1px dotted white;
    &:nth-child(1) {
     width: 40%;
@@ -71,7 +73,7 @@
 
 @media (max-width: 930px) {
   .footer-content-wrapper {
-    padding: 10px;
+    padding: 30px 10px 10px 10px;
   }
 
   .footer-column {

@@ -1,56 +1,72 @@
-<section class="skills-section">
+  <div [@showPage]="'on'">
+  <!-- <div *ngIf="componentLoaded==='/overview'" class="banner"> -->
+    <section class="banner-section" >
+      <div class="banner-content">
+        <h1 class="banner-header">Full Stack Web Developer</h1>
+        <p class="banner-text">HTML | CSS | JAVASCRIPT | JQUERY | ANGULAR | NODE | EXPRESS | MONGODB | MYSQL</p>
 
-      <article class="skill-card">
-        <i class="fa fa-laptop skill-icon" aria-hidden="true"></i>
-        <h3 class="skill-card-heading">Fluid Design</h3>
-        <p class="skill-card-text">
-          Using front end libraries like Twitter Bootstrap, as well as custom CSS written in fuctional style with CSS,
-          I create web applications with fluid, responsive and intuitive user interfaces.
+        <p>
+          <a href="https://github.com/{{name}}" target="_blank"><i class="banner-icon-link fa fa-github" aria-hidden="true"></i></a>
+          <a href="mailto:{{username}}@{{hostname}}" target="_blank"><i class="banner-icon-link fa fa-envelope" aria-hidden="true"></i></a>
         </p>
-      </article>
-      <article class="skill-card">
-        <i class="fa fa-industry skill-icon" aria-hidden="true"></i>
-        <h3 class="skill-card-heading">Modern Frameworks</h3>
-        <p class="skill-card-text">
-          Utilizing a modern, component based framework like AngularJS and Angular / Typescript, I build modular web applications which are easy to quick to develop
-          and easy to maintain.
-        </p>
-      </article>
-      <article class="skill-card">
-        <i class="fa fa-database skill-icon" aria-hidden="true"></i>
-        <h3 class="skill-card-heading">Full Stack Javascript</h3>
-        <p class="skill-card-text">
-          Using Javascript-based back end technologies such as Node, Express, and MongoDB, I benefit from
-          increased efficiency by working in a single language across the whole stack.
-        </p>
-      </article>
+      </div>
+    </section>
+    <!-- banner end -->
 
-</section>
+  <section class="skills-section">
 
-<section class="portfolio-section">
-  <div class="portfolio-content">
-    <div class="section-heading-wrapper">
-      <img class="project-icon" src="../../assets/webpage-128.png">
-      <h2 class="section-heading">FEATURED PROJECTS</h2>
-    </div>
-    <div class="projects">
+        <article class="skill-card">
+          <i class="fa fa-laptop skill-icon" aria-hidden="true"></i>
+          <h3 class="skill-card-heading">Fluid Design</h3>
+          <p class="skill-card-text">
+            Using front end libraries like Twitter Bootstrap, as well as custom CSS written in functional style with CSS,
+            I create web applications with fluid, responsive and intuitive user interfaces.
+          </p>
+        </article>
+        <article class="skill-card">
+          <i class="fa fa-industry skill-icon" aria-hidden="true"></i>
+          <h3 class="skill-card-heading">Modern Frameworks</h3>
+          <p class="skill-card-text">
+            Utilizing a modern, component based framework like AngularJS and Angular / Typescript, I build modular web applications which are easy to quick to develop
+            and easy to maintain.
+          </p>
+        </article>
+        <article class="skill-card">
+          <i class="fa fa-database skill-icon" aria-hidden="true"></i>
+          <h3 class="skill-card-heading">Full Stack Javascript</h3>
+          <p class="skill-card-text">
+            Using Javascript-based back end technologies such as Node, Express, and MongoDB, I benefit from
+            increased efficiency by working in a single language across the whole stack.
+          </p>
+        </article>
 
-      <article *ngFor="let project of projectData" class="project">
-        <div class="image-column">
-          <img src={{project.image_url}} class="project-image" [ngStyle]="{'order': project.image_order}" >
-        </div>
-        <div class="text-column">
-          <div class="text-wrapper">
-          <h3 class="project-heading">{{project.name | uppercase }}</h3>
-          <p class="project-text">{{project.summary}}</p>
-            <div class="project-links">
-              <a class="project-link" target="_blank" href={{project.github_link}}><i class="project-link-icon fa fa-github" aria-hidden="true"></i>&nbsp;SOURCE&nbsp;CODE</a>
-              <a class="project-link" target="_blank" href={{project.website_link}}><i class="project-link-icon fa fa-external-link-square" aria-hidden="true"></i>&nbsp;VIEW&nbsp;WEBSITE</a>
+  </section>
+
+  <section class="portfolio-section">
+    <div class="portfolio-content">
+      <div class="section-heading-wrapper">
+        <img class="project-icon" src="../../assets/webpage-128.png">
+        <h2 class="section-heading">FEATURED WEB APPLICATIONS</h2>
+      </div>
+      <div class="projects">
+
+        <article *ngFor="let project of projectData" class="project">
+          <div class="image-column">
+            <img src={{project.image_url}} class="project-image" [ngStyle]="{'order': project.image_order}" >
+          </div>
+          <div class="text-column">
+            <div class="text-wrapper">
+            <h3 class="project-heading">{{project.name | uppercase }}</h3>
+            <p class="project-text">{{project.summary}}</p>
+              <div class="project-links">
+                <a class="project-link" target="_blank" href={{project.github_link}}><i class="project-link-icon fa fa-github" aria-hidden="true"></i>&nbsp;SOURCE&nbsp;CODE</a>
+                <a class="project-link" target="_blank" href={{project.website_link}}><i class="project-link-icon fa fa-external-link-square" aria-hidden="true"></i>&nbsp;VIEW&nbsp;WEBSITE</a>
+              </div>
             </div>
           </div>
-        </div>
-      </article>
+        </article>
 
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+</div>

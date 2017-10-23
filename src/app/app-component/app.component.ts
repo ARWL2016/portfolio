@@ -7,10 +7,10 @@ import { pageTransition } from '../../animations';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements DoCheck, OnInit {
-  componentLoaded = '/overview';
-  backgroundImage = 'url("../assets/splash-wide.png")';
-  minHeight = '600px';
+export class AppComponent implements OnInit {
+  // componentLoaded = '/overview';
+  // backgroundImage = 'url("../assets/splash-wide.png")';
+  // minHeight = '600px';
   username = 'alistairrwillis';
   hostname = 'gmail.com';
   // private fragment: string;
@@ -24,24 +24,26 @@ export class AppComponent implements DoCheck, OnInit {
   }
 
   navigateTo(page) {
-    window.scroll({top: 0, left: 0, behavior: 'smooth' });
+    // window.scroll({top: 0, left: 0, behavior: 'smooth' });
+
     this.router.navigate([page]);
+    this.scrollToTop();
   }
 
   scrollToTop() {
-    window.scrollTo(0, 0);
+    window.scroll({ top: 0, left: 0, behavior: 'smooth' });
   }
 
-  ngDoCheck() {
-    this.componentLoaded = this.router.url;
-    if (this.componentLoaded !== '/overview') {
-      this.backgroundImage = 'none';
-      this.minHeight = '90px';
-    } else {
-      this.backgroundImage = 'url("../assets/splash-wide.png")';
-      this.minHeight = '600px';
-    }
-  }
+  // ngDoCheck() {
+  //   this.componentLoaded = this.router.url;
+  //   if (this.componentLoaded !== '/overview') {
+  //     this.backgroundImage = 'none';
+  //     this.minHeight = '90px';
+  //   } else {
+  //     this.backgroundImage = 'url("../assets/splash-wide.png")';
+  //     this.minHeight = '600px';
+  //   }
+  // }
 
 
 }

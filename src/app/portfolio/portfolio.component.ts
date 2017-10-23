@@ -6,7 +6,8 @@ import { pageTransition } from '../../animations';
 @Component({
   selector: 'app-portfolio',
   templateUrl: './portfolio.component.html',
-  styleUrls: ['./portfolio.component.scss']
+  styleUrls: ['./portfolio.component.scss'],
+  animations: [pageTransition]
 })
 export class PortfolioComponent implements OnInit {
   projectData: Project[];

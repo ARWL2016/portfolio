@@ -1,6 +1,50 @@
 @import '../../style-config.scss';
 @import 'overview.component.layout.scss';
 
+// BANNER SECTION
+
+.banner-section {
+  // border: 1px dotted blue;
+  height: 650px;
+  // background-color: #000;
+  background-image: url('../../assets/splash-wide.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: auto;
+}
+
+.banner-content {
+  margin-top: 230px;
+}
+
+.banner-header {
+
+  margin-bottom: 20px;
+  border: 1px dotted white;
+  padding: 5px;
+  padding-left: 10px;
+  letter-spacing: 3px;
+  font-size: 3.2rem;
+  background-color: white;
+  opacity: 0.7;
+}
+
+.banner-text {
+  // border: 1px dotted white;
+  font-size: 1.2rem;
+  line-height: 30px;
+  color: white;
+  letter-spacing: 1.5px;
+}
+
+.banner-icon-link {
+  font-size: 2em;
+  color: white;
+  padding: 15px 20px 15px 0;
+
+}
+
 
 // SKILLS SECTION
 // *********************************************
@@ -127,6 +171,19 @@
 
   .skill-card {
     width: 100%;
+  }
+}
+
+@media (max-width: 670px) {
+
+
+  .banner-header {
+    font-size: 2em;
+    margin-top: 100px;
+  }
+
+  .banner-text {
+    font-size: 1em;
   }
 }
 

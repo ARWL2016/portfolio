@@ -1,5 +1,10 @@
 @import '../../style-config.scss';
 
+.banner-content {
+  max-width: $max-content-width;
+  margin: 0 auto;
+}
+
 .skills-section {
   display: flex;
   flex-direction: row;
@@ -7,7 +12,7 @@
   width: 80%;
   margin: 0 auto;
   margin-top: 50px;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   // border: 1px dotted blue;
 }
 
@@ -35,6 +40,10 @@
 
 @media (max-width: 890px) {
 
+  .banner-content {
+    width: 95%;
+  }
+
   .skills-section {
     flex-direction: column;
   }
@@ -43,3 +52,5 @@
     width: 95%;
   }
 }
+
+
