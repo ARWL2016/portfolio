@@ -22,7 +22,7 @@ app.listen(port, () => {
 
 setInterval(function() {
   // Wake up Heroku apps
-  // https.get("https://votogo.herokuapp.com/home");
+  https.get("https://alistair-willis.herokuapp.com/");
   https.get("https://votogo.herokuapp.com/home");
   https.get("https://arwl-book-exchange.herokuapp.com/browse");
   https.get("https://arwl-stock-tracker.herokuapp.com/main");
