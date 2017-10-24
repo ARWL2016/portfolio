@@ -11,8 +11,7 @@ export class AppComponent implements OnInit {
   // componentLoaded = '/overview';
   // backgroundImage = 'url("../assets/splash-wide.png")';
   // minHeight = '600px';
-  username = 'alistairrwillis';
-  hostname = 'gmail.com';
+
   // private fragment: string;
 
   constructor (private router: Router) {

@@ -12,6 +12,8 @@ import { pageTransition } from '../../animations';
 export class OverviewComponent implements OnInit {
 
   projectData: Project[];
+  username = 'alistairrwillis';
+  hostname = 'gmail.com';
 
   constructor(
     private _data: ProjectDataService
