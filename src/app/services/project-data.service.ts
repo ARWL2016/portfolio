@@ -104,8 +104,8 @@ export class ProjectDataService {
     },
     {
       name: 'Portfolio',
-      tech: 'CSS, Angular 4.0, Typescript, Express, Karma, Jasmine',
-      tags: 'HTML, CSS, Javascript, CSS, Express, Angular, Karma, Jasmine',
+      tech: 'Sass, Angular 4.0, Typescript, Express, Karma, Jasmine',
+      tags: 'HTML, CSS, Sass, Javascript, CSS, Express, Angular, Karma, Jasmine',
       featured: false,
       summary: `
 
@@ -117,8 +117,10 @@ export class ProjectDataService {
       `,
       highlights: [
         'responsive design created in native CSS and flexbox',
-        'components and services tested with Karma and Jasmine',
-        'angular/animations module used for smoother UI'
+        'angular/animations module used for smoother UI',
+        'design features consistent colour scheme and custom logo',
+        'uses Sass to configure consistent styles and allow one-step alterations',
+        'components and services tested with Karma and Jasmine'
       ],
       image_url: 'assets/portfolio-1-min.png',
       image_order: 0,

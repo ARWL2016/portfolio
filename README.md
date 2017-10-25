@@ -1,9 +1,7 @@
 ## Portfolio 
 
-
 #### To do 
-- create the footer 
-- add the portfolio page and model a single card 
+- portfolio stats need correcting
 
 #### About this Project 
 This project is a portfolio website created to showcase my personal web development projects and document my technical skills. 
@@ -57,4 +55,4 @@ in a single location.
   <p>When it comes to front end design, I strive to build applications </p>
 
 
-    [ngStyle]="{'background-image': backgroundImage, 'min-height': minHeight}"
+
