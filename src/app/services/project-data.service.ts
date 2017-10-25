@@ -103,6 +103,32 @@ export class ProjectDataService {
       page_load_time: 3.35
     },
     {
+      name: 'Portfolio',
+      tech: 'CSS, Angular 4.0, Typescript, Express, Karma, Jasmine',
+      tags: 'HTML, CSS, Javascript, CSS, Express, Angular, Karma, Jasmine',
+      featured: false,
+      summary: `
+
+        `,
+      user_stories: `
+        Portfolio website that allows users to view projects, link to live sites
+        and Github repos, and see a skills summary.
+
+      `,
+      highlights: [
+        'responsive design created in native CSS and flexbox',
+        'components and services tested with Karma and Jasmine',
+        'angular/animations module used for smoother UI'
+      ],
+      image_url: 'assets/portfolio-1-min.png',
+      image_order: 0,
+      github_link: 'https://github.com/ARWL2016/portfolio',
+      website_link: 'https://alistair-willis.herokuapp.com/overview',
+      page_speed_score: 0,
+      page_size: 1100,
+      page_load_time: 4.36
+    },
+    {
       name: 'JS-Calculator',
       tech: 'HTML, Sass, ES6, Webpack',
       tags: 'HTML, CSS, Javascript, HTML, Sass, ES6, Webpack,',

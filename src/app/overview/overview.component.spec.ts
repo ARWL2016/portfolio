@@ -9,7 +9,7 @@ import { ProjectDataService } from 'app/services/project-data.service';
 describe('OverviewComponent', () => {
   let comp: OverviewComponent;
   let fixture: ComponentFixture<OverviewComponent>;
-  let projectDataService: any;
+  let projectDataService: ProjectDataService;
   let h1: HTMLElement;
   let bh: DebugElement;
   class RouterStub { navigateByUrl(url: string) { return url; }};
