@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, DoCheck } from '@angular/core';
 import { ProjectDataService } from 'app/services/project-data.service';
 import { Project } from 'app/services/project';
 import { pageTransition } from '../../animations';
@@ -16,12 +16,26 @@ export class OverviewComponent implements OnInit {
   hostname = 'gmail.com';
 
   constructor(
-    private _data: ProjectDataService
+    private dataService: ProjectDataService
   ) { }
 
   ngOnInit() {
     console.log('overview loaded');
-    this.projectData = this._data.projectData.filter(project => project.featured);
+    console.log('OVERVIEW', this.dataService.projectData);
+
+    if (this.dataService.projectData) {
+      this.projectData = this.dataService.projectData.filter(project => project.featured);
+    } else {
+      this.dataService.getProjectData()
+        .then(data => {
+          this.projectData = data.filter(project => project.featured);
+      });
+    }
+
   }
+
+  // ngDoCheck() {
+  //   console.log('OVERVIEW DO CHECK', this.data.projectData);
+  // }
 
 }

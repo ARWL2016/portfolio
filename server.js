@@ -4,12 +4,18 @@ const path = require('path');
 const chalk = require('chalk');
 const https = require('https');
 
+const projectData = require('./data/project.data');
+
 const app = express();
 app.use(compression());
 
 let port = process.env.PORT || 4200;
 
 app.use(express.static(path.join(__dirname, 'dist')));
+
+app.get('/data/projects', (req, res) => {
+  res.status(200).send(projectData);
+})
 
 app.get('/*', (req, res) => {
   res.redirect('/');

@@ -1,7 +1,8 @@
 ## Portfolio 
 
 #### To do 
-- portfolio stats need correcting
+- update data and stats 
+
 
 #### About this Project 
 This project is a portfolio website created to showcase my personal web development projects and document my technical skills. 

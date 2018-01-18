@@ -15,18 +15,18 @@ export class PortfolioComponent implements OnInit {
   results: number;
 
   constructor(
-    private _data: ProjectDataService
+    private data: ProjectDataService
   ) { }
 
   ngOnInit() {
     console.log('portfolio loaded');
-    this.projectData = this._data.projectData;
+    this.projectData = this.data.projectData;
     this.results = this.projectData.length;
   }
 
   search() {
     const filter = this.searchTerm.trim().concat(',');
-    this.projectData = this.transform(this._data.projectData, filter);
+    this.projectData = this.transform(this.data.projectData, filter);
     this.results = this.projectData.length;
   }
 
