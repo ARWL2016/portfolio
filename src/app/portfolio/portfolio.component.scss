@@ -215,6 +215,12 @@
   position: fixed;
   right: 20px;
   bottom: 20px;
+  border-radius: 32px;
+  box-shadow: 3px 3px 5px rgba(0,0,0,0.2);
+  transition: all 500ms;
+  &:hover {
+    cursor:pointer
+  }
 }
 
 // MEDIA QUERIES

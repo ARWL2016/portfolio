@@ -22,6 +22,7 @@
   // to cover a mysterious gap
   margin-bottom: -30px;
   overflow: auto;
+  border-top: 3px solid #eee;
 }
 
 .portfolio-content {
@@ -38,14 +39,18 @@
 // MEDIA QUERIES
 // *********************************************
 
-@media (max-width: 890px) {
+@media (max-width: 1080px) {
 
   .banner-content {
     width: 95%;
   }
 
   .skills-section {
-    flex-direction: column;
+    flex-direction: column !important;
+  }
+
+  .skill-card {
+    width: 100% !important;
   }
 
   .portfolio-content {

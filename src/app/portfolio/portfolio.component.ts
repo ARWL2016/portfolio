@@ -1,8 +1,9 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener, Inject } from '@angular/core';
 import { ProjectDataService } from 'app/services/project-data.service';
 import { Project } from 'app/services/project';
 import { pageTransition } from '../../animations';
 import { FormControl } from '@angular/forms';
+import { DOCUMENT } from "@angular/platform-browser";
 import 'rxjs/add/operator/debounceTime';
 
 @Component({
@@ -17,11 +18,15 @@ export class PortfolioComponent implements OnInit {
   searchTerm = new FormControl();
   results: number;
 
+  showBackToTopIcon = false;
+
   constructor(
-    private dataService: ProjectDataService
+    private dataService: ProjectDataService,
+    @Inject(DOCUMENT) private document: Document
   ) { }
 
   ngOnInit() {
+    console.clear();
     console.log('portfolio loaded');
     if (this.dataService.projectData) {
       this.projectData = this.dataService.projectData;
@@ -41,6 +46,20 @@ export class PortfolioComponent implements OnInit {
         this.search();
     });
 
+  }
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    if (window.scrollY > 1000) {
+      this.showBackToTopIcon = true;
+    } else {
+      this.showBackToTopIcon = false;
+    }
+
+  }
+
+  public scrollToTop(): void {
+    window.scroll({ top: 0, left: 0, behavior: 'smooth' });
   }
 
   search() {

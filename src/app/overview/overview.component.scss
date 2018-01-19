@@ -21,14 +21,15 @@
 
 .banner-header {
   margin-bottom: 20px;
-  border: 1px dotted white;
+  // border: 1px dotted white;
 
   padding: 5px;
   padding-left: 10px;
   letter-spacing: 2.5px;
   font-size: 3.2rem;
-  background-color: white;
-  opacity: 0.7;
+  // background-color: rgba(255, 255, 255, 1);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1));
+  // opacity: 0.7;
 }
 
 .banner-text {
@@ -192,7 +193,7 @@
 // MEDIA QUERIES
 // *********************************************
 
-@media (max-width: 890px) {
+@media (max-width: 1000px) {
 
   .image-column {
     width: 200px;
@@ -202,9 +203,7 @@
     width: 150px;
   }
 
-  .skill-card {
-    width: 100%;
-  }
+
 }
 
 @media (max-width: 670px) {

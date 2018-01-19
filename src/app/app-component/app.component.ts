@@ -17,15 +17,16 @@ export class AppComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    console.clear();
     this.data.getProjectData();
   }
 
-  navigateTo(page) {
+  public navigateTo(page): void {
     this.router.navigate([page]);
     this.scrollToTop();
   }
 
-  scrollToTop() {
+  public scrollToTop(): void {
     window.scroll({ top: 0, left: 0, behavior: 'smooth' });
   }
 
