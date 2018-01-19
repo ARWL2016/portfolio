@@ -1,10 +1,16 @@
 <div class="page-wrapper" [@showPage]="'on'">
 
   <div class="search-wrapper" >
-    <form (keyup)="search()">
+    <form >
       <label for="search">SEARCH BY TECHNOLOGY</label>
       <div class="input-wrapper">
-        <input class="search-input" name="search" type="text" [(ngModel)]="searchTerm" placeholder="e.g. angular">
+        <input
+          class="search-input"
+          name="search"
+          type="text"
+          autocomplete="off"
+          [formControl]="searchTerm"
+          placeholder="e.g. angular">
         <i class="search-icon fa fa-search" aria-hidden="true"></i>
       </div>
       <p *ngIf="results !== 1" class="search-result">{{results}} results</p>
@@ -16,6 +22,11 @@
 
   <article class="project-card" *ngFor="let project of projectData" [@showPage]="'on'">
     <h1 class="project-heading">{{ project.name }}</h1>
+    <span class="project-stack-type">
+        <i *ngIf="project.type.frontend" title="front end" class="fa fa-desktop" aria-hidden="true"></i>
+        <i *ngIf="project.type.server" title="server" class="fa fa-server" aria-hidden="true"></i>
+        <i *ngIf="project.type.database" title="database" class="fa fa-database" aria-hidden="true"></i>
+    </span>
     <p class="project-tech">{{ project.tech | uppercase }}</p>
     <div class="project-columns">
       <div class="project-image-column">

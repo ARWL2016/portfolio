@@ -66,15 +66,20 @@
 
 .skills-table-cell {
   padding: 10px;
-  font-weight: bold;
-  border: 1px solid darken($highlight-color, 30%);
   line-height: 1.5em;
   font-size: 1.1em;
 }
 
 .skills-table-cell:first-child {
   color: white;
+  font-weight: bold;
   background-color: $highlight-color;
+  border: 1px solid darken($highlight-color, 30%);
+
+}
+
+.skills-table-cell:nth-child(2) {
+  border: 1px solid #555;
 }
 
 @media (max-width: 800px) {

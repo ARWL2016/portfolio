@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -22,12 +22,13 @@ import { SkillsComponent } from './skills/skills.component';
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpModule,
     RouterModule.forRoot([
       { path: 'overview', component: OverviewComponent },
       { path: 'portfolio', component: PortfolioComponent },
       { path: 'skills', component: SkillsComponent },
-      { path: '', redirectTo: 'portfolio', pathMatch: 'full' },
+      { path: '', redirectTo: 'overview', pathMatch: 'full' },
     ])
   ],
   providers: [

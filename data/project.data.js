@@ -1,6 +1,7 @@
 const projectData = [
   {
     name: 'Pathfinder',
+    type: {frontend: true, server: true, database: true},
     tech: 'AngularJS 1.5, Node, Express, Mongo, Mongoose, Passport, Google Places API,',
     tags: `
     HTML, CSS, Angular, AngularJS, Mongo, Mongodb, mongoose, passport
@@ -24,7 +25,7 @@ const projectData = [
       'fully responsive design',
       'client-side caching of search results'
     ],
-    image_url: 'assets/pathfinder.png',
+    image_url: 'assets/images/pathfinder.png',
     image_order: 0,
     github_link: 'https://github.com/ARWL2016/nightlife',
     website_link: 'https://pathfinder-2017.herokuapp.com/',
@@ -35,6 +36,7 @@ const projectData = [
   },
   {
     name: 'Book Exchange',
+    type: {frontend: true, server: true, database: true},
     tech: 'Angular 4.0, Typescript, MaterializeCSS, Node, Express, MongoDB, Mongoose, BCrypt, JSON Web Tokens,',
     tags: `
       HTML, CSS, Javascript, Angular, Typescript, MaterializeCSS,
@@ -59,7 +61,7 @@ const projectData = [
       'REST API tested with Mocha and Expect, plus Supertest for HTTP request mocking',
       'data persisted using MongoDB cloud provider MLab'
     ],
-    image_url: 'assets/book-exchange-min.png',
+    image_url: 'assets/images/book-exchange-min.png',
     image_order: 0,
     github_link: 'https://github.com/ARWL2016/book-trading-club',
     website_link: 'https://arwl-book-exchange.herokuapp.com/browse',
@@ -70,6 +72,7 @@ const projectData = [
   },
   {
     name: 'Votogo',
+    type: {frontend: true, server: true, database: true},
     tech: 'Angular 4.0, Typescript, Bootstrap, Node, Express, MongoDB, Mongoose',
     tags: 'HTML, CSS, Javascript, Angular, Typescript, Bootstrap, Node, Express, MongoDB, Mongo, Mongoose, Heroku, Mlab,',
     featured: true,
@@ -91,7 +94,7 @@ const projectData = [
       'Chart.js doughtnut chart implemented as Angular child component',
       'authentication module uses JSON Web Tokens to implement secure sessions'
     ],
-    image_url: 'assets/votogo-sm.png',
+    image_url: 'assets/images/votogo-sm.png',
     image_order: 0,
     github_link: 'https://github.com/ARWL2016/voting-app',
     website_link: 'https://votogo.herokuapp.com/home',
@@ -102,9 +105,10 @@ const projectData = [
   },
   {
     name: 'Stock Tracker',
+    type: {frontend: true, server: true, database: true},
     tech: 'AngularJS 1.6, CSS, Node, Express, MySQL, Chart.js',
     tags: 'HTML, CSS, Javascript, AngularJS, Angular, CSS, Node, Express, MySQL, Chart.js,',
-    featured: true,
+    featured: false,
     summary: `
       Stock Tracker is an AngularJS application which charts time series data from the FTSE 100
       using the Quandl API. Data is cached once a day on a MySQL database, ensuring rapid load times.
@@ -121,7 +125,7 @@ const projectData = [
       'back end makes daily series of requests to Quandl API to update stock data',
       'data persisted on a MySQL database at JawsDB via Heroku'
     ],
-    image_url: 'assets/stocko.png',
+    image_url: 'assets/images/stocko.png',
     image_order: 0,
     github_link: 'https://github.com/ARWL2016/stock-tracker',
     website_link: 'https://arwl-stock-tracker.herokuapp.com/main',
@@ -130,8 +134,10 @@ const projectData = [
     pingdom_average_load_time: 3.35,
     mozilla_security_grade: ''
   },
+
   {
     name: 'Open Weather',
+    type: {frontend: true, server: true, database: false},
     tech: 'Vue 2.4, Sass, Webpack, Node, Express, Open Weather Map API,',
     tags: 'html, css, sass, vue, vuejs, node, express, webpack',
     featured: true,
@@ -148,7 +154,8 @@ const projectData = [
       'responsive, mobile first design',
       'compiled with Babel and Webpack'
     ],
-    image_url: 'assets/weather-app.png',
+    image_url: 'assets/images/weather-app.png',
+    // image_url: 'assets/images/recipe-book.jpg',
     image_order: 0,
     github_link: 'https://github.com/ARWL2016/weather',
     website_link: 'https://arwl-weather.herokuapp.com',
@@ -158,7 +165,34 @@ const projectData = [
     mozilla_security_grade: 'C'
   },
   {
+    name: 'Recipe Book',
+    type: {frontend: true, server: false, database: false},
+    tech: 'Angular 4.0, Typescript, CSS, Bootstrap',
+    tags: 'HTML, CSS, Javascript, Typescript, Angular, Node, Express, Toastr, Bootstrap,',
+    featured: false,
+    summary: ``,
+    user_stories: `
+      A front end CRUD application which allows users to view, create, edit and delete recipe information.
+    `,
+    highlights: [
+      'responsive design',
+      'reactive form style',
+      'toastr notifications',
+      'angular animations',
+      'Ahead-of-Time compilation',
+    ],
+    image_url: 'assets/images/recipe-book.jpg',
+    image_order: 0,
+    github_link: 'https://github.com/ARWL2016/recipe-book-cli',
+    website_link: 'https://ng-recipe-book.herokuapp.com',
+    google_page_speed_score: 89,
+    pingdom_page_size_kb: 262,
+    pingdom_average_load_time: 1.58,
+    mozilla_security_grade: 'C'
+  },
+  {
     name: 'Portfolio',
+    type: {frontend: true, server: true, database: false},
     tech: 'Sass, Angular 4.0, Typescript, Express, Karma, Jasmine',
     tags: 'HTML, CSS, Sass, Javascript, CSS, Express, Angular, Karma, Jasmine',
     featured: false,
@@ -177,7 +211,7 @@ const projectData = [
       'uses Sass to configure consistent styles and allow one-step alterations',
       'components and services tested with Karma and Jasmine'
     ],
-    image_url: 'assets/portfolio-1-min.png',
+    image_url: 'assets/images/portfolio-1-min.png',
     image_order: 0,
     github_link: 'https://github.com/ARWL2016/portfolio',
     website_link: 'https://alistair-willis.herokuapp.com/overview',
@@ -188,6 +222,7 @@ const projectData = [
   },
   {
     name: 'JS-Calculator',
+    type: {frontend: true, server: false, database: false},
     tech: 'HTML, Sass, ES6, Webpack',
     tags: 'HTML, CSS, Javascript, Sass, ES6, Webpack,',
     featured: false,
@@ -205,7 +240,7 @@ const projectData = [
       'custom UI design written in Sass with modular structure',
       'uses Webpack to transpile ES6 and Sass; code splitting produces separate CSS bundle',
       'DOM manipulation written in native Javascript; DOM selections cached for greater efficiency'],
-    image_url: 'assets/calculator.png',
+    image_url: 'assets/images/calculator.png',
     image_order: 0,
     github_link: 'https://github.com/ARWL2016/js-calculator',
     website_link: 'https://calculator-arwl.herokuapp.com/',
@@ -216,6 +251,7 @@ const projectData = [
   },
   {
     name: 'Noughts and Crosses Game',
+    type: {frontend: true, server: false, database: false},
     tech: 'HTML, Sass, Javascript, JQuery, Babel, Webpack',
     tags: 'HTML, CSS, Javascript, Sass, ES6, JQuery, Babel, Webpack,',
     featured: true,
@@ -235,7 +271,7 @@ const projectData = [
       'Sass variables and color functions used to ensure consistent color design',
       'uses Webpack to transpile Javascript to ES5 and Sass to CSS'
     ],
-    image_url: 'assets/tictactoe.png',
+    image_url: 'assets/images/tictactoe.png',
     image_order: 0,
     github_link: 'https://github.com/ARWL2016/nought-and-cross-app',
     website_link: 'https://arwl-noughts-and-crosses.herokuapp.com/',
@@ -246,6 +282,7 @@ const projectData = [
   },
   {
     name: 'Game of Life Simulation',
+    type: {frontend: true, server: false, database: false},
     tech: 'HTML, CSS, Foundation, Javascript, JQuery',
     tags: 'HTML, CSS, Javascript, Foundation, JQuery,',
     featured: false,
@@ -263,7 +300,7 @@ const projectData = [
       'responsive navigation panel created with Foundation',
       'object literals used for code encapsulation'
       ],
-    image_url: 'assets/game-of-life-min.png',
+    image_url: 'assets/images/game-of-life-min.png',
     image_order: 0,
     github_link: 'https://github.com/ARWL2016/game-of-life-jquery',
     website_link: 'https://arwl-game-of-life.herokuapp.com/',
@@ -274,6 +311,7 @@ const projectData = [
   },
   {
     name: 'Image Search Abstraction Layer',
+    type: {frontend: true, server: true, database: false},
     tech: 'Node, Express, Mocha, Chai, Heroku, Google Custom Search',
     tags: 'html, css, node, express, mocha, chai, heroku, helmet, winston',
     featured: false,
@@ -289,7 +327,7 @@ const projectData = [
       'modular architecture',
       'tested with Mocha / Chai'
       ],
-    image_url: 'assets/image-search.png',
+    image_url: 'assets/images/image-search.png',
     image_order: 0,
     github_link: 'https://github.com/ARWL2016/image-search',
     website_link: 'https://arwl-image-search.herokuapp.com/',

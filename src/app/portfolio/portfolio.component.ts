@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ProjectDataService } from 'app/services/project-data.service';
 import { Project } from 'app/services/project';
 import { pageTransition } from '../../animations';
+import { FormGroup, FormControl, FormBuilder, } from '@angular/forms';
+import 'rxjs/add/operator/debounceTime';
 
 @Component({
   selector: 'app-portfolio',
@@ -11,7 +13,8 @@ import { pageTransition } from '../../animations';
 })
 export class PortfolioComponent implements OnInit {
   projectData: Project[] = [];
-  searchTerm: string;
+  // searchTerm: string;
+  searchTerm = new FormControl();
   results: number;
 
   constructor(
@@ -27,13 +30,21 @@ export class PortfolioComponent implements OnInit {
       this.dataService.getProjectData()
         .then(data => {
           this.projectData = data;
+          console.log(this.projectData);
           this.results = this.projectData.length;
       });
     }
+
+    this.searchTerm.valueChanges
+      // .debounceTime(200)
+      .subscribe(newValue => {
+        this.search();
+    });
+
   }
 
   search() {
-    const filter = this.searchTerm.trim().concat(',');
+    const filter = this.searchTerm.value.trim().concat(',');
     this.projectData = this.transform(this.dataService.projectData, filter);
     this.results = this.projectData.length;
   }
@@ -45,7 +56,8 @@ export class PortfolioComponent implements OnInit {
       return allProjects.filter(project => project.tags.toLocaleLowerCase().match(filterBy));
     }
     return allProjects;
-
   }
+
+
 
 }
