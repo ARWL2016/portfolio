@@ -21,8 +21,6 @@ export class AppComponent implements OnInit {
   }
 
   navigateTo(page) {
-    // window.scroll({top: 0, left: 0, behavior: 'smooth' });
-
     this.router.navigate([page]);
     this.scrollToTop();
   }

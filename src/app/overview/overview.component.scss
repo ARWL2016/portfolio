@@ -12,6 +12,7 @@
   background-size: cover;
   background-position: center;
   overflow: auto;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .banner-content {
@@ -21,9 +22,10 @@
 .banner-header {
   margin-bottom: 20px;
   border: 1px dotted white;
+
   padding: 5px;
   padding-left: 10px;
-  letter-spacing: 3px;
+  letter-spacing: 2.5px;
   font-size: 3.2rem;
   background-color: white;
   opacity: 0.7;
@@ -31,7 +33,7 @@
 
 .banner-text {
   // border: 1px dotted white;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   line-height: 30px;
   color: white;
   letter-spacing: 1.5px;
@@ -55,6 +57,8 @@
   flex-direction: column;
   line-height: 2rem;
   padding: 25px;
+  box-shadow: $box-shadow-style-small;
+  margin: 10px 15px;
   // border: 1px dotted yellow;
   transition: width 300ms;
 }
@@ -66,8 +70,11 @@
 
 .skill-card-heading {
   // border: 1px dotted yellow;
+  margin-top: 3px;
   margin-bottom: 10px;
   text-align: center;
+  font-family: $heading-font;
+  border-bottom: 3px solid $highlight-color;
 }
 
 .skill-card-text {
@@ -78,32 +85,55 @@
 // PORTFOLIO SECTION
 // *********************************************
 
+.section-banner {
+
+  margin-top: 50px;
+  padding: 30px;
+  // border: 1px dotted blue;
+  background-color: white;
+  box-shadow: $box-shadow-style;
+
+
+}
+
 .section-heading-wrapper {
+  // border: 1px dotted blue;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
-  margin-top: 100px;
-  // border: 1px dotted blue;
+  justify-content: left;
+  margin-bottom: 30px;
 }
 
 .project-icon {
-  width: 64px;
+  height: 36px;
+
 }
 
 .section-heading {
   // border: 1px dotted blue;
-  margin-left: 20px;
-  border-radius: 30px;
+  margin-left: 18px;
   letter-spacing: 2px;
-  font-size: 2.0em;
-  background-color: #FFF;
-  padding: 5px 15px 5px 15px;
+  font-size: 1.5em;
+  font-family: $heading-font;
+  padding: 3px 0;
+  border-bottom: 3px solid $highlight-color;
 }
+
+.section-banner-text {
+  line-height: $tall-line-height;
+
+  a {
+    @include project-links();
+  }
+}
+
+// PROJECT CARDS
+// ***********************
 
 .project {
   background-color: #fff;
-  border-radius: 5px;
+  // border-radius: 5px;
   display: flex;
   flex-direction: row;
   margin-top: 50px;
@@ -112,6 +142,10 @@
   &:last-child {
     margin-bottom: 50px;
   }
+}
+
+.project-heading {
+  font-family: $heading-font;
 }
 
 .image-column {

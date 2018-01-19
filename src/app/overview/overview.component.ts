@@ -2,6 +2,7 @@ import { Component, OnInit, DoCheck } from '@angular/core';
 import { ProjectDataService } from 'app/services/project-data.service';
 import { Project } from 'app/services/project';
 import { pageTransition } from '../../animations';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-overview',
@@ -16,7 +17,8 @@ export class OverviewComponent implements OnInit {
   hostname = 'gmail.com';
 
   constructor(
-    private dataService: ProjectDataService
+    private dataService: ProjectDataService,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -32,6 +34,11 @@ export class OverviewComponent implements OnInit {
       });
     }
 
+  }
+
+  navigateTo(page) {
+    this.router.navigate([page]);
+    window.scroll({ top: 0, left: 0, behavior: 'smooth' });
   }
 
   // ngDoCheck() {

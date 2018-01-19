@@ -4,8 +4,9 @@
 
 .page-wrapper {
   background-color: $light-grey-background;
-  // border: 1px solid $light-grey-background;
-  min-height: 70vh;
+  min-height: 95vh;
+  // prevents white space at bottom
+  overflow: hidden;
 }
 
 .portfolio-content,
@@ -92,6 +93,7 @@
 
 .project-heading {
   margin-bottom: 10px;
+  font-family: 'Montserrat', sans-serif;
   font-size: 2.2em;
   color: $highlight-color;
   display: inline-block;
@@ -207,6 +209,12 @@
 
 .project-link-icon {
   font-size: 1.2em;
+}
+
+.back-to-top-icon {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
 }
 
 // MEDIA QUERIES
