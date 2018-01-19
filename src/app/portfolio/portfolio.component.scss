@@ -4,12 +4,12 @@
 
 .page-wrapper {
   background-color: $light-grey-background;
-  border: 1px solid $light-grey-background;
+  // border: 1px solid $light-grey-background;
   min-height: 70vh;
 }
 
 .portfolio-content,
-.search-input-wrapper {
+.search-wrapper {
   max-width: $max-content-width;
   width: 80%;
   margin: 0 auto;
@@ -20,33 +20,51 @@
 
 // SEARCH INPUT ************
 
-.search-input-wrapper {
-  position: relative;
-  // border: 1px dotted lightgreen;
-}
+.search-wrapper {
 
-.search-input {
-  height: 46px;
-  font-size: 1.2em;
-  border-radius: 10px;
-  padding: 10px;
-  padding-left: 44px;
-  width: 500px;
-  margin-top: 50px;
-  border: 1px solid $highlight-color;
-  transition: box-shadow 400ms;
-  &:focus {
-    box-shadow: 0 0 1px 1px $highlight-color;
-    outline: none;
+  // border: 1px dotted lightgreen;
+  padding-top: 50px;
+  // width: 100%;
+
+  label {
+    display: block;
+    font-size: 0.9em;
+    font-weight: bold;
+    letter-spacing: 0.1px;
+    padding: 5px 8px;
+  }
+
+  .input-wrapper {
+    position: relative;
+    // border: 1px dotted red;
+
+    i.search-icon {
+      position: absolute;
+      top: 14px;
+      left: 12px;
+      font-size: 1.2em;
+    }
+
+    input {
+      height: 46px;
+      font-size: 1.2em;
+      border-radius: 10px;
+      padding: 10px;
+      padding-left: 44px;
+      width: 50%;
+      box-shadow: $box-shadow-style;
+      border: 1px solid $highlight-color;
+      transition: box-shadow 400ms;
+      &:focus {
+        box-shadow: 0 0 1px 1px $highlight-color;
+        outline: none;
+      }
+    }
   }
 }
 
-.search-icon {
-  position: absolute;
-  top: 64px;
-  left: 16px;
-  font-size: 1.2em;
-}
+
+
 
 .search-result {
   color: #444;
@@ -63,7 +81,7 @@
   margin-top: 50px;
   padding: 30px;
   width: 100%;
-  box-shadow: 2px 2px 4px #444;
+  box-shadow: $box-shadow-style;
   &:first-child {
     margin-top: 30px;
   }
@@ -83,7 +101,7 @@
   letter-spacing: 2px;
   color: #444;
   margin-bottom: 10px;
-  background-color: $light-grey-background;
+  background-color: $mustard-yellow;
   padding: 8px;
   border-radius: 3px;
 }
@@ -136,8 +154,8 @@
 
 .project-stat {
   font-weight: bold;
-  font-size: 0.9em;
-  letter-spacing: 2px;
+  font-size: 0.85em;
+  letter-spacing: 1.5px;
   line-height: 2.2em;
   // margin-top: 12px;
   // margin-left: 12px;
@@ -145,12 +163,21 @@
 }
 
 .project-stat-badge {
-  background-color: $highlight-color;
+  background-color: $mustard-yellow;
   padding: 3px 8px 3px 8px;
   border-radius: 10px;
-  color: white;
-  font-size: 0.9em;
+  color: black;
+  font-size: 0.8em;
   text-align: right;
+
+}
+
+.tooltip {
+  font-size: 1em;
+  color: $highlight-color;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 // LINKS ********************
@@ -175,10 +202,10 @@
 // MEDIA QUERIES
 // *********************************************
 
-@media (max-width: 930px) {
+@media screen and (max-width: 930px) {
 
   .portfolio-content,
-  .search-input-wrapper {
+  .search-wrapper {
     width: 95%;
   }
 
@@ -192,7 +219,16 @@
 
 }
 
-@media (max-width: 595px) {
+@media screen and (max-width: 595px) {
+
+  .search-wrapper {
+    .input-wrapper {
+      input {
+        width: 100%;
+      }
+    }
+  }
+
   .project-image-column {
     display: none;
   }

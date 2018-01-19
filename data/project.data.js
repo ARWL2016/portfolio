@@ -1,7 +1,7 @@
 const projectData = [
   {
     name: 'Pathfinder',
-    tech: 'AngularJS 1.5, Node, Express, Mongo, Mongoose, Passport, Google Places API',
+    tech: 'AngularJS 1.5, Node, Express, Mongo, Mongoose, Passport, Google Places API,',
     tags: `
     HTML, CSS, Angular, AngularJS, Mongo, Mongodb, mongoose, passport
     npm, bower, babel, heroku, mlab, oauth`,
@@ -18,14 +18,11 @@ const projectData = [
        Twitter or Github account and add a location and time to their diary.
     `,
     highlights: [
-      'mixture of angular controller and component styles',
-      'data served from four Google API services: Text Search, Place Details, Place Photos and Geocode',
       'social login uses Google, Twitter and Github OAuth',
-      'cloud data provider MLab used for development and production',
-      'responsive design',
-      'client-side caching of search results (local storage) for better UX',
-      'client side errors logged to MLab',
-      'written in ES6: client-side code transpiled to ES5 and minified with babel',
+      'data served from four separate Google API services',
+      'cloud data provider MLab used in development and production',
+      'fully responsive design',
+      'client-side caching of search results'
     ],
     image_url: 'assets/pathfinder.png',
     image_order: 0,
@@ -38,7 +35,7 @@ const projectData = [
   },
   {
     name: 'Book Exchange',
-    tech: 'Angular 4.0, Typescript, MaterializeCSS, Node, Express, MongoDB, Mongoose, BCrypt, JSON Web Tokens',
+    tech: 'Angular 4.0, Typescript, MaterializeCSS, Node, Express, MongoDB, Mongoose, BCrypt, JSON Web Tokens,',
     tags: `
       HTML, CSS, Javascript, Angular, Typescript, MaterializeCSS,
       Node, Express, MongoDB, Mongo, Mongoose, BCrypt, JSON Web Tokens,`,
@@ -56,12 +53,10 @@ const projectData = [
     `,
     highlights: [
       'UI implements progress bar, notifications, and background username check during registration',
-      'MaterializeCSS used for navbar and form components, plus icons',
-      'Google Books API basic searches need no API key so requests made from front end for speed',
-      'three entity data structure: user, book and request',
-      'Typescript interfaces used to enforce data structure on front end',
-      'authentication implemented with Bcrypt password encryption and JSON Web Tokens added to HTTP headers',
-      'REST api tested with Mocha and Expect, using Supertest for HTTP request mocking; separate test database with mock data',
+      'MaterializeCSS used for navbar, form components and icons',
+      'consumes Google Books API for book data',
+      'authentication implemented with Bcrypt password encryption and JSON Web Tokens',
+      'REST API tested with Mocha and Expect, plus Supertest for HTTP request mocking',
       'data persisted using MongoDB cloud provider MLab'
     ],
     image_url: 'assets/book-exchange-min.png',
@@ -76,7 +71,7 @@ const projectData = [
   {
     name: 'Votogo',
     tech: 'Angular 4.0, Typescript, Bootstrap, Node, Express, MongoDB, Mongoose',
-    tags: 'HTML, CSS, Javascript, Angular, Typescript, Bootstrap, Node, Express, MongoDB, Mongo, Mongoose, Heroku, Mlab',
+    tags: 'HTML, CSS, Javascript, Angular, Typescript, Bootstrap, Node, Express, MongoDB, Mongo, Mongoose, Heroku, Mlab,',
     featured: true,
     summary: `
       Votogo is a full stack CRUD application that allows users to create,
@@ -94,7 +89,6 @@ const projectData = [
       'UI implemented using Bootstrap panels, buttons and navigation bar',
       'Angular animations module used for smoothing transitions during data requests',
       'Chart.js doughtnut chart implemented as Angular child component',
-      'two entity data structure: users and votes persisted with MongoDB using Mongoose schema',
       'authentication module uses JSON Web Tokens to implement secure sessions'
     ],
     image_url: 'assets/votogo-sm.png',
@@ -131,14 +125,14 @@ const projectData = [
     image_order: 0,
     github_link: 'https://github.com/ARWL2016/stock-tracker',
     website_link: 'https://arwl-stock-tracker.herokuapp.com/main',
-    google_page_speed_score: 0,
+    google_page_speed_score: 86,
     pingdom_page_size_kb: 264,
     pingdom_average_load_time: 3.35,
     mozilla_security_grade: ''
   },
   {
     name: 'Open Weather',
-    tech: 'Vue 2.4, Sass, Webpack, Node, Express, Open Weather Map API',
+    tech: 'Vue 2.4, Sass, Webpack, Node, Express, Open Weather Map API,',
     tags: 'html, css, sass, vue, vuejs, node, express, webpack',
     featured: true,
     summary: `
@@ -254,7 +248,7 @@ const projectData = [
     name: 'Game of Life Simulation',
     tech: 'HTML, CSS, Foundation, Javascript, JQuery',
     tags: 'HTML, CSS, Javascript, Foundation, JQuery,',
-    featured: true,
+    featured: false,
     summary: `
       This front end web application is an implementation of Conway's game of life using JQuery and Foundation.
       Users can start and stop the simulation, add and remove cells, and change the speed.
@@ -283,9 +277,7 @@ const projectData = [
     tech: 'Node, Express, Mocha, Chai, Heroku, Google Custom Search',
     tags: 'html, css, node, express, mocha, chai, heroku, helmet, winston',
     featured: false,
-    summary: `
-
-      `,
+    summary: ``,
     user_stories: `
     This API microservice conducts an image search of the https://imgur.com/* domain using Google Custom Search.
     Users can enter a search term and the API will respond with a list of image URLs and alt texts.

@@ -1,9 +1,12 @@
 <div class="page-wrapper" [@showPage]="'on'">
 
-  <div class="search-input-wrapper" >
+  <div class="search-wrapper" >
     <form (keyup)="search()">
-      <input class="search-input" name="search" type="text" [(ngModel)]="searchTerm" placeholder="search by technology">
-      <i class="search-icon fa fa-search" aria-hidden="true"></i>
+      <label for="search">SEARCH BY TECHNOLOGY</label>
+      <div class="input-wrapper">
+        <input class="search-input" name="search" type="text" [(ngModel)]="searchTerm" placeholder="e.g. angular">
+        <i class="search-icon fa fa-search" aria-hidden="true"></i>
+      </div>
       <p *ngIf="results !== 1" class="search-result">{{results}} results</p>
       <p *ngIf="results === 1" class="search-result">{{results}} result</p>
     </form>
@@ -16,11 +19,23 @@
     <p class="project-tech">{{ project.tech | uppercase }}</p>
     <div class="project-columns">
       <div class="project-image-column">
-        <img src={{project.image_url}} class="project-image" [ngStyle]="{'order': project.image_order}" >
+        <a href={{project.website_link}} target="_blank">
+          <img src={{project.image_url}} class="project-image" [ngStyle]="{'order': project.image_order}" >
+        </a>
         <div class="project-stat-wrapper">
-          <p class="project-stat">PAGE SIZE <span class="project-stat-badge">{{ project.page_size }}kb</span></p>
-          <p class="project-stat">LOAD TIME <span class="project-stat-badge">{{ project.page_load_time }}s</span></p>
-          <p class="project-stat">PAGE SPEED SCORE <span class="project-stat-badge">{{ project.page_speed_score }}%</span></p>
+          <p class="project-stat">PAGE SIZE
+            <span class="project-stat-badge" >{{ project.pingdom_page_size_kb }}kb</span>
+            <i class="tooltip fa fa-question-circle-o" title="Data is raw size without browser caching" aria-hidden="true"></i>
+          </p>
+          <p class="project-stat">LOAD TIME
+            <span class="project-stat-badge">{{ project.pingdom_average_load_time }}s</span>
+            <i class="tooltip fa fa-question-circle-o" title="Measured by Pingdom Website Speed Test. Average of four speeds measured from San Jose, New York, Stockholm and Melbourne." aria-hidden="true"></i>
+          </p>
+          <p class="project-stat">PAGE SPEED SCORE
+            <span class="project-stat-badge">{{ project.google_page_speed_score }}%</span>
+            <i class="tooltip fa fa-question-circle-o" title="Score is from Google Page Speed Insights (desktop)." aria-hidden="true"></i>
+
+          </p>
         </div>
       </div>
 

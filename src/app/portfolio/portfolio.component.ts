@@ -10,23 +10,31 @@ import { pageTransition } from '../../animations';
   animations: [pageTransition]
 })
 export class PortfolioComponent implements OnInit {
-  projectData: Project[];
+  projectData: Project[] = [];
   searchTerm: string;
   results: number;
 
   constructor(
-    private data: ProjectDataService
+    private dataService: ProjectDataService
   ) { }
 
   ngOnInit() {
     console.log('portfolio loaded');
-    this.projectData = this.data.projectData;
-    this.results = this.projectData.length;
+    if (this.dataService.projectData) {
+      this.projectData = this.dataService.projectData;
+      this.results = this.projectData.length;
+    } else {
+      this.dataService.getProjectData()
+        .then(data => {
+          this.projectData = data;
+          this.results = this.projectData.length;
+      });
+    }
   }
 
   search() {
     const filter = this.searchTerm.trim().concat(',');
-    this.projectData = this.transform(this.data.projectData, filter);
+    this.projectData = this.transform(this.dataService.projectData, filter);
     this.results = this.projectData.length;
   }
 
