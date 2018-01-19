@@ -20,9 +20,8 @@
   width: 100%;
   background-color: $light-grey-background;
   // to cover a mysterious gap
-  margin-bottom: -30px;
-  overflow: auto;
-  border-top: 3px solid #eee;
+  // margin-bottom: -30px;
+  overflow: hidden;
 }
 
 .portfolio-content {

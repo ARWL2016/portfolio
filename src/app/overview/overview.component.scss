@@ -58,10 +58,8 @@
   flex-direction: column;
   line-height: 2rem;
   padding: 25px;
-  box-shadow: $box-shadow-style-small;
   margin: 10px 15px;
-  // border: 1px dotted yellow;
-  transition: width 300ms;
+  transition: width 400ms ease-in;
 }
 
 .skill-icon {
@@ -88,7 +86,7 @@
 
 .section-banner {
 
-  margin-top: 50px;
+  margin-top: 80px;
   padding: 30px;
   // border: 1px dotted blue;
   background-color: white;
