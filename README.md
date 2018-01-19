@@ -2,6 +2,7 @@
 
 #### To do 
 - update data and stats 
+- debounce search box
 
 
 #### About this Project 

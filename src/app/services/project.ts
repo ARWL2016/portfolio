@@ -10,7 +10,8 @@ export interface Project {
   image_order: number;
   github_link: string;
   website_link: string;
-  page_speed_score: number;
-  page_size: number;
-  page_load_time: number;
+  google_page_speed_score: number;
+  pingdom_page_size: number;
+  pingdom_average_load_time: number;
+  pingdom_average_page_speed: number;
 }
