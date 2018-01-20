@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProjectDataService } from 'app/services/project-data.service';
 import { Project } from 'app/services/project';
 import { pageTransition } from '../../animations';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-overview',
@@ -15,10 +15,12 @@ export class OverviewComponent implements OnInit {
   projectData: Project[];
   username = 'alistairrwillis';
   hostname = 'gmail.com';
+  private fragment: string;
 
   constructor(
     private dataService: ProjectDataService,
-    private router: Router
+    private router: Router,
+    private route: ActivatedRoute
   ) { }
 
   ngOnInit() {
@@ -33,15 +35,9 @@ export class OverviewComponent implements OnInit {
     }
   }
 
-  public navigateTo(page) {
-    this.router.navigate([page]);
-    window.scroll({ top: 0, left: 0, behavior: 'smooth' });
-  }
-
   public goTo() {
-    console.log('going');
-    this.router.navigate(['overview/#contactForm']);
-    window.scroll({ top: 5000, left: 0, behavior: 'smooth' });
+    document.querySelector('#contactForm').scrollIntoView({behavior: 'smooth' });
+    // this.router.navigate( ['/overview', ], {fragment: 'contactForm'});
   }
 
 
