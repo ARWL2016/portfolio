@@ -6,17 +6,21 @@ import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from 'app/app-component/app.component';
-import { ProjectDataService } from 'app/services/project-data.service';
 import { OverviewComponent } from './overview/overview.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { SkillsComponent } from './skills/skills.component';
+import { EmailComponent } from './email/email.component';
+
+import { ProjectDataService } from 'app/services/project-data.service';
+import { EmailService } from 'app/email/email.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     OverviewComponent,
     PortfolioComponent,
-    SkillsComponent
+    SkillsComponent,
+    EmailComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +36,8 @@ import { SkillsComponent } from './skills/skills.component';
     ])
   ],
   providers: [
-    ProjectDataService
+    ProjectDataService,
+    EmailService
   ],
   bootstrap: [AppComponent]
 })

@@ -1,4 +1,4 @@
-import { Component, OnInit, DoCheck } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ProjectDataService } from 'app/services/project-data.service';
 import { Project } from 'app/services/project';
 import { pageTransition } from '../../animations';
@@ -22,9 +22,7 @@ export class OverviewComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    console.log('overview loaded');
-    console.log('OVERVIEW', this.dataService.projectData);
-
+    // fetch project data
     if (this.dataService.projectData) {
       this.projectData = this.dataService.projectData.filter(project => project.featured);
     } else {
@@ -33,7 +31,6 @@ export class OverviewComponent implements OnInit {
           this.projectData = data.filter(project => project.featured);
       });
     }
-
   }
 
   navigateTo(page) {
@@ -41,8 +38,5 @@ export class OverviewComponent implements OnInit {
     window.scroll({ top: 0, left: 0, behavior: 'smooth' });
   }
 
-  // ngDoCheck() {
-  //   console.log('OVERVIEW DO CHECK', this.data.projectData);
-  // }
 
 }

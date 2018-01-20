@@ -129,16 +129,20 @@ var _a, _b;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser_animations__ = __webpack_require__("../../../platform-browser/@angular/platform-browser/animations.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_app_app_component_app_component__ = __webpack_require__("../../../../../src/app/app-component/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_app_services_project_data_service__ = __webpack_require__("../../../../../src/app/services/project-data.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__overview_overview_component__ = __webpack_require__("../../../../../src/app/overview/overview.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__portfolio_portfolio_component__ = __webpack_require__("../../../../../src/app/portfolio/portfolio.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__skills_skills_component__ = __webpack_require__("../../../../../src/app/skills/skills.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__overview_overview_component__ = __webpack_require__("../../../../../src/app/overview/overview.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__portfolio_portfolio_component__ = __webpack_require__("../../../../../src/app/portfolio/portfolio.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__skills_skills_component__ = __webpack_require__("../../../../../src/app/skills/skills.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__email_email_component__ = __webpack_require__("../../../../../src/app/email/email.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_app_services_project_data_service__ = __webpack_require__("../../../../../src/app/services/project-data.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_app_email_email_service__ = __webpack_require__("../../../../../src/app/email/email.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -159,25 +163,27 @@ AppModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["M" /* NgModule */])({
         declarations: [
             __WEBPACK_IMPORTED_MODULE_6_app_app_component_app_component__["a" /* AppComponent */],
-            __WEBPACK_IMPORTED_MODULE_8__overview_overview_component__["a" /* OverviewComponent */],
-            __WEBPACK_IMPORTED_MODULE_9__portfolio_portfolio_component__["a" /* PortfolioComponent */],
-            __WEBPACK_IMPORTED_MODULE_10__skills_skills_component__["a" /* SkillsComponent */]
+            __WEBPACK_IMPORTED_MODULE_7__overview_overview_component__["a" /* OverviewComponent */],
+            __WEBPACK_IMPORTED_MODULE_8__portfolio_portfolio_component__["a" /* PortfolioComponent */],
+            __WEBPACK_IMPORTED_MODULE_9__skills_skills_component__["a" /* SkillsComponent */],
+            __WEBPACK_IMPORTED_MODULE_10__email_email_component__["a" /* EmailComponent */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
             __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
-            __WEBPACK_IMPORTED_MODULE_2__angular_forms__["b" /* FormsModule */],
-            __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* ReactiveFormsModule */],
+            __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* FormsModule */],
+            __WEBPACK_IMPORTED_MODULE_2__angular_forms__["d" /* ReactiveFormsModule */],
             __WEBPACK_IMPORTED_MODULE_3__angular_http__["b" /* HttpModule */],
             __WEBPACK_IMPORTED_MODULE_4__angular_router__["b" /* RouterModule */].forRoot([
-                { path: 'overview', component: __WEBPACK_IMPORTED_MODULE_8__overview_overview_component__["a" /* OverviewComponent */] },
-                { path: 'portfolio', component: __WEBPACK_IMPORTED_MODULE_9__portfolio_portfolio_component__["a" /* PortfolioComponent */] },
-                { path: 'skills', component: __WEBPACK_IMPORTED_MODULE_10__skills_skills_component__["a" /* SkillsComponent */] },
+                { path: 'overview', component: __WEBPACK_IMPORTED_MODULE_7__overview_overview_component__["a" /* OverviewComponent */] },
+                { path: 'portfolio', component: __WEBPACK_IMPORTED_MODULE_8__portfolio_portfolio_component__["a" /* PortfolioComponent */] },
+                { path: 'skills', component: __WEBPACK_IMPORTED_MODULE_9__skills_skills_component__["a" /* SkillsComponent */] },
                 { path: '', redirectTo: 'overview', pathMatch: 'full' },
             ])
         ],
         providers: [
-            __WEBPACK_IMPORTED_MODULE_7_app_services_project_data_service__["a" /* ProjectDataService */]
+            __WEBPACK_IMPORTED_MODULE_11_app_services_project_data_service__["a" /* ProjectDataService */],
+            __WEBPACK_IMPORTED_MODULE_12_app_email_email_service__["a" /* EmailService */]
         ],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_6_app_app_component_app_component__["a" /* AppComponent */]]
     })
@@ -187,10 +193,134 @@ AppModule = __decorate([
 
 /***/ }),
 
+/***/ "../../../../../src/app/email/email.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<section class=\"email-section\">\n\n    <form (ngSubmit)=\"sendEmail()\" [formGroup]=\"emailForm\">\n      <h2>Contact Me</h2>\n      <div class=\"form-input-wrapper\">\n        <label for=\"name\">Your name</label>\n        <input\n          id=\"name\"\n          type=\"text\"\n          name=\"name\"\n          formControlName=\"name\"\n          placeholder=\"Your name\">\n      </div>\n      <div class=\"form-input-wrapper\">\n        <label for=\"email\">Your email</label>\n        <input\n          id=\"email\"\n          type=\"email\"\n          name=\"email\"\n          formControlName=\"email\"\n          placeholder=\"Your email\">\n      </div>\n      <div class=\"textarea-wrapper\">\n        <label for=\"message\">Your message</label>\n        <textarea\n          id=\"message\"\n          name=\"message\"\n          formControlName=\"message\"\n          placeholder=\"Your message\"></textarea>\n      </div>\n      <button type=\"submit\">Send</button>\n\n    </form>\n  </section>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/email/email.component.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "section.email-section {\n  background-color: #FFC857; }\n  section.email-section form {\n    margin: 0 auto;\n    padding: 50px 0;\n    max-width: 1000px;\n    width: 80%; }\n    section.email-section form h2 {\n      padding: 3px 10px;\n      text-transform: uppercase;\n      font-family: \"Montserrat\", sans-serif;\n      font-size: 1.5em;\n      border-bottom: 3px solid #2587ce; }\n    section.email-section form label {\n      display: block;\n      color: black;\n      font-size: 0.9em;\n      font-weight: bold;\n      margin-bottom: 3px; }\n    section.email-section form button {\n      background-color: #FFF;\n      color: #222;\n      letter-spacing: 1px;\n      font-size: 0.9rem;\n      display: inline-block;\n      padding: 8px 12px 8px 12px;\n      border: 2px solid #2587ce;\n      border-radius: 3px;\n      margin-right: 5px;\n      margin-bottom: 5px;\n      font-weight: 500;\n      transition: background-color 300ms;\n      margin: 10px;\n      min-width: 150px; }\n      section.email-section form button:hover {\n        cursor: pointer;\n        background-color: #2587ce; }\n    section.email-section form .form-input-wrapper {\n      display: inline-block;\n      padding: 10px;\n      width: 50%;\n      margin: 0; }\n      section.email-section form .form-input-wrapper input {\n        margin: 0;\n        width: 100%;\n        height: 3.2em;\n        padding: 15px; }\n    section.email-section form .form-input-wrapper:nth-child(3) {\n      float: right; }\n    section.email-section form .textarea-wrapper {\n      padding: 10px;\n      width: 100%; }\n      section.email-section form .textarea-wrapper textarea {\n        width: 100%;\n        min-height: 100px;\n        padding: 15px; }\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/email/email.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EmailComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_app_email_email_service__ = __webpack_require__("../../../../../src/app/email/email.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var EmailComponent = (function () {
+    // email: Email;
+    function EmailComponent(emailService, formBuilder) {
+        this.emailService = emailService;
+        this.formBuilder = formBuilder;
+    }
+    EmailComponent.prototype.ngOnInit = function () {
+        // set up reactive form
+        this.emailForm = this.formBuilder.group({
+            email: ['', [__WEBPACK_IMPORTED_MODULE_2__angular_forms__["e" /* Validators */].required, __WEBPACK_IMPORTED_MODULE_2__angular_forms__["e" /* Validators */].email]],
+            name: ['', []],
+            message: ['', [__WEBPACK_IMPORTED_MODULE_2__angular_forms__["e" /* Validators */].required]]
+        });
+    };
+    EmailComponent.prototype.sendEmail = function () {
+        console.log(this.emailForm);
+        console.log(this.emailForm.value);
+        this.emailService.sendEmail(this.emailForm.value)
+            .then(function (res) { return console.log(res); })
+            .catch(function (err) { return console.log(err); });
+    };
+    return EmailComponent;
+}());
+EmailComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+        selector: 'app-email',
+        template: __webpack_require__("../../../../../src/app/email/email.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/email/email.component.scss")]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_app_email_email_service__["a" /* EmailService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_app_email_email_service__["a" /* EmailService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */]) === "function" && _b || Object])
+], EmailComponent);
+
+var _a, _b;
+//# sourceMappingURL=email.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/email/email.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EmailService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise__ = __webpack_require__("../../../../rxjs/add/operator/toPromise.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var EmailService = (function () {
+    function EmailService(http) {
+        this.http = http;
+    }
+    EmailService.prototype.sendEmail = function (email) {
+        var url = 'https://formspree.io/alistairrwillis@gmail.com';
+        return this.http.post(url, email)
+            .toPromise();
+    };
+    return EmailService;
+}());
+EmailService = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])(),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */]) === "function" && _a || Object])
+], EmailService);
+
+var _a;
+//# sourceMappingURL=email.service.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/overview/overview.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "  <div [@showPage]=\"'on'\">\r\n  <!-- <div *ngIf=\"componentLoaded==='/overview'\" class=\"banner\"> -->\r\n    <section class=\"banner-section\" >\r\n      <div class=\"banner-content\">\r\n        <h1 class=\"banner-header\">Full Stack Web Developer</h1>\r\n        <p class=\"banner-text\">HTML | CSS | JAVASCRIPT | JQUERY | ANGULAR | NODE | EXPRESS | MONGODB | MYSQL</p>\r\n\r\n        <p>\r\n          <a href=\"https://github.com/{{name}}\" target=\"_blank\"><i class=\"banner-icon-link fa fa-github\" aria-hidden=\"true\"></i></a>\r\n          <a href=\"mailto:{{username}}@{{hostname}}\" target=\"_blank\"><i class=\"banner-icon-link fa fa-envelope\" aria-hidden=\"true\"></i></a>\r\n        </p>\r\n      </div>\r\n    </section>\r\n    <!-- banner end -->\r\n\r\n  <section class=\"skills-section\">\r\n\r\n        <article class=\"skill-card\">\r\n          <i class=\"fa fa-laptop skill-icon\" aria-hidden=\"true\"></i>\r\n          <h3 class=\"skill-card-heading\">Fluid Design</h3>\r\n          <p class=\"skill-card-text\">\r\n            Using front end libraries like Twitter Bootstrap, as well as custom CSS written in functional style with CSS,\r\n            I create web applications with fluid, responsive and intuitive user interfaces.\r\n          </p>\r\n        </article>\r\n        <article class=\"skill-card\">\r\n          <i class=\"fa fa-industry skill-icon\" aria-hidden=\"true\"></i>\r\n          <h3 class=\"skill-card-heading\">Modern Frameworks</h3>\r\n          <p class=\"skill-card-text\">\r\n            Utilizing a modern, component based framework like AngularJS and Angular / Typescript, I build modular web applications which are easy to quick to develop\r\n            and easy to maintain.\r\n          </p>\r\n        </article>\r\n        <article class=\"skill-card\">\r\n          <i class=\"fa fa-server skill-icon\" aria-hidden=\"true\"></i>\r\n          <h3 class=\"skill-card-heading\">Full Stack Javascript</h3>\r\n          <p class=\"skill-card-text\">\r\n            Using Javascript-based back end technologies such as Node, Express, and MongoDB, I benefit from\r\n            increased efficiency by working in a single language across the whole stack.\r\n          </p>\r\n        </article>\r\n\r\n  </section>\r\n\r\n  <section class=\"portfolio-section\">\r\n    <div class=\"portfolio-content\">\r\n      <div class=\"section-banner\">\r\n        <div class=\"section-heading-wrapper\">\r\n          <img class=\"project-icon\" src=\"../../assets/icons/webpage-128.png\">\r\n          <h2 class=\"section-heading\">FEATURED WEB APPLICATIONS</h2>\r\n        </div>\r\n        <p class=\"section-banner-text\">Some are my recent web apps are featured below. You can view all the projects,\r\n          search by language and framework, and view technical specs, on the <a (click)=\"navigateTo('/portfolio')\">PORTFOLIO</a> page.\r\n\r\n        </p>\r\n      </div>\r\n      <div class=\"projects\">\r\n\r\n        <article *ngFor=\"let project of projectData\" class=\"project\">\r\n          <div class=\"image-column\">\r\n            <img src={{project.image_url}} class=\"project-image\" [ngStyle]=\"{'order': project.image_order}\" >\r\n          </div>\r\n          <div class=\"text-column\">\r\n            <div class=\"text-wrapper\">\r\n            <h3 class=\"project-heading\">{{project.name | uppercase }}</h3>\r\n            <p class=\"project-text\">{{project.summary}}</p>\r\n              <div class=\"project-links\">\r\n                <a class=\"project-link\" target=\"_blank\" href={{project.github_link}}><i class=\"project-link-icon fa fa-github\" aria-hidden=\"true\"></i>&nbsp;SOURCE&nbsp;CODE</a>\r\n                <a class=\"project-link\" target=\"_blank\" href={{project.website_link}}><i class=\"project-link-icon fa fa-external-link-square\" aria-hidden=\"true\"></i>&nbsp;VIEW&nbsp;WEBSITE</a>\r\n              </div>\r\n            </div>\r\n          </div>\r\n        </article>\r\n\r\n      </div>\r\n    </div>\r\n  </section>\r\n</div>\r\n"
+module.exports = "  <div [@showPage]=\"'on'\">\r\n  <!-- <div *ngIf=\"componentLoaded==='/overview'\" class=\"banner\"> -->\r\n    <section class=\"banner-section\" >\r\n      <div class=\"banner-content\">\r\n        <h1 class=\"banner-header\">Full Stack Web Developer</h1>\r\n        <p class=\"banner-text\">HTML | CSS | JAVASCRIPT | JQUERY | ANGULAR | NODE | EXPRESS | MONGODB | MYSQL</p>\r\n\r\n        <p>\r\n          <a href=\"https://github.com/{{name}}\" target=\"_blank\"><i class=\"banner-icon-link fa fa-github\" aria-hidden=\"true\"></i></a>\r\n          <a href=\"mailto:{{username}}@{{hostname}}\" target=\"_blank\"><i class=\"banner-icon-link fa fa-envelope\" aria-hidden=\"true\"></i></a>\r\n        </p>\r\n      </div>\r\n    </section>\r\n    <!-- banner end -->\r\n\r\n  <section class=\"skills-section\">\r\n\r\n        <article class=\"skill-card\">\r\n          <i class=\"fa fa-laptop skill-icon\" aria-hidden=\"true\"></i>\r\n          <h3 class=\"skill-card-heading\">Fluid Design</h3>\r\n          <p class=\"skill-card-text\">\r\n            Using front end libraries like Twitter Bootstrap, as well as custom CSS written in functional style with CSS,\r\n            I create web applications with fluid, responsive and intuitive user interfaces.\r\n          </p>\r\n        </article>\r\n        <article class=\"skill-card\">\r\n          <i class=\"fa fa-industry skill-icon\" aria-hidden=\"true\"></i>\r\n          <h3 class=\"skill-card-heading\">Modern Frameworks</h3>\r\n          <p class=\"skill-card-text\">\r\n            Utilizing a modern, component based framework like AngularJS and Angular / Typescript, I build modular web applications which are easy to quick to develop\r\n            and easy to maintain.\r\n          </p>\r\n        </article>\r\n        <article class=\"skill-card\">\r\n          <i class=\"fa fa-server skill-icon\" aria-hidden=\"true\"></i>\r\n          <h3 class=\"skill-card-heading\">Full Stack Javascript</h3>\r\n          <p class=\"skill-card-text\">\r\n            Using Javascript-based back end technologies such as Node, Express, and MongoDB, I benefit from\r\n            increased efficiency by working in a single language across the whole stack.\r\n          </p>\r\n        </article>\r\n\r\n  </section>\r\n\r\n  <section class=\"portfolio-section\">\r\n    <div class=\"portfolio-content\">\r\n      <div class=\"section-banner\">\r\n        <div class=\"section-heading-wrapper\">\r\n          <img class=\"project-icon\" src=\"../../assets/icons/webpage-128.png\">\r\n          <h2 class=\"section-heading\">FEATURED WEB APPLICATIONS</h2>\r\n        </div>\r\n        <p class=\"section-banner-text\">Some are my recent web apps are featured below. You can view all the projects,\r\n          search by language and framework, and view technical specs, on the <a (click)=\"navigateTo('/portfolio')\">PORTFOLIO</a> page.\r\n\r\n        </p>\r\n      </div>\r\n      <div class=\"projects\">\r\n\r\n        <article *ngFor=\"let project of projectData\" class=\"project\">\r\n          <div class=\"image-column\">\r\n            <img src={{project.image_url}} class=\"project-image\" [ngStyle]=\"{'order': project.image_order}\" >\r\n          </div>\r\n          <div class=\"text-column\">\r\n            <div class=\"text-wrapper\">\r\n            <h3 class=\"project-heading\">{{project.name | uppercase }}</h3>\r\n            <p class=\"project-text\">{{project.summary}}</p>\r\n              <div class=\"project-links\">\r\n                <a class=\"project-link\" target=\"_blank\" href={{project.github_link}}><i class=\"project-link-icon fa fa-github\" aria-hidden=\"true\"></i>&nbsp;SOURCE&nbsp;CODE</a>\r\n                <a class=\"project-link\" target=\"_blank\" href={{project.website_link}}><i class=\"project-link-icon fa fa-external-link-square\" aria-hidden=\"true\"></i>&nbsp;VIEW&nbsp;WEBSITE</a>\r\n              </div>\r\n            </div>\r\n          </div>\r\n        </article>\r\n\r\n      </div>\r\n    </div>\r\n  </section>\r\n\r\n  <!-- EMAIL COMPONENT -->\r\n  <app-email></app-email>\r\n\r\n</div>\r\n"
 
 /***/ }),
 
@@ -244,8 +374,7 @@ var OverviewComponent = (function () {
     }
     OverviewComponent.prototype.ngOnInit = function () {
         var _this = this;
-        console.log('overview loaded');
-        console.log('OVERVIEW', this.dataService.projectData);
+        // fetch project data
         if (this.dataService.projectData) {
             this.projectData = this.dataService.projectData.filter(function (project) { return project.featured; });
         }
@@ -338,7 +467,7 @@ var PortfolioComponent = (function () {
         this.document = document;
         this.projectData = [];
         // searchTerm: string;
-        this.searchTerm = new __WEBPACK_IMPORTED_MODULE_3__angular_forms__["a" /* FormControl */]();
+        this.searchTerm = new __WEBPACK_IMPORTED_MODULE_3__angular_forms__["b" /* FormControl */]();
         this.showBackToTopIcon = false;
     }
     PortfolioComponent.prototype.ngOnInit = function () {
