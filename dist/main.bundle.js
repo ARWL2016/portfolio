@@ -196,7 +196,7 @@ AppModule = __decorate([
 /***/ "../../../../../src/app/email/email.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<section class=\"email-section\">\n\n    <form (ngSubmit)=\"sendEmail()\" [formGroup]=\"emailForm\">\n      <h2>Contact Me</h2>\n      <div class=\"form-input-wrapper\">\n        <label for=\"name\">Your name</label>\n        <input\n          id=\"name\"\n          type=\"text\"\n          name=\"name\"\n          formControlName=\"name\"\n          placeholder=\"Your name\">\n      </div>\n      <div class=\"form-input-wrapper\">\n        <label for=\"email\">Your email</label>\n        <input\n          id=\"email\"\n          type=\"email\"\n          name=\"email\"\n          formControlName=\"email\"\n          placeholder=\"Your email\">\n      </div>\n      <div class=\"textarea-wrapper\">\n        <label for=\"message\">Your message</label>\n        <textarea\n          id=\"message\"\n          name=\"message\"\n          formControlName=\"message\"\n          placeholder=\"Your message\"></textarea>\n      </div>\n      <button type=\"submit\">Send</button>\n\n    </form>\n  </section>\n"
+module.exports = "<section class=\"email-section\">\n\n    <form (ngSubmit)=\"sendEmail()\" [formGroup]=\"emailForm\">\n      <div class=\"form-heading-wrapper\">\n        <img src=\"../../assets/icons/email.png\" alt=\"email icon\">\n        <h2>Contact Me</h2>\n      </div>\n      <div class=\"form-input-wrapper\">\n        <label for=\"name\">Your name</label>\n        <input\n          id=\"name\"\n          type=\"text\"\n          name=\"name\"\n\n          formControlName=\"name\">\n\n      </div>\n\n      <div class=\"form-input-wrapper\">\n        <label for=\"email\">Your email</label>\n        <input\n          id=\"email\"\n          type=\"email\"\n          name=\"email\"\n\n          formControlName=\"email\">\n      </div>\n\n      <div class=\"textarea-wrapper\">\n        <label for=\"message\">Your message</label>\n        <textarea\n          id=\"message\"\n          name=\"message\"\n          formControlName=\"message\"></textarea>\n      </div>\n      <div class=\"validation-message\">\n        <i *ngIf=\"validationMessage\" class=\"fa fa-exclamation-circle\" aria-hidden=\"true\"></i>\n       {{validationMessage}}\n      </div>\n\n      <button type=\"submit\" [disabled]=\"btnDisabled\"><div class=\"spinner\" *ngIf=\"showLoader\"></div>{{btnLabel}}</button>\n\n    </form>\n  </section>\n\n\n"
 
 /***/ }),
 
@@ -208,7 +208,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "section.email-section {\n  background-color: #FFC857; }\n  section.email-section form {\n    margin: 0 auto;\n    padding: 50px 0;\n    max-width: 1000px;\n    width: 80%; }\n    section.email-section form h2 {\n      padding: 3px 10px;\n      text-transform: uppercase;\n      font-family: \"Montserrat\", sans-serif;\n      font-size: 1.5em;\n      border-bottom: 3px solid #2587ce; }\n    section.email-section form label {\n      display: block;\n      color: black;\n      font-size: 0.9em;\n      font-weight: bold;\n      margin-bottom: 3px; }\n    section.email-section form button {\n      background-color: #FFF;\n      color: #222;\n      letter-spacing: 1px;\n      font-size: 0.9rem;\n      display: inline-block;\n      padding: 8px 12px 8px 12px;\n      border: 2px solid #2587ce;\n      border-radius: 3px;\n      margin-right: 5px;\n      margin-bottom: 5px;\n      font-weight: 500;\n      transition: background-color 300ms;\n      margin: 10px;\n      min-width: 150px; }\n      section.email-section form button:hover {\n        cursor: pointer;\n        background-color: #2587ce; }\n    section.email-section form .form-input-wrapper {\n      display: inline-block;\n      padding: 10px;\n      width: 50%;\n      margin: 0; }\n      section.email-section form .form-input-wrapper input {\n        margin: 0;\n        width: 100%;\n        height: 3.2em;\n        padding: 15px; }\n    section.email-section form .form-input-wrapper:nth-child(3) {\n      float: right; }\n    section.email-section form .textarea-wrapper {\n      padding: 10px;\n      width: 100%; }\n      section.email-section form .textarea-wrapper textarea {\n        width: 100%;\n        min-height: 100px;\n        padding: 15px; }\n", ""]);
+exports.push([module.i, ".spinner {\n  width: 20px;\n  height: 20px;\n  margin: 0 auto;\n  background-color: #333;\n  display: inline-block;\n  border-radius: 100%;\n  -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;\n  animation: sk-scaleout 1.0s infinite ease-in-out; }\n\n@-webkit-keyframes sk-scaleout {\n  0% {\n    -webkit-transform: scale(0); }\n  100% {\n    -webkit-transform: scale(1);\n    opacity: 0; } }\n\n@keyframes sk-scaleout {\n  0% {\n    -webkit-transform: scale(0);\n    transform: scale(0); }\n  100% {\n    -webkit-transform: scale(1);\n    transform: scale(1);\n    opacity: 0; } }\n\nsection.email-section {\n  background-color: #FFC857; }\n  section.email-section form {\n    margin: 0 auto;\n    padding: 50px 0;\n    max-width: 1000px;\n    width: 80%; }\n    section.email-section form .form-heading-wrapper {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-orient: horizontal;\n      -webkit-box-direction: normal;\n          -ms-flex-direction: row;\n              flex-direction: row;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center;\n      -webkit-box-pack: left;\n          -ms-flex-pack: left;\n              justify-content: left;\n      padding: 10px;\n      margin-bottom: 6px; }\n    section.email-section form h2 {\n      padding: 3px 0;\n      margin-left: 18px;\n      text-transform: uppercase;\n      font-family: \"Montserrat\", sans-serif;\n      font-size: 1.4em; }\n    section.email-section form label {\n      display: block;\n      color: black;\n      font-size: 0.9em;\n      font-weight: bold;\n      margin-bottom: 4px;\n      margin-left: 3px; }\n    section.email-section form .validation-message {\n      font-size: 0.9em;\n      margin-left: 10px;\n      min-height: 2em; }\n      section.email-section form .validation-message i {\n        color: red;\n        margin: 0 10px; }\n    section.email-section form button {\n      background-color: #FFF;\n      color: #222;\n      letter-spacing: 1px;\n      font-size: 0.9rem;\n      display: inline-block;\n      padding: 8px 12px 8px 12px;\n      border: 2px solid #2587ce;\n      border-radius: 3px;\n      margin-right: 5px;\n      margin-bottom: 5px;\n      font-weight: 500;\n      transition: background-color 300ms;\n      margin: 10px;\n      min-width: 200px;\n      text-transform: uppercase;\n      font-weight: bold;\n      font-size: 0.8em;\n      height: 40px; }\n      section.email-section form button:hover {\n        cursor: pointer;\n        background-color: #2587ce; }\n      section.email-section form button:disabled {\n        cursor: no-drop; }\n    section.email-section form .form-input-wrapper {\n      display: inline-block;\n      padding: 10px;\n      width: 50%; }\n      section.email-section form .form-input-wrapper input {\n        margin: 0;\n        width: 100%;\n        height: 3.2em;\n        padding: 15px;\n        font-size: 1em;\n        font-family: monospace; }\n    section.email-section form .form-input-wrapper:nth-child(3) {\n      float: right; }\n    section.email-section form .textarea-wrapper {\n      padding: 10px;\n      width: 100%; }\n      section.email-section form .textarea-wrapper textarea {\n        width: 100%;\n        min-height: 140px;\n        padding: 15px;\n        font-size: 1em;\n        font-family: monospace; }\n\n@media screen and (max-width: 600px) {\n  section.email-section form .form-input-wrapper {\n    display: block;\n    width: 100%;\n    float: none; }\n  .form-input-wrapper:nth-child(3) {\n    margin-bottom: 12px; } }\n", ""]);
 
 // exports
 
@@ -239,25 +239,54 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var EmailComponent = (function () {
-    // email: Email;
     function EmailComponent(emailService, formBuilder) {
         this.emailService = emailService;
         this.formBuilder = formBuilder;
+        this.btnLabel = 'Send Message';
+        this.btnDisabled = false;
+        this.showLoader = false;
+        this.createForm();
     }
     EmailComponent.prototype.ngOnInit = function () {
+    };
+    EmailComponent.prototype.createForm = function () {
         // set up reactive form
         this.emailForm = this.formBuilder.group({
             email: ['', [__WEBPACK_IMPORTED_MODULE_2__angular_forms__["e" /* Validators */].required, __WEBPACK_IMPORTED_MODULE_2__angular_forms__["e" /* Validators */].email]],
             name: ['', []],
             message: ['', [__WEBPACK_IMPORTED_MODULE_2__angular_forms__["e" /* Validators */].required]]
         });
+        this.emailCtrl = this.emailForm.get('email');
+        this.nameCtrl = this.emailForm.get('name');
+        this.messageCtrl = this.emailForm.get('message');
     };
     EmailComponent.prototype.sendEmail = function () {
-        console.log(this.emailForm);
-        console.log(this.emailForm.value);
-        this.emailService.sendEmail(this.emailForm.value)
-            .then(function (res) { return console.log(res); })
-            .catch(function (err) { return console.log(err); });
+        var _this = this;
+        this.validationMessage = '';
+        console.log(this.emailCtrl, this.nameCtrl, this.messageCtrl);
+        if (this.emailCtrl.invalid) {
+            return this.validationMessage = 'Please include a valid email.';
+        }
+        else if (!this.nameCtrl.value || !this.messageCtrl.value) {
+            this.validationMessage = 'Please complete all form fields.';
+        }
+        else {
+            this.btnDisabled = true;
+            this.btnLabel = '';
+            this.showLoader = true;
+            this.emailService.sendEmail(this.emailForm.value)
+                .then(function (res) {
+                console.log(res);
+                _this.showLoader = false;
+                _this.btnLabel = 'Message Sent';
+            })
+                .catch(function (err) {
+                console.log(err);
+                _this.showLoader = false;
+                _this.validationMessage = 'Oops! Something went wrong.';
+                _this.btnLabel = 'Send';
+            });
+        }
     };
     return EmailComponent;
 }());
@@ -320,7 +349,7 @@ var _a;
 /***/ "../../../../../src/app/overview/overview.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "  <div [@showPage]=\"'on'\">\r\n  <!-- <div *ngIf=\"componentLoaded==='/overview'\" class=\"banner\"> -->\r\n    <section class=\"banner-section\" >\r\n      <div class=\"banner-content\">\r\n        <h1 class=\"banner-header\">Full Stack Web Developer</h1>\r\n        <p class=\"banner-text\">HTML | CSS | JAVASCRIPT | JQUERY | ANGULAR | NODE | EXPRESS | MONGODB | MYSQL</p>\r\n\r\n        <p>\r\n          <a href=\"https://github.com/{{name}}\" target=\"_blank\"><i class=\"banner-icon-link fa fa-github\" aria-hidden=\"true\"></i></a>\r\n          <a href=\"mailto:{{username}}@{{hostname}}\" target=\"_blank\"><i class=\"banner-icon-link fa fa-envelope\" aria-hidden=\"true\"></i></a>\r\n        </p>\r\n      </div>\r\n    </section>\r\n    <!-- banner end -->\r\n\r\n  <section class=\"skills-section\">\r\n\r\n        <article class=\"skill-card\">\r\n          <i class=\"fa fa-laptop skill-icon\" aria-hidden=\"true\"></i>\r\n          <h3 class=\"skill-card-heading\">Fluid Design</h3>\r\n          <p class=\"skill-card-text\">\r\n            Using front end libraries like Twitter Bootstrap, as well as custom CSS written in functional style with CSS,\r\n            I create web applications with fluid, responsive and intuitive user interfaces.\r\n          </p>\r\n        </article>\r\n        <article class=\"skill-card\">\r\n          <i class=\"fa fa-industry skill-icon\" aria-hidden=\"true\"></i>\r\n          <h3 class=\"skill-card-heading\">Modern Frameworks</h3>\r\n          <p class=\"skill-card-text\">\r\n            Utilizing a modern, component based framework like AngularJS and Angular / Typescript, I build modular web applications which are easy to quick to develop\r\n            and easy to maintain.\r\n          </p>\r\n        </article>\r\n        <article class=\"skill-card\">\r\n          <i class=\"fa fa-server skill-icon\" aria-hidden=\"true\"></i>\r\n          <h3 class=\"skill-card-heading\">Full Stack Javascript</h3>\r\n          <p class=\"skill-card-text\">\r\n            Using Javascript-based back end technologies such as Node, Express, and MongoDB, I benefit from\r\n            increased efficiency by working in a single language across the whole stack.\r\n          </p>\r\n        </article>\r\n\r\n  </section>\r\n\r\n  <section class=\"portfolio-section\">\r\n    <div class=\"portfolio-content\">\r\n      <div class=\"section-banner\">\r\n        <div class=\"section-heading-wrapper\">\r\n          <img class=\"project-icon\" src=\"../../assets/icons/webpage-128.png\">\r\n          <h2 class=\"section-heading\">FEATURED WEB APPLICATIONS</h2>\r\n        </div>\r\n        <p class=\"section-banner-text\">Some are my recent web apps are featured below. You can view all the projects,\r\n          search by language and framework, and view technical specs, on the <a (click)=\"navigateTo('/portfolio')\">PORTFOLIO</a> page.\r\n\r\n        </p>\r\n      </div>\r\n      <div class=\"projects\">\r\n\r\n        <article *ngFor=\"let project of projectData\" class=\"project\">\r\n          <div class=\"image-column\">\r\n            <img src={{project.image_url}} class=\"project-image\" [ngStyle]=\"{'order': project.image_order}\" >\r\n          </div>\r\n          <div class=\"text-column\">\r\n            <div class=\"text-wrapper\">\r\n            <h3 class=\"project-heading\">{{project.name | uppercase }}</h3>\r\n            <p class=\"project-text\">{{project.summary}}</p>\r\n              <div class=\"project-links\">\r\n                <a class=\"project-link\" target=\"_blank\" href={{project.github_link}}><i class=\"project-link-icon fa fa-github\" aria-hidden=\"true\"></i>&nbsp;SOURCE&nbsp;CODE</a>\r\n                <a class=\"project-link\" target=\"_blank\" href={{project.website_link}}><i class=\"project-link-icon fa fa-external-link-square\" aria-hidden=\"true\"></i>&nbsp;VIEW&nbsp;WEBSITE</a>\r\n              </div>\r\n            </div>\r\n          </div>\r\n        </article>\r\n\r\n      </div>\r\n    </div>\r\n  </section>\r\n\r\n  <!-- EMAIL COMPONENT -->\r\n  <app-email></app-email>\r\n\r\n</div>\r\n"
+module.exports = "  <div [@showPage]=\"'on'\">\r\n  <!-- <div *ngIf=\"componentLoaded==='/overview'\" class=\"banner\"> -->\r\n    <section class=\"banner-section\" >\r\n      <div class=\"banner-content\">\r\n        <h1 class=\"banner-header\">Full Stack Web Developer</h1>\r\n        <p class=\"banner-text\">HTML | CSS | JAVASCRIPT | JQUERY | ANGULAR | NODE | EXPRESS | MONGODB | MYSQL</p>\r\n\r\n        <p>\r\n          <a href=\"https://github.com/{{name}}\" target=\"_blank\"><i class=\"banner-icon-link fa fa-github\" aria-hidden=\"true\"></i></a>\r\n          <a href=\"mailto:{{username}}@{{hostname}}\" target=\"_blank\"><i class=\"banner-icon-link fa fa-envelope\" aria-hidden=\"true\"></i></a>\r\n          <button\r\n          (click)=\"goTo()\"\r\n          >Contact</button>\r\n        </p>\r\n      </div>\r\n    </section>\r\n    <!-- banner end -->\r\n\r\n  <section class=\"skills-section\">\r\n\r\n        <article class=\"skill-card\">\r\n          <i class=\"fa fa-laptop skill-icon\" aria-hidden=\"true\"></i>\r\n          <h3 class=\"skill-card-heading\">Fluid Design</h3>\r\n          <p class=\"skill-card-text\">\r\n            Using front end libraries like Twitter Bootstrap, as well as custom CSS written in functional style with CSS,\r\n            I create web applications with fluid, responsive and intuitive user interfaces.\r\n          </p>\r\n        </article>\r\n        <article class=\"skill-card\">\r\n          <i class=\"fa fa-industry skill-icon\" aria-hidden=\"true\"></i>\r\n          <h3 class=\"skill-card-heading\">Modern Frameworks</h3>\r\n          <p class=\"skill-card-text\">\r\n            Utilizing a modern, component based framework like AngularJS and Angular / Typescript, I build modular web applications which are easy to quick to develop\r\n            and easy to maintain.\r\n          </p>\r\n        </article>\r\n        <article class=\"skill-card\">\r\n          <i class=\"fa fa-server skill-icon\" aria-hidden=\"true\"></i>\r\n          <h3 class=\"skill-card-heading\">Full Stack Javascript</h3>\r\n          <p class=\"skill-card-text\">\r\n            Using Javascript-based back end technologies such as Node, Express, and MongoDB, I benefit from\r\n            increased efficiency by working in a single language across the whole stack.\r\n          </p>\r\n        </article>\r\n\r\n  </section>\r\n\r\n  <section class=\"portfolio-section\">\r\n    <div class=\"portfolio-content\">\r\n      <div class=\"section-banner\">\r\n        <div class=\"section-heading-wrapper\">\r\n          <img class=\"project-icon\" src=\"../../assets/icons/webpage-128.png\">\r\n          <h2 class=\"section-heading\">FEATURED WEB APPLICATIONS</h2>\r\n        </div>\r\n        <p class=\"section-banner-text\">Some are my recent web apps are featured below. You can view all the projects,\r\n          search by language and framework, and view technical specs, on the <a (click)=\"navigateTo('/portfolio')\">PORTFOLIO</a> page.\r\n\r\n        </p>\r\n      </div>\r\n      <div class=\"projects\">\r\n\r\n        <article *ngFor=\"let project of projectData\" class=\"project\">\r\n          <div class=\"image-column\">\r\n            <img src={{project.image_url}} class=\"project-image\" [ngStyle]=\"{'order': project.image_order}\" >\r\n          </div>\r\n          <div class=\"text-column\">\r\n            <div class=\"text-wrapper\">\r\n            <h3 class=\"project-heading\">{{project.name | uppercase }}</h3>\r\n            <p class=\"project-text\">{{project.summary}}</p>\r\n              <div class=\"project-links\">\r\n                <a class=\"project-link\" target=\"_blank\" href={{project.github_link}}><i class=\"project-link-icon fa fa-github\" aria-hidden=\"true\"></i>&nbsp;SOURCE&nbsp;CODE</a>\r\n                <a class=\"project-link\" target=\"_blank\" href={{project.website_link}}><i class=\"project-link-icon fa fa-external-link-square\" aria-hidden=\"true\"></i>&nbsp;VIEW&nbsp;WEBSITE</a>\r\n              </div>\r\n            </div>\r\n          </div>\r\n        </article>\r\n\r\n      </div>\r\n    </div>\r\n  </section>\r\n\r\n  <!-- EMAIL COMPONENT -->\r\n  <app-email id=\"contactForm\"></app-email>\r\n\r\n</div>\r\n"
 
 /***/ }),
 
@@ -388,6 +417,11 @@ var OverviewComponent = (function () {
     OverviewComponent.prototype.navigateTo = function (page) {
         this.router.navigate([page]);
         window.scroll({ top: 0, left: 0, behavior: 'smooth' });
+    };
+    OverviewComponent.prototype.goTo = function () {
+        console.log('going');
+        this.router.navigate(['overview/#contactForm']);
+        window.scroll({ top: 5000, left: 0, behavior: 'smooth' });
     };
     return OverviewComponent;
 }());

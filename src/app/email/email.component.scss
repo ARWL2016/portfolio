@@ -1,4 +1,5 @@
 @import '../../variables';
+@import '../../loader';
 
 section.email-section {
   background-color: $mustard-yellow;
@@ -8,68 +9,98 @@ section.email-section {
     padding: 50px 0;
     max-width: $max-content-width;
     width: 80%;
-    // border: 1px dotted blue;
+
+    .form-heading-wrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: left;
+      padding: 10px;
+      margin-bottom: 6px;
+    }
 
     h2 {
-      padding: 3px 10px;
+      padding: 3px 0;
+      margin-left: 18px;
       text-transform: uppercase;
       font-family: $heading-font;
-      font-size: 1.5em;
-      border-bottom: 3px solid $highlight-color;
+      font-size: 1.4em;
     }
 
     label {
       display: block;
-      // margin: 3px 0;
       color: black;
       font-size: 0.9em;
       font-weight: bold;
-      margin-bottom: 3px;
+      margin-bottom: 4px;
+      margin-left: 3px;
+    }
+
+    .validation-message {
+      font-size: 0.9em;
+      margin-left: 10px;
+      min-height: 2em;
+      i {
+        color: red;
+        margin: 0 10px;
+      }
     }
 
     button {
       @include project-buttons($highlight-color);
       margin: 10px;
-      min-width: 150px;
+      min-width: 200px;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 0.8em;
+      height: 40px;
+      &:disabled {
+        cursor: no-drop;
+      }
     }
 
     .form-input-wrapper {
       display: inline-block;
       padding: 10px;
-      // border: 1px dotted blue;
       width: 50%;
-      margin: 0;
 
       input {
         margin: 0;
         width: 100%;
         height: 3.2em;
         padding: 15px;
+        font-size: 1em;
+        font-family: monospace;
       }
-
-
     }
 
     .form-input-wrapper:nth-child(3) {
-      // border: 1px solid red;
       float: right;
     }
 
     .textarea-wrapper {
       padding: 10px;
-      // border: 1px dotted blue;
       width: 100%;
 
       textarea {
         width: 100%;
-        min-height: 100px;
+        min-height: 140px;
         padding: 15px;
+        font-size: 1em;
+        font-family: monospace;
       }
-
     }
-
-
+  }
 }
 
+@media screen and (max-width: 600px) {
+  section.email-section form .form-input-wrapper {
+    display: block;
+    width: 100%;
+    float: none;
+  }
 
+  .form-input-wrapper:nth-child(3) {
+    margin-bottom: 12px;
+  }
 }

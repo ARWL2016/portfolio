@@ -1,34 +1,46 @@
 <section class="email-section">
 
     <form (ngSubmit)="sendEmail()" [formGroup]="emailForm">
-      <h2>Contact Me</h2>
+      <div class="form-heading-wrapper">
+        <img src="../../assets/icons/email.png" alt="email icon">
+        <h2>Contact Me</h2>
+      </div>
       <div class="form-input-wrapper">
         <label for="name">Your name</label>
         <input
           id="name"
           type="text"
           name="name"
-          formControlName="name"
-          placeholder="Your name">
+
+          formControlName="name">
+
       </div>
+
       <div class="form-input-wrapper">
         <label for="email">Your email</label>
         <input
           id="email"
           type="email"
           name="email"
-          formControlName="email"
-          placeholder="Your email">
+
+          formControlName="email">
       </div>
+
       <div class="textarea-wrapper">
         <label for="message">Your message</label>
         <textarea
           id="message"
           name="message"
-          formControlName="message"
-          placeholder="Your message"></textarea>
+          formControlName="message"></textarea>
       </div>
-      <button type="submit">Send</button>
+      <div class="validation-message">
+        <i *ngIf="validationMessage" class="fa fa-exclamation-circle" aria-hidden="true"></i>
+       {{validationMessage}}
+      </div>
+
+      <button type="submit" [disabled]="btnDisabled"><div class="spinner" *ngIf="showLoader"></div>{{btnLabel}}</button>
 
     </form>
   </section>
+
+

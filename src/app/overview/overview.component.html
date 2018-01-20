@@ -8,6 +8,9 @@
         <p>
           <a href="https://github.com/{{name}}" target="_blank"><i class="banner-icon-link fa fa-github" aria-hidden="true"></i></a>
           <a href="mailto:{{username}}@{{hostname}}" target="_blank"><i class="banner-icon-link fa fa-envelope" aria-hidden="true"></i></a>
+          <button
+          (click)="goTo()"
+          >Contact</button>
         </p>
       </div>
     </section>
@@ -77,6 +80,6 @@
   </section>
 
   <!-- EMAIL COMPONENT -->
-  <app-email></app-email>
+  <app-email id="contactForm"></app-email>
 
 </div>
