@@ -26,15 +26,54 @@
   // border: 1px dotted yellow;
 }
 
-.titlebar-logo {
-  width: 250px;
+// LOGO
+
+.logo-wrapper {
+  width: 280px;
+  min-width: 280px;
   height: 45px;
-  padding-top: 8px;
-  flex-grow: 0;
-  &:hover {
-    cursor: pointer;
+  // border: 1px dotted white;
+  position: relative;
+  display: inline-block;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+
+  img {
+    height: 45px;
+    width: auto;
+    // border: 1px dotted white;
   }
+
+  .logo-title {
+    font-size: 0.9em;
+    position: absolute;
+    top: 2px;
+    left: 85px;
+    // border: 1px dotted white;
+    padding: 0;
+  }
+
+  .logo-name {
+    position: absolute;
+    top: 22px;
+    left: 100px;
+    font-size: 1.1em;
+    // border: 1px dotted white;
+    letter-spacing: 1.3px;
+  }
+
 }
+
+// .titlebar-logo {
+//   width: 250px;
+//   height: 45px;
+//   padding-top: 8px;
+//   flex-grow: 0;
+//   &:hover {
+//     cursor: pointer;
+//   }
+// }
 
 .titlebar-list {
   display: flex;
