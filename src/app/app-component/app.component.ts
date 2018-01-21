@@ -1,4 +1,4 @@
-import { Component, OnInit, DoCheck } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { pageTransition } from '../../animations';
 
@@ -17,7 +17,6 @@ export class AppComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    console.clear();
     this.data.getProjectData();
   }
 

@@ -37,7 +37,7 @@ const projectData = [
   {
     name: 'Book Exchange',
     type: {frontend: true, server: true, database: true},
-    tech: 'Angular 4.0, Typescript, MaterializeCSS, Node, Express, MongoDB, Mongoose, BCrypt, JSON Web Tokens,',
+    tech: 'Angular 4.0, Typescript, MaterializeCSS, Node, Express, MongoDB, Mongoose',
     tags: `
       HTML, CSS, Javascript, Angular, Typescript, MaterializeCSS,
       Node, Express, MongoDB, Mongo, Mongoose, BCrypt, JSON Web Tokens,`,
@@ -254,7 +254,7 @@ const projectData = [
     type: {frontend: true, server: false, database: false},
     tech: 'HTML, Sass, Javascript, JQuery, Babel, Webpack',
     tags: 'HTML, CSS, Javascript, Sass, ES6, JQuery, Babel, Webpack,',
-    featured: true,
+    featured: false,
     summary: `
       This is a noughts-and-crosses implementation built with ES6, JQuery and Sass and using Webpack as a build tool
       to run the Babel compiler and process the style declarations to CSS. The algorithm consists of three general

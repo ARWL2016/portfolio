@@ -40,5 +40,14 @@ export class OverviewComponent implements OnInit {
     // this.router.navigate( ['/overview', ], {fragment: 'contactForm'});
   }
 
+  public navigateTo(page): void {
+    this.router.navigate([page]);
+    this.scrollToTop();
+  }
+
+  public scrollToTop(): void {
+    window.scroll({ top: 0, left: 0, behavior: 'smooth' });
+  }
+
 
 }

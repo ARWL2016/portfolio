@@ -5,7 +5,7 @@
 
 .banner-section {
   // border: 1px dotted blue;
-  height: 650px;
+  height: 600px;
   // background-color: #000;
   background-image: url('../../assets/images/splash-wide-min.png');
   background-repeat: no-repeat;
@@ -13,10 +13,11 @@
   background-position: center;
   overflow: auto;
   font-family: 'Montserrat', sans-serif;
+  padding: 30px;
 }
 
 .banner-content {
-  margin-top: 230px;
+  margin-top: 200px;
 }
 
 .banner-header {
@@ -44,7 +45,9 @@
   font-size: 2em;
   color: white;
   padding: 15px 20px 15px 0;
-
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 
@@ -135,11 +138,11 @@
   // border-radius: 5px;
   display: flex;
   flex-direction: row;
-  margin-top: 50px;
+  margin-top: 40px;
   width: 100%;
   box-shadow: 0px 1px 5px rgba(0,0,0,0.4);
   &:last-child {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
   }
 }
 
@@ -180,7 +183,8 @@
 }
 
 .project-link {
-  @include project-button-link()
+  @include project-button-link();
+  text-align: center;
 }
 
 .project-link-icon {
@@ -192,6 +196,10 @@
 // *********************************************
 
 @media (max-width: 1000px) {
+
+  .banner-content {
+    margin-top: 120px;
+  }
 
   .image-column {
     width: 200px;
@@ -207,14 +215,17 @@
 @media (max-width: 670px) {
 
 
+
   .banner-header {
     font-size: 2em;
-    margin-top: 100px;
+    // margin-top: 100px;
   }
 
   .banner-text {
     font-size: 1em;
   }
+
+
 }
 
 @media (max-width: 610px) {
@@ -228,6 +239,13 @@
 
   .text-wrapper {
     margin: 30px 30px 30px 30px;
+  }
+
+  .project-link {
+    width: 100%;
+    display: block;
+    margin: 12px auto;
+
   }
 }
 

@@ -246,6 +246,7 @@
 @media screen and (max-width: 595px) {
 
   .search-wrapper {
+    padding: 20px 10px 0 10px;
     .input-wrapper {
       input {
         width: 100%;
@@ -253,12 +254,36 @@
     }
   }
 
+  .project-card {
+    padding: 25px;
+    margin-top: 10px;
+  }
+
+  .project-stack-type {
+    display: none;
+  }
+
+  .project-tech {
+    line-height: 1.4em;
+  }
+
   .project-image-column {
     display: none;
   }
 
-  .project-links-wrapper {
+  .project-list {
     margin-left: 20px;
+  }
+
+  .project-links-wrapper {
+    margin-left: 0px;
+  }
+
+  .project-link {
+    width: 100%;
+    display: block;
+    margin: 0;
+    margin-top: 10px;
   }
 }
 

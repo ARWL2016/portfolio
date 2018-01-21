@@ -38,7 +38,12 @@
        {{validationMessage}}
       </div>
 
-      <button type="submit" [disabled]="btnDisabled"><div class="spinner" *ngIf="showLoader"></div>{{btnLabel}}</button>
+      <button
+        type="submit"
+        [disabled]="btnDisabled">
+        <div class="spinner" *ngIf="showLoader"></div>
+        <i *ngIf="btnLabel=='Message Sent'" class="fa fa-check-circle" aria-hidden="true"></i>{{btnLabel}}
+      </button>
 
     </form>
   </section>

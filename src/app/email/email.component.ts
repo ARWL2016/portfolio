@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { EmailService } from 'app/email/email.service';
 import { FormGroup, FormControl, FormBuilder, Validators, AbstractControl } from '@angular/forms';
 import { Email } from 'app/email/email';
@@ -8,7 +8,7 @@ import { Email } from 'app/email/email';
   templateUrl: './email.component.html',
   styleUrls: ['./email.component.scss']
 })
-export class EmailComponent implements OnInit {
+export class EmailComponent {
 
    // email model
    emailForm: FormGroup;
@@ -26,15 +26,11 @@ export class EmailComponent implements OnInit {
     this.createForm();
    }
 
-  ngOnInit() {
-
-  }
-
+  // set up reactive form
   private createForm() {
-    // set up reactive form
     this.emailForm = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email]],
-      name: ['', []],
+      name: ['', [Validators.required]],
       message: ['', [Validators.required]]
     });
     this.emailCtrl = this.emailForm.get('email');
@@ -42,35 +38,51 @@ export class EmailComponent implements OnInit {
     this.messageCtrl = this.emailForm.get('message');
   }
 
-  sendEmail() {
+  public sendEmail(): void {
+    const valid = this.validateForm();
+    if (valid) {
+      this.btnDisabled = true;
+      this.btnLabel = '';
+      this.showLoader = true;
+      this.emailService.sendEmail(this.emailForm.value)
+        .then(res => this.handleResponse(res))
+        .catch(err => this.handleError(err));
+    }
+  }
+
+  private validateForm() {
     this.validationMessage = '';
 
     console.log(this.emailCtrl, this.nameCtrl, this.messageCtrl);
 
     if (this.emailCtrl.invalid) {
-      return this.validationMessage = 'Please include a valid email.';
+      this.validationMessage = 'Please include a valid email.';
+      return false;
     } else if (!this.nameCtrl.value || !this.messageCtrl.value) {
       this.validationMessage = 'Please complete all form fields.';
+      return false;
     } else {
-      this.btnDisabled = true;
-      this.btnLabel = '';
-      this.showLoader = true;
-      this.emailService.sendEmail(this.emailForm.value)
-        .then(res => {
-          console.log(res);
-          this.showLoader = false;
-          this.btnLabel = 'Message Sent';
-
-        })
-        .catch(err => {
-          console.log(err);
-          this.showLoader = false;
-          this.validationMessage = 'Oops! Something went wrong.';
-          this.btnLabel = 'Send';
-        });
+      return true;
     }
+  }
+
+  private handleResponse(res): void {
+    console.log(res);
+    this.showLoader = false;
+    this.btnLabel = 'Message Sent';
+    this.resetForm();
+  }
+
+  private handleError(err): void {
+    console.log(err);
+    this.showLoader = false;
+    this.validationMessage = 'Oops! Something went wrong.';
+    this.btnLabel = 'Send';
+  }
 
 
+  private resetForm() {
+    this.emailForm.setValue({name: '', email: '', message: ''});
   }
 
 }
