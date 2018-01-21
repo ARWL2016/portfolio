@@ -213,8 +213,9 @@
 }
 
 @media (max-width: 670px) {
-
-
+  .section-banner {
+    margin-top: 10px;
+  }
 
   .banner-header {
     font-size: 2em;
@@ -229,6 +230,13 @@
 }
 
 @media (max-width: 610px) {
+  .skills-section {
+    margin-bottom: 20px;
+  }
+  .project {
+    margin-top: 30px;
+  }
+
   .project-image {
     display: none;
   }
