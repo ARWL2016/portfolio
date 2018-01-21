@@ -134,12 +134,14 @@ var _a, _b;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__email_email_component__ = __webpack_require__("../../../../../src/app/email/email.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_app_services_project_data_service__ = __webpack_require__("../../../../../src/app/services/project-data.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_app_email_email_service__ = __webpack_require__("../../../../../src/app/email/email.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_app_services_ping_service__ = __webpack_require__("../../../../../src/app/services/ping.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -182,7 +184,8 @@ AppModule = __decorate([
         ],
         providers: [
             __WEBPACK_IMPORTED_MODULE_11_app_services_project_data_service__["a" /* ProjectDataService */],
-            __WEBPACK_IMPORTED_MODULE_12_app_email_email_service__["a" /* EmailService */]
+            __WEBPACK_IMPORTED_MODULE_12_app_email_email_service__["a" /* EmailService */],
+            __WEBPACK_IMPORTED_MODULE_13_app_services_ping_service__["a" /* PingService */]
         ],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_6_app_app_component_app_component__["a" /* AppComponent */]]
     })
@@ -392,6 +395,7 @@ module.exports = module.exports.toString();
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_app_services_project_data_service__ = __webpack_require__("../../../../../src/app/services/project-data.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__animations__ = __webpack_require__("../../../../../src/animations.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_app_services_ping_service__ = __webpack_require__("../../../../../src/app/services/ping.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -405,11 +409,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var OverviewComponent = (function () {
-    function OverviewComponent(dataService, router, route) {
+    function OverviewComponent(dataService, router, route, ping) {
         this.dataService = dataService;
         this.router = router;
         this.route = route;
+        this.ping = ping;
         this.username = 'alistairrwillis';
         this.hostname = 'gmail.com';
     }
@@ -426,6 +432,12 @@ var OverviewComponent = (function () {
             });
         }
     };
+    OverviewComponent.prototype.onWindowScroll = function () {
+        console.log(window.scrollY);
+        if (!this.ping.pinged && window.scrollY > 400) {
+            this.ping.pingProject();
+        }
+    };
     OverviewComponent.prototype.goTo = function () {
         document.querySelector('#contactForm').scrollIntoView({ behavior: 'smooth' });
         // this.router.navigate( ['/overview', ], {fragment: 'contactForm'});
@@ -439,6 +451,12 @@ var OverviewComponent = (function () {
     };
     return OverviewComponent;
 }());
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* HostListener */])('window:scroll', []),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", void 0)
+], OverviewComponent.prototype, "onWindowScroll", null);
 OverviewComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
         selector: 'app-overview',
@@ -446,10 +464,10 @@ OverviewComponent = __decorate([
         styles: [__webpack_require__("../../../../../src/app/overview/overview.component.scss")],
         animations: [__WEBPACK_IMPORTED_MODULE_2__animations__["a" /* pageTransition */]]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_app_services_project_data_service__["a" /* ProjectDataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_app_services_project_data_service__["a" /* ProjectDataService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["b" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* ActivatedRoute */]) === "function" && _c || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_app_services_project_data_service__["a" /* ProjectDataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_app_services_project_data_service__["a" /* ProjectDataService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["b" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* ActivatedRoute */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4_app_services_ping_service__["a" /* PingService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_app_services_ping_service__["a" /* PingService */]) === "function" && _d || Object])
 ], OverviewComponent);
 
-var _a, _b, _c;
+var _a, _b, _c, _d;
 //# sourceMappingURL=overview.component.js.map
 
 /***/ }),
@@ -457,7 +475,7 @@ var _a, _b, _c;
 /***/ "../../../../../src/app/portfolio/portfolio.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"page-wrapper\" [@showPage]=\"'on'\">\r\n\r\n  <div class=\"search-wrapper\" >\r\n    <form >\r\n      <label for=\"search\">SEARCH BY TECHNOLOGY</label>\r\n      <div class=\"input-wrapper\">\r\n        <input\r\n          class=\"search-input\"\r\n          name=\"search\"\r\n          type=\"text\"\r\n          autocomplete=\"off\"\r\n          [formControl]=\"searchTerm\"\r\n          placeholder=\"e.g. angular\">\r\n        <i class=\"search-icon fa fa-search\" aria-hidden=\"true\"></i>\r\n      </div>\r\n      <p *ngIf=\"results !== 1\" class=\"search-result\">{{results}} results</p>\r\n      <p *ngIf=\"results === 1\" class=\"search-result\">{{results}} result</p>\r\n    </form>\r\n  </div>\r\n\r\n<section *ngIf=\"projectData\" class=\"portfolio-content\">\r\n\r\n  <article class=\"project-card\" *ngFor=\"let project of projectData\" [@showPage]=\"'on'\">\r\n    <h1 class=\"project-heading\">{{ project.name }}</h1>\r\n    <span class=\"project-stack-type\">\r\n        <i *ngIf=\"project.type.frontend\" title=\"front end\" class=\"fa fa-desktop\" aria-hidden=\"true\"></i>\r\n        <i *ngIf=\"project.type.server\" title=\"server\" class=\"fa fa-server\" aria-hidden=\"true\"></i>\r\n        <i *ngIf=\"project.type.database\" title=\"database\" class=\"fa fa-database\" aria-hidden=\"true\"></i>\r\n    </span>\r\n    <p class=\"project-tech\">{{ project.tech | uppercase }}</p>\r\n    <div class=\"project-columns\">\r\n      <div class=\"project-image-column\">\r\n        <a href={{project.website_link}} target=\"_blank\">\r\n          <img src={{project.image_url}} class=\"project-image\" [ngStyle]=\"{'order': project.image_order}\" >\r\n        </a>\r\n        <div class=\"project-stat-wrapper\">\r\n          <p class=\"project-stat\">PAGE SIZE\r\n            <span class=\"project-stat-badge\" >{{ project.pingdom_page_size_kb }}kb</span>\r\n            <i class=\"tooltip fa fa-question-circle-o\" title=\"Data is raw size without browser caching\" aria-hidden=\"true\"></i>\r\n          </p>\r\n          <p class=\"project-stat\">LOAD TIME\r\n            <span class=\"project-stat-badge\">{{ project.pingdom_average_load_time }}s</span>\r\n            <i class=\"tooltip fa fa-question-circle-o\" title=\"Measured by Pingdom Website Speed Test. Average of four speeds measured from San Jose, New York, Stockholm and Melbourne.\" aria-hidden=\"true\"></i>\r\n          </p>\r\n          <p class=\"project-stat\">PAGE SPEED SCORE\r\n            <span class=\"project-stat-badge\">{{ project.google_page_speed_score }}%</span>\r\n            <i class=\"tooltip fa fa-question-circle-o\" title=\"Score is from Google Page Speed Insights (desktop).\" aria-hidden=\"true\"></i>\r\n\r\n          </p>\r\n        </div>\r\n      </div>\r\n\r\n      <div class=\"project-text-column\">\r\n        <p class=\"project-text\">{{ project.user_stories }}</p>\r\n        <ul class=\"project-list\">\r\n          <li class=\"project-list-item\" *ngFor=\"let highlight of project.highlights\">{{ highlight }}</li>\r\n        </ul>\r\n\r\n\r\n      </div>\r\n    </div>\r\n    <div class=\"project-links-wrapper\">\r\n      <a class=\"project-link\" target=\"_blank\" href={{project.github_link}}><i class=\"project-link-icon fa fa-github\" aria-hidden=\"true\"></i>&nbsp;SOURCE&nbsp;CODE</a>\r\n      <a class=\"project-link\" target=\"_blank\" href={{project.website_link}}><i class=\"project-link-icon fa fa-external-link-square\" aria-hidden=\"true\"></i>&nbsp;VIEW&nbsp;WEBSITE</a>\r\n    </div>\r\n\r\n  </article>\r\n</section>\r\n\r\n\r\n\r\n</div>\r\n\r\n<img\r\n  *ngIf=\"showBackToTopIcon\"\r\n  (click)=\"scrollToTop()\"\r\n  [@showPage]=\"'on'\"\r\n  class=\"back-to-top-icon\"\r\n  src=\"../../assets/icons/up-arrow-64.png\">\r\n"
+module.exports = "<div class=\"page-wrapper\" [@showPage]=\"'on'\">\r\n\r\n  <div class=\"search-wrapper\" >\r\n    <form>\r\n      <label for=\"search\">SEARCH BY TECHNOLOGY</label>\r\n      <div class=\"input-wrapper\">\r\n        <input\r\n          class=\"search-input\"\r\n          name=\"search\"\r\n          type=\"text\"\r\n          autocomplete=\"off\"\r\n          [formControl]=\"searchTerm\"\r\n          placeholder=\"e.g. angular\">\r\n        <i class=\"search-icon fa fa-search\" aria-hidden=\"true\"></i>\r\n      </div>\r\n      <p *ngIf=\"results !== 1\" class=\"search-result\">{{results}} results</p>\r\n      <p *ngIf=\"results === 1\" class=\"search-result\">{{results}} result</p>\r\n    </form>\r\n  </div>\r\n\r\n<section *ngIf=\"projectData\" class=\"portfolio-content\">\r\n\r\n  <article class=\"project-card\" *ngFor=\"let project of projectData\" [@showPage]=\"'on'\">\r\n    <h1 class=\"project-heading\">{{ project.name }}</h1>\r\n    <span class=\"project-stack-type\">\r\n        <i *ngIf=\"project.type.frontend\" title=\"front end\" class=\"fa fa-desktop\" aria-hidden=\"true\"></i>\r\n        <i *ngIf=\"project.type.server\" title=\"server\" class=\"fa fa-server\" aria-hidden=\"true\"></i>\r\n        <i *ngIf=\"project.type.database\" title=\"database\" class=\"fa fa-database\" aria-hidden=\"true\"></i>\r\n    </span>\r\n    <p class=\"project-tech\">{{ project.tech | uppercase }}</p>\r\n    <div class=\"project-columns\">\r\n      <div class=\"project-image-column\">\r\n        <a href={{project.website_link}} target=\"_blank\">\r\n          <img src={{project.image_url}} class=\"project-image\" [ngStyle]=\"{'order': project.image_order}\" >\r\n        </a>\r\n        <div class=\"project-stat-wrapper\">\r\n          <p class=\"project-stat\">PAGE SIZE\r\n            <span class=\"project-stat-badge\" >{{ project.pingdom_page_size_kb }}kb</span>\r\n            <i class=\"tooltip fa fa-question-circle-o\" title=\"Data is raw size without browser caching\" aria-hidden=\"true\"></i>\r\n          </p>\r\n          <p class=\"project-stat\">LOAD TIME\r\n            <span class=\"project-stat-badge\">{{ project.pingdom_average_load_time }}s</span>\r\n            <i class=\"tooltip fa fa-question-circle-o\" title=\"Measured by Pingdom Website Speed Test. Average of four speeds measured from San Jose, New York, Stockholm and Melbourne.\" aria-hidden=\"true\"></i>\r\n          </p>\r\n          <p class=\"project-stat\">PAGE SPEED SCORE\r\n            <span class=\"project-stat-badge\">{{ project.google_page_speed_score }}%</span>\r\n            <i class=\"tooltip fa fa-question-circle-o\" title=\"Score is from Google Page Speed Insights (desktop).\" aria-hidden=\"true\"></i>\r\n\r\n          </p>\r\n        </div>\r\n      </div>\r\n\r\n      <div class=\"project-text-column\">\r\n        <p class=\"project-text\">{{ project.user_stories }}</p>\r\n        <ul class=\"project-list\">\r\n          <li class=\"project-list-item\" *ngFor=\"let highlight of project.highlights\">{{ highlight }}</li>\r\n        </ul>\r\n\r\n\r\n      </div>\r\n    </div>\r\n    <div class=\"project-links-wrapper\">\r\n      <a class=\"project-link\" target=\"_blank\" href={{project.github_link}}><i class=\"project-link-icon fa fa-github\" aria-hidden=\"true\"></i>&nbsp;SOURCE&nbsp;CODE</a>\r\n      <a class=\"project-link\" target=\"_blank\" href={{project.website_link}}><i class=\"project-link-icon fa fa-external-link-square\" aria-hidden=\"true\"></i>&nbsp;VIEW&nbsp;WEBSITE</a>\r\n    </div>\r\n\r\n  </article>\r\n</section>\r\n\r\n\r\n\r\n</div>\r\n\r\n<img\r\n  *ngIf=\"showBackToTopIcon\"\r\n  (click)=\"scrollToTop()\"\r\n  [@showPage]=\"'on'\"\r\n  class=\"back-to-top-icon\"\r\n  src=\"../../assets/icons/up-arrow-64.png\">\r\n"
 
 /***/ }),
 
@@ -488,9 +506,9 @@ module.exports = module.exports.toString();
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_app_services_project_data_service__ = __webpack_require__("../../../../../src/app/services/project-data.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__animations__ = __webpack_require__("../../../../../src/animations.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_platform_browser__ = __webpack_require__("../../../platform-browser/@angular/platform-browser.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_debounceTime__ = __webpack_require__("../../../../rxjs/add/operator/debounceTime.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_debounceTime___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_debounceTime__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_debounceTime__ = __webpack_require__("../../../../rxjs/add/operator/debounceTime.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_debounceTime___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_debounceTime__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_app_services_ping_service__ = __webpack_require__("../../../../../src/app/services/ping.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -500,9 +518,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var __param = (this && this.__param) || function (paramIndex, decorator) {
-    return function (target, key) { decorator(target, key, paramIndex); }
-};
 
 
 
@@ -510,34 +525,50 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 
 
 var PortfolioComponent = (function () {
-    function PortfolioComponent(dataService, document) {
+    function PortfolioComponent(dataService, ping) {
         this.dataService = dataService;
-        this.document = document;
+        this.ping = ping;
+        // project data
         this.projectData = [];
-        // searchTerm: string;
+        // search
         this.searchTerm = new __WEBPACK_IMPORTED_MODULE_3__angular_forms__["b" /* FormControl */]();
+        // UI props
         this.showBackToTopIcon = false;
+        this.createSearchListener();
     }
+    Object.defineProperty(PortfolioComponent.prototype, "results", {
+        get: function () {
+            return this.projectData.length;
+        },
+        enumerable: true,
+        configurable: true
+    });
     PortfolioComponent.prototype.ngOnInit = function () {
+        this.getData();
+        this.pingProjects();
+    };
+    PortfolioComponent.prototype.getData = function () {
         var _this = this;
-        console.clear();
-        console.log('portfolio loaded');
         if (this.dataService.projectData) {
             this.projectData = this.dataService.projectData;
-            this.results = this.projectData.length;
         }
         else {
             this.dataService.getProjectData()
                 .then(function (data) {
                 _this.projectData = data;
                 console.log(_this.projectData);
-                _this.results = _this.projectData.length;
             });
         }
+    };
+    PortfolioComponent.prototype.pingProjects = function () {
+        if (!this.ping.pinged) {
+            this.ping.pingProject();
+        }
+    };
+    PortfolioComponent.prototype.createSearchListener = function () {
+        var _this = this;
         this.searchTerm.valueChanges
-            .subscribe(function (newValue) {
-            _this.search();
-        });
+            .subscribe(function (newValue) { return _this.search(); });
     };
     PortfolioComponent.prototype.onWindowScroll = function () {
         if (window.scrollY > 1000) {
@@ -553,7 +584,6 @@ var PortfolioComponent = (function () {
     PortfolioComponent.prototype.search = function () {
         var filter = this.searchTerm.value.trim().concat(',');
         this.projectData = this.transform(this.dataService.projectData, filter);
-        this.results = this.projectData.length;
     };
     PortfolioComponent.prototype.transform = function (allProjects, filterBy) {
         filterBy = filterBy ? filterBy.toLocaleLowerCase() : null;
@@ -577,12 +607,57 @@ PortfolioComponent = __decorate([
         styles: [__webpack_require__("../../../../../src/app/portfolio/portfolio.component.scss")],
         animations: [__WEBPACK_IMPORTED_MODULE_2__animations__["a" /* pageTransition */]]
     }),
-    __param(1, Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Inject */])(__WEBPACK_IMPORTED_MODULE_4__angular_platform_browser__["b" /* DOCUMENT */])),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_app_services_project_data_service__["a" /* ProjectDataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_app_services_project_data_service__["a" /* ProjectDataService */]) === "function" && _a || Object, Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_app_services_project_data_service__["a" /* ProjectDataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_app_services_project_data_service__["a" /* ProjectDataService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_5_app_services_ping_service__["a" /* PingService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5_app_services_ping_service__["a" /* PingService */]) === "function" && _b || Object])
 ], PortfolioComponent);
 
-var _a;
+var _a, _b;
 //# sourceMappingURL=portfolio.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/services/ping.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PingService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise__ = __webpack_require__("../../../../rxjs/add/operator/toPromise.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var PingService = (function () {
+    function PingService(http) {
+        this.http = http;
+        this.pinged = false;
+    }
+    PingService.prototype.pingProject = function () {
+        this.pinged = true;
+        console.log('pinging...');
+        return this.http.get('https://pathfinder-2017.herokuapp.com')
+            .toPromise()
+            .then(function (res) { return console.log(res); })
+            .catch(function (e) { return console.log(e); });
+    };
+    return PingService;
+}());
+PingService = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])(),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */]) === "function" && _a || Object])
+], PingService);
+
+var _a;
+//# sourceMappingURL=ping.service.js.map
 
 /***/ }),
 

@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { ProjectDataService } from 'app/services/project-data.service';
 import { Project } from 'app/services/project';
 import { pageTransition } from '../../animations';
 import { ActivatedRoute, Router } from '@angular/router';
+import { PingService } from 'app/services/ping.service';
 
 @Component({
   selector: 'app-overview',
@@ -20,7 +21,8 @@ export class OverviewComponent implements OnInit {
   constructor(
     private dataService: ProjectDataService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private ping: PingService
   ) { }
 
   ngOnInit() {
@@ -32,6 +34,14 @@ export class OverviewComponent implements OnInit {
         .then(data => {
           this.projectData = data.filter(project => project.featured);
       });
+    }
+  }
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    console.log(window.scrollY);
+    if (!this.ping.pinged && window.scrollY > 400) {
+      this.ping.pingProject();
     }
   }
 

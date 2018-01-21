@@ -3,8 +3,8 @@ import { ProjectDataService } from 'app/services/project-data.service';
 import { Project } from 'app/services/project';
 import { pageTransition } from '../../animations';
 import { FormControl } from '@angular/forms';
-import { DOCUMENT } from "@angular/platform-browser";
 import 'rxjs/add/operator/debounceTime';
+import { PingService } from 'app/services/ping.service';
 
 @Component({
   selector: 'app-portfolio',
@@ -13,39 +13,50 @@ import 'rxjs/add/operator/debounceTime';
   animations: [pageTransition]
 })
 export class PortfolioComponent implements OnInit {
-  projectData: Project[] = [];
-  // searchTerm: string;
-  searchTerm = new FormControl();
-  results: number;
 
+  // project data
+  projectData: Project[] = [];
+  get results(): number {
+    return this.projectData.length;
+  }
+
+  // search
+  searchTerm = new FormControl();
+
+  // UI props
   showBackToTopIcon = false;
 
-  constructor(
-    private dataService: ProjectDataService,
-    @Inject(DOCUMENT) private document: Document
-  ) { }
+  constructor(private dataService: ProjectDataService, private ping: PingService) {
+    this.createSearchListener();
+  }
 
   ngOnInit() {
-    console.clear();
-    console.log('portfolio loaded');
+    this.getData();
+    this.pingProjects();
+  }
+
+  private getData(): void {
     if (this.dataService.projectData) {
       this.projectData = this.dataService.projectData;
-      this.results = this.projectData.length;
     } else {
       this.dataService.getProjectData()
         .then(data => {
           this.projectData = data;
           console.log(this.projectData);
-          this.results = this.projectData.length;
       });
     }
+  }
 
+  private pingProjects(): void {
+    if (!this.ping.pinged) {
+      this.ping.pingProject();
+    }
+  }
+
+  private createSearchListener(): void {
     this.searchTerm.valueChanges
-      // .debounceTime(200)
-      .subscribe(newValue => {
-        this.search();
-    });
-
+    // .debounceTime(200)
+      .subscribe(newValue => this.search());
   }
 
   @HostListener('window:scroll', [])
@@ -55,20 +66,18 @@ export class PortfolioComponent implements OnInit {
     } else {
       this.showBackToTopIcon = false;
     }
-
   }
 
   public scrollToTop(): void {
     window.scroll({ top: 0, left: 0, behavior: 'smooth' });
   }
 
-  search() {
+  private search(): void {
     const filter = this.searchTerm.value.trim().concat(',');
     this.projectData = this.transform(this.dataService.projectData, filter);
-    this.results = this.projectData.length;
   }
 
-  transform(allProjects: Project[], filterBy: string): Project[] {
+  private transform(allProjects: Project[], filterBy: string): Project[] {
     filterBy = filterBy ? filterBy.toLocaleLowerCase() : null;
 
     if (filterBy) {
@@ -76,7 +85,4 @@ export class PortfolioComponent implements OnInit {
     }
     return allProjects;
   }
-
-
-
 }

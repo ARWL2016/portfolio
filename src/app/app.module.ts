@@ -13,6 +13,8 @@ import { EmailComponent } from './email/email.component';
 
 import { ProjectDataService } from 'app/services/project-data.service';
 import { EmailService } from 'app/email/email.service';
+import { PingService } from 'app/services/ping.service';
+
 
 @NgModule({
   declarations: [
@@ -37,7 +39,8 @@ import { EmailService } from 'app/email/email.service';
   ],
   providers: [
     ProjectDataService,
-    EmailService
+    EmailService,
+    PingService
   ],
   bootstrap: [AppComponent]
 })
