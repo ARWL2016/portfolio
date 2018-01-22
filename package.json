@@ -38,6 +38,7 @@
     "express": "4.16.2",
     "helmet": "3.9.0",
     "ms": "2.1.1",
+    "request": "2.83.0",
     "request-promise": "4.2.2",
     "rxjs": "^5.1.0",
     "web-animations-js": "2.3.1",
