@@ -14,6 +14,7 @@ import { EmailComponent } from './email/email.component';
 import { ProjectDataService } from 'app/services/project-data.service';
 import { EmailService } from 'app/email/email.service';
 import { PingService } from 'app/services/ping.service';
+import { LogoComponent } from 'app/shared/logo.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { PingService } from 'app/services/ping.service';
     OverviewComponent,
     PortfolioComponent,
     SkillsComponent,
-    EmailComponent
+    EmailComponent,
+    LogoComponent
   ],
   imports: [
     BrowserModule,

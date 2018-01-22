@@ -3,7 +3,6 @@ import { ProjectDataService } from 'app/services/project-data.service';
 import { Project } from 'app/services/project';
 import { pageTransition } from '../../animations';
 import { FormControl } from '@angular/forms';
-import 'rxjs/add/operator/debounceTime';
 import { PingService } from 'app/services/ping.service';
 
 @Component({
@@ -32,7 +31,7 @@ export class PortfolioComponent implements OnInit {
 
   ngOnInit() {
     this.getData();
-    this.pingProjects();
+    this.pingProjects('primary');
   }
 
   private getData(): void {
@@ -42,25 +41,27 @@ export class PortfolioComponent implements OnInit {
       this.dataService.getProjectData()
         .then(data => {
           this.projectData = data;
-          console.log(this.projectData);
       });
     }
   }
 
-  private pingProjects(): void {
-    if (!this.ping.pinged) {
-      this.ping.pingProject();
+  private pingProjects(type: string): void {
+    if (!this.ping.pinged[type]) {
+      this.ping.postPing(type);
     }
   }
 
   private createSearchListener(): void {
     this.searchTerm.valueChanges
-    // .debounceTime(200)
       .subscribe(newValue => this.search());
   }
 
   @HostListener('window:scroll', [])
-  onWindowScroll() {
+  onWindowScroll(): void {
+    if (window.scrollY > 2000) {
+      this.pingProjects('secondary');
+    }
+
     if (window.scrollY > 1000) {
       this.showBackToTopIcon = true;
     } else {

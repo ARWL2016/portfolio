@@ -1,6 +1,7 @@
 <div class="page-wrapper" [@showPage]="'on'">
 
-  <div class="search-wrapper" >
+  <!-- SEARCH SECTION -->
+  <section class="search-wrapper" >
     <form>
       <label for="search">SEARCH BY TECHNOLOGY</label>
       <div class="input-wrapper">
@@ -16,58 +17,53 @@
       <p *ngIf="results !== 1" class="search-result">{{results}} results</p>
       <p *ngIf="results === 1" class="search-result">{{results}} result</p>
     </form>
-  </div>
+  </section>
 
-<section *ngIf="projectData" class="portfolio-content">
+  <!-- PORTFOLIO SECTION -->
+  <section *ngIf="projectData" class="portfolio-content">
 
-  <article class="project-card" *ngFor="let project of projectData" [@showPage]="'on'">
-    <h1 class="project-heading">{{ project.name }}</h1>
-    <span class="project-stack-type">
-        <i *ngIf="project.type.frontend" title="front end" class="fa fa-desktop" aria-hidden="true"></i>
-        <i *ngIf="project.type.server" title="server" class="fa fa-server" aria-hidden="true"></i>
-        <i *ngIf="project.type.database" title="database" class="fa fa-database" aria-hidden="true"></i>
-    </span>
-    <p class="project-tech">{{ project.tech | uppercase }}</p>
-    <div class="project-columns">
-      <div class="project-image-column">
-        <a href={{project.website_link}} target="_blank">
-          <img src={{project.image_url}} class="project-image" [ngStyle]="{'order': project.image_order}" >
-        </a>
-        <div class="project-stat-wrapper">
-          <p class="project-stat">PAGE SIZE
-            <span class="project-stat-badge" >{{ project.pingdom_page_size_kb }}kb</span>
-            <i class="tooltip fa fa-question-circle-o" title="Data is raw size without browser caching" aria-hidden="true"></i>
-          </p>
-          <p class="project-stat">LOAD TIME
-            <span class="project-stat-badge">{{ project.pingdom_average_load_time }}s</span>
-            <i class="tooltip fa fa-question-circle-o" title="Measured by Pingdom Website Speed Test. Average of four speeds measured from San Jose, New York, Stockholm and Melbourne." aria-hidden="true"></i>
-          </p>
-          <p class="project-stat">PAGE SPEED SCORE
-            <span class="project-stat-badge">{{ project.google_page_speed_score }}%</span>
-            <i class="tooltip fa fa-question-circle-o" title="Score is from Google Page Speed Insights (desktop)." aria-hidden="true"></i>
-
-          </p>
+    <article class="project-card" *ngFor="let project of projectData" [@showPage]="'on'">
+      <h1 class="project-heading">{{ project.name }}</h1>
+      <span class="project-stack-type">
+          <i *ngIf="project.type.frontend" title="front end" class="fa fa-desktop" aria-hidden="true"></i>
+          <i *ngIf="project.type.server" title="server" class="fa fa-server" aria-hidden="true"></i>
+          <i *ngIf="project.type.database" title="database" class="fa fa-database" aria-hidden="true"></i>
+      </span>
+      <p class="project-tech">{{ project.tech | uppercase }}</p>
+      <div class="project-columns">
+        <div class="project-image-column">
+          <a href={{project.website_link}} target="_blank">
+            <img src={{project.image_url}} class="project-image" [ngStyle]="{'order': project.image_order}" >
+          </a>
+          <div class="project-stat-wrapper">
+            <p class="project-stat">PAGE SIZE
+              <span class="project-stat-badge" >{{ project.pingdom_page_size_kb }}kb</span>
+              <i class="tooltip fa fa-question-circle-o" title="Data is raw size without browser caching" aria-hidden="true"></i>
+            </p>
+            <p class="project-stat">LOAD TIME
+              <span class="project-stat-badge">{{ project.pingdom_average_load_time }}s</span>
+              <i class="tooltip fa fa-question-circle-o" title="Measured by Pingdom Website Speed Test. Average of four speeds measured from San Jose, New York, Stockholm and Melbourne." aria-hidden="true"></i>
+            </p>
+            <p class="project-stat">PAGE SPEED SCORE
+              <span class="project-stat-badge">{{ project.google_page_speed_score }}%</span>
+              <i class="tooltip fa fa-question-circle-o" title="Score is from Google Page Speed Insights (desktop)." aria-hidden="true"></i>
+            </p>
+          </div>
+        </div>
+        <div class="project-text-column">
+          <p class="project-text">{{ project.user_stories }}</p>
+          <ul class="project-list">
+            <li class="project-list-item" *ngFor="let highlight of project.highlights">{{ highlight }}</li>
+          </ul>
         </div>
       </div>
-
-      <div class="project-text-column">
-        <p class="project-text">{{ project.user_stories }}</p>
-        <ul class="project-list">
-          <li class="project-list-item" *ngFor="let highlight of project.highlights">{{ highlight }}</li>
-        </ul>
-
-
+      <div class="project-links-wrapper">
+        <a class="project-link" target="_blank" href={{project.github_link}}><i class="project-link-icon fa fa-github" aria-hidden="true"></i>&nbsp;SOURCE&nbsp;CODE</a>
+        <a class="project-link" target="_blank" href={{project.website_link}}><i class="project-link-icon fa fa-external-link-square" aria-hidden="true"></i>&nbsp;VIEW&nbsp;WEBSITE</a>
       </div>
-    </div>
-    <div class="project-links-wrapper">
-      <a class="project-link" target="_blank" href={{project.github_link}}><i class="project-link-icon fa fa-github" aria-hidden="true"></i>&nbsp;SOURCE&nbsp;CODE</a>
-      <a class="project-link" target="_blank" href={{project.website_link}}><i class="project-link-icon fa fa-external-link-square" aria-hidden="true"></i>&nbsp;VIEW&nbsp;WEBSITE</a>
-    </div>
 
-  </article>
-</section>
-
-
+    </article>
+  </section>
 
 </div>
 

@@ -1,17 +1,11 @@
+<!-- HEADER SECTION -->
 <header
   class="header"
   id="header">
-
   <div class="header-content">
-
   <nav class="titlebar">
-
-    <div class="logo-wrapper">
-      <img class="titlebar-logo" src="../assets/logos/logo_blue.png" routerLink="/overview">
-      <div class="logo-title">Front End Developer</div>
-      <div class="logo-name">Alistair Willis</div>
-    </div>
-
+    <!-- LOGO COMPONENT -->
+    <app-logo></app-logo>
     <ul class="titlebar-list">
       <li class="titlebar-list-item">
         <a class="titlebar-anchor" routerLink="/overview" routerLinkActive="titlebar-list-item_selected">OVERVIEW</a>
@@ -24,16 +18,15 @@
       </li>
     </ul>
   </nav>
-
-
   </div>
-  <!-- header content -->
 </header>
 
+<!-- ROUTER OUTLET -->
 <div class="content">
   <router-outlet></router-outlet>
 </div>
 
+<!-- FOOTER SECTION -->
 <footer class="footer">
   <div class="footer-content-wrapper">
     <div class="footer-column footer-bio-wrapper">
@@ -41,7 +34,6 @@
       <p class="footer-text">I'm a software developer who uses modern tools and frameworks to build responsive, modular web applications.</p>
       <p class="footer-text">Available for hire: March 2018.</p>
     </div>
-
     <div class="footer-column footer-contacts-wrapper">
       <h3 class="footer-heading">EXTERNAL LINKS</h3>
       <a class="footer-link" target="_blank" href="https://github.com/ARWL2016">Github
@@ -54,20 +46,13 @@
         Codewars <img src="https://www.codewars.com/users/ARWL2016/badges/micro">
       </a>
     </div>
-
     <div class="footer-column footer-links-wrapper">
       <h3 class="footer-heading footer-link" (click)="scrollToTop()">BACK TO TOP</h3>
       <hr class="footer-line">
       <h3 class="footer-heading footer-link" (click)="navigateTo('/overview')">OVERVIEW</h3>
-      <!-- <p class="footer-text">See an overview of my projects and link to live websites and the source code.</p> -->
-
       <h3 class="footer-heading footer-link" (click)="navigateTo('/portfolio')">PORTFOLIO</h3>
-      <!-- <p class="footer-text">See an overview of my projects and link to live websites and the source code.</p> -->
-
       <h3 class="footer-heading footer-link" (click)="navigateTo('/skills')">SKILLS</h3>
-      <!-- <p class="footer-text">Get a summary of my technical skills and read about my coding philosophy.</p> -->
     </div>
   </div>
-
 </footer>
 

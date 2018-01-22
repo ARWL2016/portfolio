@@ -1,18 +1,14 @@
 @import '../../variables';
 
 .header {
-
-  // flex-grow: 0;
   background-color: #222;
   font-family: 'Montserrat', sans-serif;
   min-height: 80px;
   width: 100%;
   padding: 15px;
-  // border: 1px dotted green;
 }
 
 .header-content {
-
   width: 80%;
   max-width: $max-content-width;
   margin: 0 auto;
@@ -25,47 +21,41 @@
   justify-content: space-between;
   height: 50px;
   margin-top: 0px;
-  // border: 1px dotted yellow;
 }
 
 // LOGO
 
-.logo-wrapper {
-  width: 280px;
-  min-width: 280px;
-  height: 45px;
-  // border: 1px dotted white;
-  position: relative;
-  display: inline-block;
-  color: white;
-  text-transform: uppercase;
-  font-weight: bold;
+// .logo-wrapper {
+//   width: 280px;
+//   min-width: 280px;
+//   height: 45px;
+//   position: relative;
+//   display: inline-block;
+//   color: white;
+//   text-transform: uppercase;
+//   font-weight: bold;
 
-  img {
-    height: 45px;
-    width: auto;
-    // border: 1px dotted white;
-  }
+//   img {
+//     height: 45px;
+//     width: auto;
+//   }
 
-  .logo-title {
-    font-size: 0.9em;
-    position: absolute;
-    top: 2px;
-    left: 85px;
-    // border: 1px dotted white;
-    padding: 0;
-  }
+//   .logo-title {
+//     font-size: 0.9em;
+//     position: absolute;
+//     top: 2px;
+//     left: 85px;
+//     padding: 0;
+//   }
 
-  .logo-name {
-    position: absolute;
-    top: 22px;
-    left: 100px;
-    font-size: 1.1em;
-    // border: 1px dotted white;
-    letter-spacing: 1.3px;
-  }
-
-}
+//   .logo-name {
+//     position: absolute;
+//     top: 22px;
+//     left: 100px;
+//     font-size: 1.1em;
+//     letter-spacing: 1.3px;
+//   }
+// }
 
 .titlebar-list {
   display: flex;
@@ -73,7 +63,6 @@
   flex-grow: 1;
   align-items: center;
   height: 50px;
-  // border: 1px dotted white;
   justify-content: flex-end;
 }
 
@@ -82,7 +71,6 @@
   display: inline-block;
   color: white;
   margin-left: 20px;
-  // border: 1px dotted white;
   margin-bottom: 4px;
   padding: 10px;
 }
@@ -124,7 +112,6 @@
 }
 
 @media screen and (max-width: 400px) {
-
   .header {
     padding: 20px 10px 10px 10px;
   }

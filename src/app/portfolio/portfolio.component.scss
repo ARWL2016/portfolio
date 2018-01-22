@@ -15,17 +15,13 @@
   width: 80%;
   margin: 0 auto;
   transition: width 300ms;
-  // margin-bottom: 30px;
-  // border: 1px dotted red;
 }
+
 
 // SEARCH INPUT ************
 
 .search-wrapper {
-
-  // border: 1px dotted lightgreen;
   padding-top: 50px;
-  // width: 100%;
 
   label {
     display: block;
@@ -37,7 +33,6 @@
 
   .input-wrapper {
     position: relative;
-    // border: 1px dotted red;
 
     i.search-icon {
       position: absolute;
@@ -64,15 +59,13 @@
   }
 }
 
-
-
-
 .search-result {
   color: #444;
   font-style: italic;
   padding: 7px;
 
 }
+
 
 // PROJECT CARD ************
 
@@ -129,7 +122,6 @@
 }
 
 .project-text-column {
-  // border: 1px dotted blue;
   float: left;
   margin: 0 20px 0 20px;
 }
@@ -153,15 +145,14 @@
   list-style-type: square;
 }
 
+
 // STATS ********************
 
 .project-stat-wrapper {
   background-color: $light-grey-background;
-  // padding: 4px 4px 10px 4px;
   padding: 10px 15px 10px 15px;
   margin-top: 20px;
   border-radius: 3px;
-  // margin-left: 12px;
 }
 
 .project-stat {
@@ -169,9 +160,6 @@
   font-size: 0.85em;
   letter-spacing: 1.5px;
   line-height: 2.2em;
-  // margin-top: 12px;
-  // margin-left: 12px;
-  // color: red;
 }
 
 .project-stat-badge {
@@ -181,7 +169,6 @@
   color: black;
   font-size: 0.8em;
   text-align: right;
-
 }
 
 .tooltip {
@@ -192,19 +179,15 @@
   }
 }
 
-// LINKS ********************
+
+// PROJECT LINK BUTTONS ********************
 
 .project-links-wrapper {
-  // flex-direction: row;
   margin-left: 320px;
 }
 
 .project-link {
   @include project-button-link();
-  // @include project-buttons($highlight-color);
-  // text-decoration: none;
-  // font-weight: 500;
-  // float: right;
 }
 
 .project-link-icon {
@@ -223,11 +206,11 @@
   }
 }
 
+
 // MEDIA QUERIES
 // *********************************************
 
 @media screen and (max-width: 930px) {
-
   .portfolio-content,
   .search-wrapper {
     width: 95%;
@@ -240,11 +223,9 @@
   .project-links-wrapper {
     margin-left: 220px;
   }
-
 }
 
 @media screen and (max-width: 595px) {
-
   .search-wrapper {
     padding: 20px 10px 0 10px;
     .input-wrapper {

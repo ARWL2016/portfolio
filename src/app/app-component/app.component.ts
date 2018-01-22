@@ -7,7 +7,7 @@ import { ProjectDataService } from '../services/project-data.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss', './app.component.header.scss', './app.component.footer.scss']
 })
 export class AppComponent implements OnInit {
 
@@ -28,6 +28,4 @@ export class AppComponent implements OnInit {
   public scrollToTop(): void {
     window.scroll({ top: 0, left: 0, behavior: 'smooth' });
   }
-
-
 }

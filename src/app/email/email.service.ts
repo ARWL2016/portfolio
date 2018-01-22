@@ -8,10 +8,9 @@ export class EmailService {
 
   constructor(private http: Http) { }
 
-  public sendEmail(email: Email) {
+  public sendEmail(email: Email): Promise<any> {
 
     const url = 'https://formspree.io/alistairrwillis@gmail.com';
-
     return this.http.post(url, email)
       .toPromise();
   }

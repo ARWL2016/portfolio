@@ -14,19 +14,18 @@ import { PingService } from 'app/services/ping.service';
 export class OverviewComponent implements OnInit {
 
   projectData: Project[];
-  username = 'alistairrwillis';
-  hostname = 'gmail.com';
-  private fragment: string;
 
   constructor(
     private dataService: ProjectDataService,
     private router: Router,
-    private route: ActivatedRoute,
     private ping: PingService
   ) { }
 
   ngOnInit() {
-    // fetch project data
+    this.getProjectData();
+  }
+
+  private getProjectData() {
     if (this.dataService.projectData) {
       this.projectData = this.dataService.projectData.filter(project => project.featured);
     } else {
@@ -38,16 +37,14 @@ export class OverviewComponent implements OnInit {
   }
 
   @HostListener('window:scroll', [])
-  onWindowScroll() {
-    console.log(window.scrollY);
-    if (!this.ping.pinged && window.scrollY > 400) {
-      this.ping.pingProject();
+  onWindowScroll(): void {
+    if (!this.ping.pinged.primary && window.scrollY > 400) {
+      this.ping.postPing('primary');
     }
   }
 
-  public goTo() {
+  public scrollTo() {
     document.querySelector('#contactForm').scrollIntoView({behavior: 'smooth' });
-    // this.router.navigate( ['/overview', ], {fragment: 'contactForm'});
   }
 
   public navigateTo(page): void {
@@ -58,6 +55,4 @@ export class OverviewComponent implements OnInit {
   public scrollToTop(): void {
     window.scroll({ top: 0, left: 0, behavior: 'smooth' });
   }
-
-
 }

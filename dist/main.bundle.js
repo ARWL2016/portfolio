@@ -40,10 +40,46 @@ var pageTransition = Object(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["j
 
 /***/ }),
 
+/***/ "../../../../../src/app/app-component/app.component.footer.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".footer {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-flex: 0;\n      -ms-flex-positive: 0;\n          flex-grow: 0;\n  background-color: #222;\n  color: white;\n  min-height: 300px;\n  bottom: 0; }\n\n.footer-content-wrapper {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  font-weight: 300;\n  max-width: 1000px;\n  margin: 0 auto;\n  padding: 30px;\n  line-height: 1.8em;\n  overflow: auto; }\n\n.footer-column {\n  padding: 20px 20px 20px 50px; }\n  .footer-column:nth-child(1) {\n    width: 40%; }\n  .footer-column:nth-child(2) {\n    width: 30%; }\n  .footer-column:nth-child(3) {\n    width: 30%; }\n\n.footer-heading {\n  font-size: 0.9em;\n  font-family: \"Montserrat\", sans-serif; }\n\n.footer-text {\n  font-size: 0.9em;\n  margin-bottom: 10px; }\n\n.footer-link {\n  color: #2587ce;\n  text-decoration: none; }\n  .footer-link:hover {\n    text-decoration: underline;\n    cursor: pointer; }\n  .footer-link:hover {\n    text-decoration: none; }\n\n.footer-icon-link:hover {\n  text-decoration: none; }\n\n.footer-line {\n  color: #2587ce;\n  background-color: #2587ce;\n  height: 2px;\n  border: 0;\n  width: 50%;\n  text-align: left;\n  margin: 10px auto 10px 0; }\n\n@media (max-width: 930px) {\n  .footer-content-wrapper {\n    padding: 30px 10px 10px 10px; }\n  .footer-column {\n    padding: 10px; } }\n\n@media (max-width: 670px) {\n  .footer-column:nth-child(1) {\n    display: none; }\n  .footer-column:nth-child(2) {\n    width: 50%; }\n  .footer-column:nth-child(3) {\n    width: 50%; } }\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/app-component/app.component.header.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".header {\n  background-color: #222;\n  font-family: 'Montserrat', sans-serif;\n  min-height: 80px;\n  width: 100%;\n  padding: 15px; }\n\n.header-content {\n  width: 80%;\n  max-width: 1000px;\n  margin: 0 auto;\n  transition: width 300ms; }\n\n.titlebar {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  height: 50px;\n  margin-top: 0px; }\n\n.titlebar-list {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  margin: 0;\n  -webkit-box-flex: 1;\n      -ms-flex-positive: 1;\n          flex-grow: 1;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  height: 50px;\n  -webkit-box-pack: end;\n      -ms-flex-pack: end;\n          justify-content: flex-end; }\n\n.titlebar-list-item {\n  list-style-type: none;\n  display: inline-block;\n  color: white;\n  margin-left: 20px;\n  margin-bottom: 4px;\n  padding: 10px; }\n\n.titlebar-list-item_selected {\n  border-bottom: 4px solid #2587ce;\n  margin-bottom: 0; }\n\n.titlebar-anchor {\n  text-decoration: none;\n  color: #FFF;\n  font-size: 0.85rem;\n  padding: 5px 0 5px 0; }\n\n@media screen and (max-width: 770px) {\n  .header-content {\n    width: 95%; }\n  .titlebar {\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center; }\n  .titlebar-list {\n    margin-top: 30px; }\n  .titlebar-list-item {\n    margin-left: 10px;\n    padding: 10px 20px; }\n  .header {\n    min-height: 120px; } }\n\n@media screen and (max-width: 400px) {\n  .header {\n    padding: 20px 10px 10px 10px; }\n  .header-content {\n    width: 100%; }\n  .titlebar-list {\n    margin-top: 25px; }\n  .titlebar-list-item {\n    padding: 10px 3px; } }\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
 /***/ "../../../../../src/app/app-component/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<header\r\n  class=\"header\"\r\n  id=\"header\">\r\n\r\n  <div class=\"header-content\">\r\n\r\n  <nav class=\"titlebar\">\r\n\r\n    <div class=\"logo-wrapper\">\r\n      <img class=\"titlebar-logo\" src=\"../assets/logos/logo_blue.png\" routerLink=\"/overview\">\r\n      <div class=\"logo-title\">Front End Developer</div>\r\n      <div class=\"logo-name\">Alistair Willis</div>\r\n    </div>\r\n\r\n    <ul class=\"titlebar-list\">\r\n      <li class=\"titlebar-list-item\">\r\n        <a class=\"titlebar-anchor\" routerLink=\"/overview\" routerLinkActive=\"titlebar-list-item_selected\">OVERVIEW</a>\r\n      </li>\r\n      <li class=\"titlebar-list-item\">\r\n        <a class=\"titlebar-anchor\" routerLink=\"/portfolio\" routerLinkActive=\"titlebar-list-item_selected\">PORTFOLIO</a>\r\n      </li>\r\n      <li class=\"titlebar-list-item\">\r\n        <a class=\"titlebar-anchor\" routerLink=\"/skills\" routerLinkActive=\"titlebar-list-item_selected\">ABOUT&nbsp;ME</a>\r\n      </li>\r\n    </ul>\r\n  </nav>\r\n\r\n\r\n  </div>\r\n  <!-- header content -->\r\n</header>\r\n\r\n<div class=\"content\">\r\n  <router-outlet></router-outlet>\r\n</div>\r\n\r\n<footer class=\"footer\">\r\n  <div class=\"footer-content-wrapper\">\r\n    <div class=\"footer-column footer-bio-wrapper\">\r\n      <h3 class=\"footer-heading\">ALISTAIR WILLIS</h3>\r\n      <p class=\"footer-text\">I'm a software developer who uses modern tools and frameworks to build responsive, modular web applications.</p>\r\n      <p class=\"footer-text\">Available for hire: March 2018.</p>\r\n    </div>\r\n\r\n    <div class=\"footer-column footer-contacts-wrapper\">\r\n      <h3 class=\"footer-heading\">EXTERNAL LINKS</h3>\r\n      <a class=\"footer-link\" target=\"_blank\" href=\"https://github.com/ARWL2016\">Github\r\n        <i class=\"footer-icon-link fa fa-github\" aria-hidden=\"true\"></i>\r\n      </a><br>\r\n      <a class=\"footer-link\" target=\"_blank\" href=\"https://app.pluralsight.com/profile/alistair-willis\">\r\n        Pluralsight\r\n      </a><br>\r\n      <a class=\"footer-link\" target=\"_blank\" href=\"https://www.codewars.com/users/ARWL2016\">\r\n        Codewars <img src=\"https://www.codewars.com/users/ARWL2016/badges/micro\">\r\n      </a>\r\n    </div>\r\n\r\n    <div class=\"footer-column footer-links-wrapper\">\r\n      <h3 class=\"footer-heading footer-link\" (click)=\"scrollToTop()\">BACK TO TOP</h3>\r\n      <hr class=\"footer-line\">\r\n      <h3 class=\"footer-heading footer-link\" (click)=\"navigateTo('/overview')\">OVERVIEW</h3>\r\n      <!-- <p class=\"footer-text\">See an overview of my projects and link to live websites and the source code.</p> -->\r\n\r\n      <h3 class=\"footer-heading footer-link\" (click)=\"navigateTo('/portfolio')\">PORTFOLIO</h3>\r\n      <!-- <p class=\"footer-text\">See an overview of my projects and link to live websites and the source code.</p> -->\r\n\r\n      <h3 class=\"footer-heading footer-link\" (click)=\"navigateTo('/skills')\">SKILLS</h3>\r\n      <!-- <p class=\"footer-text\">Get a summary of my technical skills and read about my coding philosophy.</p> -->\r\n    </div>\r\n  </div>\r\n\r\n</footer>\r\n\r\n"
+module.exports = "<!-- HEADER SECTION -->\r\n<header\r\n  class=\"header\"\r\n  id=\"header\">\r\n  <div class=\"header-content\">\r\n  <nav class=\"titlebar\">\r\n    <!-- LOGO COMPONENT -->\r\n    <app-logo></app-logo>\r\n    <ul class=\"titlebar-list\">\r\n      <li class=\"titlebar-list-item\">\r\n        <a class=\"titlebar-anchor\" routerLink=\"/overview\" routerLinkActive=\"titlebar-list-item_selected\">OVERVIEW</a>\r\n      </li>\r\n      <li class=\"titlebar-list-item\">\r\n        <a class=\"titlebar-anchor\" routerLink=\"/portfolio\" routerLinkActive=\"titlebar-list-item_selected\">PORTFOLIO</a>\r\n      </li>\r\n      <li class=\"titlebar-list-item\">\r\n        <a class=\"titlebar-anchor\" routerLink=\"/skills\" routerLinkActive=\"titlebar-list-item_selected\">ABOUT&nbsp;ME</a>\r\n      </li>\r\n    </ul>\r\n  </nav>\r\n  </div>\r\n</header>\r\n\r\n<!-- ROUTER OUTLET -->\r\n<div class=\"content\">\r\n  <router-outlet></router-outlet>\r\n</div>\r\n\r\n<!-- FOOTER SECTION -->\r\n<footer class=\"footer\">\r\n  <div class=\"footer-content-wrapper\">\r\n    <div class=\"footer-column footer-bio-wrapper\">\r\n      <h3 class=\"footer-heading\">ALISTAIR WILLIS</h3>\r\n      <p class=\"footer-text\">I'm a software developer who uses modern tools and frameworks to build responsive, modular web applications.</p>\r\n      <p class=\"footer-text\">Available for hire: March 2018.</p>\r\n    </div>\r\n    <div class=\"footer-column footer-contacts-wrapper\">\r\n      <h3 class=\"footer-heading\">EXTERNAL LINKS</h3>\r\n      <a class=\"footer-link\" target=\"_blank\" href=\"https://github.com/ARWL2016\">Github\r\n        <i class=\"footer-icon-link fa fa-github\" aria-hidden=\"true\"></i>\r\n      </a><br>\r\n      <a class=\"footer-link\" target=\"_blank\" href=\"https://app.pluralsight.com/profile/alistair-willis\">\r\n        Pluralsight\r\n      </a><br>\r\n      <a class=\"footer-link\" target=\"_blank\" href=\"https://www.codewars.com/users/ARWL2016\">\r\n        Codewars <img src=\"https://www.codewars.com/users/ARWL2016/badges/micro\">\r\n      </a>\r\n    </div>\r\n    <div class=\"footer-column footer-links-wrapper\">\r\n      <h3 class=\"footer-heading footer-link\" (click)=\"scrollToTop()\">BACK TO TOP</h3>\r\n      <hr class=\"footer-line\">\r\n      <h3 class=\"footer-heading footer-link\" (click)=\"navigateTo('/overview')\">OVERVIEW</h3>\r\n      <h3 class=\"footer-heading footer-link\" (click)=\"navigateTo('/portfolio')\">PORTFOLIO</h3>\r\n      <h3 class=\"footer-heading footer-link\" (click)=\"navigateTo('/skills')\">SKILLS</h3>\r\n    </div>\r\n  </div>\r\n</footer>\r\n\r\n"
 
 /***/ }),
 
@@ -55,7 +91,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".header {\n  background-color: #222;\n  font-family: 'Montserrat', sans-serif;\n  min-height: 80px;\n  width: 100%;\n  padding: 15px; }\n\n.header-content {\n  width: 80%;\n  max-width: 1000px;\n  margin: 0 auto;\n  transition: width 300ms; }\n\n.titlebar {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  height: 50px;\n  margin-top: 0px; }\n\n.logo-wrapper {\n  width: 280px;\n  min-width: 280px;\n  height: 45px;\n  position: relative;\n  display: inline-block;\n  color: white;\n  text-transform: uppercase;\n  font-weight: bold; }\n  .logo-wrapper img {\n    height: 45px;\n    width: auto; }\n  .logo-wrapper .logo-title {\n    font-size: 0.9em;\n    position: absolute;\n    top: 2px;\n    left: 85px;\n    padding: 0; }\n  .logo-wrapper .logo-name {\n    position: absolute;\n    top: 22px;\n    left: 100px;\n    font-size: 1.1em;\n    letter-spacing: 1.3px; }\n\n.titlebar-list {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  margin: 0;\n  -webkit-box-flex: 1;\n      -ms-flex-positive: 1;\n          flex-grow: 1;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  height: 50px;\n  -webkit-box-pack: end;\n      -ms-flex-pack: end;\n          justify-content: flex-end; }\n\n.titlebar-list-item {\n  list-style-type: none;\n  display: inline-block;\n  color: white;\n  margin-left: 20px;\n  margin-bottom: 4px;\n  padding: 10px; }\n\n.titlebar-list-item_selected {\n  border-bottom: 4px solid #2587ce;\n  margin-bottom: 0; }\n\n.titlebar-anchor {\n  text-decoration: none;\n  color: #FFF;\n  font-size: 0.85rem;\n  padding: 5px 0 5px 0; }\n\n@media screen and (max-width: 770px) {\n  .header-content {\n    width: 95%; }\n  .titlebar {\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center; }\n  .titlebar-list {\n    margin-top: 30px; }\n  .titlebar-list-item {\n    margin-left: 10px;\n    padding: 10px 20px; }\n  .header {\n    min-height: 120px; } }\n\n@media screen and (max-width: 400px) {\n  .header {\n    padding: 20px 10px 10px 10px; }\n  .header-content {\n    width: 100%; }\n  .titlebar-list {\n    margin-top: 25px; }\n  .titlebar-list-item {\n    padding: 10px 3px; } }\n\n.footer {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-flex: 0;\n      -ms-flex-positive: 0;\n          flex-grow: 0;\n  background-color: #222;\n  color: white;\n  min-height: 300px;\n  bottom: 0; }\n\n.footer-content-wrapper {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  font-weight: 300;\n  max-width: 1000px;\n  margin: 0 auto;\n  padding: 30px;\n  line-height: 1.8em;\n  overflow: auto; }\n\n.footer-column {\n  padding: 20px 20px 20px 50px; }\n  .footer-column:nth-child(1) {\n    width: 40%; }\n  .footer-column:nth-child(2) {\n    width: 30%; }\n  .footer-column:nth-child(3) {\n    width: 30%; }\n\n.footer-heading {\n  font-size: 0.9em;\n  font-family: \"Montserrat\", sans-serif; }\n\n.footer-text {\n  font-size: 0.9em;\n  margin-bottom: 10px; }\n\n.footer-link {\n  color: #2587ce;\n  text-decoration: none; }\n  .footer-link:hover {\n    text-decoration: underline;\n    cursor: pointer; }\n  .footer-link:hover {\n    text-decoration: none; }\n\n.footer-icon-link:hover {\n  text-decoration: none; }\n\n.footer-line {\n  color: #2587ce;\n  background-color: #2587ce;\n  height: 2px;\n  border: 0;\n  width: 50%;\n  text-align: left;\n  margin: 10px auto 10px 0; }\n\n@media (max-width: 930px) {\n  .footer-content-wrapper {\n    padding: 30px 10px 10px 10px; }\n  .footer-column {\n    padding: 10px; } }\n\n@media (max-width: 670px) {\n  .footer-column:nth-child(1) {\n    display: none; }\n  .footer-column:nth-child(2) {\n    width: 50%; }\n  .footer-column:nth-child(3) {\n    width: 50%; } }\n\n:host {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  position: absolute;\n  top: 0;\n  left: 0;\n  bottom: 0;\n  right: 0;\n  min-height: 100vh; }\n\n.content {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -webkit-box-flex: 1;\n      -ms-flex-positive: 1;\n          flex-grow: 1;\n  -ms-flex-negative: 0;\n      flex-shrink: 0;\n  background-color: #FFF; }\n", ""]);
+exports.push([module.i, ":host {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  position: absolute;\n  top: 0;\n  left: 0;\n  bottom: 0;\n  right: 0;\n  min-height: 100vh; }\n\n.content {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -webkit-box-flex: 1;\n      -ms-flex-positive: 1;\n          flex-grow: 1;\n  -ms-flex-negative: 0;\n      flex-shrink: 0;\n  background-color: #FFF; }\n", ""]);
 
 // exports
 
@@ -106,9 +142,9 @@ AppComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
         selector: 'app-root',
         template: __webpack_require__("../../../../../src/app/app-component/app.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/app-component/app.component.scss")]
+        styles: [__webpack_require__("../../../../../src/app/app-component/app.component.scss"), __webpack_require__("../../../../../src/app/app-component/app.component.header.scss"), __webpack_require__("../../../../../src/app/app-component/app.component.footer.scss")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_project_data_service__["a" /* ProjectDataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_project_data_service__["a" /* ProjectDataService */]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_project_data_service__["a" /* ProjectDataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_project_data_service__["a" /* ProjectDataService */]) === "function" && _b || Object])
 ], AppComponent);
 
 var _a, _b;
@@ -135,12 +171,14 @@ var _a, _b;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_app_services_project_data_service__ = __webpack_require__("../../../../../src/app/services/project-data.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_app_email_email_service__ = __webpack_require__("../../../../../src/app/email/email.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_app_services_ping_service__ = __webpack_require__("../../../../../src/app/services/ping.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_app_shared_logo_component__ = __webpack_require__("../../../../../src/app/shared/logo.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -167,7 +205,8 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_7__overview_overview_component__["a" /* OverviewComponent */],
             __WEBPACK_IMPORTED_MODULE_8__portfolio_portfolio_component__["a" /* PortfolioComponent */],
             __WEBPACK_IMPORTED_MODULE_9__skills_skills_component__["a" /* SkillsComponent */],
-            __WEBPACK_IMPORTED_MODULE_10__email_email_component__["a" /* EmailComponent */]
+            __WEBPACK_IMPORTED_MODULE_10__email_email_component__["a" /* EmailComponent */],
+            __WEBPACK_IMPORTED_MODULE_14_app_shared_logo_component__["a" /* LogoComponent */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -175,7 +214,7 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* FormsModule */],
             __WEBPACK_IMPORTED_MODULE_2__angular_forms__["d" /* ReactiveFormsModule */],
             __WEBPACK_IMPORTED_MODULE_3__angular_http__["b" /* HttpModule */],
-            __WEBPACK_IMPORTED_MODULE_4__angular_router__["c" /* RouterModule */].forRoot([
+            __WEBPACK_IMPORTED_MODULE_4__angular_router__["b" /* RouterModule */].forRoot([
                 { path: 'overview', component: __WEBPACK_IMPORTED_MODULE_7__overview_overview_component__["a" /* OverviewComponent */] },
                 { path: 'portfolio', component: __WEBPACK_IMPORTED_MODULE_8__portfolio_portfolio_component__["a" /* PortfolioComponent */] },
                 { path: 'skills', component: __WEBPACK_IMPORTED_MODULE_9__skills_skills_component__["a" /* SkillsComponent */] },
@@ -198,7 +237,7 @@ AppModule = __decorate([
 /***/ "../../../../../src/app/email/email.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<section class=\"email-section\">\n\n    <form (ngSubmit)=\"sendEmail()\" [formGroup]=\"emailForm\">\n      <div class=\"form-heading-wrapper\">\n        <img src=\"../../assets/icons/email.png\" alt=\"email icon\">\n        <h2>Contact Me</h2>\n      </div>\n      <div class=\"form-input-wrapper\">\n        <label for=\"name\">Your name</label>\n        <input\n          id=\"name\"\n          type=\"text\"\n          name=\"name\"\n\n          formControlName=\"name\">\n\n      </div>\n\n      <div class=\"form-input-wrapper\">\n        <label for=\"email\">Your email</label>\n        <input\n          id=\"email\"\n          type=\"email\"\n          name=\"email\"\n\n          formControlName=\"email\">\n      </div>\n\n      <div class=\"textarea-wrapper\">\n        <label for=\"message\">Your message</label>\n        <textarea\n          id=\"message\"\n          name=\"message\"\n          formControlName=\"message\"></textarea>\n      </div>\n      <div class=\"validation-message\">\n        <i *ngIf=\"validationMessage\" class=\"fa fa-exclamation-circle\" aria-hidden=\"true\"></i>\n       {{validationMessage}}\n      </div>\n\n      <button\n        type=\"submit\"\n        [disabled]=\"btnDisabled\">\n        <div class=\"spinner\" *ngIf=\"showLoader\"></div>\n        <i *ngIf=\"btnLabel=='Message Sent'\" class=\"fa fa-check-circle\" aria-hidden=\"true\"></i>{{btnLabel}}\n      </button>\n\n    </form>\n  </section>\n\n\n"
+module.exports = "<section class=\"email-section\">\n  <form (ngSubmit)=\"sendEmail()\" [formGroup]=\"emailForm\">\n    <div class=\"form-heading-wrapper\">\n      <img src=\"../../assets/icons/email.png\" alt=\"email icon\">\n      <h2>Contact Me</h2>\n    </div>\n    <div class=\"form-input-wrapper\">\n      <label for=\"name\">Your name</label>\n      <input\n        id=\"name\"\n        type=\"text\"\n        name=\"name\"\n        formControlName=\"name\">\n    </div>\n    <div class=\"form-input-wrapper\">\n      <label for=\"email\">Your email</label>\n      <input\n        id=\"email\"\n        type=\"email\"\n        name=\"email\"\n        formControlName=\"email\">\n    </div>\n    <div class=\"textarea-wrapper\">\n      <label for=\"message\">Your message</label>\n      <textarea\n        id=\"message\"\n        name=\"message\"\n        formControlName=\"message\"></textarea>\n    </div>\n    <div class=\"validation-message\">\n      <i *ngIf=\"validationMessage\" class=\"fa fa-exclamation-circle\" aria-hidden=\"true\"></i>\n      {{validationMessage}}\n    </div>\n    <button\n      type=\"submit\"\n      [disabled]=\"btnDisabled\">\n      <div class=\"spinner\" *ngIf=\"showLoader\"></div>\n      <i *ngIf=\"btnLabel=='Message Sent'\" class=\"fa fa-check-circle\" aria-hidden=\"true\"></i>{{btnLabel}}\n    </button>\n  </form>\n</section>\n\n\n"
 
 /***/ }),
 
@@ -274,7 +313,6 @@ var EmailComponent = (function () {
     };
     EmailComponent.prototype.validateForm = function () {
         this.validationMessage = '';
-        console.log(this.emailCtrl, this.nameCtrl, this.messageCtrl);
         if (this.emailCtrl.invalid) {
             this.validationMessage = 'Please include a valid email.';
             return false;
@@ -288,13 +326,11 @@ var EmailComponent = (function () {
         }
     };
     EmailComponent.prototype.handleResponse = function (res) {
-        console.log(res);
         this.showLoader = false;
         this.btnLabel = 'Message Sent';
         this.resetForm();
     };
     EmailComponent.prototype.handleError = function (err) {
-        console.log(err);
         this.showLoader = false;
         this.validationMessage = 'Oops! Something went wrong.';
         this.btnLabel = 'Send';
@@ -363,7 +399,7 @@ var _a;
 /***/ "../../../../../src/app/overview/overview.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "  <div [@showPage]=\"'on'\">\r\n  <!-- <div *ngIf=\"componentLoaded==='/overview'\" class=\"banner\"> -->\r\n    <section class=\"banner-section\" >\r\n      <div class=\"banner-content\">\r\n        <h1 class=\"banner-header\">Front End Web Developer</h1>\r\n        <p class=\"banner-text\">HTML | CSS | JAVASCRIPT | ANGULAR | JQUERY | NODE | EXPRESS | MONGODB</p>\r\n        <p>\r\n          <a href=\"https://github.com/ARWL2016\" target=\"_blank\" rel=\"noopener noreferrer\"><i class=\"banner-icon-link fa fa-github\" aria-hidden=\"true\"></i></a>\r\n          <i (click)='goTo()' class=\"banner-icon-link fa fa-envelope\" aria-hidden=\"true\"></i>\r\n        </p>\r\n      </div>\r\n    </section>\r\n    <!-- banner end -->\r\n\r\n  <section class=\"skills-section\">\r\n\r\n        <article class=\"skill-card\">\r\n          <i class=\"fa fa-laptop skill-icon\" aria-hidden=\"true\"></i>\r\n          <h3 class=\"skill-card-heading\">Fluid Design</h3>\r\n          <p class=\"skill-card-text\">\r\n            Using front end libraries like Twitter Bootstrap, as well as custom CSS written in functional style with CSS,\r\n            I create web applications with fluid, responsive and intuitive user interfaces.\r\n          </p>\r\n        </article>\r\n        <article class=\"skill-card\">\r\n          <i class=\"fa fa-industry skill-icon\" aria-hidden=\"true\"></i>\r\n          <h3 class=\"skill-card-heading\">Modern Frameworks</h3>\r\n          <p class=\"skill-card-text\">\r\n            Utilizing a modern, component based framework like AngularJS and Angular / Typescript, I build modular web applications which are easy to quick to develop\r\n            and easy to maintain.\r\n          </p>\r\n        </article>\r\n        <article class=\"skill-card\">\r\n          <i class=\"fa fa-server skill-icon\" aria-hidden=\"true\"></i>\r\n          <h3 class=\"skill-card-heading\">Full Stack Javascript</h3>\r\n          <p class=\"skill-card-text\">\r\n            Using Javascript-based back end technologies such as Node, Express, and MongoDB, I benefit from\r\n            increased efficiency by working in a single language across the whole stack.\r\n          </p>\r\n        </article>\r\n\r\n  </section>\r\n\r\n  <section class=\"portfolio-section\">\r\n    <div class=\"portfolio-content\">\r\n      <div class=\"section-banner\">\r\n        <div class=\"section-heading-wrapper\">\r\n          <img class=\"project-icon\" src=\"../../assets/icons/webpage-128.png\">\r\n          <h2 class=\"section-heading\">FEATURED WEB APPLICATIONS</h2>\r\n        </div>\r\n        <p class=\"section-banner-text\">Some are my recent web apps are featured below. You can view all the projects,\r\n          search by language and framework, and view technical specs, on the <a (click)=\"navigateTo('/portfolio')\">PORTFOLIO</a> page.\r\n\r\n        </p>\r\n      </div>\r\n      <div class=\"projects\">\r\n\r\n        <article *ngFor=\"let project of projectData\" class=\"project\">\r\n          <div class=\"image-column\">\r\n            <img src={{project.image_url}} class=\"project-image\" [ngStyle]=\"{'order': project.image_order}\" >\r\n          </div>\r\n          <div class=\"text-column\">\r\n            <div class=\"text-wrapper\">\r\n            <h3 class=\"project-heading\">{{project.name | uppercase }}</h3>\r\n            <p class=\"project-text\">{{project.summary}}</p>\r\n              <div class=\"project-links\">\r\n                <a class=\"project-link\" target=\"_blank\" href={{project.github_link}}><i class=\"project-link-icon fa fa-github\" aria-hidden=\"true\"></i>&nbsp;SOURCE&nbsp;CODE</a>\r\n                <a class=\"project-link\" target=\"_blank\" href={{project.website_link}}><i class=\"project-link-icon fa fa-external-link-square\" aria-hidden=\"true\"></i>&nbsp;VIEW&nbsp;WEBSITE</a>\r\n              </div>\r\n            </div>\r\n          </div>\r\n        </article>\r\n\r\n      </div>\r\n    </div>\r\n  </section>\r\n\r\n  <!-- EMAIL COMPONENT -->\r\n  <app-email id=\"contactForm\"></app-email>\r\n\r\n</div>\r\n"
+module.exports = "<div [@showPage]=\"'on'\">\r\n\r\n  <!-- BANNER SECTION -->\r\n  <section class=\"banner-section\" >\r\n    <div class=\"banner-content\">\r\n      <h1 class=\"banner-header\">Front End Web Developer</h1>\r\n      <p class=\"banner-text\">HTML | CSS | JAVASCRIPT | ANGULAR | JQUERY | NODE | EXPRESS | MONGODB</p>\r\n      <p>\r\n        <a href=\"https://github.com/ARWL2016\" target=\"_blank\" rel=\"noopener noreferrer\"><i class=\"banner-icon-link fa fa-github\" aria-hidden=\"true\"></i></a>\r\n        <i (click)='scrollTo()' class=\"banner-icon-link fa fa-envelope\" aria-hidden=\"true\"></i>\r\n      </p>\r\n    </div>\r\n  </section>\r\n\r\n  <!-- SKILLS SECTION -->\r\n  <section class=\"skills-section\">\r\n    <article class=\"skill-card\">\r\n      <i class=\"fa fa-laptop skill-icon\" aria-hidden=\"true\"></i>\r\n      <h3 class=\"skill-card-heading\">Fluid Design</h3>\r\n      <p class=\"skill-card-text\">\r\n        Using front end libraries like Twitter Bootstrap, as well as custom CSS written in functional style with CSS,\r\n        I create web applications with fluid, responsive and intuitive user interfaces.\r\n      </p>\r\n    </article>\r\n    <article class=\"skill-card\">\r\n      <i class=\"fa fa-industry skill-icon\" aria-hidden=\"true\"></i>\r\n      <h3 class=\"skill-card-heading\">Modern Frameworks</h3>\r\n      <p class=\"skill-card-text\">\r\n        Utilizing a modern, component based framework like AngularJS and Angular / Typescript, I build modular web applications which are easy to quick to develop\r\n        and easy to maintain.\r\n      </p>\r\n    </article>\r\n    <article class=\"skill-card\">\r\n      <i class=\"fa fa-server skill-icon\" aria-hidden=\"true\"></i>\r\n      <h3 class=\"skill-card-heading\">Full Stack Javascript</h3>\r\n      <p class=\"skill-card-text\">\r\n        Using Javascript-based back end technologies such as Node, Express, and MongoDB, I benefit from\r\n        increased efficiency by working in a single language across the whole stack.\r\n      </p>\r\n    </article>\r\n  </section>\r\n\r\n<!-- PORTFOLIO SECTION -->\r\n  <section class=\"portfolio-section\">\r\n  <div class=\"portfolio-content\">\r\n    <div class=\"section-banner\">\r\n      <div class=\"section-heading-wrapper\">\r\n        <img class=\"project-icon\" src=\"../../assets/icons/webpage-128.png\">\r\n        <h2 class=\"section-heading\">FEATURED WEB APPLICATIONS</h2>\r\n      </div>\r\n      <p class=\"section-banner-text\">Some are my recent web apps are featured below. You can view all the projects,\r\n        search by language and framework, and view technical specs, on the <a (click)=\"navigateTo('/portfolio')\">PORTFOLIO</a> page.\r\n      </p>\r\n    </div>\r\n    <div class=\"projects\">\r\n\r\n      <article *ngFor=\"let project of projectData\" class=\"project\">\r\n        <div class=\"image-column\">\r\n          <img src={{project.image_url}} class=\"project-image\" [ngStyle]=\"{'order': project.image_order}\" >\r\n        </div>\r\n        <div class=\"text-column\">\r\n          <div class=\"text-wrapper\">\r\n          <h3 class=\"project-heading\">{{project.name | uppercase }}</h3>\r\n          <p class=\"project-text\">{{project.summary}}</p>\r\n            <div class=\"project-links\">\r\n              <a class=\"project-link\" target=\"_blank\" href={{project.github_link}}><i class=\"project-link-icon fa fa-github\" aria-hidden=\"true\"></i>&nbsp;SOURCE&nbsp;CODE</a>\r\n              <a class=\"project-link\" target=\"_blank\" href={{project.website_link}}><i class=\"project-link-icon fa fa-external-link-square\" aria-hidden=\"true\"></i>&nbsp;VIEW&nbsp;WEBSITE</a>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </article>\r\n\r\n    </div>\r\n  </div>\r\n  </section>\r\n\r\n  <!-- EMAIL COMPONENT -->\r\n  <app-email id=\"contactForm\"></app-email>\r\n\r\n</div>\r\n"
 
 /***/ }),
 
@@ -411,17 +447,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var OverviewComponent = (function () {
-    function OverviewComponent(dataService, router, route, ping) {
+    function OverviewComponent(dataService, router, ping) {
         this.dataService = dataService;
         this.router = router;
-        this.route = route;
         this.ping = ping;
-        this.username = 'alistairrwillis';
-        this.hostname = 'gmail.com';
     }
     OverviewComponent.prototype.ngOnInit = function () {
+        this.getProjectData();
+    };
+    OverviewComponent.prototype.getProjectData = function () {
         var _this = this;
-        // fetch project data
         if (this.dataService.projectData) {
             this.projectData = this.dataService.projectData.filter(function (project) { return project.featured; });
         }
@@ -433,14 +468,12 @@ var OverviewComponent = (function () {
         }
     };
     OverviewComponent.prototype.onWindowScroll = function () {
-        console.log(window.scrollY);
-        if (!this.ping.pinged && window.scrollY > 400) {
-            this.ping.pingProject();
+        if (!this.ping.pinged.primary && window.scrollY > 400) {
+            this.ping.postPing('primary');
         }
     };
-    OverviewComponent.prototype.goTo = function () {
+    OverviewComponent.prototype.scrollTo = function () {
         document.querySelector('#contactForm').scrollIntoView({ behavior: 'smooth' });
-        // this.router.navigate( ['/overview', ], {fragment: 'contactForm'});
     };
     OverviewComponent.prototype.navigateTo = function (page) {
         this.router.navigate([page]);
@@ -464,10 +497,10 @@ OverviewComponent = __decorate([
         styles: [__webpack_require__("../../../../../src/app/overview/overview.component.scss")],
         animations: [__WEBPACK_IMPORTED_MODULE_2__animations__["a" /* pageTransition */]]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_app_services_project_data_service__["a" /* ProjectDataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_app_services_project_data_service__["a" /* ProjectDataService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["b" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* ActivatedRoute */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4_app_services_ping_service__["a" /* PingService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_app_services_ping_service__["a" /* PingService */]) === "function" && _d || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_app_services_project_data_service__["a" /* ProjectDataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_app_services_project_data_service__["a" /* ProjectDataService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4_app_services_ping_service__["a" /* PingService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_app_services_ping_service__["a" /* PingService */]) === "function" && _c || Object])
 ], OverviewComponent);
 
-var _a, _b, _c, _d;
+var _a, _b, _c;
 //# sourceMappingURL=overview.component.js.map
 
 /***/ }),
@@ -475,7 +508,7 @@ var _a, _b, _c, _d;
 /***/ "../../../../../src/app/portfolio/portfolio.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"page-wrapper\" [@showPage]=\"'on'\">\r\n\r\n  <div class=\"search-wrapper\" >\r\n    <form>\r\n      <label for=\"search\">SEARCH BY TECHNOLOGY</label>\r\n      <div class=\"input-wrapper\">\r\n        <input\r\n          class=\"search-input\"\r\n          name=\"search\"\r\n          type=\"text\"\r\n          autocomplete=\"off\"\r\n          [formControl]=\"searchTerm\"\r\n          placeholder=\"e.g. angular\">\r\n        <i class=\"search-icon fa fa-search\" aria-hidden=\"true\"></i>\r\n      </div>\r\n      <p *ngIf=\"results !== 1\" class=\"search-result\">{{results}} results</p>\r\n      <p *ngIf=\"results === 1\" class=\"search-result\">{{results}} result</p>\r\n    </form>\r\n  </div>\r\n\r\n<section *ngIf=\"projectData\" class=\"portfolio-content\">\r\n\r\n  <article class=\"project-card\" *ngFor=\"let project of projectData\" [@showPage]=\"'on'\">\r\n    <h1 class=\"project-heading\">{{ project.name }}</h1>\r\n    <span class=\"project-stack-type\">\r\n        <i *ngIf=\"project.type.frontend\" title=\"front end\" class=\"fa fa-desktop\" aria-hidden=\"true\"></i>\r\n        <i *ngIf=\"project.type.server\" title=\"server\" class=\"fa fa-server\" aria-hidden=\"true\"></i>\r\n        <i *ngIf=\"project.type.database\" title=\"database\" class=\"fa fa-database\" aria-hidden=\"true\"></i>\r\n    </span>\r\n    <p class=\"project-tech\">{{ project.tech | uppercase }}</p>\r\n    <div class=\"project-columns\">\r\n      <div class=\"project-image-column\">\r\n        <a href={{project.website_link}} target=\"_blank\">\r\n          <img src={{project.image_url}} class=\"project-image\" [ngStyle]=\"{'order': project.image_order}\" >\r\n        </a>\r\n        <div class=\"project-stat-wrapper\">\r\n          <p class=\"project-stat\">PAGE SIZE\r\n            <span class=\"project-stat-badge\" >{{ project.pingdom_page_size_kb }}kb</span>\r\n            <i class=\"tooltip fa fa-question-circle-o\" title=\"Data is raw size without browser caching\" aria-hidden=\"true\"></i>\r\n          </p>\r\n          <p class=\"project-stat\">LOAD TIME\r\n            <span class=\"project-stat-badge\">{{ project.pingdom_average_load_time }}s</span>\r\n            <i class=\"tooltip fa fa-question-circle-o\" title=\"Measured by Pingdom Website Speed Test. Average of four speeds measured from San Jose, New York, Stockholm and Melbourne.\" aria-hidden=\"true\"></i>\r\n          </p>\r\n          <p class=\"project-stat\">PAGE SPEED SCORE\r\n            <span class=\"project-stat-badge\">{{ project.google_page_speed_score }}%</span>\r\n            <i class=\"tooltip fa fa-question-circle-o\" title=\"Score is from Google Page Speed Insights (desktop).\" aria-hidden=\"true\"></i>\r\n\r\n          </p>\r\n        </div>\r\n      </div>\r\n\r\n      <div class=\"project-text-column\">\r\n        <p class=\"project-text\">{{ project.user_stories }}</p>\r\n        <ul class=\"project-list\">\r\n          <li class=\"project-list-item\" *ngFor=\"let highlight of project.highlights\">{{ highlight }}</li>\r\n        </ul>\r\n\r\n\r\n      </div>\r\n    </div>\r\n    <div class=\"project-links-wrapper\">\r\n      <a class=\"project-link\" target=\"_blank\" href={{project.github_link}}><i class=\"project-link-icon fa fa-github\" aria-hidden=\"true\"></i>&nbsp;SOURCE&nbsp;CODE</a>\r\n      <a class=\"project-link\" target=\"_blank\" href={{project.website_link}}><i class=\"project-link-icon fa fa-external-link-square\" aria-hidden=\"true\"></i>&nbsp;VIEW&nbsp;WEBSITE</a>\r\n    </div>\r\n\r\n  </article>\r\n</section>\r\n\r\n\r\n\r\n</div>\r\n\r\n<img\r\n  *ngIf=\"showBackToTopIcon\"\r\n  (click)=\"scrollToTop()\"\r\n  [@showPage]=\"'on'\"\r\n  class=\"back-to-top-icon\"\r\n  src=\"../../assets/icons/up-arrow-64.png\">\r\n"
+module.exports = "<div class=\"page-wrapper\" [@showPage]=\"'on'\">\r\n\r\n  <!-- SEARCH SECTION -->\r\n  <section class=\"search-wrapper\" >\r\n    <form>\r\n      <label for=\"search\">SEARCH BY TECHNOLOGY</label>\r\n      <div class=\"input-wrapper\">\r\n        <input\r\n          class=\"search-input\"\r\n          name=\"search\"\r\n          type=\"text\"\r\n          autocomplete=\"off\"\r\n          [formControl]=\"searchTerm\"\r\n          placeholder=\"e.g. angular\">\r\n        <i class=\"search-icon fa fa-search\" aria-hidden=\"true\"></i>\r\n      </div>\r\n      <p *ngIf=\"results !== 1\" class=\"search-result\">{{results}} results</p>\r\n      <p *ngIf=\"results === 1\" class=\"search-result\">{{results}} result</p>\r\n    </form>\r\n  </section>\r\n\r\n  <!-- PORTFOLIO SECTION -->\r\n  <section *ngIf=\"projectData\" class=\"portfolio-content\">\r\n\r\n    <article class=\"project-card\" *ngFor=\"let project of projectData\" [@showPage]=\"'on'\">\r\n      <h1 class=\"project-heading\">{{ project.name }}</h1>\r\n      <span class=\"project-stack-type\">\r\n          <i *ngIf=\"project.type.frontend\" title=\"front end\" class=\"fa fa-desktop\" aria-hidden=\"true\"></i>\r\n          <i *ngIf=\"project.type.server\" title=\"server\" class=\"fa fa-server\" aria-hidden=\"true\"></i>\r\n          <i *ngIf=\"project.type.database\" title=\"database\" class=\"fa fa-database\" aria-hidden=\"true\"></i>\r\n      </span>\r\n      <p class=\"project-tech\">{{ project.tech | uppercase }}</p>\r\n      <div class=\"project-columns\">\r\n        <div class=\"project-image-column\">\r\n          <a href={{project.website_link}} target=\"_blank\">\r\n            <img src={{project.image_url}} class=\"project-image\" [ngStyle]=\"{'order': project.image_order}\" >\r\n          </a>\r\n          <div class=\"project-stat-wrapper\">\r\n            <p class=\"project-stat\">PAGE SIZE\r\n              <span class=\"project-stat-badge\" >{{ project.pingdom_page_size_kb }}kb</span>\r\n              <i class=\"tooltip fa fa-question-circle-o\" title=\"Data is raw size without browser caching\" aria-hidden=\"true\"></i>\r\n            </p>\r\n            <p class=\"project-stat\">LOAD TIME\r\n              <span class=\"project-stat-badge\">{{ project.pingdom_average_load_time }}s</span>\r\n              <i class=\"tooltip fa fa-question-circle-o\" title=\"Measured by Pingdom Website Speed Test. Average of four speeds measured from San Jose, New York, Stockholm and Melbourne.\" aria-hidden=\"true\"></i>\r\n            </p>\r\n            <p class=\"project-stat\">PAGE SPEED SCORE\r\n              <span class=\"project-stat-badge\">{{ project.google_page_speed_score }}%</span>\r\n              <i class=\"tooltip fa fa-question-circle-o\" title=\"Score is from Google Page Speed Insights (desktop).\" aria-hidden=\"true\"></i>\r\n            </p>\r\n          </div>\r\n        </div>\r\n        <div class=\"project-text-column\">\r\n          <p class=\"project-text\">{{ project.user_stories }}</p>\r\n          <ul class=\"project-list\">\r\n            <li class=\"project-list-item\" *ngFor=\"let highlight of project.highlights\">{{ highlight }}</li>\r\n          </ul>\r\n        </div>\r\n      </div>\r\n      <div class=\"project-links-wrapper\">\r\n        <a class=\"project-link\" target=\"_blank\" href={{project.github_link}}><i class=\"project-link-icon fa fa-github\" aria-hidden=\"true\"></i>&nbsp;SOURCE&nbsp;CODE</a>\r\n        <a class=\"project-link\" target=\"_blank\" href={{project.website_link}}><i class=\"project-link-icon fa fa-external-link-square\" aria-hidden=\"true\"></i>&nbsp;VIEW&nbsp;WEBSITE</a>\r\n      </div>\r\n\r\n    </article>\r\n  </section>\r\n\r\n</div>\r\n\r\n<img\r\n  *ngIf=\"showBackToTopIcon\"\r\n  (click)=\"scrollToTop()\"\r\n  [@showPage]=\"'on'\"\r\n  class=\"back-to-top-icon\"\r\n  src=\"../../assets/icons/up-arrow-64.png\">\r\n"
 
 /***/ }),
 
@@ -506,9 +539,7 @@ module.exports = module.exports.toString();
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_app_services_project_data_service__ = __webpack_require__("../../../../../src/app/services/project-data.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__animations__ = __webpack_require__("../../../../../src/animations.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_debounceTime__ = __webpack_require__("../../../../rxjs/add/operator/debounceTime.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_debounceTime___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_debounceTime__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_app_services_ping_service__ = __webpack_require__("../../../../../src/app/services/ping.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_app_services_ping_service__ = __webpack_require__("../../../../../src/app/services/ping.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -518,7 +549,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
 
 
 
@@ -545,7 +575,7 @@ var PortfolioComponent = (function () {
     });
     PortfolioComponent.prototype.ngOnInit = function () {
         this.getData();
-        this.pingProjects();
+        this.pingProjects('primary');
     };
     PortfolioComponent.prototype.getData = function () {
         var _this = this;
@@ -556,13 +586,12 @@ var PortfolioComponent = (function () {
             this.dataService.getProjectData()
                 .then(function (data) {
                 _this.projectData = data;
-                console.log(_this.projectData);
             });
         }
     };
-    PortfolioComponent.prototype.pingProjects = function () {
-        if (!this.ping.pinged) {
-            this.ping.pingProject();
+    PortfolioComponent.prototype.pingProjects = function (type) {
+        if (!this.ping.pinged[type]) {
+            this.ping.postPing(type);
         }
     };
     PortfolioComponent.prototype.createSearchListener = function () {
@@ -571,6 +600,9 @@ var PortfolioComponent = (function () {
             .subscribe(function (newValue) { return _this.search(); });
     };
     PortfolioComponent.prototype.onWindowScroll = function () {
+        if (window.scrollY > 2000) {
+            this.pingProjects('secondary');
+        }
         if (window.scrollY > 1000) {
             this.showBackToTopIcon = true;
         }
@@ -607,7 +639,7 @@ PortfolioComponent = __decorate([
         styles: [__webpack_require__("../../../../../src/app/portfolio/portfolio.component.scss")],
         animations: [__WEBPACK_IMPORTED_MODULE_2__animations__["a" /* pageTransition */]]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_app_services_project_data_service__["a" /* ProjectDataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_app_services_project_data_service__["a" /* ProjectDataService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_5_app_services_ping_service__["a" /* PingService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5_app_services_ping_service__["a" /* PingService */]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_app_services_project_data_service__["a" /* ProjectDataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_app_services_project_data_service__["a" /* ProjectDataService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_4_app_services_ping_service__["a" /* PingService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_app_services_ping_service__["a" /* PingService */]) === "function" && _b || Object])
 ], PortfolioComponent);
 
 var _a, _b;
@@ -639,15 +671,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var PingService = (function () {
     function PingService(http) {
         this.http = http;
-        this.pinged = false;
+        this.pinged = {
+            primary: false,
+            secondary: false
+        };
     }
-    PingService.prototype.pingProject = function () {
-        this.pinged = true;
-        console.log('pinging...');
-        return this.http.get('https://pathfinder-2017.herokuapp.com')
+    PingService.prototype.postPing = function (type) {
+        this.pinged[type] = true;
+        return this.http.post('/ping', { type: type })
             .toPromise()
-            .then(function (res) { return console.log(res); })
-            .catch(function (e) { return console.log(e); });
+            .then(function (res) {
+            console.log(res);
+        })
+            .catch(function (e) {
+            console.log('Heroku request error');
+        });
     };
     return PingService;
 }());
@@ -715,6 +753,54 @@ var _a;
 
 /***/ }),
 
+/***/ "../../../../../src/app/shared/logo.component.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".logo-wrapper {\n  width: 280px;\n  min-width: 280px;\n  height: 45px;\n  position: relative;\n  display: inline-block;\n  color: white;\n  text-transform: uppercase;\n  font-weight: bold; }\n  .logo-wrapper img {\n    height: 45px;\n    width: auto;\n    outline: none; }\n    .logo-wrapper img:hover {\n      cursor: pointer; }\n  .logo-wrapper .logo-title {\n    font-size: 0.9em;\n    position: absolute;\n    top: 2px;\n    left: 85px;\n    padding: 0; }\n  .logo-wrapper .logo-name {\n    position: absolute;\n    top: 22px;\n    left: 100px;\n    font-size: 1.1em;\n    letter-spacing: 1.3px; }\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/shared/logo.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LogoComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var LogoComponent = (function () {
+    function LogoComponent() {
+    }
+    return LogoComponent;
+}());
+LogoComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+        selector: 'app-logo',
+        template: "\n    <div class=\"logo-wrapper\">\n      <img class=\"titlebar-logo\" src=\"../assets/logos/logo_blue.png\" routerLink=\"/overview\">\n      <div class=\"logo-title\">Front End Developer</div>\n      <div class=\"logo-name\">Alistair Willis</div>\n    </div>\n  ",
+        styles: [__webpack_require__("../../../../../src/app/shared/logo.component.scss")]
+    })
+], LogoComponent);
+
+//# sourceMappingURL=logo.component.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/skills/skills.component.html":
 /***/ (function(module, exports) {
 
@@ -730,7 +816,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".page-wrapper {\n  background-color: #f7f7f7; }\n\n.content-wrapper {\n  max-width: 1000px;\n  margin: 0 auto;\n  background-color: white;\n  border: 1px solid white;\n  padding: 20px; }\n\n.skills-section {\n  max-width: 800px;\n  margin: 0 auto;\n  margin-top: 100px;\n  margin-bottom: 100px; }\n\n.skills-heading-wrapper {\n  margin: 30px 0;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: left;\n      -ms-flex-pack: left;\n          justify-content: left; }\n\n.skills-icon {\n  height: 36px; }\n\n.skills-heading {\n  margin-left: 18px;\n  font-family: \"Montserrat\", sans-serif; }\n\n.skills-text {\n  margin-bottom: 20px;\n  line-height: 1.8em; }\n  .skills-text:last-child {\n    margin-bottom: 50px; }\n\n.text-link {\n  color: #2587ce;\n  text-decoration: none; }\n  .text-link:hover {\n    text-decoration: underline;\n    cursor: pointer; }\n\n.skills-table {\n  border: 1px solid #2587ce;\n  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.4);\n  border-collapse: collapse;\n  margin-bottom: 20px; }\n\n.skills-table-cell {\n  padding: 10px;\n  line-height: 1.5em;\n  font-size: 1.1em; }\n\n.skills-table-cell:first-child {\n  color: white;\n  font-weight: bold;\n  background-color: #2587ce;\n  border: 1px solid #0e324c; }\n\n.skills-table-cell:nth-child(2) {\n  border: 1px solid #555; }\n\n@media (max-width: 800px) {\n  .skills-section {\n    width: 90%;\n    margin-top: 30px; }\n  .skills-heading-wrapper {\n    margin-top: 30px; } }\n", ""]);
+exports.push([module.i, ".page-wrapper {\n  background-color: #f7f7f7; }\n\n.content-wrapper {\n  max-width: 1000px;\n  margin: 0 auto;\n  background-color: white;\n  padding: 20px; }\n\n.skills-section {\n  max-width: 800px;\n  margin: 0 auto;\n  margin-top: 100px;\n  margin-bottom: 100px; }\n\n.skills-heading-wrapper {\n  margin: 50px 0 30px 0;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: left;\n      -ms-flex-pack: left;\n          justify-content: left; }\n\n.skills-icon {\n  height: 36px; }\n\n.skills-heading {\n  margin-left: 18px;\n  font-family: \"Montserrat\", sans-serif; }\n\n.skills-text {\n  margin-bottom: 20px;\n  line-height: 1.8em; }\n  .skills-text:last-child {\n    margin-bottom: 50px; }\n\n.text-link {\n  color: #2587ce;\n  text-decoration: none; }\n  .text-link:hover {\n    text-decoration: underline;\n    cursor: pointer; }\n\n.skills-table {\n  border: 1px solid #2587ce;\n  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.4);\n  border-collapse: collapse;\n  margin-bottom: 20px; }\n\n.skills-table-cell {\n  padding: 10px;\n  line-height: 1.5em;\n  font-size: 1.1em; }\n\n.skills-table-cell:first-child {\n  color: white;\n  font-weight: bold;\n  background-color: #2587ce;\n  border: 1px solid #0e324c; }\n\n.skills-table-cell:nth-child(2) {\n  border: 1px solid #555; }\n\n@media (max-width: 800px) {\n  .skills-section {\n    width: 90%;\n    margin-top: 30px; }\n  .skills-heading-wrapper {\n    margin-top: 30px; } }\n", ""]);
 
 // exports
 

@@ -2,14 +2,11 @@
 
 .footer {
   display: flex;
-
   flex-grow: 0;
   background-color: #222;
   color: white;
   min-height: 300px;
   bottom: 0;
-  // overflow:auto;
-
 }
 
 .footer-content-wrapper {
@@ -21,13 +18,11 @@
   padding: 30px;
   line-height: 1.8em;
   overflow: auto;
-  // border: 1px dotted yellow;
 }
 
 .footer-column {
   padding: 20px 20px 20px 50px;
 
-  // border: 1px dotted white;
    &:nth-child(1) {
     width: 40%;
   }
@@ -83,8 +78,6 @@
 }
 
 @media (max-width: 670px) {
-
-
   .footer-column:nth-child(1) {
     display: none;
   }
@@ -94,5 +87,4 @@
   .footer-column:nth-child(3) {
     width: 50%;
   }
-
 }

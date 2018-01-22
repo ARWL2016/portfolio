@@ -1,51 +1,43 @@
 <section class="email-section">
-
-    <form (ngSubmit)="sendEmail()" [formGroup]="emailForm">
-      <div class="form-heading-wrapper">
-        <img src="../../assets/icons/email.png" alt="email icon">
-        <h2>Contact Me</h2>
-      </div>
-      <div class="form-input-wrapper">
-        <label for="name">Your name</label>
-        <input
-          id="name"
-          type="text"
-          name="name"
-
-          formControlName="name">
-
-      </div>
-
-      <div class="form-input-wrapper">
-        <label for="email">Your email</label>
-        <input
-          id="email"
-          type="email"
-          name="email"
-
-          formControlName="email">
-      </div>
-
-      <div class="textarea-wrapper">
-        <label for="message">Your message</label>
-        <textarea
-          id="message"
-          name="message"
-          formControlName="message"></textarea>
-      </div>
-      <div class="validation-message">
-        <i *ngIf="validationMessage" class="fa fa-exclamation-circle" aria-hidden="true"></i>
-       {{validationMessage}}
-      </div>
-
-      <button
-        type="submit"
-        [disabled]="btnDisabled">
-        <div class="spinner" *ngIf="showLoader"></div>
-        <i *ngIf="btnLabel=='Message Sent'" class="fa fa-check-circle" aria-hidden="true"></i>{{btnLabel}}
-      </button>
-
-    </form>
-  </section>
+  <form (ngSubmit)="sendEmail()" [formGroup]="emailForm">
+    <div class="form-heading-wrapper">
+      <img src="../../assets/icons/email.png" alt="email icon">
+      <h2>Contact Me</h2>
+    </div>
+    <div class="form-input-wrapper">
+      <label for="name">Your name</label>
+      <input
+        id="name"
+        type="text"
+        name="name"
+        formControlName="name">
+    </div>
+    <div class="form-input-wrapper">
+      <label for="email">Your email</label>
+      <input
+        id="email"
+        type="email"
+        name="email"
+        formControlName="email">
+    </div>
+    <div class="textarea-wrapper">
+      <label for="message">Your message</label>
+      <textarea
+        id="message"
+        name="message"
+        formControlName="message"></textarea>
+    </div>
+    <div class="validation-message">
+      <i *ngIf="validationMessage" class="fa fa-exclamation-circle" aria-hidden="true"></i>
+      {{validationMessage}}
+    </div>
+    <button
+      type="submit"
+      [disabled]="btnDisabled">
+      <div class="spinner" *ngIf="showLoader"></div>
+      <i *ngIf="btnLabel=='Message Sent'" class="fa fa-check-circle" aria-hidden="true"></i>{{btnLabel}}
+    </button>
+  </form>
+</section>
 
 

@@ -50,10 +50,8 @@ export class EmailComponent {
     }
   }
 
-  private validateForm() {
+  private validateForm(): boolean {
     this.validationMessage = '';
-
-    console.log(this.emailCtrl, this.nameCtrl, this.messageCtrl);
 
     if (this.emailCtrl.invalid) {
       this.validationMessage = 'Please include a valid email.';
@@ -67,21 +65,18 @@ export class EmailComponent {
   }
 
   private handleResponse(res): void {
-    console.log(res);
     this.showLoader = false;
     this.btnLabel = 'Message Sent';
     this.resetForm();
   }
 
   private handleError(err): void {
-    console.log(err);
     this.showLoader = false;
     this.validationMessage = 'Oops! Something went wrong.';
     this.btnLabel = 'Send';
   }
 
-
-  private resetForm() {
+  private resetForm(): void {
     this.emailForm.setValue({name: '', email: '', message: ''});
   }
 
