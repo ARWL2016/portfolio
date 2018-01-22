@@ -23,6 +23,7 @@ const pingSecondary = false;
 app.use(express.static(path.join(__dirname, 'dist'), {maxAge: ms('1y')}));
 
 app.get('/data/projects', (req, res) => {
+  res.setHeader('Cache-Control', 'public, max-age=86400');
   res.status(200).send(projectData);
 });
 
@@ -45,7 +46,8 @@ app.get('/Alistair-Willis-CV', (req, res) => {
 })
 
 app.get('/*', (req, res) => {
-  res.redirect('/');
+  // res.redirect('/');
+  res.status(200).sendFile(path.join(__dirname, 'dist/index.html'));
 });
 
 app.listen(port, () => {

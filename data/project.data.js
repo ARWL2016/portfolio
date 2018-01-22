@@ -25,7 +25,7 @@ const projectData = [
       'fully responsive design',
       'client-side caching of search results'
     ],
-    image_url: 'assets/images/pathfinder.png',
+    image_url: 'assets/images/pathfinder-300.png',
     image_order: 0,
     github_link: 'https://github.com/ARWL2016/nightlife',
     website_link: 'https://pathfinder-2017.herokuapp.com/',
@@ -61,7 +61,7 @@ const projectData = [
       'REST API tested with Mocha and Expect, plus Supertest for HTTP request mocking',
       'data persisted using MongoDB cloud provider MLab'
     ],
-    image_url: 'assets/images/book-exchange-min.png',
+    image_url: 'assets/images/book-exchange-300.png',
     image_order: 0,
     github_link: 'https://github.com/ARWL2016/book-trading-club',
     website_link: 'https://arwl-book-exchange.herokuapp.com/browse',
@@ -94,7 +94,7 @@ const projectData = [
       'Chart.js doughtnut chart implemented as Angular child component',
       'authentication module uses JSON Web Tokens to implement secure sessions'
     ],
-    image_url: 'assets/images/votogo-sm.png',
+    image_url: 'assets/images/votogo-300.png',
     image_order: 0,
     github_link: 'https://github.com/ARWL2016/voting-app',
     website_link: 'https://votogo.herokuapp.com/home',
@@ -125,7 +125,7 @@ const projectData = [
       'back end makes daily series of requests to Quandl API to update stock data',
       'data persisted on a MySQL database at JawsDB via Heroku'
     ],
-    image_url: 'assets/images/stocko.png',
+    image_url: 'assets/images/stocko-300.png',
     image_order: 0,
     github_link: 'https://github.com/ARWL2016/stock-tracker',
     website_link: 'https://arwl-stock-tracker.herokuapp.com/main',
@@ -154,7 +154,7 @@ const projectData = [
       'responsive, mobile first design',
       'compiled with Babel and Webpack'
     ],
-    image_url: 'assets/images/weather-app.png',
+    image_url: 'assets/images/weather-app-300.png',
     // image_url: 'assets/images/recipe-book.jpg',
     image_order: 0,
     github_link: 'https://github.com/ARWL2016/weather',
@@ -181,7 +181,7 @@ const projectData = [
       'angular animations',
       'Ahead-of-Time compilation',
     ],
-    image_url: 'assets/images/recipe-book.jpg',
+    image_url: 'assets/images/recipe-book-300.jpg',
     image_order: 0,
     github_link: 'https://github.com/ARWL2016/recipe-book-cli',
     website_link: 'https://ng-recipe-book.herokuapp.com',
@@ -209,7 +209,7 @@ const projectData = [
       'uses Sass to configure consistent styles and allow one-step alterations',
       'components and services tested with Karma and Jasmine'
     ],
-    image_url: 'assets/images/portfolio-1-min.png',
+    image_url: 'assets/images/portfolio-300.png',
     image_order: 0,
     github_link: 'https://github.com/ARWL2016/portfolio',
     website_link: 'https://alistair-willis.herokuapp.com/overview',
@@ -325,7 +325,7 @@ const projectData = [
       'modular architecture',
       'tested with Mocha / Chai'
       ],
-    image_url: 'assets/images/image-search.png',
+    image_url: 'assets/images/image-search-300.jpg',
     image_order: 0,
     github_link: 'https://github.com/ARWL2016/image-search',
     website_link: 'https://arwl-image-search.herokuapp.com/',
