@@ -125,7 +125,7 @@ const projectData = [
       'back end makes daily series of requests to Quandl API to update stock data',
       'data persisted on a MySQL database at JawsDB via Heroku'
     ],
-    image_url: 'assets/images/stocko-300.png',
+    image_url: 'assets/images/stocko-300.jpg',
     image_order: 0,
     github_link: 'https://github.com/ARWL2016/stock-tracker',
     website_link: 'https://arwl-stock-tracker.herokuapp.com/main',
@@ -209,7 +209,7 @@ const projectData = [
       'uses Sass to configure consistent styles and allow one-step alterations',
       'components and services tested with Karma and Jasmine'
     ],
-    image_url: 'assets/images/portfolio-300.png',
+    image_url: 'assets/images/portfolio-300.jpg',
     image_order: 0,
     github_link: 'https://github.com/ARWL2016/portfolio',
     website_link: 'https://alistair-willis.herokuapp.com/overview',
@@ -269,7 +269,7 @@ const projectData = [
       'Sass variables and color functions used to ensure consistent color design',
       'uses Webpack to transpile Javascript to ES5 and Sass to CSS'
     ],
-    image_url: 'assets/images/tictactoe.png',
+    image_url: 'assets/images/tictactoe-300.jpg',
     image_order: 0,
     github_link: 'https://github.com/ARWL2016/nought-and-cross-app',
     website_link: 'https://arwl-noughts-and-crosses.herokuapp.com/',
