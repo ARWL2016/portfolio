@@ -2,7 +2,7 @@ const projectData = [
   {
     name: 'Pathfinder',
     type: {frontend: true, server: true, database: true},
-    tech: 'AngularJS 1.5, Node, Express, Mongo, Mongoose, Passport, Google Places API,',
+    tech: 'AngularJS 1.5, Node, Express, Mongo, Mongoose, Passport, Google Places API',
     tags: `
     HTML, CSS, Angular, AngularJS, Mongo, Mongodb, mongoose, passport
     npm, bower, babel, heroku, mlab, oauth`,
@@ -197,12 +197,10 @@ const projectData = [
     tags: 'HTML, CSS, Sass, Javascript, CSS, Express, Angular, Karma, Jasmine',
     featured: false,
     summary: `
-
       `,
     user_stories: `
       Portfolio website that allows users to view projects, link to live sites
       and Github repos, and see a skills summary.
-
     `,
     highlights: [
       'responsive design created in native CSS and flexbox',

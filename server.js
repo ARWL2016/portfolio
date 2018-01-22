@@ -4,6 +4,7 @@ const path = require('path');
 const chalk = require('chalk');
 const bodyParser = require('body-parser');
 const ms = require('ms');
+const helmet = require('helmet');
 
 const projectData = require('./data/project.data');
 const pingController = require('./ping/ping.controller');
@@ -11,6 +12,7 @@ const pingController = require('./ping/ping.controller');
 const app = express();
 app.use(bodyParser.json())
 app.use(compression());
+app.use(helmet());
 
 let port = process.env.PORT || 4200;
 
@@ -44,7 +46,6 @@ app.get('/Alistair-Willis-CV', (req, res) => {
 
 app.get('/*', (req, res) => {
   res.redirect('/');
-  // res.status(200).sendFile(path.join(__dirname, 'dist/index.html'));
 });
 
 app.listen(port, () => {

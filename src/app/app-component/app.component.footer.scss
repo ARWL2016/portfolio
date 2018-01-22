@@ -1,7 +1,7 @@
 @import '../../variables';
 
 .footer {
-  display: flex;
+  @include flex();
   flex-grow: 0;
   background-color: #222;
   color: white;
@@ -10,7 +10,7 @@
 }
 
 .footer-content-wrapper {
-  display: flex;
+  @include flex();
   flex-direction: row;
   font-weight: 300;
   max-width: $max-content-width;

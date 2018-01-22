@@ -112,7 +112,7 @@
 }
 
 .project-columns {
-  display: flex;
+  @include flex();
   flex-direction: row;
   margin: 20px 0 30px 0;
 }
@@ -139,6 +139,7 @@
 
 .project-list {
   line-height: $tall-line-height;
+  margin-left: 20px;
 }
 
 .project-list-item {
@@ -250,10 +251,6 @@
 
   .project-image-column {
     display: none;
-  }
-
-  .project-list {
-    margin-left: 20px;
   }
 
   .project-links-wrapper {

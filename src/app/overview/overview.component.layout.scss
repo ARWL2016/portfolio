@@ -6,7 +6,7 @@
 }
 
 .skills-section {
-  display: flex;
+  @include flex();
   flex-direction: row;
   max-width: $max-content-width;
   width: 80%;

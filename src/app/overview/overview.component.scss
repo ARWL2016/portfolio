@@ -56,7 +56,7 @@
 
 .skill-card {
   align-items: center;
-  display: flex;
+  @include flex();
   width: 33.3%;
   flex-direction: column;
   line-height: 2rem;
@@ -100,7 +100,7 @@
 
 .section-heading-wrapper {
   // border: 1px dotted blue;
-  display: flex;
+  @include flex();
   flex-direction: row;
   align-items: center;
   justify-content: left;
@@ -136,7 +136,7 @@
 .project {
   background-color: #fff;
   // border-radius: 5px;
-  display: flex;
+  @include flex();
   flex-direction: row;
   margin-top: 40px;
   width: 100%;

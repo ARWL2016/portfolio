@@ -11,11 +11,13 @@
     "server": "nodemon server.js",
     "build": "ng build",
     "build:watch": "ng build --watch",
-    "build:prod": "ng build --no-aot --prod",
+    "build:prod": "ng build --prod",
     "dev": "concurrently  \"npm run server\" \"npm run build:watch\"",
     "test": "ng test --sourcemaps=false",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "deploy": "git push heroku master",
+    "postdeploy": "heroku open"
   },
   "private": true,
   "dependencies": {
@@ -34,9 +36,11 @@
     "concurrently": "3.5.1",
     "core-js": "^2.4.1",
     "express": "4.16.2",
+    "helmet": "3.9.0",
     "ms": "2.1.1",
     "request-promise": "4.2.2",
     "rxjs": "^5.1.0",
+    "web-animations-js": "2.3.1",
     "zone.js": "^0.8.4"
   },
   "devDependencies": {

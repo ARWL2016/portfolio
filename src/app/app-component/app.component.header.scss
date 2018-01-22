@@ -16,7 +16,7 @@
 }
 
 .titlebar {
-  display: flex;
+  @include flex();
   flex-direction: row;
   justify-content: space-between;
   height: 50px;
@@ -58,7 +58,7 @@
 // }
 
 .titlebar-list {
-  display: flex;
+  @include flex();
   margin: 0;
   flex-grow: 1;
   align-items: center;
