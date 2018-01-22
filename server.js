@@ -18,7 +18,7 @@ const keepAwake = false;
 const pingPrimary = false;
 const pingSecondary = false;
 
-app.use(express.static(path.join(__dirname, 'dist')));
+app.use(express.static(path.join(__dirname, 'dist'), {maxAge: ms('1y')}));
 
 app.get('/data/projects', (req, res) => {
   res.status(200).send(projectData);
@@ -37,6 +37,10 @@ app.post('/ping', (req, res) => {
     res.status(200).send('Ping service is switched off');
   }
 });
+
+app.get('/Alistair-Willis-CV', (req, res) => {
+  res.status(200).sendFile(path.join(__dirname, 'Alistair-Willis-CV.pdf'));
+})
 
 app.get('/*', (req, res) => {
   res.redirect('/');
