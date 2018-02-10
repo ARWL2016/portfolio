@@ -43,7 +43,7 @@ app.post('/ping', (req, res) => {
 
 app.get('/Alistair-Willis-CV', (req, res) => {
   res.status(200).sendFile(path.join(__dirname, 'Alistair-Willis-CV.pdf'));
-})
+});
 
 app.get('/*', (req, res) => {
   // res.redirect('/');
