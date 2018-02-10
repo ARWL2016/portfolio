@@ -32,7 +32,7 @@ const projectData = [
     google_page_speed_score: 84,
     pingdom_page_size_kb: 256,
     pingdom_average_load_time: 1.89,
-    mozilla_security_grade: ''
+    mozilla_security_grade: 'C-'
   },
   {
     name: 'Book Exchange',
@@ -65,10 +65,10 @@ const projectData = [
     image_order: 0,
     github_link: 'https://github.com/ARWL2016/book-trading-club',
     website_link: 'https://arwl-book-exchange.herokuapp.com/browse',
-    google_page_speed_score: 91,
-    pingdom_page_size_kb: 957,
-    pingdom_average_load_time: 4.19,
-    mozilla_security_grade: ''
+    google_page_speed_score: 84,
+    pingdom_page_size_kb: 683,
+    pingdom_average_load_time: 2.59,
+    mozilla_security_grade: 'A'
   },
   {
     name: 'Votogo',
@@ -99,9 +99,9 @@ const projectData = [
     github_link: 'https://github.com/ARWL2016/voting-app',
     website_link: 'https://votogo.herokuapp.com/home',
     google_page_speed_score: 91,
-    pingdom_page_size_kb: 530,
-    pingdom_average_load_time: 4.11,
-    mozilla_security_grade: ''
+    pingdom_page_size_kb: 479,
+    pingdom_average_load_time: 2.11,
+    mozilla_security_grade: 'C'
   },
   {
     name: 'Stock Tracker',
@@ -130,9 +130,9 @@ const projectData = [
     github_link: 'https://github.com/ARWL2016/stock-tracker',
     website_link: 'https://arwl-stock-tracker.herokuapp.com/main',
     google_page_speed_score: 86,
-    pingdom_page_size_kb: 264,
-    pingdom_average_load_time: 3.35,
-    mozilla_security_grade: ''
+    pingdom_page_size_kb: 261,
+    pingdom_average_load_time: 1.45,
+    mozilla_security_grade: 'B'
   },
 
   {
@@ -214,8 +214,8 @@ const projectData = [
     github_link: 'https://github.com/ARWL2016/portfolio',
     website_link: 'https://alistair-willis.herokuapp.com/overview',
     google_page_speed_score: 0,
-    pingdom_page_size_kb: 1100,
-    pingdom_average_load_time: 4.36,
+    pingdom_page_size_kb: 0,
+    pingdom_average_load_time: 0,
     mozilla_security_grade: ''
   },
   {
@@ -243,9 +243,9 @@ const projectData = [
     github_link: 'https://github.com/ARWL2016/js-calculator',
     website_link: 'https://calculator-arwl.herokuapp.com/',
     google_page_speed_score: 91,
-    pingdom_page_size_kb: 56,
-    pingdom_average_load_time: 0.79,
-    mozilla_security_grade: ''
+    pingdom_page_size_kb: 65,
+    pingdom_average_load_time: 1.44,
+    mozilla_security_grade: 'C'
   },
   {
     name: 'Noughts and Crosses Game',
@@ -273,10 +273,10 @@ const projectData = [
     image_order: 0,
     github_link: 'https://github.com/ARWL2016/nought-and-cross-app',
     website_link: 'https://arwl-noughts-and-crosses.herokuapp.com/',
-    google_page_speed_score: 92,
-    pingdom_page_size_kb: 185,
-    pingdom_average_load_time: 2.96,
-    mozilla_security_grade: ''
+    google_page_speed_score: 97,
+    pingdom_page_size_kb: 186,
+    pingdom_average_load_time: 1.43,
+    mozilla_security_grade: 'A+'
   },
   {
     name: 'Game of Life Simulation',
@@ -302,10 +302,10 @@ const projectData = [
     image_order: 0,
     github_link: 'https://github.com/ARWL2016/game-of-life-jquery',
     website_link: 'https://arwl-game-of-life.herokuapp.com/',
-    google_page_speed_score: 0,
-    pingdom_page_size_kb: 73,
-    pingdom_average_load_time: 2.65,
-    mozilla_security_grade: ''
+    google_page_speed_score: 93,
+    pingdom_page_size_kb: 72,
+    pingdom_average_load_time: 1.34,
+    mozilla_security_grade: 'F'
   },
   {
     name: 'Image Search Abstraction Layer',
