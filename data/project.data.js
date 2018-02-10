@@ -155,7 +155,6 @@ const projectData = [
       'compiled with Babel and Webpack'
     ],
     image_url: 'assets/images/weather-app-300.png',
-    // image_url: 'assets/images/recipe-book.jpg',
     image_order: 0,
     github_link: 'https://github.com/ARWL2016/weather',
     website_link: 'https://arwl-weather.herokuapp.com',
@@ -213,10 +212,10 @@ const projectData = [
     image_order: 0,
     github_link: 'https://github.com/ARWL2016/portfolio',
     website_link: 'https://alistair-willis.herokuapp.com/overview',
-    google_page_speed_score: 0,
-    pingdom_page_size_kb: 0,
-    pingdom_average_load_time: 0,
-    mozilla_security_grade: ''
+    google_page_speed_score: 86,
+    pingdom_page_size_kb: 558,
+    pingdom_average_load_time: 2.73,
+    mozilla_security_grade: 'C'
   },
   {
     name: 'JS-Calculator',
