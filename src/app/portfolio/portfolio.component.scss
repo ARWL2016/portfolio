@@ -9,12 +9,47 @@
   overflow: hidden;
 }
 
+.portfolio-banner,
 .portfolio-content,
 .search-wrapper {
   max-width: $max-content-width;
   width: 80%;
   margin: 0 auto;
   transition: width 300ms;
+}
+
+// BANNER ******************
+
+.portfolio-banner {
+  margin-top: 80px;
+  padding: 30px;
+  background-color: white;
+  box-shadow: $box-shadow-style;
+
+  div {
+    @include flex();
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    margin-bottom: 30px;
+
+    img {
+      height: 36px;
+    }
+    h2 {
+      margin-left: 18px;
+      letter-spacing: 2px;
+      font-size: 1.5em;
+      font-family: $heading-font;
+      padding: 3px 0;
+      border-bottom: 3px solid $highlight-color;
+    }
+  }
+  p {
+    line-height: $tall-line-height;
+  }
+
+
 }
 
 
@@ -47,7 +82,7 @@
       border-radius: 10px;
       padding: 10px;
       padding-left: 44px;
-      width: 50%;
+      width: 100%;
       box-shadow: $box-shadow-style;
       border: 1px solid $highlight-color;
       transition: box-shadow 400ms;
@@ -135,6 +170,7 @@
 // this paragraph sits next to the image
 .project-text {
   line-height: $tall-line-height;
+  margin-bottom: 8px;
 }
 
 .project-list {
@@ -174,7 +210,7 @@
 
 .tooltip {
   font-size: 1em;
-  color: $highlight-color;
+  color: lighten($highlight-color, 20%);
   &:hover {
     cursor: pointer;
   }
@@ -212,6 +248,7 @@
 // *********************************************
 
 @media screen and (max-width: 930px) {
+  .portfolio-banner,
   .portfolio-content,
   .search-wrapper {
     width: 95%;

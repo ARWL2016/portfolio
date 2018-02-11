@@ -6,7 +6,8 @@
 .banner-section {
   height: 600px;
   background-color: #222;
-  background-image: url('../../assets/images/splash-wide-min.png');
+  // background-image: url('../../assets/images/splash-wide-min.png');
+  background-image: url('../../assets/images/splash-wide-clr.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -20,7 +21,7 @@
 }
 
 .banner-header {
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   // border: 1px dotted white;
 
   padding: 5px;
@@ -36,17 +37,33 @@
   // border: 1px dotted white;
   font-size: 1.1rem;
   line-height: 30px;
-  color: white;
+  color: $highlight-color;
+  font-weight: bold;
   letter-spacing: 1.5px;
+}
+
+a.banner-link {
+  color: transparent;
 }
 
 .banner-icon-link {
   font-size: 2em;
+
   color: white;
   padding: 15px 20px 15px 0;
   &:hover {
     cursor: pointer;
   }
+}
+
+i.fa.fa-envelope:before {
+  color: $highlight-color;
+
+}
+
+.ps-icon {
+  width: 30px;
+  margin-bottom: -5px;
 }
 
 
@@ -87,14 +104,10 @@
 // *********************************************
 
 .section-banner {
-
   margin-top: 80px;
   padding: 30px;
-  // border: 1px dotted blue;
   background-color: white;
   box-shadow: $box-shadow-style;
-
-
 }
 
 .section-heading-wrapper {

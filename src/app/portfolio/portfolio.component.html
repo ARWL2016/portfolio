@@ -1,5 +1,22 @@
 <div class="page-wrapper" [@showPage]="'on'">
 
+  <!-- BANNER SECTION -->
+  <section class="portfolio-banner">
+    <div>
+      <img class="project-icon" src="../../assets/icons/webpage-128.png">
+      <h2>PORTFOLIO</h2>
+    </div>
+    <p>This page contains information about and links to my personal web application projects.</p>
+    <p>
+      Please note that all projects are hosted on free dynos at Heroku.
+      There may be an initial loading delay while the server wakes up.
+    </p>
+    <p>
+      Some projects have not been subject to full cross browser testing. A modern desktop browser is recommended.
+    </p>
+    <p>More detailed technical information for each app is available on the Github README page.</p>
+  </section>
+
   <!-- SEARCH SECTION -->
   <section class="search-wrapper" >
     <form>
@@ -32,7 +49,7 @@
       <p class="project-tech">{{ project.tech | uppercase }}</p>
       <div class="project-columns">
         <div class="project-image-column">
-          <a href={{project.website_link}} target="_blank">
+          <a href={{project.website_link}} target="_blank" rel="noopener noreferrer">
             <img src={{project.image_url}} class="project-image" [ngStyle]="{'order': project.image_order}" >
           </a>
           <div class="project-stat-wrapper">
@@ -48,6 +65,10 @@
               <span class="project-stat-badge">{{ project.google_page_speed_score }}%</span>
               <i class="tooltip fa fa-question-circle-o" title="Score is from Google Page Speed Insights (desktop)." aria-hidden="true"></i>
             </p>
+            <p class="project-stat">SECURITY GRADE
+                <span class="project-stat-badge">{{ project.mozilla_security_grade }}</span>
+                <i class="tooltip fa fa-question-circle-o" title="Security assessment is by Mozilla Observatory." aria-hidden="true"></i>
+              </p>
           </div>
         </div>
         <div class="project-text-column">
