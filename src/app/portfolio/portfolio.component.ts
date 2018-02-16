@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener, Inject } from '@angular/core';
+import { Component, OnInit, HostListener, Inject, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { ProjectDataService } from 'app/services/project-data.service';
 import { Project } from 'app/services/project';
 import { pageTransition } from '../../animations';
@@ -11,7 +11,7 @@ import { PingService } from 'app/services/ping.service';
   styleUrls: ['./portfolio.component.scss'],
   animations: [pageTransition]
 })
-export class PortfolioComponent implements OnInit {
+export class PortfolioComponent implements OnInit, AfterViewInit {
 
   // project data
   projectData: Project[] = [];
@@ -21,17 +21,24 @@ export class PortfolioComponent implements OnInit {
 
   // search
   searchTerm = new FormControl();
+  @ViewChild('searchInput')
+  searchInputRef: ElementRef;
 
   // UI props
   showBackToTopIcon = false;
+  showDetails = false;
 
   constructor(private dataService: ProjectDataService, private ping: PingService) {
     this.createSearchListener();
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.getData();
     this.pingProjects('primary');
+  }
+
+  ngAfterViewInit(): void {
+    this.searchInputRef.nativeElement.focus();
   }
 
   private getData(): void {
@@ -43,6 +50,10 @@ export class PortfolioComponent implements OnInit {
           this.projectData = data;
       });
     }
+  }
+
+  public toggleDetails(): void {
+    this.showDetails = !this.showDetails;
   }
 
   private pingProjects(type: string): void {

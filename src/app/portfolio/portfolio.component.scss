@@ -25,8 +25,9 @@
   padding: 30px;
   background-color: white;
   box-shadow: $box-shadow-style;
+  line-height: $tall-line-height;
 
-  div {
+  div.heading {
     @include flex();
     flex-direction: row;
     align-items: center;
@@ -45,9 +46,34 @@
       border-bottom: 3px solid $highlight-color;
     }
   }
-  p {
-    line-height: $tall-line-height;
+
+  div.toggle {
+    cursor: pointer;
+    i {
+      float: left;
+    }
+    i.fa-caret-right{
+      padding: 5px 10px 0 5px;
+    }
+    i.fa-sort-down {
+      padding: 0px 7px 5px 5px;
+    }
+    p:last-of-type {
+      margin-top: 10px;
+      font-weight: bold;
+    }
   }
+
+  ul {
+    padding: 0 40px;
+    li {
+      list-style-type: dot;
+      // font-size: 0.95em;
+    }
+  }
+
+
+
 
 
 }
