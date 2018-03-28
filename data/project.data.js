@@ -14,15 +14,15 @@ const projectData = [
     `,
     user_stories: `
       Pathfinder is a web app which allows users to search for information on restaurants,
-       shops, hospitals and many other kinds of location using Google APIs.
-       Users can save a favorite location. Users can also log in using a Google,
-       Twitter or Github account and add a location and time to their diary.
+      shops, hospitals and many other kinds of location using Google APIs.
+      Users can save a favorite location, log in using a social media
+      account and manage search results with a diary widget.
     `,
     highlights: [
       'social login uses Google, Twitter and Github OAuth',
       'data served from four separate Google API services',
       'cloud data provider MLab used in development and production',
-      'fully responsive design',
+      'fully responsive design written in native CSS',
       'client-side caching of search results'
     ],
     image_url: 'assets/images/pathfinder-300.png',
@@ -37,25 +37,25 @@ const projectData = [
   {
     name: 'Book Exchange',
     type: {frontend: true, server: true, database: true},
-    tech: 'Angular 4.0, Typescript, MaterializeCSS, Node, Express, MongoDB, Mongoose',
+    tech: 'Angular 4.0, Typescript, Materialize, Node, Express, MongoDB, Mongoose',
     tags: `
-      HTML, CSS, Javascript, Angular, Typescript, MaterializeCSS,
+      HTML, CSS, Javascript, Angular, Typescript, Materialize,
       Node, Express, MongoDB, Mongo, Mongoose, BCrypt, JSON Web Tokens,`,
     featured: true,
     summary: `
-      Book Exchange is a book trading application which allows authenticated users to search for books on the Google Books API,
+      Book Exchange is a book trading app that allows authenticated users to search for books on the Google Books API,
       build a book collection, view other users' collections, and send and receive requests for books.
       This is a full stack application built on Angular 4.0, MaterializeCSS, Node, Express and MongoDB, and deployed on
       Heroku with data persistence in the cloud at MLab.
         `,
     user_stories: `
-      Book Exchange is a book trading app which allows users to search data from the Google Books API and browse other users' books.
+      Book Exchange is a book trading app that allows users to search data from the Google Books API and browse other users' books.
       Authenticated users can also create and manage their own book collection, make requests to other users, and see other users'
       requests. A messaging function is still to be implemented.
     `,
     highlights: [
       'UI implements progress bar, notifications, and background username check during registration',
-      'MaterializeCSS used for navbar, form components and icons',
+      'Materialize used for navbar, form components and icons',
       'consumes Google Books API for book data',
       'authentication implemented with Bcrypt password encryption and JSON Web Tokens',
       'REST API tested with Mocha and Expect, plus Supertest for HTTP request mocking',
@@ -84,14 +84,14 @@ const projectData = [
         `,
     user_stories: `
       Votogo is a full stack CRUD application that allows authenticated users to create,
-      share and view the results of surveys. Topics can be serached by title, and voting results can be
+      share and view the results of surveys. Topics can be searched by title, and voting results can be
       viewed in both table and chart format.
       `,
     highlights: [
       'CRUD application with RESTful API',
       'UI implemented using Bootstrap panels, buttons and navigation bar',
       'Angular animations module used for smoothing transitions during data requests',
-      'Chart.js doughtnut chart implemented as Angular child component',
+      'integrates Chart.js doughtnut chart as Angular child component',
       'authentication module uses JSON Web Tokens to implement secure sessions'
     ],
     image_url: 'assets/images/votogo-300.png',
@@ -115,15 +115,15 @@ const projectData = [
       The back end is written in Node and Express.
       `,
     user_stories: `
-      Stock tracking application which allows users to view stock data from the FTSE 100 over the last
+      Stock tracking app that allows users to view FTSE 100 stock data from the last
       five years. Users can select and compare different stocks, and alter the timescale between three months
       and five years.
     `,
     highlights: [
-      'custom UI built without CSS framework',
+      'responsive custom UI built with native CSS',
       'renders line graph from Chart.js using daily stock prices',
-      'back end makes daily series of requests to Quandl API to update stock data',
-      'data persisted on a MySQL database at JawsDB via Heroku'
+      'consumes data from Quandl API, cached daily on the backend for quicker response times',
+      'data persisted on a MySQL database in the cloud via Heroku'
     ],
     image_url: 'assets/images/stocko-300.jpg',
     image_order: 0,
@@ -152,7 +152,8 @@ const projectData = [
     highlights: [
       'consumes data from the Open Weather Map API',
       'responsive, mobile first design',
-      'compiled with Babel and Webpack'
+      'compiled with Babel and Webpack',
+      'built with Vue using the Vue CLI'
     ],
     image_url: 'assets/images/weather-app-300.png',
     image_order: 0,
@@ -171,14 +172,14 @@ const projectData = [
     featured: false,
     summary: ``,
     user_stories: `
-      A front end CRUD application which allows users to view, create, edit and delete recipe information.
+      A front end CRUD application which allows users to view, create, edit and delete recipe information. Data
+      is saved between sessions using browser local storage.
     `,
     highlights: [
-      'responsive design',
-      'reactive form style',
-      'toastr notifications',
-      'angular animations',
-      'Ahead-of-Time compilation',
+      'responsive design created with Bootstrap',
+      'uses Angular\'s reactive form style to keep coding logic out of the template',
+      'toastr notifications and Angular animations for a slick user experience',
+      'uses ahead-of-time compilation to reduce app bundle size',
     ],
     image_url: 'assets/images/recipe-book-300.jpg',
     image_order: 0,
@@ -230,12 +231,11 @@ const projectData = [
       `,
     user_stories: `
       Browser based calculator with basic arithmetic operators and a memory function. Operations can be chained
-      and the correct order of operations will be followed. The interface uses a skeuomorphic design and
-      permits keyboard or mouse input.
+      and the correct order of operations will be followed. The interface permits keyboard or mouse input.
      `,
     highlights: [
       'custom UI design written in Sass with modular structure',
-      'uses Webpack to transpile ES6 and Sass; code splitting produces separate CSS bundle',
+      'uses Webpack to transpile ES6 and Sass; code splitting produces separate CSS bundles',
       'DOM manipulation written in native Javascript; DOM selections cached for greater efficiency'],
     image_url: 'assets/images/calculator.png',
     image_order: 0,
@@ -264,7 +264,7 @@ const projectData = [
      `,
     highlights: [
       'JQuery and JQueryUI loaded via CDN',
-      'CSS3 transition effects create smooth game experience',
+      'CSS3 transition effects create a smooth game experience',
       'Sass variables and color functions used to ensure consistent color design',
       'uses Webpack to transpile Javascript to ES5 and Sass to CSS'
     ],
@@ -288,8 +288,8 @@ const projectData = [
       Users can start and stop the simulation, add and remove cells, and change the speed.
       `,
     user_stories: `
-      This application is an implementation of Conway's Game of Life, a grid of cells which follow a
-      few simple rules but produce complex and apparently life-life patterns. Users can start and stop
+      This application is an implementation of Conway's Game of Life, a grid of cells which follows a
+      few simple rules to generate complex and apparently life-life patterns. Users can start and stop
       the simulation, add and remove cells, and change the speed.
      `,
     highlights: [

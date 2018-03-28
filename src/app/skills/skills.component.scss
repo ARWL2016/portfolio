@@ -81,6 +81,24 @@
   border: 1px solid #555;
 }
 
+.cv-link {
+
+
+  img {
+    height: 1.5em;
+  }
+
+  a {
+    color: $highlight-color;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
 
 
 @media (max-width: 800px) {
