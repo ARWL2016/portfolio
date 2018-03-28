@@ -9,12 +9,12 @@ const projectData = [
     featured: true,
     summary: `
       Pathfinder is a web app which allows users to search for information on restaurants,
-       shops, hospitals and many other kinds of location using google APIs. It was built using
+       shops, hospitals and many other kinds of location using Google APIs. It was built using
        AngularJS and the MEAN stack, and features social authentication with Passport.
     `,
     user_stories: `
       Pathfinder is a web app which allows users to search for information on restaurants,
-       shops, hospitals and many other kinds of location using google APIs.
+       shops, hospitals and many other kinds of location using Google APIs.
        Users can save a favorite location. Users can also log in using a Google,
        Twitter or Github account and add a location and time to their diary.
     `,
@@ -46,7 +46,7 @@ const projectData = [
       Book Exchange is a book trading application which allows authenticated users to search for books on the Google Books API,
       build a book collection, view other users' collections, and send and receive requests for books.
       This is a full stack application built on Angular 4.0, MaterializeCSS, Node, Express and MongoDB, and deployed on
-      Heroku with data persistance in the cloud at MLab.
+      Heroku with data persistence in the cloud at MLab.
         `,
     user_stories: `
       Book Exchange is a book trading app which allows users to search data from the Google Books API and browse other users' books.
@@ -78,8 +78,8 @@ const projectData = [
     featured: true,
     summary: `
       Votogo is a full stack CRUD application that allows users to create,
-      share and view the results of surveys. It is built with Angular, Node, Express and MongoDB
-      and includes an authentication module using BCrypt.js for password encryption and JSON Web Tokens
+      share and view the results of surveys. It was built with Angular, Node, Express and MongoDB
+      and includes an authentication module using Bcrypt for password encryption and JSON Web Tokens
       for secure sessions.
         `,
     user_stories: `
@@ -142,7 +142,7 @@ const projectData = [
     tags: 'html, css, sass, vue, vuejs, node, express, webpack',
     featured: true,
     summary: `
-      This weather app allows user to search for today's weather in locations across the world, using the Open Weather Map API.
+      This weather app allows user to search for the current weather in locations across the world, using the Open Weather Map API.
       It was built with Vue.js and the Vue CLI, and features a mobile first design using Sass.
     `,
     user_stories: `
