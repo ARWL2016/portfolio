@@ -16,9 +16,9 @@ app.use(helmet());
 
 let port = process.env.PORT || 4200;
 
-const keepAwake = false;
-const pingPrimary = false;
-const pingSecondary = false;
+const keepAwake = true;
+const pingPrimary = true;
+const pingSecondary = true;
 
 app.use(express.static(path.join(__dirname, 'dist'), {maxAge: ms('1y')}));
 
