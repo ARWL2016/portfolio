@@ -1,40 +1,5 @@
 const projectData = [
   {
-    name: 'Pathfinder',
-    type: {frontend: true, server: true, database: true},
-    tech: 'AngularJS 1.5, Node, Express, Mongo, Mongoose, Passport, Google Places API',
-    tags: `
-    HTML, CSS, Angular, AngularJS, Mongo, Mongodb, mongoose, passport
-    npm, bower, babel, heroku, mlab, oauth`,
-    featured: true,
-    summary: `
-      Pathfinder is a web app which allows users to search for information on restaurants,
-       shops, hospitals and many other kinds of location using Google APIs. It was built using
-       AngularJS and the MEAN stack, and features social authentication with Passport.
-    `,
-    user_stories: `
-      Pathfinder is a web app which allows users to search for information on restaurants,
-      shops, hospitals and many other kinds of location using Google APIs.
-      Users can save a favorite location, log in using a social media
-      account and manage search results with a diary widget.
-    `,
-    highlights: [
-      'social login uses Google, Twitter and Github OAuth',
-      'data served from four separate Google API services',
-      'cloud data provider MLab used in development and production',
-      'fully responsive design written in native CSS',
-      'client-side caching of search results'
-    ],
-    image_url: 'assets/images/pathfinder-300.png',
-    image_order: 0,
-    github_link: 'https://github.com/ARWL2016/nightlife',
-    website_link: 'https://pathfinder-2017.herokuapp.com/',
-    google_page_speed_score: 84,
-    pingdom_page_size_kb: 256,
-    pingdom_average_load_time: 1.89,
-    mozilla_security_grade: 'C-'
-  },
-  {
     name: 'Book Exchange',
     type: {frontend: true, server: true, database: true},
     tech: 'Angular 4.0, Typescript, Materialize, Node, Express, MongoDB, Mongoose',
@@ -69,6 +34,41 @@ const projectData = [
     pingdom_page_size_kb: 683,
     pingdom_average_load_time: 2.59,
     mozilla_security_grade: 'A'
+  },
+  {
+    name: 'Pathfinder',
+    type: {frontend: true, server: true, database: true},
+    tech: 'AngularJS 1.5, Node, Express, Mongo, Mongoose, Passport, Google Places API',
+    tags: `
+    HTML, CSS, Angular, AngularJS, Mongo, Mongodb, mongoose, passport
+    npm, bower, babel, heroku, mlab, oauth`,
+    featured: true,
+    summary: `
+      Pathfinder is a web app which allows users to search for information on restaurants,
+       shops, hospitals and many other kinds of location using Google APIs. It was built using
+       AngularJS and the MEAN stack, and features social authentication with Passport.
+    `,
+    user_stories: `
+      Pathfinder is a web app which allows users to search for information on restaurants,
+      shops, hospitals and many other kinds of location using Google APIs.
+      Users can save a favorite location, log in using a social media
+      account and manage search results with a diary widget.
+    `,
+    highlights: [
+      'social login uses Google, Twitter and Github OAuth',
+      'data served from four separate Google API services',
+      'cloud data provider MLab used in development and production',
+      'fully responsive design written in native CSS',
+      'client-side caching of search results'
+    ],
+    image_url: 'assets/images/pathfinder-300.png',
+    image_order: 0,
+    github_link: 'https://github.com/ARWL2016/nightlife',
+    website_link: 'https://pathfinder-2017.herokuapp.com/',
+    google_page_speed_score: 84,
+    pingdom_page_size_kb: 256,
+    pingdom_average_load_time: 1.89,
+    mozilla_security_grade: 'C-'
   },
   {
     name: 'Votogo',
