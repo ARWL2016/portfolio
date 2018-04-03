@@ -17,6 +17,7 @@ const rp = require('request-promise');
   }
 
   function pingSelf() {
+    console.log("Waking App");
     rp.get("https://alistair-willis.herokuapp.com/overview");
   }
 
