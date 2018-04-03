@@ -17,7 +17,7 @@ const rp = require('request-promise');
   }
 
   function pingSelf() {
-    rp.get("https://github.com/ARWL2016/portfolio");
+    rp.get("https://alistair-willis.herokuapp.com/overview");
   }
 
 module.exports = { pingPrimaryProjects, pingSecondaryProjects, pingSelf };
