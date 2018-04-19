@@ -16,7 +16,6 @@ app.use(helmet());
 
 let port = process.env.PORT || 4200;
 
-const keepAwake = true;
 const pingPrimary = true;
 const pingSecondary = true;
 
@@ -32,10 +31,10 @@ app.post('/ping', (req, res) => {
 
   if (type === 'primary' && pingPrimary) {
     pingController.pingPrimaryProjects();
-    res.status(200).send('Primary Projects Promptly Pinged');
+    res.status(200).send('Primary Projects Pinged');
   } else if (type === 'secondary' && pingSecondary) {
     pingController.pingSecondaryProjects();
-    res.status(200).send('Secondary Projects Promptly Pinged');
+    res.status(200).send('Secondary Projects Pinged');
   } else {
     res.status(200).send('Ping service is switched off');
   }
@@ -46,7 +45,6 @@ app.get('/alistair-willis', (req, res) => {
 });
 
 app.get('/*', (req, res) => {
-  // res.redirect('/');
   res.status(200).sendFile(path.join(__dirname, 'dist/index.html'));
 });
 
@@ -54,8 +52,4 @@ app.listen(port, () => {
   console.log(chalk.green('API Running on Port ' + port));
 });
 
-if (keepAwake) {
-  setInterval(function() {
-    pingController.pingSelf();
-  }, ms('1hr'));
-}
+
