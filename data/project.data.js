@@ -42,7 +42,7 @@ const projectData = [
     tags: `
     HTML, CSS, Angular, AngularJS, Mongo, Mongodb, mongoose, passport
     npm, bower, babel, heroku, mlab, oauth`,
-    featured: true,
+    featured: false,
     summary: `
       Pathfinder is a web app which allows users to search for information on restaurants,
        shops, hospitals and many other kinds of location using Google APIs. It was built using

@@ -56,9 +56,14 @@ a.banner-link {
   }
 }
 
+i.fa.fa-linkedin::before {
+  padding: 3px 5px;
+  background-color: $linkedin-colour;
+  border-radius: 2px;
+}
+
 i.fa.fa-envelope:before {
   color: $highlight-color;
-
 }
 
 .ps-icon {
