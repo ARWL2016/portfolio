@@ -21,7 +21,7 @@ export class PortfolioComponent implements OnInit, AfterViewInit {
 
   // search
   searchTerm = new FormControl();
-  @ViewChild('searchInput')
+  @ViewChild('searchInput', { static: true })
   searchInputRef: ElementRef;
 
   // UI props

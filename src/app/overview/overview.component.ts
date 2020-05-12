@@ -2,7 +2,7 @@ import { Component, OnInit, HostListener } from '@angular/core';
 import { ProjectDataService } from 'app/services/project-data.service';
 import { Project } from 'app/services/project';
 import { pageTransition } from '../../animations';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { PingService } from 'app/services/ping.service';
 
 @Component({
@@ -25,14 +25,15 @@ export class OverviewComponent implements OnInit {
     this.getProjectData();
   }
 
-  private getProjectData() {
+  private async getProjectData() {
     if (this.dataService.projectData) {
       this.projectData = this.dataService.projectData.filter(project => project.featured);
     } else {
-      this.dataService.getProjectData()
-        .then(data => {
-          this.projectData = data.filter(project => project.featured);
-      });
+      const data = await this.dataService.getProjectData()
+
+      if (data) {
+        this.projectData = data.filter(project => project.featured);
+      }
     }
   }
 

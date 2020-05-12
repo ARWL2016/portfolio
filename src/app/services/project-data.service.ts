@@ -14,9 +14,14 @@ export class ProjectDataService {
 
   public async getProjectData(): Promise<Project[]> {
 
-    this.projectData = await this.http.get<Project[]>('/data/projects').toPromise();
+    try {
+      this.projectData = await this.http.get<Project[]>('/data/projects').toPromise();
+      return this.projectData;
+    } catch (e) {
+      console.log(e);
+    }
 
-    return this.projectData;
+
 
   }
 
