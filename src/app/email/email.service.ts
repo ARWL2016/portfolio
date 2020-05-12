@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
-import 'rxjs/add/operator/toPromise';
+import { HttpClient } from '@angular/common/http';
+
 import { Email } from 'app/email/email';
 
 @Injectable()
 export class EmailService {
 
-  constructor(private http: Http) { }
+  constructor(private http: HttpClient) { }
 
   public sendEmail(email: Email): Promise<any> {
 
