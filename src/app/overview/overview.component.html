@@ -1,93 +1,11 @@
 <div [@showPage]="'on'">
 
-  <!-- BANNER SECTION -->
-  <section class="banner-section" >
-    <div class="banner-content">
-      <h1 class="banner-header">Front End Developer</h1>
-      <p class="banner-text">HTML | CSS | JAVASCRIPT (ES6) | ANGULAR | JQUERY | NODE | AGILE</p>
-      <p>
-        <a class="banner-link" href="https://github.com/ARWL2016" target="_blank" rel="noopener noreferrer">
-          <i class="banner-icon-link fa fa-github" aria-hidden="true" title="Open GitHub profile"></i>
-        </a>
-        <a class="banner-link" href="https://www.linkedin.com/in/alistair-willis-developer/" target="_blank" rel="noopener noreferrer">
-          <i class="banner-icon-link fa fa-linkedin" aria-hidden="true" title="Open LinkedIn profile"></i>
-        </a>
-        <i (click)='scrollTo()' class="banner-icon-link fa fa-envelope" aria-hidden="true" title="Email me"></i>
-        <a href="https://app.pluralsight.com/profile/alistair-willis" target="_blank" rel="noopener noreferrer">
-          <img class="ps-icon" src="assets/icons/ps.jpg" alt="pluralsight icon" title="Open Pluralsight profile">
-        </a>
-        <a class="banner-link" href="/alistair-willis" target="_blank" rel="noopener noreferrer">
-          <img class="cv-icon" src="assets/icons/cv.png" alt="cv icon" title="Open / download CV">
-        </a>
-      </p>
-    </div>
-  </section>
+  <app-banner></app-banner>
 
-  <!-- SKILLS SECTION -->
-  <section class="skills-section">
-    <article class="skill-card">
-      <i class="fa fa-laptop skill-icon" aria-hidden="true"></i>
-      <h3 class="skill-card-heading">Fluid Design</h3>
-      <p class="skill-card-text">
-        Using front end libraries such as Bootstrap and Foundation, as well as custom CSS written in a maintainable style with Sass,
-        I create web applications with responsive and intuitive user interfaces.
-      </p>
-    </article>
-    <article class="skill-card">
-      <i class="fa fa-industry skill-icon" aria-hidden="true"></i>
-      <h3 class="skill-card-heading">Modern Libraries</h3>
-      <p class="skill-card-text">
-        As well as JavaScript and jQuery, I utilize modern, component-based libraries such as Angular, React and Vue to build modular web applications which are quick
-        to develop and highly performant.
-      </p>
-    </article>
-    <article class="skill-card">
-      <i class="fa fa-server skill-icon" aria-hidden="true"></i>
-      <h3 class="skill-card-heading">Full Stack Experience</h3>
-      <p class="skill-card-text">
-        Using JavaScript based back end technologies such as Node, Express and MongoDB, I've built RESTful APIs and
-        authentication modules. I've also worked with MySQL, PHP and C#.
-      </p>
-    </article>
-  </section>
+  <app-skills-summary></app-skills-summary>
 
-<!-- PORTFOLIO SECTION -->
-  <section class="portfolio-section">
-  <div class="portfolio-content">
-    <div class="section-banner">
-      <div class="section-heading-wrapper">
-        <img class="project-icon" src="../../assets/icons/webpage-128.png">
-        <h2 class="section-heading">FEATURED WEB APPLICATIONS</h2>
-      </div>
-      <p class="section-banner-text">Some are my recent web apps are featured below. You can view all the projects,
-        search by language and framework, and view technical specs, on the <a (click)="navigateTo('/portfolio')">PORTFOLIO</a> page.
-      </p>
-    </div>
-    <div class="projects">
+  <app-featured-apps></app-featured-apps>
 
-      <article *ngFor="let project of projectData" class="project">
-        <div class="image-column">
-          <a href={{project.website_link}} target="_blank" rel="noopener noreferrer">
-            <img src={{project.image_url}} class="project-image" [ngStyle]="{'order': project.image_order}" >
-          </a>
-        </div>
-        <div class="text-column">
-          <div class="text-wrapper">
-          <h3 class="project-heading">{{project.name | uppercase }}</h3>
-          <p class="project-text">{{project.summary}}</p>
-            <div class="project-links">
-              <a class="project-link" target="_blank" href={{project.github_link}}><i class="project-link-icon fa fa-github" aria-hidden="true"></i>&nbsp;SOURCE&nbsp;CODE</a>
-              <a class="project-link" target="_blank" href={{project.website_link}}><i class="project-link-icon fa fa-external-link-square" aria-hidden="true"></i>&nbsp;VIEW&nbsp;WEBSITE</a>
-            </div>
-          </div>
-        </div>
-      </article>
-
-    </div>
-  </div>
-  </section>
-
-  <!-- EMAIL COMPONENT -->
   <app-email id="contactForm"></app-email>
 
 </div>

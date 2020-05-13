@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
 import { PortfolioComponent } from './portfolio.component';
-import { ProjectDataService } from 'app/services/project-data.service';
+import { ProjectDataService } from 'app/_core/services/project-data.service';
 import { DebugElement } from "@angular/core";
 import { By } from "@angular/platform-browser";
 

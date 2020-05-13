@@ -4,7 +4,7 @@ import { DebugElement } from '@angular/core';
 
 import { OverviewComponent } from './overview.component';
 import { Router } from '@angular/router';
-import { ProjectDataService } from 'app/services/project-data.service';
+import { ProjectDataService } from 'app/_core/services/project-data.service';
 
 describe('OverviewComponent', () => {
   let comp: OverviewComponent;

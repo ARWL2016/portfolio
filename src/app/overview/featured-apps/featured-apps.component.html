@@ -1,0 +1,46 @@
+<div class="background">
+
+  <main>
+
+
+    <section class="banner">
+      <header>
+        <img class="project-icon" src="../../../assets/icons/webpage-128.png">
+        <h2>FEATURED PROJECTS</h2>
+      </header>
+      <p>Some are my recent web apps are featured below. You can view all the projects,
+        search by language and framework, and view technical specs, on the <a
+          (click)="navigateTo('/portfolio')">PORTFOLIO</a> page.
+      </p>
+    </section>
+
+    <div *ngIf="projectData">
+
+      <article *ngFor="let project of projectData" class="project">
+        <div class="image-column">
+          <a [href]="project.website_link" target="_blank" rel="noopener noreferrer">
+            <img [src]="project.image_url" [ngStyle]="{'order': project.image_order}">
+          </a>
+        </div>
+
+        <div class="text-column">
+          <div class="text-wrapper">
+            <h3>{{project.name | uppercase }}</h3>
+            <p>{{project.summary}}</p>
+
+            <div class="project-links">
+              <a target="_blank" [href]="project.github_link"><i class="fa fa-github"
+                  aria-hidden="true"></i>&nbsp;SOURCE&nbsp;CODE</a>
+              <a target="_blank" [href]="project.website_link"><i class="fa fa-external-link-square"
+                  aria-hidden="true"></i>&nbsp;VIEW&nbsp;WEBSITE</a>
+            </div>
+          </div>
+        </div>
+
+
+      </article>
+
+    </div>
+  </main>
+
+</div>

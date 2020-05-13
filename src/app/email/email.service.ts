@@ -3,7 +3,9 @@ import { HttpClient } from '@angular/common/http';
 
 import { Email } from 'app/email/email';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class EmailService {
 
   constructor(private http: HttpClient) { }

@@ -6,6 +6,11 @@
     "portfolio": {
       "root": "",
       "sourceRoot": "src",
+      "schematics": {
+        "@schematics/angular:component": {
+          "styleext": "scss"
+        }
+      },
       "projectType": "application",
       "architect": {
         "build": {
@@ -22,8 +27,13 @@
               "src/favicon.ico"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles/index.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "./styles"
+              ]
+          },
             "scripts": []
           },
           "configurations": {

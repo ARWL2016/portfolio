@@ -1,0 +1,55 @@
+
+$max-content-width: 1000px;
+$highlight-color: #2587ce;
+$light-grey-background: #f7f7f7;
+$mustard-yellow: #FFC857;
+$heading-font: 'Montserrat', sans-serif;
+$linkedin-colour: rgb(0, 119, 181);
+
+$box-shadow-style: 0px 1px 5px rgba(0,0,0,0.4);
+$box-shadow-style-small: 0px 1px 3px rgba(0,0,0,0.4);
+$tall-line-height: 1.8em;
+
+@mixin project-buttons($colour) {
+  background-color: #FFF;
+  color: #222;
+  letter-spacing: 1px;
+  font-size:  0.9rem;
+  display: inline-block;
+  padding: 8px 12px 8px 12px;
+  border: 2px solid $colour;
+  border-radius: 3px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  font-weight: 500;
+  text-align: center;
+  -webkit-transition: background-color 300ms;
+  transition: background-color 300ms;
+  &:hover {
+    cursor: pointer;
+    background-color: $highlight-color;
+  }
+}
+
+@mixin project-button-link() {
+  @include project-buttons($highlight-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+@mixin project-links() {
+  color: $highlight-color;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+@mixin flex() {
+  display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+}

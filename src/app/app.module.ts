@@ -2,20 +2,29 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { AppComponent } from 'app/app-component/app.component';
+import { AppComponent } from 'app/app.component';
 import { OverviewComponent } from './overview/overview.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { SkillsComponent } from './skills/skills.component';
 import { EmailComponent } from './email/email.component';
 
-import { ProjectDataService } from 'app/services/project-data.service';
-import { EmailService } from 'app/email/email.service';
-import { PingService } from 'app/services/ping.service';
-import { LogoComponent } from 'app/shared/logo.component';
 
+import { LogoComponent } from 'app/_shared/logo/logo.component';
+import { HeaderComponent } from './_core/layout/header/header.component';
+import { FooterComponent } from './_core/layout/footer/footer.component';
+import { BannerComponent } from './overview/banner/banner.component';
+import { SkillsSummaryComponent } from './overview/skills-summary/skills-summary.component';
+import { FeaturedAppsComponent } from './overview/featured-apps/featured-apps.component';
+
+const routes: Routes = [
+  { path: 'overview', component: OverviewComponent },
+  { path: 'portfolio', component: PortfolioComponent },
+  { path: 'skills', component: SkillsComponent },
+  { path: '', redirectTo: 'overview', pathMatch: 'full' },
+]
 
 @NgModule({
   declarations: [
@@ -24,7 +33,12 @@ import { LogoComponent } from 'app/shared/logo.component';
     PortfolioComponent,
     SkillsComponent,
     EmailComponent,
-    LogoComponent
+    LogoComponent,
+    HeaderComponent,
+    FooterComponent,
+    BannerComponent,
+    SkillsSummaryComponent,
+    FeaturedAppsComponent
   ],
   imports: [
     BrowserModule,
@@ -32,18 +46,9 @@ import { LogoComponent } from 'app/shared/logo.component';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    RouterModule.forRoot([
-      { path: 'overview', component: OverviewComponent },
-      { path: 'portfolio', component: PortfolioComponent },
-      { path: 'skills', component: SkillsComponent },
-      { path: '', redirectTo: 'overview', pathMatch: 'full' },
-    ])
+    RouterModule.forRoot(routes)
   ],
-  providers: [
-    ProjectDataService,
-    EmailService,
-    PingService
-  ],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }

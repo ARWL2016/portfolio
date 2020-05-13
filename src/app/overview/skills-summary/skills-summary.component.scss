@@ -1,0 +1,60 @@
+@import 'src/styles/variables';
+
+main {
+  @include flex();
+  flex-direction: row;
+  max-width: $max-content-width;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+article {
+  align-items: center;
+  @include flex();
+  width: 33.3%;
+  flex-direction: column;
+  line-height: 2rem;
+  padding: 25px;
+  margin: 10px 15px;
+  transition: width 400ms ease-in;
+
+  i {
+    font-size: 2rem;
+    margin-bottom: 5px;
+  }
+
+  h3 {
+    // border: 1px dotted yellow;
+    margin-top: 3px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: $heading-font;
+    border-bottom: 3px solid $highlight-color;
+  }
+
+  p {
+    text-align: center;
+  }
+}
+
+@media (max-width: 1080px) {
+  main {
+    flex-direction: column !important;
+  }
+
+  article {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+
+}
+
+@media (max-width: 610px) {
+  main {
+    margin-bottom: 20px;
+  }
+}
+

@@ -1,0 +1,10 @@
+<main>
+  <article *ngFor="let skill of skillsSummary">
+    <i [class]="skill.iconClass" aria-hidden="true"></i>
+    <h3>{{ skill.title}}</h3>
+    <p>
+      {{ skill.content }}
+    </p>
+  </article>
+
+</main>

@@ -1,0 +1,91 @@
+@import 'src/styles/variables';
+
+footer {
+  @include flex();
+  flex-grow: 0;
+  background-color: #222;
+  color: white;
+  min-height: 300px;
+  bottom: 0;
+}
+
+main {
+  @include flex();
+  flex-direction: row;
+  font-weight: 300;
+  max-width: $max-content-width;
+  margin: 0 auto;
+  padding: 30px 0;
+  line-height: 1.8em;
+  overflow: auto;
+}
+
+.column {
+  padding: 20px 20px 20px 50px;
+
+   &.left {
+    width: 40%;
+  }
+
+  &.middle {
+    width: 30%;
+  }
+  &.right {
+    width: 30%;
+  }
+}
+
+h3 {
+  font-size: 0.9em;
+  font-family: $heading-font;
+}
+
+p {
+  font-size: 0.9em;
+  margin-bottom: 10px;
+}
+
+.link {
+  @include project-links();
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.icon-link {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+hr {
+  color: $highlight-color;
+  background-color: $highlight-color;
+  height: 2px;
+  border: 0;
+  width: 50%;
+  text-align: left;
+  margin: 10px auto 10px 0;
+}
+
+@media (max-width: 930px) {
+  main {
+    padding: 30px 10px 10px 10px;
+  }
+
+  .column {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 670px) {
+  .column.left {
+    display: none;
+  }
+  .column.middle {
+    width: 50%;
+  }
+  .column.right {
+    width: 50%;
+  }
+}

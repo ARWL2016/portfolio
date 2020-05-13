@@ -1,9 +1,10 @@
-import { Component, OnInit, HostListener, Inject, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
-import { ProjectDataService } from 'app/services/project-data.service';
-import { Project } from 'app/services/project';
-import { pageTransition } from '../../animations';
+import { Component, OnInit, HostListener, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { PingService } from 'app/services/ping.service';
+
+import { ProjectDataService } from 'app/_core/services/project-data.service';
+import { Project } from 'app/_core/types/project';
+import { pageTransition } from '../_shared/animations';
+import { PingService } from 'app/_core/services/ping.service';
 
 @Component({
   selector: 'app-portfolio',
@@ -13,43 +14,41 @@ import { PingService } from 'app/services/ping.service';
 })
 export class PortfolioComponent implements OnInit, AfterViewInit {
 
+  @ViewChild('searchInput', { static: true }) searchInputRef: ElementRef;
+
+  public displayedProjects: Project[];
+  public allProjects: Project[];
+
   // project data
-  projectData: Project[] = [];
+  get projectData(): Project[] {
+    return this.dataService.projectData;
+  }
+
   get results(): number {
     return this.projectData.length;
   }
 
   // search
-  searchTerm = new FormControl();
-  @ViewChild('searchInput', { static: true })
-  searchInputRef: ElementRef;
+  public searchTerm = new FormControl();
+
 
   // UI props
-  showBackToTopIcon = false;
-  showDetails = false;
+  public showBackToTopIcon = false;
+  public showDetails = false;
 
-  constructor(private dataService: ProjectDataService, private ping: PingService) {
+  constructor(
+    private dataService: ProjectDataService,
+    private ping: PingService) {
     this.createSearchListener();
   }
 
   ngOnInit(): void {
-    this.getData();
+    this.displayedProjects = this.allProjects = this.dataService.projectData;
     this.pingProjects('primary');
   }
 
   ngAfterViewInit(): void {
     this.searchInputRef.nativeElement.focus();
-  }
-
-  private getData(): void {
-    if (this.dataService.projectData) {
-      this.projectData = this.dataService.projectData;
-    } else {
-      this.dataService.getProjectData()
-        .then(data => {
-          this.projectData = data;
-      });
-    }
   }
 
   public toggleDetails(): void {
@@ -86,7 +85,7 @@ export class PortfolioComponent implements OnInit, AfterViewInit {
 
   private search(): void {
     const filter = this.searchTerm.value.trim().concat(',');
-    this.projectData = this.transform(this.dataService.projectData, filter);
+    this.displayedProjects = this.transform(this.allProjects, filter);
   }
 
   private transform(allProjects: Project[], filterBy: string): Project[] {

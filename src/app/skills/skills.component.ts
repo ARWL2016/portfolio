@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { pageTransition } from '../../animations';
+import { pageTransition } from '../_shared/animations';
 
 
 @Component({

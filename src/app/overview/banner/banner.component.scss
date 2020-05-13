@@ -1,0 +1,97 @@
+@import 'src/styles/variables';
+
+.jumbotron {
+  height: 640px;
+  background-color: #222;
+  background-image: url('../../../assets/images/splash-wide-clr.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: auto;
+  font-family: 'Montserrat', sans-serif;
+  padding: 30px;
+}
+
+main {
+  max-width: $max-content-width;
+  margin: 200px auto;
+  margin-top: 200px;
+}
+
+
+
+h1 {
+  margin-bottom: 16px;
+
+  padding: 5px;
+  padding-left: 10px;
+  letter-spacing: 2.5px;
+  font-size: 3.2rem;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1));
+}
+
+p.banner-text {
+  font-size: 1.1rem;
+  line-height: 30px;
+  color: $highlight-color;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+a.banner-link {
+  color: transparent;
+}
+
+.banner-icon-link {
+  font-size: 2em;
+
+  color: white;
+  padding: 15px 20px 15px 0;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+i.fa.fa-linkedin::before {
+  padding: 3px 5px;
+  background-color: $linkedin-colour;
+  border-radius: 2px;
+}
+
+i.fa.fa-envelope:before {
+  color: $highlight-color;
+}
+
+.ps-icon {
+  width: 30px;
+  margin-bottom: -5px;
+}
+
+.cv-icon {
+  height: 26px;
+  margin-left: 18px;
+  margin-bottom: -3px;
+}
+
+@media (max-width: 1000px) {
+
+  main {
+    margin-top: 120px;
+    width: 95%;
+  }
+
+
+}
+
+@media (max-width: 670px) {
+
+  h1 {
+    font-size: 2em;
+  }
+
+  .banner-text {
+    font-size: 1em;
+  }
+
+
+}
