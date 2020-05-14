@@ -16,79 +16,67 @@
 
     <ul *ngIf="showDetails">
       <li>
-          All projects are hosted on free dynos at Heroku. There may be an initial loading delay while the server wakes up.
+        All projects are hosted on free dynos at Heroku. There may be an initial loading delay while the server wakes
+        up.
       </li>
       <li>
-          Some projects have not been subject to full cross browser testing. A modern desktop browser is recommended.
+        Some projects have not been subject to full cross browser testing. A modern desktop browser is recommended.
       </li>
     </ul>
 
   </section>
 
-  <!-- SEARCH SECTION -->
-  <section class="search-wrapper" >
-    <form>
-      <label for="search">SEARCH BY TECHNOLOGY</label>
-      <div class="input-wrapper">
-        <input #searchInput
-          class="search-input"
-          name="search"
-          type="text"
-          autocomplete="off"
-          [formControl]="searchTerm"
-          placeholder="e.g. angular">
-        <i class="search-icon fa fa-search" aria-hidden="true"></i>
-      </div>
-      <p *ngIf="results !== 1" class="search-result">{{results}} results</p>
-      <p *ngIf="results === 1" class="search-result">{{results}} result</p>
-    </form>
-  </section>
+  <app-search (searchValueChanged)="onSearchValueChanged($event)" [searchResultsCount]="searchResultsCount">
+  </app-search>
 
   <!-- PORTFOLIO SECTION -->
-  <section *ngIf="projectData" class="portfolio-content">
+  <section *ngIf="displayedProjects" class="portfolio-content">
 
-    <article class="project-card" *ngFor="let project of projectData" [@showPage]="'on'">
-      <h1 class="project-heading">{{ project.name }}</h1>
-      <span class="project-stack-type">
-          <i *ngIf="project.type.frontend" title="front end" class="fa fa-desktop" aria-hidden="true"></i>
-          <i *ngIf="project.type.server" title="server" class="fa fa-server" aria-hidden="true"></i>
-          <i *ngIf="project.type.database" title="database" class="fa fa-database" aria-hidden="true"></i>
+    <article class="project-card" *ngFor="let project of displayedProjects" [@showPage]="'on'">
+
+      <!-- header -->
+      <h1>{{ project.name }}</h1>
+      <span class="icon-container">
+        <i *ngIf="project.type.frontend" title="front end" class="fa fa-desktop" aria-hidden="true"></i>
+        <i *ngIf="project.type.server" title="server" class="fa fa-server" aria-hidden="true"></i>
+        <i *ngIf="project.type.database" title="database" class="fa fa-database" aria-hidden="true"></i>
       </span>
-      <p class="project-tech">{{ project.tech | uppercase }}</p>
-      <div class="project-columns">
-        <div class="project-image-column">
-          <a href={{project.website_link}} target="_blank" rel="noopener noreferrer">
-            <img src={{project.image_url}} class="project-image" [ngStyle]="{'order': project.image_order}" >
+      <p class="tech">{{ project.tech | uppercase }}</p>
+      <div class="column-container">
+
+        <!-- image column -->
+        <div class="left">
+          <a [href]="project.website_link" target="_blank" rel="noopener noreferrer">
+            <img [src]="project.image_url" class="project-image" [ngStyle]="{'order': project.image_order}">
           </a>
+
+          <!-- stats -->
           <div class="project-stat-wrapper">
-            <p class="project-stat">PAGE SIZE
-              <span class="project-stat-badge" >{{ project.pingdom_page_size_kb }}kb</span>
-              <i class="tooltip fa fa-question-circle-o" title="Data is raw size without browser caching" aria-hidden="true"></i>
-            </p>
-            <p class="project-stat">LOAD TIME
-              <span class="project-stat-badge">{{ project.pingdom_average_load_time }}s</span>
-              <i class="tooltip fa fa-question-circle-o" title="Measured by Pingdom Website Speed Test. Average of four speeds measured from San Jose, New York, Stockholm and Melbourne." aria-hidden="true"></i>
-            </p>
-            <p class="project-stat">PAGE SPEED SCORE
-              <span class="project-stat-badge">{{ project.google_page_speed_score }}%</span>
-              <i class="tooltip fa fa-question-circle-o" title="Score is from Google Page Speed Insights (desktop)." aria-hidden="true"></i>
-            </p>
-            <p class="project-stat">SECURITY GRADE
-                <span class="project-stat-badge">{{ project.mozilla_security_grade }}</span>
-                <i class="tooltip fa fa-question-circle-o" title="Security assessment is by Mozilla Observatory." aria-hidden="true"></i>
-              </p>
+
+            <app-stat label="PAGE SIZE" [value]="project.pingdom_page_size_kb" unit="kb" note="Data is raw size without browser caching"></app-stat>
+            <app-stat label="LOAD TIME" [value]="project.pingdom_average_load_time" unit="s" note="Measured by Pingdom Website Speed Test. Average of four speeds measured from San Jose, New York, Stockholm and Melbourne."></app-stat>
+            <app-stat label="PAGE SPEED SCORE" [value]="project.google_page_speed_score" unit="%" note="Score is from Google Page Speed Insights (desktop)."></app-stat>
+            <app-stat label="SECURITY GRADE" [value]="project.mozilla_security_grade" note="Security assessment is by Mozilla Observatory."></app-stat>
+
+
           </div>
         </div>
-        <div class="project-text-column">
+
+        <!-- text column -->
+        <div class="right">
           <p class="project-text">{{ project.user_stories }}</p>
           <ul class="project-list">
             <li class="project-list-item" *ngFor="let highlight of project.highlights">{{ highlight }}</li>
           </ul>
         </div>
       </div>
-      <div class="project-links-wrapper">
-        <a class="project-link" target="_blank" href={{project.github_link}}><i class="project-link-icon fa fa-github" aria-hidden="true"></i>&nbsp;SOURCE&nbsp;CODE</a>
-        <a class="project-link" target="_blank" href={{project.website_link}}><i class="project-link-icon fa fa-external-link-square" aria-hidden="true"></i>&nbsp;VIEW&nbsp;WEBSITE</a>
+
+      <!-- buttons -->
+      <div class="button-container">
+        <a target="_blank" href={{project.github_link}}><i class="fa fa-github"
+            aria-hidden="true"></i>&nbsp;SOURCE&nbsp;CODE</a>
+        <a target="_blank" href={{project.website_link}}><i class="fa fa-external-link-square"
+            aria-hidden="true"></i>&nbsp;VIEW&nbsp;WEBSITE</a>
       </div>
 
     </article>
@@ -96,9 +84,5 @@
 
 </div>
 
-<img
-  *ngIf="showBackToTopIcon"
-  (click)="scrollToTop()"
-  [@showPage]="'on'"
-  class="back-to-top-icon"
+<img *ngIf="showBackToTopIcon" (click)="scrollToTop()" [@showPage]="'on'" class="back-to-top-icon"
   src="../../assets/icons/up-arrow-64.png">

@@ -1,0 +1,68 @@
+@import 'src/styles/variables';
+
+form {
+  padding-top: 50px;
+
+  label {
+    display: block;
+    font-size: 0.9em;
+    font-weight: bold;
+    letter-spacing: 0.1px;
+    padding: 5px 8px;
+  }
+
+  .input-wrapper {
+    position: relative;
+
+    i {
+      position: absolute;
+      top: 14px;
+      left: 12px;
+      font-size: 1.2em;
+    }
+
+    input {
+      height: 46px;
+      font-size: 1.2em;
+      border-radius: 10px;
+      padding: 10px;
+      padding-left: 44px;
+      width: 100%;
+      box-shadow: $box-shadow-style;
+      border: 1px solid $highlight-color;
+      transition: box-shadow 400ms;
+      &:focus {
+        box-shadow: 0 0 1px 1px $highlight-color;
+        outline: none;
+      }
+    }
+  }
+}
+
+.search-result {
+  color: #444;
+  font-style: italic;
+  padding: 7px;
+
+}
+
+@media screen and (max-width: 930px) {
+  form {
+    width: 95%;
+  }
+
+
+}
+
+@media screen and (max-width: 595px) {
+  form {
+    padding: 20px 10px 0 10px;
+
+    .input-wrapper {
+      input {
+        width: 100%;
+      }
+    }
+  }
+
+}

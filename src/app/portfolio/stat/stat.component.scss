@@ -1,0 +1,27 @@
+@import 'src/styles/variables';
+
+p {
+  font-weight: bold;
+  font-size: 0.85em;
+  letter-spacing: 1.5px;
+  line-height: 2.2em;
+}
+
+span {
+  background-color: $mustard-yellow;
+  padding: 3px 8px 3px 8px;
+  border-radius: 10px;
+  color: black;
+  font-size: 0.8em;
+  text-align: right;
+}
+
+i {
+  font-size: 1em;
+  color: lighten($highlight-color, 20%);
+  margin-left: 5px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}

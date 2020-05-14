@@ -11,11 +11,15 @@
 
 .portfolio-banner,
 .portfolio-content,
-.search-wrapper {
+app-search {
   max-width: $max-content-width;
   width: 80%;
   margin: 0 auto;
   transition: width 300ms;
+}
+
+app-search {
+  display: block;
 }
 
 // BANNER ******************
@@ -79,113 +83,69 @@
 }
 
 
-// SEARCH INPUT ************
-
-.search-wrapper {
-  padding-top: 50px;
-
-  label {
-    display: block;
-    font-size: 0.9em;
-    font-weight: bold;
-    letter-spacing: 0.1px;
-    padding: 5px 8px;
-  }
-
-  .input-wrapper {
-    position: relative;
-
-    i.search-icon {
-      position: absolute;
-      top: 14px;
-      left: 12px;
-      font-size: 1.2em;
-    }
-
-    input {
-      height: 46px;
-      font-size: 1.2em;
-      border-radius: 10px;
-      padding: 10px;
-      padding-left: 44px;
-      width: 100%;
-      box-shadow: $box-shadow-style;
-      border: 1px solid $highlight-color;
-      transition: box-shadow 400ms;
-      &:focus {
-        box-shadow: 0 0 1px 1px $highlight-color;
-        outline: none;
-      }
-    }
-  }
-}
-
-.search-result {
-  color: #444;
-  font-style: italic;
-  padding: 7px;
-
-}
 
 
-// PROJECT CARD ************
-
-.project-card {
+article.project-card {
   background-color: #fff;
   border-radius: 5px;
   margin-top: 50px;
   padding: 30px;
   width: 100%;
   box-shadow: $box-shadow-style;
+
   &:first-child {
     margin-top: 30px;
   }
+
   &:last-child {
     margin-bottom: 100px;
   }
-}
 
-.project-heading {
-  margin-bottom: 10px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2.2em;
-  color: $highlight-color;
-  display: inline-block;
-}
-
-.project-stack-type {
-  float: right;
-  padding: 12px;
-
-  i {
-    padding-left: 5px;
+  h1 {
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2em;
+    color: $highlight-color;
+    display: inline-block;
   }
+
+  span.icon-container {
+    float: right;
+    padding: 12px;
+
+    i {
+      padding-left: 5px;
+    }
+  }
+
+  .tech {
+    font-size: 0.9em;
+    letter-spacing: 2px;
+    color: #444;
+    margin-bottom: 10px;
+    background-color: $mustard-yellow;
+    padding: 8px;
+    border-radius: 3px;
+  }
+
+  div.column-container {
+    @include flex();
+    flex-direction: row;
+    margin: 20px 0 30px 0;
+
+    .left {
+      float: left;
+    }
+
+    .right {
+      float: left;
+      margin: 0 20px 0 20px;
+    }
+  }
+
 }
 
-.project-tech {
-  font-size: 0.9em;
-  letter-spacing: 2px;
-  color: #444;
-  margin-bottom: 10px;
-  background-color: $mustard-yellow;
-  padding: 8px;
-  border-radius: 3px;
-}
 
-.project-columns {
-  @include flex();
-  flex-direction: row;
-  margin: 20px 0 30px 0;
-}
-
-.project-image-column {
-  float: left;
-}
-
-.project-text-column {
-  float: left;
-  margin: 0 20px 0 20px;
-}
 
 .project-image {
   width: 300px;
@@ -218,44 +178,30 @@
   border-radius: 3px;
 }
 
-.project-stat {
-  font-weight: bold;
-  font-size: 0.85em;
-  letter-spacing: 1.5px;
-  line-height: 2.2em;
-}
 
-.project-stat-badge {
-  background-color: $mustard-yellow;
-  padding: 3px 8px 3px 8px;
-  border-radius: 10px;
-  color: black;
-  font-size: 0.8em;
-  text-align: right;
-}
 
-.tooltip {
-  font-size: 1em;
-  color: lighten($highlight-color, 20%);
-  &:hover {
-    cursor: pointer;
-  }
-}
+
+
+
 
 
 // PROJECT LINK BUTTONS ********************
 
-.project-links-wrapper {
+.button-container {
   margin-left: 320px;
+
+  a {
+    @include project-button-link();
+  }
+
+  i {
+    font-size: 1.2em;
+  }
 }
 
-.project-link {
-  @include project-button-link();
-}
 
-.project-link-icon {
-  font-size: 1.2em;
-}
+
+
 
 .back-to-top-icon {
   position: fixed;
@@ -284,7 +230,7 @@
     width: 200px;
   }
 
-  .project-links-wrapper {
+  .button-container {
     margin-left: 220px;
   }
 }
@@ -299,24 +245,24 @@
     }
   }
 
-  .project-card {
+  article.project-card {
     padding: 25px;
     margin-top: 10px;
+
+    span {
+      display: none;
+    }
+
+    .tech {
+      line-height: 1.4em;
+    }
   }
 
-  .project-stack-type {
+  div.column-container .left {
     display: none;
   }
 
-  .project-tech {
-    line-height: 1.4em;
-  }
-
-  .project-image-column {
-    display: none;
-  }
-
-  .project-links-wrapper {
+  .button-container {
     margin-left: 0px;
   }
 

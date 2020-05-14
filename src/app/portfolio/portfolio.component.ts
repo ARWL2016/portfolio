@@ -1,5 +1,4 @@
-import { Component, OnInit, HostListener, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { Component, OnInit, HostListener } from '@angular/core';
 
 import { ProjectDataService } from 'app/_core/services/project-data.service';
 import { Project } from 'app/_core/types/project';
@@ -12,43 +11,28 @@ import { PingService } from 'app/_core/services/ping.service';
   styleUrls: ['./portfolio.component.scss'],
   animations: [pageTransition]
 })
-export class PortfolioComponent implements OnInit, AfterViewInit {
-
-  @ViewChild('searchInput', { static: true }) searchInputRef: ElementRef;
+export class PortfolioComponent implements OnInit {
 
   public displayedProjects: Project[];
   public allProjects: Project[];
+  public searchResultsCount = 0;
 
-  // project data
-  get projectData(): Project[] {
-    return this.dataService.projectData;
-  }
-
-  get results(): number {
-    return this.projectData.length;
-  }
-
-  // search
-  public searchTerm = new FormControl();
-
-
-  // UI props
   public showBackToTopIcon = false;
   public showDetails = false;
 
   constructor(
     private dataService: ProjectDataService,
-    private ping: PingService) {
-    this.createSearchListener();
+    private ping: PingService
+    ) {
   }
 
   ngOnInit(): void {
-    this.displayedProjects = this.allProjects = this.dataService.projectData;
-    this.pingProjects('primary');
-  }
 
-  ngAfterViewInit(): void {
-    this.searchInputRef.nativeElement.focus();
+    this.pingProjects('primary');
+
+    this.dataService.data.subscribe((data: Project[]) => {
+      this.displayedProjects = this.allProjects = this.dataService.projectData;
+    })
   }
 
   public toggleDetails(): void {
@@ -59,11 +43,6 @@ export class PortfolioComponent implements OnInit, AfterViewInit {
     if (!this.ping.pinged[type]) {
       this.ping.postPing(type);
     }
-  }
-
-  private createSearchListener(): void {
-    this.searchTerm.valueChanges
-      .subscribe(newValue => this.search());
   }
 
   @HostListener('window:scroll', [])
@@ -83,9 +62,11 @@ export class PortfolioComponent implements OnInit, AfterViewInit {
     window.scroll({ top: 0, left: 0, behavior: 'smooth' });
   }
 
-  private search(): void {
-    const filter = this.searchTerm.value.trim().concat(',');
+  public onSearchValueChanged(searchTerm: string): void {
+    const filter = searchTerm.trim().concat(',');
     this.displayedProjects = this.transform(this.allProjects, filter);
+
+    this.searchResultsCount = this.displayedProjects.length;
   }
 
   private transform(allProjects: Project[], filterBy: string): Project[] {

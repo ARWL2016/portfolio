@@ -18,6 +18,8 @@ import { FooterComponent } from './_core/layout/footer/footer.component';
 import { BannerComponent } from './overview/banner/banner.component';
 import { SkillsSummaryComponent } from './overview/skills-summary/skills-summary.component';
 import { FeaturedAppsComponent } from './overview/featured-apps/featured-apps.component';
+import { SearchComponent } from './portfolio/search/search.component';
+import { StatComponent } from './portfolio/stat/stat.component';
 
 const routes: Routes = [
   { path: 'overview', component: OverviewComponent },
@@ -38,7 +40,9 @@ const routes: Routes = [
     FooterComponent,
     BannerComponent,
     SkillsSummaryComponent,
-    FeaturedAppsComponent
+    FeaturedAppsComponent,
+    SearchComponent,
+    StatComponent
   ],
   imports: [
     BrowserModule,

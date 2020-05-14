@@ -1,0 +1,9 @@
+  <form>
+    <label for="search">SEARCH BY TECHNOLOGY</label>
+    <div class="input-wrapper">
+      <input #searchInput class="search-input" name="search" type="text" autocomplete="off" [formControl]="searchCtrl"
+        placeholder="e.g. angular">
+      <i class="fa fa-search" aria-hidden="true"></i>
+    </div>
+    <p class="search-result">{{searchResultsCount}} {{ searchResultsCount === 1 ? 'result' : 'results'}}</p>
+  </form>
