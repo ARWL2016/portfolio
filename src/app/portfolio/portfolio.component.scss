@@ -9,81 +9,19 @@
   overflow: hidden;
 }
 
-.portfolio-banner,
 .portfolio-content,
-app-search {
+app-search,
+app-portfolio-banner {
   max-width: $max-content-width;
   width: 80%;
   margin: 0 auto;
   transition: width 300ms;
 }
 
-app-search {
+app-search,
+app-portfolio-banner {
   display: block;
 }
-
-// BANNER ******************
-
-.portfolio-banner {
-  margin-top: 80px;
-  padding: 30px;
-  background-color: white;
-  box-shadow: $box-shadow-style;
-  line-height: $tall-line-height;
-
-  div.heading {
-    @include flex();
-    flex-direction: row;
-    align-items: center;
-    justify-content: left;
-    margin-bottom: 30px;
-
-    img {
-      height: 36px;
-    }
-    h2 {
-      margin-left: 18px;
-      letter-spacing: 2px;
-      font-size: 1.5em;
-      font-family: $heading-font;
-      padding: 3px 0;
-      border-bottom: 3px solid $highlight-color;
-    }
-  }
-
-  div.toggle {
-    cursor: pointer;
-    i {
-      float: left;
-    }
-    i.fa-caret-right{
-      padding: 5px 10px 0 5px;
-    }
-    i.fa-sort-down {
-      padding: 0px 7px 5px 5px;
-    }
-    p:last-of-type {
-      margin-top: 10px;
-      font-weight: bold;
-    }
-  }
-
-  ul {
-    padding: 0 40px;
-    li {
-      list-style-type: dot;
-      // font-size: 0.95em;
-    }
-  }
-
-
-
-
-
-}
-
-
-
 
 article.project-card {
   background-color: #fff;
@@ -178,30 +116,17 @@ article.project-card {
   border-radius: 3px;
 }
 
-
-
-
-
-
-
-
-// PROJECT LINK BUTTONS ********************
-
 .button-container {
   margin-left: 320px;
+  @include flex();
 
-  a {
-    @include project-button-link();
+  app-button-link {
+    margin: 0 5px 5px 0;
+    display: block;
   }
 
-  i {
-    font-size: 1.2em;
-  }
+
 }
-
-
-
-
 
 .back-to-top-icon {
   position: fixed;
@@ -220,9 +145,9 @@ article.project-card {
 // *********************************************
 
 @media screen and (max-width: 930px) {
-  .portfolio-banner,
-  .portfolio-content,
-  .search-wrapper {
+  app-portfolio-banner,
+  app-search,
+  .portfolio-content {
     width: 95%;
   }
 
@@ -264,9 +189,10 @@ article.project-card {
 
   .button-container {
     margin-left: 0px;
+    flex-direction: column;
   }
 
-  .project-link {
+  app-search {
     width: 100%;
     display: block;
     margin: 0;

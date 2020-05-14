@@ -7,14 +7,14 @@
 }
 
 .content-wrapper {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
   background-color: white;
   padding: 20px;
 }
 
 .skills-section {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
   margin-top: 100px;
   margin-bottom: 100px;
@@ -43,42 +43,19 @@
 // TEXT STYLES ********
 
 .skills-text {
-  margin-bottom: 20px;
-  line-height: $tall-line-height;
-  &:last-child {
+
+  p {
+    margin-bottom: 20px;
+    line-height: $tall-line-height;
+  }
+
+  p:last-child {
     margin-bottom: 50px;
   }
 }
 
 .text-link {
  @include project-links;
-}
-
-
-// TABLE STYLES *********************
-
-.skills-table {
-  border:1px solid $highlight-color;
-  box-shadow: $box-shadow-style;
-  border-collapse:collapse;
-  margin-bottom: 20px;
-}
-
-.skills-table-cell {
-  padding: 10px;
-  line-height: 1.5em;
-  font-size: 1.1em;
-}
-
-.skills-table-cell:first-child {
-  color: white;
-  font-weight: bold;
-  background-color: $highlight-color;
-  border: 1px solid darken($highlight-color, 30%);
-}
-
-.skills-table-cell:nth-child(2) {
-  border: 1px solid #555;
 }
 
 .cv-link {
@@ -96,6 +73,7 @@
     }
   }
 }
+
 
 
 

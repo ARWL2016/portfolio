@@ -18,7 +18,7 @@ export class PortfolioComponent implements OnInit {
   public searchResultsCount = 0;
 
   public showBackToTopIcon = false;
-  public showDetails = false;
+
 
   constructor(
     private dataService: ProjectDataService,
@@ -31,13 +31,11 @@ export class PortfolioComponent implements OnInit {
     this.pingProjects('primary');
 
     this.dataService.data.subscribe((data: Project[]) => {
-      this.displayedProjects = this.allProjects = this.dataService.projectData;
+      this.displayedProjects = this.allProjects = data;
     })
   }
 
-  public toggleDetails(): void {
-    this.showDetails = !this.showDetails;
-  }
+
 
   private pingProjects(type: string): void {
     if (!this.ping.pinged[type]) {

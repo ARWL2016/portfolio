@@ -1,12 +1,12 @@
 
-$max-content-width: 1000px;
+$max-content-width: 1200px;
 $highlight-color: #2587ce;
 $light-grey-background: #f7f7f7;
 $mustard-yellow: #FFC857;
 $heading-font: 'Montserrat', sans-serif;
 $linkedin-colour: rgb(0, 119, 181);
 
-$box-shadow-style: 0px 1px 5px rgba(0,0,0,0.4);
+$box-shadow-style: 0px 1px 3px rgba(0,0,0,0.4);
 $box-shadow-style-small: 0px 1px 3px rgba(0,0,0,0.4);
 $tall-line-height: 1.8em;
 
@@ -25,6 +25,7 @@ $tall-line-height: 1.8em;
   text-align: center;
   -webkit-transition: background-color 300ms;
   transition: background-color 300ms;
+
   &:hover {
     cursor: pointer;
     background-color: $highlight-color;
@@ -34,12 +35,12 @@ $tall-line-height: 1.8em;
 @mixin project-button-link() {
   @include project-buttons($highlight-color);
   text-decoration: none;
-  font-weight: 500;
 }
 
 @mixin project-links() {
   color: $highlight-color;
   text-decoration: none;
+
   &:hover {
     text-decoration: underline;
     cursor: pointer;

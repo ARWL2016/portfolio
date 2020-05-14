@@ -1,0 +1,38 @@
+@import 'src/styles/variables';
+
+table {
+  border:1px solid $highlight-color;
+  box-shadow: $box-shadow-style;
+  border-collapse:collapse;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+
+td, th {
+  padding: 10px;
+  line-height: 1.5em;
+  font-size: 1.1em;
+}
+
+th,
+td.category {
+  color: white;
+  font-weight: bold;
+  background-color: $highlight-color;
+  border: 1px solid darken($highlight-color, 30%);
+}
+
+td.professional,
+td.amateur {
+  border: 1px solid #555;
+}
+
+td.professional {
+  font-weight: bold;
+}
+
+
+
+
+

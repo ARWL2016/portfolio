@@ -1,30 +1,6 @@
 <div class="page-wrapper" [@showPage]="'on'">
 
-  <!-- BANNER SECTION -->
-  <section class="portfolio-banner">
-    <div class="heading">
-      <img class="project-icon" src="../../assets/icons/webpage-128.png">
-      <h2>PORTFOLIO</h2>
-    </div>
-    <p>This page contains information about and links to some of my recent web application projects.</p>
-    <p>More detailed technical information for each app is available on the Github README page.</p>
-    <div class="toggle" (click)="toggleDetails()">
-      <i *ngIf="!showDetails" class="fa fa-caret-right"></i>
-      <i *ngIf="showDetails" class="fa fa-sort-down"></i>
-      <p>Accessibility</p>
-    </div>
-
-    <ul *ngIf="showDetails">
-      <li>
-        All projects are hosted on free dynos at Heroku. There may be an initial loading delay while the server wakes
-        up.
-      </li>
-      <li>
-        Some projects have not been subject to full cross browser testing. A modern desktop browser is recommended.
-      </li>
-    </ul>
-
-  </section>
+  <app-portfolio-banner></app-portfolio-banner>
 
   <app-search (searchValueChanged)="onSearchValueChanged($event)" [searchResultsCount]="searchResultsCount">
   </app-search>
@@ -37,9 +13,9 @@
       <!-- header -->
       <h1>{{ project.name }}</h1>
       <span class="icon-container">
-        <i *ngIf="project.type.frontend" title="front end" class="fa fa-desktop" aria-hidden="true"></i>
-        <i *ngIf="project.type.server" title="server" class="fa fa-server" aria-hidden="true"></i>
-        <i *ngIf="project.type.database" title="database" class="fa fa-database" aria-hidden="true"></i>
+        <i *ngIf="project.type.frontend" title="front end" class="fa fa-desktop"></i>
+        <i *ngIf="project.type.server" title="server" class="fa fa-server" ></i>
+        <i *ngIf="project.type.database" title="database" class="fa fa-database" ></i>
       </span>
       <p class="tech">{{ project.tech | uppercase }}</p>
       <div class="column-container">
@@ -73,10 +49,10 @@
 
       <!-- buttons -->
       <div class="button-container">
-        <a target="_blank" href={{project.github_link}}><i class="fa fa-github"
-            aria-hidden="true"></i>&nbsp;SOURCE&nbsp;CODE</a>
-        <a target="_blank" href={{project.website_link}}><i class="fa fa-external-link-square"
-            aria-hidden="true"></i>&nbsp;VIEW&nbsp;WEBSITE</a>
+
+        <app-button-link [href]="project.github_link" value="Source Code" iconClass="fa fa-github"></app-button-link>
+        <app-button-link [href]="project.website_link" value="Live Site" iconClass="fa fa-external-link-square"></app-button-link>
+
       </div>
 
     </article>

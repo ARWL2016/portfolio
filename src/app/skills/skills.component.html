@@ -1,93 +1,43 @@
 <div class="page-wrapper" [@showPage]="'on'">
   <div class="content-wrapper">
-  <section class="skills-section">
+    <section class="skills-section">
 
-    <div class="skills-heading-wrapper">
-      <img class="skills-icon" src="../../assets/icons/skills.png">
-      <h2 class="skills-heading">ABOUT ME</h2>
-    </div>
-    <p class="skills-text">
-      I'm a front end developer with a special interest in modular JavaScript libraries and frameworks.
-      In my professional life, I work with AngularJS, but for personal projects, I have also used React, Vue and Angular 4.0.
-    </p>
-    <p class="skills-text">
-      For styling, I've worked with with CSS frameworks like Bootstrap and AngularJS-Materialize, but I also enjoy the challenge of working in native CSS or Sass.
-      I’m also familiar with various tools used in modern development, such as Webpack for module bundling, npm for package management and build scripts and Git / GitHub for version control.
-      In my professional capacity, I've also used Sourcetree, Bitbucket and Jira to manage workflows.
-    </p>
-    <p class="skills-text">
-      Front end development makes up about three quarters of my experience, but I’ve also done a fair amount of work in Node, especially using the Express framework and MongoDB. I’ve built RESTful APIs to support CRUD applications, and I’ve also implemented authentication modules both locally and using OAuth. I have some experience creating databases with MySQL and writing SQL queries.
-    </p>
-    <p class="skills-text">
-      As a developer, I write code which is clean and concise yet readable, explicit and easy to maintain, making use of any language features that improve code clarity. I particularly value the new features of ES6, the type-checking capability of TypeScript and improved code structure made possible by using Sass.
-    </p>
-    <p class="skills-text">
-      The table below shows the key technologies that I've professionally or in the apps featured on this site. Items in <b>bold</b> represent
-      core proficiencies.
-    </p>
+      <div class="skills-heading-wrapper">
+        <img class="skills-icon" src="../../assets/icons/skills.png">
+        <h2 class="skills-heading">ABOUT ME</h2>
+      </div>
 
-    <table class="skills-table">
-      <tr class="skills-table-row">
-        <td class="skills-table-cell">Languages</td>
-        <td class="skills-table-cell"><b>HTML, CSS, JavaScript (ES6)</b>, TypeScript, SQL</td>
-      </tr>
-      <tr class="skills-table-row">
-        <td class="skills-table-cell">CSS Frameworks / Preprocessors</td>
-        <td class="skills-table-cell"><b>Sass</b>, Less, Bootstrap, AngularJS-Materialize</td>
-      </tr>
-      <tr class="skills-table-row">
-        <td class="skills-table-cell">Front End</td>
-        <td class="skills-table-cell"><b>Angular, AngularJS, jQuery</b>, Vue.js, React</td>
-      </tr>
-      <tr class="skills-table-row">
-        <td class="skills-table-cell">Server Side</td>
-        <td class="skills-table-cell"><b>Node, Express</b></td>
-      </tr>
-      <tr class="skills-table-row">
-        <td class="skills-table-cell">Data Layer</td>
-        <td class="skills-table-cell"><b>MongoDB, Mongoose</b>, MySQL</td>
-      </tr>
-      <tr class="skills-table-row">
-        <td class="skills-table-cell">Testing</td>
-        <td class="skills-table-cell"><b>Jasmine</b>, Mocha, Chai, Supertest</td>
-      </tr>
-      <tr class="skills-table-row">
-        <td class="skills-table-cell">Build Tools</td>
-        <td class="skills-table-cell"><b>NPM Scripts</b>, Bower, Webpack</td>
-      </tr>
-      <tr class="skills-table-row">
-          <td class="skills-table-cell">Version Control</td>
-          <td class="skills-table-cell"><b>Git, Github, Bitbucket, Sourcetree</b></td>
-        </tr>
-      <tr class="skills-table-row">
-        <td class="skills-table-cell">Hosting</td>
-        <td class="skills-table-cell">Heroku, MLab</td>
-      </tr>
-      <tr class="skills-table-row">
-        <td class="skills-table-cell">Tools</td>
-        <td class="skills-table-cell"><b>Visual Studio Code, PHPStorm, Powershell, Chrome DevTools</b>, Postman, Robomongo, MySQL Workbench</td>
-      </tr>
-    </table>
+      <div class="skills-text" [innerHTML]="skillsHTML"></div>
 
-    <div class="skills-heading-wrapper">
+
+      <app-skills-table></app-skills-table>
+
+
+
+      <div class="skills-heading-wrapper">
         <img class="skills-icon" src="../../assets/icons/studying.png">
         <h2 class="skills-heading">LEARNING</h2>
-    </div>
-    <p class="skills-text">
-      I make heavy use of Pluralsight to upgrade my skills and learn new techniques.
-      You can view skills evaluations for JavaScript, Node and other technologies,
-      and view a list of completed courses, on the <a class="text-link" href="https://app.pluralsight.com/profile/alistair-willis" target="_blank">profile page.</a>
-    </p>
-    <p class="skills-text">For practicing algorithms and sharpening problem solving skills
-      I use the Codewars site. You can see my ranking for Javascript, Java and C# on the
-      <a class="text-link" href="https://www.codewars.com/users/ARWL2016" target="_blank">profile page</a> and view solutions as <a class="text-link" href="https://gist.github.com/ARWL2016" target="blank">Github gists</a>.
-    </p>
+      </div>
 
-    <span class="cv-link">
-      <img src="../../assets/icons/pdf-64.png">
-      <a href="/alistair-willis" target="_blank" rel="noopener noreferrer">View my full CV</a>
-    </span>
+      <div class="skills-text">
+        <p>
+          I make heavy use of Pluralsight to upgrade my skills and learn new techniques.
+          You can view skills evaluations for JavaScript, Node and other technologies,
+          and view a list of completed courses, on the <a class="text-link"
+            href="https://app.pluralsight.com/profile/alistair-willis" target="_blank">profile page.</a>
+        </p>
+        <p>For practicing algorithms and sharpening problem solving skills
+          I use the Codewars site. You can see my ranking for Javascript, Java and C# on the
+          <a class="text-link" href="https://www.codewars.com/users/ARWL2016" target="_blank">profile page</a> and view
+          solutions as <a class="text-link" href="https://gist.github.com/ARWL2016" target="blank">GitHub gists</a>.
+        </p>
+      </div>
 
-  </section>
+      <span class="cv-link">
+        <img src="../../assets/icons/pdf-64.png">
+        <a href="/alistair-willis" target="_blank" rel="noopener noreferrer">View my full CV</a>
+      </span>
+
+    </section>
   </div>
 </div>

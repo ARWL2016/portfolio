@@ -1,0 +1,59 @@
+@import 'src/styles/variables';
+
+.portfolio-banner {
+  margin-top: 80px;
+  padding: 30px;
+  background-color: white;
+  box-shadow: $box-shadow-style;
+  line-height: $tall-line-height;
+
+  div.heading {
+    @include flex();
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    margin-bottom: 30px;
+
+    img {
+      height: 36px;
+    }
+    h2 {
+      margin-left: 18px;
+      letter-spacing: 2px;
+      font-size: 1.5em;
+      font-family: $heading-font;
+      padding: 3px 0;
+      border-bottom: 3px solid $highlight-color;
+    }
+  }
+
+  div.toggle {
+    cursor: pointer;
+    i {
+      float: left;
+    }
+    i.fa-caret-right{
+      padding: 5px 10px 0 5px;
+    }
+    i.fa-sort-down {
+      padding: 0px 7px 5px 5px;
+    }
+    p:last-of-type {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+  }
+
+  ul {
+    padding: 0 40px;
+    li {
+      list-style-type: dot;
+      // font-size: 0.95em;
+    }
+  }
+
+
+
+
+
+}

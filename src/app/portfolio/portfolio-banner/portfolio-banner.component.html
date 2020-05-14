@@ -1,0 +1,25 @@
+<!-- BANNER SECTION -->
+<section class="portfolio-banner">
+  <div class="heading">
+    <img class="project-icon" src="../../assets/icons/webpage-128.png">
+    <h2>PORTFOLIO</h2>
+  </div>
+  <p>This page contains information about and links to some of my recent web application projects.</p>
+  <p>More detailed technical information for each app is available on the Github README page.</p>
+  <div class="toggle" (click)="toggleDetails()">
+    <i *ngIf="!showDetails" class="fa fa-caret-right"></i>
+    <i *ngIf="showDetails" class="fa fa-sort-down"></i>
+    <p>Accessibility</p>
+  </div>
+
+  <ul *ngIf="showDetails">
+    <li>
+      All projects are hosted on free dynos at Heroku. There may be an initial loading delay while the server wakes
+      up.
+    </li>
+    <li>
+      Some projects have not been subject to full cross browser testing. A modern desktop browser is recommended.
+    </li>
+  </ul>
+
+</section>

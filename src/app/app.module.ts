@@ -20,6 +20,9 @@ import { SkillsSummaryComponent } from './overview/skills-summary/skills-summary
 import { FeaturedAppsComponent } from './overview/featured-apps/featured-apps.component';
 import { SearchComponent } from './portfolio/search/search.component';
 import { StatComponent } from './portfolio/stat/stat.component';
+import { ButtonLinkComponent } from './_shared/button-link/button-link.component';
+import { PortfolioBannerComponent } from './portfolio/portfolio-banner/portfolio-banner.component';
+import { SkillsTableComponent } from './skills/skills-table/skills-table.component';
 
 const routes: Routes = [
   { path: 'overview', component: OverviewComponent },
@@ -42,7 +45,10 @@ const routes: Routes = [
     SkillsSummaryComponent,
     FeaturedAppsComponent,
     SearchComponent,
-    StatComponent
+    StatComponent,
+    ButtonLinkComponent,
+    PortfolioBannerComponent,
+    SkillsTableComponent
   ],
   imports: [
     BrowserModule,
