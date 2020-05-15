@@ -10,6 +10,12 @@ export interface SkillSummary {
   iconClass: string;
 }
 
+export interface Skill {
+  category: string;
+  professional: string;
+  amateur: string;
+}
+
 export interface SiteContent {
   projects: Project[];
   overview: {
@@ -19,6 +25,10 @@ export interface SiteContent {
   };
   portfolio: {
     introduction: string;
+  };
+  skills: {
+    introductionHtml: string; // html
+    skillsTable: Skill[];
   }
 }
 

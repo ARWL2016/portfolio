@@ -1356,6 +1356,7 @@ class PortfolioComponent {
         this.showBackToTopIcon = false;
     }
     ngOnInit() {
+        this.scrollToTop();
         this.pingSvc.ping('primary');
         this.contentService.content.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["filter"])(content => content !== null), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["take"])(1)).subscribe((content) => {
             this.displayedProjects = this.allProjects = content.projects;
@@ -1576,98 +1577,56 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function SkillsTableComponent_tr_7_Template(rf, ctx) { if (rf & 1) {
+function SkillsTableComponent_table_0_tr_7_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "tr");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "td", 1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "td", 2);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "td", 2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "td", 3);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](4);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "td", 3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "td", 4);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](6);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
-    const skill_r1 = ctx.$implicit;
+    const skill_r2 = ctx.$implicit;
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](skill_r1.category);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](skill_r2.category);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](skill_r1.professional);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](skill_r2.professional);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](skill_r1.amateur);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](skill_r2.amateur);
+} }
+function SkillsTableComponent_table_0_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "table", 1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "tr");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "th", 2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "th", 3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](4, "Professional Skills");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "th", 4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](6, "Other Experience");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](7, SkillsTableComponent_table_0_tr_7_Template, 7, 3, "tr", 5);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](7);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx_r0.skillsTable);
 } }
 class SkillsTableComponent {
-    constructor() {
-        this.skills = [
-            {
-                category: 'Languages',
-                professional: 'HTML, CSS, Sass, JavaScript (ES6), TypeScript, SQL',
-                amateur: 'PHP'
-            },
-            {
-                category: 'CSS Frameworks',
-                professional: 'DevExtreme, AngularJS Material',
-                amateur: 'Bootstrap, Foundation'
-            },
-            {
-                category: 'Front End Frameworks',
-                professional: 'Angular, AngularJS',
-                amateur: 'React, Vue.js, jQuery'
-            },
-            {
-                category: 'Server Side',
-                professional: 'Node, Express',
-                amateur: 'PHP'
-            },
-            {
-                category: 'Data Layer',
-                professional: 'PostgreSQL, Sequelize, MassiveJS',
-                amateur: 'MySQL, MongoDB, Mongoose'
-            },
-            {
-                category: 'Testing',
-                professional: 'Jasmine',
-                amateur: 'Mocha, Chai, Supertest'
-            },
-            {
-                category: 'Version Control',
-                professional: 'Git, GitHub, Bitbucket',
-                amateur: ''
-            },
-            {
-                category: 'Cloud',
-                professional: 'AWS Lambda, AWS SES, AWS SQS',
-                amateur: 'Heroku, MLab'
-            },
-            {
-                category: 'Languages',
-                professional: 'Visual Studio Code, Postman, pgAdmin, PHPStorm,',
-                amateur: 'MySQL Workbench'
-            },
-        ];
-    }
+    constructor() { }
     ngOnInit() {
     }
 }
 SkillsTableComponent.ɵfac = function SkillsTableComponent_Factory(t) { return new (t || SkillsTableComponent)(); };
-SkillsTableComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: SkillsTableComponent, selectors: [["app-skills-table"]], decls: 8, vars: 1, consts: [[1, "skills-table"], [1, "category"], [1, "professional"], [1, "amateur"], [4, "ngFor", "ngForOf"]], template: function SkillsTableComponent_Template(rf, ctx) { if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "table", 0);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "tr");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "th", 1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "th", 2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](4, "Professional Skills");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "th", 3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](6, "Other Experience");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](7, SkillsTableComponent_tr_7_Template, 7, 3, "tr", 4);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+SkillsTableComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: SkillsTableComponent, selectors: [["app-skills-table"]], inputs: { skillsTable: "skillsTable" }, decls: 1, vars: 1, consts: [["class", "skills-table", 4, "ngIf"], [1, "skills-table"], [1, "category"], [1, "professional"], [1, "amateur"], [4, "ngFor", "ngForOf"]], template: function SkillsTableComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](0, SkillsTableComponent_table_0_Template, 8, 1, "table", 0);
     } if (rf & 2) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.skills);
-    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["NgForOf"]], styles: ["table[_ngcontent-%COMP%] {\n  border: 1px solid #2587ce;\n  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);\n  border-collapse: collapse;\n  margin-bottom: 20px;\n  width: 100%;\n}\n\ntd[_ngcontent-%COMP%], th[_ngcontent-%COMP%] {\n  padding: 10px;\n  line-height: 1.5em;\n  font-size: 1.1em;\n}\n\nth[_ngcontent-%COMP%], td.category[_ngcontent-%COMP%] {\n  color: white;\n  font-weight: bold;\n  background-color: #2587ce;\n  border: 1px solid #0e324c;\n}\n\ntd.professional[_ngcontent-%COMP%], td.amateur[_ngcontent-%COMP%] {\n  border: 1px solid #555;\n}\n\ntd.professional[_ngcontent-%COMP%] {\n  font-weight: bold;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2tpbGxzL3NraWxscy10YWJsZS9DOlxcVXNlcnNcXEFsaXN0YWlyXFxEb2N1bWVudHNcXEdpdEh1YlxcUHJvamVjdHNcXHBvcnRmb2xpby9zcmNcXGFwcFxcc2tpbGxzXFxza2lsbHMtdGFibGVcXHNraWxscy10YWJsZS5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvc2tpbGxzL3NraWxscy10YWJsZS9DOlxcVXNlcnNcXEFsaXN0YWlyXFxEb2N1bWVudHNcXEdpdEh1YlxcUHJvamVjdHNcXHBvcnRmb2xpby9zcmNcXHN0eWxlc1xcX3ZhcmlhYmxlcy5zY3NzIiwic3JjL2FwcC9za2lsbHMvc2tpbGxzLXRhYmxlL3NraWxscy10YWJsZS5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFFQTtFQUNFLHlCQUFBO0VBQ0EsMENDSWlCO0VESGpCLHlCQUFBO0VBQ0EsbUJBQUE7RUFDQSxXQUFBO0FFREY7O0FGS0E7RUFDRSxhQUFBO0VBQ0Esa0JBQUE7RUFDQSxnQkFBQTtBRUZGOztBRktBOztFQUVFLFlBQUE7RUFDQSxpQkFBQTtFQUNBLHlCQ25CZ0I7RURvQmhCLHlCQUFBO0FFRkY7O0FGS0E7O0VBRUUsc0JBQUE7QUVGRjs7QUZLQTtFQUNFLGlCQUFBO0FFRkYiLCJmaWxlIjoic3JjL2FwcC9za2lsbHMvc2tpbGxzLXRhYmxlL3NraWxscy10YWJsZS5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIkBpbXBvcnQgJ3NyYy9zdHlsZXMvdmFyaWFibGVzJztcclxuXHJcbnRhYmxlIHtcclxuICBib3JkZXI6MXB4IHNvbGlkICRoaWdobGlnaHQtY29sb3I7XHJcbiAgYm94LXNoYWRvdzogJGJveC1zaGFkb3ctc3R5bGU7XHJcbiAgYm9yZGVyLWNvbGxhcHNlOmNvbGxhcHNlO1xyXG4gIG1hcmdpbi1ib3R0b206IDIwcHg7XHJcbiAgd2lkdGg6IDEwMCU7XHJcbn1cclxuXHJcblxyXG50ZCwgdGgge1xyXG4gIHBhZGRpbmc6IDEwcHg7XHJcbiAgbGluZS1oZWlnaHQ6IDEuNWVtO1xyXG4gIGZvbnQtc2l6ZTogMS4xZW07XHJcbn1cclxuXHJcbnRoLFxyXG50ZC5jYXRlZ29yeSB7XHJcbiAgY29sb3I6IHdoaXRlO1xyXG4gIGZvbnQtd2VpZ2h0OiBib2xkO1xyXG4gIGJhY2tncm91bmQtY29sb3I6ICRoaWdobGlnaHQtY29sb3I7XHJcbiAgYm9yZGVyOiAxcHggc29saWQgZGFya2VuKCRoaWdobGlnaHQtY29sb3IsIDMwJSk7XHJcbn1cclxuXHJcbnRkLnByb2Zlc3Npb25hbCxcclxudGQuYW1hdGV1ciB7XHJcbiAgYm9yZGVyOiAxcHggc29saWQgIzU1NTtcclxufVxyXG5cclxudGQucHJvZmVzc2lvbmFsIHtcclxuICBmb250LXdlaWdodDogYm9sZDtcclxufVxyXG5cclxuXHJcblxyXG5cclxuXHJcbiIsIlxyXG4kbWF4LWNvbnRlbnQtd2lkdGg6IDEyMDBweDtcclxuJGhpZ2hsaWdodC1jb2xvcjogIzI1ODdjZTtcclxuJGxpZ2h0LWdyZXktYmFja2dyb3VuZDogI2Y3ZjdmNztcclxuJG11c3RhcmQteWVsbG93OiAjRkZDODU3O1xyXG4kaGVhZGluZy1mb250OiAnTW9udHNlcnJhdCcsIHNhbnMtc2VyaWY7XHJcbiRsaW5rZWRpbi1jb2xvdXI6IHJnYigwLCAxMTksIDE4MSk7XHJcblxyXG4kYm94LXNoYWRvdy1zdHlsZTogMHB4IDFweCAzcHggcmdiYSgwLDAsMCwwLjQpO1xyXG4kYm94LXNoYWRvdy1zdHlsZS1zbWFsbDogMHB4IDFweCAzcHggcmdiYSgwLDAsMCwwLjQpO1xyXG4kdGFsbC1saW5lLWhlaWdodDogMS44ZW07XHJcblxyXG5AbWl4aW4gcHJvamVjdC1idXR0b25zKCRjb2xvdXIpIHtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiAjRkZGO1xyXG4gIGNvbG9yOiAjMjIyO1xyXG4gIGxldHRlci1zcGFjaW5nOiAxcHg7XHJcbiAgZm9udC1zaXplOiAgMC45cmVtO1xyXG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcclxuICBwYWRkaW5nOiA4cHggMTJweCA4cHggMTJweDtcclxuICBib3JkZXI6IDJweCBzb2xpZCAkY29sb3VyO1xyXG4gIGJvcmRlci1yYWRpdXM6IDNweDtcclxuICBtYXJnaW4tcmlnaHQ6IDVweDtcclxuICBtYXJnaW4tYm90dG9tOiA1cHg7XHJcbiAgZm9udC13ZWlnaHQ6IDUwMDtcclxuICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgLXdlYmtpdC10cmFuc2l0aW9uOiBiYWNrZ3JvdW5kLWNvbG9yIDMwMG1zO1xyXG4gIHRyYW5zaXRpb246IGJhY2tncm91bmQtY29sb3IgMzAwbXM7XHJcblxyXG4gICY6aG92ZXIge1xyXG4gICAgY3Vyc29yOiBwb2ludGVyO1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogJGhpZ2hsaWdodC1jb2xvcjtcclxuICB9XHJcbn1cclxuXHJcbkBtaXhpbiBwcm9qZWN0LWJ1dHRvbi1saW5rKCkge1xyXG4gIEBpbmNsdWRlIHByb2plY3QtYnV0dG9ucygkaGlnaGxpZ2h0LWNvbG9yKTtcclxuICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XHJcbn1cclxuXHJcbkBtaXhpbiBwcm9qZWN0LWxpbmtzKCkge1xyXG4gIGNvbG9yOiAkaGlnaGxpZ2h0LWNvbG9yO1xyXG4gIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcclxuXHJcbiAgJjpob3ZlciB7XHJcbiAgICB0ZXh0LWRlY29yYXRpb246IHVuZGVybGluZTtcclxuICAgIGN1cnNvcjogcG9pbnRlcjtcclxuICB9XHJcbn1cclxuXHJcbkBtaXhpbiBmbGV4KCkge1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbiAgZGlzcGxheTogLXdlYmtpdC1ib3g7XHJcbiAgZGlzcGxheTogLW1vei1ib3g7XHJcbiAgZGlzcGxheTogLW1zLWZsZXhib3g7XHJcbiAgZGlzcGxheTogLXdlYmtpdC1mbGV4O1xyXG59XHJcbiIsInRhYmxlIHtcbiAgYm9yZGVyOiAxcHggc29saWQgIzI1ODdjZTtcbiAgYm94LXNoYWRvdzogMHB4IDFweCAzcHggcmdiYSgwLCAwLCAwLCAwLjQpO1xuICBib3JkZXItY29sbGFwc2U6IGNvbGxhcHNlO1xuICBtYXJnaW4tYm90dG9tOiAyMHB4O1xuICB3aWR0aDogMTAwJTtcbn1cblxudGQsIHRoIHtcbiAgcGFkZGluZzogMTBweDtcbiAgbGluZS1oZWlnaHQ6IDEuNWVtO1xuICBmb250LXNpemU6IDEuMWVtO1xufVxuXG50aCxcbnRkLmNhdGVnb3J5IHtcbiAgY29sb3I6IHdoaXRlO1xuICBmb250LXdlaWdodDogYm9sZDtcbiAgYmFja2dyb3VuZC1jb2xvcjogIzI1ODdjZTtcbiAgYm9yZGVyOiAxcHggc29saWQgIzBlMzI0Yztcbn1cblxudGQucHJvZmVzc2lvbmFsLFxudGQuYW1hdGV1ciB7XG4gIGJvcmRlcjogMXB4IHNvbGlkICM1NTU7XG59XG5cbnRkLnByb2Zlc3Npb25hbCB7XG4gIGZvbnQtd2VpZ2h0OiBib2xkO1xufSJdfQ== */"] });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.skillsTable);
+    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["NgIf"], _angular_common__WEBPACK_IMPORTED_MODULE_1__["NgForOf"]], styles: ["table[_ngcontent-%COMP%] {\n  border: 1px solid #2587ce;\n  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);\n  border-collapse: collapse;\n  margin-bottom: 20px;\n  width: 100%;\n}\n\ntd[_ngcontent-%COMP%], th[_ngcontent-%COMP%] {\n  padding: 10px;\n  line-height: 1.5em;\n  font-size: 1.1em;\n}\n\nth[_ngcontent-%COMP%], td.category[_ngcontent-%COMP%] {\n  color: white;\n  font-weight: bold;\n  background-color: #2587ce;\n  border: 1px solid #0e324c;\n}\n\ntd.professional[_ngcontent-%COMP%], td.amateur[_ngcontent-%COMP%] {\n  border: 1px solid #555;\n}\n\ntd.professional[_ngcontent-%COMP%] {\n  font-weight: bold;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2tpbGxzL3NraWxscy10YWJsZS9DOlxcVXNlcnNcXEFsaXN0YWlyXFxEb2N1bWVudHNcXEdpdEh1YlxcUHJvamVjdHNcXHBvcnRmb2xpby9zcmNcXGFwcFxcc2tpbGxzXFxza2lsbHMtdGFibGVcXHNraWxscy10YWJsZS5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvc2tpbGxzL3NraWxscy10YWJsZS9DOlxcVXNlcnNcXEFsaXN0YWlyXFxEb2N1bWVudHNcXEdpdEh1YlxcUHJvamVjdHNcXHBvcnRmb2xpby9zcmNcXHN0eWxlc1xcX3ZhcmlhYmxlcy5zY3NzIiwic3JjL2FwcC9za2lsbHMvc2tpbGxzLXRhYmxlL3NraWxscy10YWJsZS5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFFQTtFQUNFLHlCQUFBO0VBQ0EsMENDSWlCO0VESGpCLHlCQUFBO0VBQ0EsbUJBQUE7RUFDQSxXQUFBO0FFREY7O0FGS0E7RUFDRSxhQUFBO0VBQ0Esa0JBQUE7RUFDQSxnQkFBQTtBRUZGOztBRktBOztFQUVFLFlBQUE7RUFDQSxpQkFBQTtFQUNBLHlCQ25CZ0I7RURvQmhCLHlCQUFBO0FFRkY7O0FGS0E7O0VBRUUsc0JBQUE7QUVGRjs7QUZLQTtFQUNFLGlCQUFBO0FFRkYiLCJmaWxlIjoic3JjL2FwcC9za2lsbHMvc2tpbGxzLXRhYmxlL3NraWxscy10YWJsZS5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIkBpbXBvcnQgJ3NyYy9zdHlsZXMvdmFyaWFibGVzJztcclxuXHJcbnRhYmxlIHtcclxuICBib3JkZXI6MXB4IHNvbGlkICRoaWdobGlnaHQtY29sb3I7XHJcbiAgYm94LXNoYWRvdzogJGJveC1zaGFkb3ctc3R5bGU7XHJcbiAgYm9yZGVyLWNvbGxhcHNlOmNvbGxhcHNlO1xyXG4gIG1hcmdpbi1ib3R0b206IDIwcHg7XHJcbiAgd2lkdGg6IDEwMCU7XHJcbn1cclxuXHJcblxyXG50ZCwgdGgge1xyXG4gIHBhZGRpbmc6IDEwcHg7XHJcbiAgbGluZS1oZWlnaHQ6IDEuNWVtO1xyXG4gIGZvbnQtc2l6ZTogMS4xZW07XHJcbn1cclxuXHJcbnRoLFxyXG50ZC5jYXRlZ29yeSB7XHJcbiAgY29sb3I6IHdoaXRlO1xyXG4gIGZvbnQtd2VpZ2h0OiBib2xkO1xyXG4gIGJhY2tncm91bmQtY29sb3I6ICRoaWdobGlnaHQtY29sb3I7XHJcbiAgYm9yZGVyOiAxcHggc29saWQgZGFya2VuKCRoaWdobGlnaHQtY29sb3IsIDMwJSk7XHJcbn1cclxuXHJcbnRkLnByb2Zlc3Npb25hbCxcclxudGQuYW1hdGV1ciB7XHJcbiAgYm9yZGVyOiAxcHggc29saWQgIzU1NTtcclxufVxyXG5cclxudGQucHJvZmVzc2lvbmFsIHtcclxuICBmb250LXdlaWdodDogYm9sZDtcclxufVxyXG5cclxuXHJcblxyXG5cclxuXHJcbiIsIlxyXG4kbWF4LWNvbnRlbnQtd2lkdGg6IDEyMDBweDtcclxuJGhpZ2hsaWdodC1jb2xvcjogIzI1ODdjZTtcclxuJGxpZ2h0LWdyZXktYmFja2dyb3VuZDogI2Y3ZjdmNztcclxuJG11c3RhcmQteWVsbG93OiAjRkZDODU3O1xyXG4kaGVhZGluZy1mb250OiAnTW9udHNlcnJhdCcsIHNhbnMtc2VyaWY7XHJcbiRsaW5rZWRpbi1jb2xvdXI6IHJnYigwLCAxMTksIDE4MSk7XHJcblxyXG4kYm94LXNoYWRvdy1zdHlsZTogMHB4IDFweCAzcHggcmdiYSgwLDAsMCwwLjQpO1xyXG4kYm94LXNoYWRvdy1zdHlsZS1zbWFsbDogMHB4IDFweCAzcHggcmdiYSgwLDAsMCwwLjQpO1xyXG4kdGFsbC1saW5lLWhlaWdodDogMS44ZW07XHJcblxyXG5AbWl4aW4gcHJvamVjdC1idXR0b25zKCRjb2xvdXIpIHtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiAjRkZGO1xyXG4gIGNvbG9yOiAjMjIyO1xyXG4gIGxldHRlci1zcGFjaW5nOiAxcHg7XHJcbiAgZm9udC1zaXplOiAgMC45cmVtO1xyXG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcclxuICBwYWRkaW5nOiA4cHggMTJweCA4cHggMTJweDtcclxuICBib3JkZXI6IDJweCBzb2xpZCAkY29sb3VyO1xyXG4gIGJvcmRlci1yYWRpdXM6IDNweDtcclxuICBtYXJnaW4tcmlnaHQ6IDVweDtcclxuICBtYXJnaW4tYm90dG9tOiA1cHg7XHJcbiAgZm9udC13ZWlnaHQ6IDUwMDtcclxuICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgLXdlYmtpdC10cmFuc2l0aW9uOiBiYWNrZ3JvdW5kLWNvbG9yIDMwMG1zO1xyXG4gIHRyYW5zaXRpb246IGJhY2tncm91bmQtY29sb3IgMzAwbXM7XHJcblxyXG4gICY6aG92ZXIge1xyXG4gICAgY3Vyc29yOiBwb2ludGVyO1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogJGhpZ2hsaWdodC1jb2xvcjtcclxuICB9XHJcbn1cclxuXHJcbkBtaXhpbiBwcm9qZWN0LWJ1dHRvbi1saW5rKCkge1xyXG4gIEBpbmNsdWRlIHByb2plY3QtYnV0dG9ucygkaGlnaGxpZ2h0LWNvbG9yKTtcclxuICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XHJcbn1cclxuXHJcbkBtaXhpbiBwcm9qZWN0LWxpbmtzKCkge1xyXG4gIGNvbG9yOiAkaGlnaGxpZ2h0LWNvbG9yO1xyXG4gIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcclxuXHJcbiAgJjpob3ZlciB7XHJcbiAgICB0ZXh0LWRlY29yYXRpb246IHVuZGVybGluZTtcclxuICAgIGN1cnNvcjogcG9pbnRlcjtcclxuICB9XHJcbn1cclxuXHJcbkBtaXhpbiBmbGV4KCkge1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbiAgZGlzcGxheTogLXdlYmtpdC1ib3g7XHJcbiAgZGlzcGxheTogLW1vei1ib3g7XHJcbiAgZGlzcGxheTogLW1zLWZsZXhib3g7XHJcbiAgZGlzcGxheTogLXdlYmtpdC1mbGV4O1xyXG59XHJcbiIsInRhYmxlIHtcbiAgYm9yZGVyOiAxcHggc29saWQgIzI1ODdjZTtcbiAgYm94LXNoYWRvdzogMHB4IDFweCAzcHggcmdiYSgwLCAwLCAwLCAwLjQpO1xuICBib3JkZXItY29sbGFwc2U6IGNvbGxhcHNlO1xuICBtYXJnaW4tYm90dG9tOiAyMHB4O1xuICB3aWR0aDogMTAwJTtcbn1cblxudGQsIHRoIHtcbiAgcGFkZGluZzogMTBweDtcbiAgbGluZS1oZWlnaHQ6IDEuNWVtO1xuICBmb250LXNpemU6IDEuMWVtO1xufVxuXG50aCxcbnRkLmNhdGVnb3J5IHtcbiAgY29sb3I6IHdoaXRlO1xuICBmb250LXdlaWdodDogYm9sZDtcbiAgYmFja2dyb3VuZC1jb2xvcjogIzI1ODdjZTtcbiAgYm9yZGVyOiAxcHggc29saWQgIzBlMzI0Yztcbn1cblxudGQucHJvZmVzc2lvbmFsLFxudGQuYW1hdGV1ciB7XG4gIGJvcmRlcjogMXB4IHNvbGlkICM1NTU7XG59XG5cbnRkLnByb2Zlc3Npb25hbCB7XG4gIGZvbnQtd2VpZ2h0OiBib2xkO1xufSJdfQ== */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](SkillsTableComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
@@ -1675,7 +1634,9 @@ SkillsTableComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdef
                 templateUrl: './skills-table.component.html',
                 styleUrls: ['./skills-table.component.scss']
             }]
-    }], function () { return []; }, null); })();
+    }], function () { return []; }, { skillsTable: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }] }); })();
 
 
 /***/ }),
@@ -1692,93 +1653,88 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SkillsComponent", function() { return SkillsComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 /* harmony import */ var _shared_animations__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../_shared/animations */ "./src/app/_shared/animations.ts");
-/* harmony import */ var _skills_table_skills_table_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./skills-table/skills-table.component */ "./src/app/skills/skills-table/skills-table.component.ts");
+/* harmony import */ var app_core_services_content_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/_core/services/content.service */ "./src/app/_core/services/content.service.ts");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+/* harmony import */ var _skills_table_skills_table_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./skills-table/skills-table.component */ "./src/app/skills/skills-table/skills-table.component.ts");
 
 
 
 
+
+
+
+
+function SkillsComponent_section_2_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "section", 3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "img", 5);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "h2", 6);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](4, "ABOUT ME");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](5, "div", 7);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](6, "app-skills-table", 8);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "div", 4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](8, "img", 9);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "h2", 6);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](10, "LEARNING");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "div", 10);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "p");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](13, " I make heavy use of Pluralsight and Udemy to upgrade my skills and learn new techniques. You can view skills evaluations for JavaScript, Node and other technologies, and view a list of completed courses, on the ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "a", 11);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](15, "profile page.");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](16, "p");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](17, "For practicing algorithms and sharpening problem solving skills I use the Codewars site. You can see my ranking for Javascript, Java and C# on the ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](18, "a", 12);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](19, "profile page");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](20, " and view solutions as ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](21, "a", 13);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](22, "GitHub gists");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](23, ". ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](24, "span", 14);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](25, "img", 15);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](26, "a", 16);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](27, "View my full CV");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    const skills_r1 = ctx.ngIf;
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](5);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("innerHTML", skills_r1.introductionHtml, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeHtml"]);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("skillsTable", skills_r1.skillsTable);
+} }
 class SkillsComponent {
-    constructor() {
-        this.skillsHTML = `
-    <p>
-      I'm a front end developer with a special interest in modular JavaScript libraries and frameworks.
-      In my professional life, I work with AngularJS, but for personal projects, I have also used React, Vue and Angular 4.0.
-    </p>
-    <p>
-    For styling, I've worked with with CSS frameworks like Bootstrap and AngularJS-Materialize, but I also enjoy the challenge of working in native CSS or Sass.
-    I’m also familiar with various tools used in modern development, such as Webpack for module bundling, npm for package management and build scripts and Git / GitHub for version control.
-    In my professional capacity, I've also used Sourcetree, Bitbucket and Jira to manage workflows.
-    </p>
-    <p>
-    Front end development makes up about three quarters of my experience, but I've also done a fair amount of work in Node, especially using the Express framework and MongoDB.
-    I've built RESTful APIs to support CRUD applications, and I’ve also implemented authentication modules both locally and using OAuth.
-    I have some experience creating databases with MySQL and writing SQL queries.
-    </p>
-    <p>
-    As a developer, I write code which is clean and concise yet readable, explicit and easy to maintain, making use of any language features that improve code clarity.
-    I particularly value the new features of ES6, the type-checking capability of TypeScript and improved code structure made possible by using Sass.
-    </p>
-    <p>
-      The table below shows the key technologies that I've professionally or in the apps featured on this site. Items in <b>bold</b> represent
-      core proficiencies.
-    </p>
-  `;
+    constructor(contentService) {
+        this.contentService = contentService;
     }
     ngOnInit() {
+        this.skills$ = this.contentService.content.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["take"])(1), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(content => content.skills), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(a => console.log(a)));
     }
 }
-SkillsComponent.ɵfac = function SkillsComponent_Factory(t) { return new (t || SkillsComponent)(); };
-SkillsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: SkillsComponent, selectors: [["app-skills"]], decls: 30, vars: 2, consts: [[1, "page-wrapper"], [1, "content-wrapper"], [1, "skills-section"], [1, "skills-heading-wrapper"], ["src", "../../assets/icons/skills.png", 1, "skills-icon"], [1, "skills-heading"], [1, "skills-text", 3, "innerHTML"], ["src", "../../assets/icons/studying.png", 1, "skills-icon"], [1, "skills-text"], ["href", "https://app.pluralsight.com/profile/alistair-willis", "target", "_blank", 1, "text-link"], ["href", "https://www.codewars.com/users/ARWL2016", "target", "_blank", 1, "text-link"], ["href", "https://gist.github.com/ARWL2016", "target", "blank", 1, "text-link"], [1, "cv-link"], ["src", "../../assets/icons/pdf-64.png"], ["href", "/alistair-willis", "target", "_blank", "rel", "noopener noreferrer"]], template: function SkillsComponent_Template(rf, ctx) { if (rf & 1) {
+SkillsComponent.ɵfac = function SkillsComponent_Factory(t) { return new (t || SkillsComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](app_core_services_content_service__WEBPACK_IMPORTED_MODULE_2__["ContentService"])); };
+SkillsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: SkillsComponent, selectors: [["app-skills"]], decls: 4, vars: 4, consts: [[1, "page-wrapper"], [1, "content-wrapper"], ["class", "skills-section", 4, "ngIf"], [1, "skills-section"], [1, "skills-heading-wrapper"], ["src", "../../assets/icons/skills.png", 1, "skills-icon"], [1, "skills-heading"], [1, "skills-text", 3, "innerHTML"], [3, "skillsTable"], ["src", "../../assets/icons/studying.png", 1, "skills-icon"], [1, "skills-text"], ["href", "https://app.pluralsight.com/profile/alistair-willis", "target", "_blank", 1, "text-link"], ["href", "https://www.codewars.com/users/ARWL2016", "target", "_blank", 1, "text-link"], ["href", "https://gist.github.com/ARWL2016", "target", "blank", 1, "text-link"], [1, "cv-link"], ["src", "../../assets/icons/pdf-64.png"], ["href", "/alistair-willis", "target", "_blank", "rel", "noopener noreferrer"]], template: function SkillsComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "section", 2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div", 3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](4, "img", 4);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "h2", 5);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](6, "ABOUT ME");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](7, "div", 6);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](8, "app-skills-table");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "div", 3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](10, "img", 7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "h2", 5);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](12, "LEARNING");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "div", 8);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "p");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](15, " I make heavy use of Pluralsight and Udemy to upgrade my skills and learn new techniques. You can view skills evaluations for JavaScript, Node and other technologies, and view a list of completed courses, on the ");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](16, "a", 9);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](17, "profile page.");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](18, "p");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](19, "For practicing algorithms and sharpening problem solving skills I use the Codewars site. You can see my ranking for Javascript, Java and C# on the ");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "a", 10);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](21, "profile page");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](22, " and view solutions as ");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](23, "a", 11);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](24, "GitHub gists");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](25, ". ");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](26, "span", 12);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](27, "img", 13);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](28, "a", 14);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](29, "View my full CV");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, SkillsComponent_section_2_Template, 28, 2, "section", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](3, "async");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     } if (rf & 2) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("@showPage", "on");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("innerHTML", ctx.skillsHTML, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeHtml"]);
-    } }, directives: [_skills_table_skills_table_component__WEBPACK_IMPORTED_MODULE_2__["SkillsTableComponent"]], styles: [".page-wrapper {\n  background-color: #f7f7f7;\n}\n\n.content-wrapper {\n  max-width: 1200px;\n  margin: 0 auto;\n  background-color: white;\n  padding: 20px;\n}\n\n.skills-section {\n  max-width: 1000px;\n  margin: 0 auto;\n  margin-top: 100px;\n  margin-bottom: 100px;\n}\n\n.skills-heading-wrapper {\n  margin: 50px 0 30px 0;\n  display: flex;\n  display: -webkit-flex;\n  flex-direction: row;\n  align-items: center;\n  justify-content: left;\n}\n\n.skills-icon {\n  height: 36px;\n}\n\n.skills-heading {\n  margin-left: 18px;\n  font-family: \"Montserrat\", sans-serif;\n}\n\n.skills-text p {\n  margin-bottom: 20px;\n  line-height: 1.8em;\n}\n\n.skills-text p:last-child {\n  margin-bottom: 50px;\n}\n\n.text-link {\n  color: #2587ce;\n  text-decoration: none;\n}\n\n.text-link:hover {\n  text-decoration: underline;\n  cursor: pointer;\n}\n\n.cv-link img {\n  height: 1.5em;\n}\n\n.cv-link a {\n  color: #2587ce;\n  text-decoration: none;\n  text-transform: uppercase;\n}\n\n.cv-link a:hover {\n  text-decoration: underline;\n}\n\n@media (max-width: 800px) {\n  .skills-section {\n    width: 90%;\n    margin-top: 30px;\n  }\n\n  .skills-heading-wrapper {\n    margin-top: 30px;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2tpbGxzL0M6XFxVc2Vyc1xcQWxpc3RhaXJcXERvY3VtZW50c1xcR2l0SHViXFxQcm9qZWN0c1xccG9ydGZvbGlvL3NyY1xcYXBwXFxza2lsbHNcXHNraWxscy5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvc2tpbGxzL0M6XFxVc2Vyc1xcQWxpc3RhaXJcXERvY3VtZW50c1xcR2l0SHViXFxQcm9qZWN0c1xccG9ydGZvbGlvL3NyY1xcc3R5bGVzXFxfdmFyaWFibGVzLnNjc3MiLCJzcmMvYXBwL3NraWxscy9za2lsbHMuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBSUE7RUFDRSx5QkNGc0I7QUNEeEI7O0FGTUE7RUFDRSxpQkFBQTtFQUNBLGNBQUE7RUFDQSx1QkFBQTtFQUNBLGFBQUE7QUVIRjs7QUZNQTtFQUNFLGlCQUFBO0VBQ0EsY0FBQTtFQUNBLGlCQUFBO0VBQ0Esb0JBQUE7QUVIRjs7QUZRQTtFQUNFLHFCQUFBO0VDeUJBLGFBQUE7RUFJQSxxQkFBQTtFRDNCQSxtQkFBQTtFQUNBLG1CQUFBO0VBQ0EscUJBQUE7QUVERjs7QUZLQTtFQUNFLFlBQUE7QUVGRjs7QUZLQTtFQUNFLGlCQUFBO0VBQ0EscUNDbENhO0FDZ0NmOztBRlNFO0VBQ0UsbUJBQUE7RUFDQSxrQkN0Q2U7QUNnQ25COztBRlNFO0VBQ0UsbUJBQUE7QUVQSjs7QUZXQTtFQ2hCRSxjQXRDZ0I7RUF1Q2hCLHFCQUFBO0FDU0Y7O0FEUEU7RUFDRSwwQkFBQTtFQUNBLGVBQUE7QUNTSjs7QUZPRTtFQUNFLGFBQUE7QUVKSjs7QUZPRTtFQUNFLGNDaEVjO0VEaUVkLHFCQUFBO0VBQ0EseUJBQUE7QUVMSjs7QUZPSTtFQUNFLDBCQUFBO0FFTE47O0FGYUE7RUFDRTtJQUNFLFVBQUE7SUFDQSxnQkFBQTtFRVZGOztFRllBO0lBQ0UsZ0JBQUE7RUVURjtBQUNGIiwiZmlsZSI6InNyYy9hcHAvc2tpbGxzL3NraWxscy5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIkBpbXBvcnQgJ3NyYy9zdHlsZXMvdmFyaWFibGVzJztcclxuXHJcbi8vIExBWU9VVCBTVFlMRVMgKioqKioqKipcclxuXHJcbi5wYWdlLXdyYXBwZXIge1xyXG4gIGJhY2tncm91bmQtY29sb3I6ICRsaWdodC1ncmV5LWJhY2tncm91bmQ7XHJcbn1cclxuXHJcbi5jb250ZW50LXdyYXBwZXIge1xyXG4gIG1heC13aWR0aDogMTIwMHB4O1xyXG4gIG1hcmdpbjogMCBhdXRvO1xyXG4gIGJhY2tncm91bmQtY29sb3I6IHdoaXRlO1xyXG4gIHBhZGRpbmc6IDIwcHg7XHJcbn1cclxuXHJcbi5za2lsbHMtc2VjdGlvbiB7XHJcbiAgbWF4LXdpZHRoOiAxMDAwcHg7XHJcbiAgbWFyZ2luOiAwIGF1dG87XHJcbiAgbWFyZ2luLXRvcDogMTAwcHg7XHJcbiAgbWFyZ2luLWJvdHRvbTogMTAwcHg7XHJcbn1cclxuXHJcbi8vIEhFQURJTkcgU1RZTEVTICoqKioqKioqXHJcblxyXG4uc2tpbGxzLWhlYWRpbmctd3JhcHBlciB7XHJcbiAgbWFyZ2luOiA1MHB4IDAgMzBweCAwO1xyXG4gIEBpbmNsdWRlIGZsZXgoKTtcclxuICBmbGV4LWRpcmVjdGlvbjogcm93O1xyXG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XHJcbiAganVzdGlmeS1jb250ZW50OiBsZWZ0O1xyXG5cclxufVxyXG5cclxuLnNraWxscy1pY29uIHtcclxuICBoZWlnaHQ6IDM2cHg7XHJcbn1cclxuXHJcbi5za2lsbHMtaGVhZGluZyB7XHJcbiAgbWFyZ2luLWxlZnQ6IDE4cHg7XHJcbiAgZm9udC1mYW1pbHk6ICRoZWFkaW5nLWZvbnQ7XHJcbn1cclxuXHJcbi8vIFRFWFQgU1RZTEVTICoqKioqKioqXHJcblxyXG4uc2tpbGxzLXRleHQge1xyXG5cclxuICBwIHtcclxuICAgIG1hcmdpbi1ib3R0b206IDIwcHg7XHJcbiAgICBsaW5lLWhlaWdodDogJHRhbGwtbGluZS1oZWlnaHQ7XHJcbiAgfVxyXG5cclxuICBwOmxhc3QtY2hpbGQge1xyXG4gICAgbWFyZ2luLWJvdHRvbTogNTBweDtcclxuICB9XHJcbn1cclxuXHJcbi50ZXh0LWxpbmsge1xyXG4gQGluY2x1ZGUgcHJvamVjdC1saW5rcztcclxufVxyXG5cclxuLmN2LWxpbmsge1xyXG4gIGltZyB7XHJcbiAgICBoZWlnaHQ6IDEuNWVtO1xyXG4gIH1cclxuXHJcbiAgYSB7XHJcbiAgICBjb2xvcjogJGhpZ2hsaWdodC1jb2xvcjtcclxuICAgIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcclxuICAgIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7XHJcblxyXG4gICAgJjpob3ZlciB7XHJcbiAgICAgIHRleHQtZGVjb3JhdGlvbjogdW5kZXJsaW5lO1xyXG4gICAgfVxyXG4gIH1cclxufVxyXG5cclxuXHJcblxyXG5cclxuQG1lZGlhIChtYXgtd2lkdGg6IDgwMHB4KSB7XHJcbiAgLnNraWxscy1zZWN0aW9uIHtcclxuICAgIHdpZHRoOiA5MCU7XHJcbiAgICBtYXJnaW4tdG9wOiAzMHB4O1xyXG4gIH1cclxuICAuc2tpbGxzLWhlYWRpbmctd3JhcHBlciB7XHJcbiAgICBtYXJnaW4tdG9wOiAzMHB4O1xyXG4gIH1cclxufVxyXG5cclxuXHJcblxyXG5cclxuXHJcbiIsIlxyXG4kbWF4LWNvbnRlbnQtd2lkdGg6IDEyMDBweDtcclxuJGhpZ2hsaWdodC1jb2xvcjogIzI1ODdjZTtcclxuJGxpZ2h0LWdyZXktYmFja2dyb3VuZDogI2Y3ZjdmNztcclxuJG11c3RhcmQteWVsbG93OiAjRkZDODU3O1xyXG4kaGVhZGluZy1mb250OiAnTW9udHNlcnJhdCcsIHNhbnMtc2VyaWY7XHJcbiRsaW5rZWRpbi1jb2xvdXI6IHJnYigwLCAxMTksIDE4MSk7XHJcblxyXG4kYm94LXNoYWRvdy1zdHlsZTogMHB4IDFweCAzcHggcmdiYSgwLDAsMCwwLjQpO1xyXG4kYm94LXNoYWRvdy1zdHlsZS1zbWFsbDogMHB4IDFweCAzcHggcmdiYSgwLDAsMCwwLjQpO1xyXG4kdGFsbC1saW5lLWhlaWdodDogMS44ZW07XHJcblxyXG5AbWl4aW4gcHJvamVjdC1idXR0b25zKCRjb2xvdXIpIHtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiAjRkZGO1xyXG4gIGNvbG9yOiAjMjIyO1xyXG4gIGxldHRlci1zcGFjaW5nOiAxcHg7XHJcbiAgZm9udC1zaXplOiAgMC45cmVtO1xyXG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcclxuICBwYWRkaW5nOiA4cHggMTJweCA4cHggMTJweDtcclxuICBib3JkZXI6IDJweCBzb2xpZCAkY29sb3VyO1xyXG4gIGJvcmRlci1yYWRpdXM6IDNweDtcclxuICBtYXJnaW4tcmlnaHQ6IDVweDtcclxuICBtYXJnaW4tYm90dG9tOiA1cHg7XHJcbiAgZm9udC13ZWlnaHQ6IDUwMDtcclxuICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgLXdlYmtpdC10cmFuc2l0aW9uOiBiYWNrZ3JvdW5kLWNvbG9yIDMwMG1zO1xyXG4gIHRyYW5zaXRpb246IGJhY2tncm91bmQtY29sb3IgMzAwbXM7XHJcblxyXG4gICY6aG92ZXIge1xyXG4gICAgY3Vyc29yOiBwb2ludGVyO1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogJGhpZ2hsaWdodC1jb2xvcjtcclxuICB9XHJcbn1cclxuXHJcbkBtaXhpbiBwcm9qZWN0LWJ1dHRvbi1saW5rKCkge1xyXG4gIEBpbmNsdWRlIHByb2plY3QtYnV0dG9ucygkaGlnaGxpZ2h0LWNvbG9yKTtcclxuICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XHJcbn1cclxuXHJcbkBtaXhpbiBwcm9qZWN0LWxpbmtzKCkge1xyXG4gIGNvbG9yOiAkaGlnaGxpZ2h0LWNvbG9yO1xyXG4gIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcclxuXHJcbiAgJjpob3ZlciB7XHJcbiAgICB0ZXh0LWRlY29yYXRpb246IHVuZGVybGluZTtcclxuICAgIGN1cnNvcjogcG9pbnRlcjtcclxuICB9XHJcbn1cclxuXHJcbkBtaXhpbiBmbGV4KCkge1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbiAgZGlzcGxheTogLXdlYmtpdC1ib3g7XHJcbiAgZGlzcGxheTogLW1vei1ib3g7XHJcbiAgZGlzcGxheTogLW1zLWZsZXhib3g7XHJcbiAgZGlzcGxheTogLXdlYmtpdC1mbGV4O1xyXG59XHJcbiIsIi5wYWdlLXdyYXBwZXIge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZjdmN2Y3O1xufVxuXG4uY29udGVudC13cmFwcGVyIHtcbiAgbWF4LXdpZHRoOiAxMjAwcHg7XG4gIG1hcmdpbjogMCBhdXRvO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB3aGl0ZTtcbiAgcGFkZGluZzogMjBweDtcbn1cblxuLnNraWxscy1zZWN0aW9uIHtcbiAgbWF4LXdpZHRoOiAxMDAwcHg7XG4gIG1hcmdpbjogMCBhdXRvO1xuICBtYXJnaW4tdG9wOiAxMDBweDtcbiAgbWFyZ2luLWJvdHRvbTogMTAwcHg7XG59XG5cbi5za2lsbHMtaGVhZGluZy13cmFwcGVyIHtcbiAgbWFyZ2luOiA1MHB4IDAgMzBweCAwO1xuICBkaXNwbGF5OiBmbGV4O1xuICBkaXNwbGF5OiAtd2Via2l0LWJveDtcbiAgZGlzcGxheTogLW1vei1ib3g7XG4gIGRpc3BsYXk6IC1tcy1mbGV4Ym94O1xuICBkaXNwbGF5OiAtd2Via2l0LWZsZXg7XG4gIGZsZXgtZGlyZWN0aW9uOiByb3c7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGp1c3RpZnktY29udGVudDogbGVmdDtcbn1cblxuLnNraWxscy1pY29uIHtcbiAgaGVpZ2h0OiAzNnB4O1xufVxuXG4uc2tpbGxzLWhlYWRpbmcge1xuICBtYXJnaW4tbGVmdDogMThweDtcbiAgZm9udC1mYW1pbHk6IFwiTW9udHNlcnJhdFwiLCBzYW5zLXNlcmlmO1xufVxuXG4uc2tpbGxzLXRleHQgcCB7XG4gIG1hcmdpbi1ib3R0b206IDIwcHg7XG4gIGxpbmUtaGVpZ2h0OiAxLjhlbTtcbn1cbi5za2lsbHMtdGV4dCBwOmxhc3QtY2hpbGQge1xuICBtYXJnaW4tYm90dG9tOiA1MHB4O1xufVxuXG4udGV4dC1saW5rIHtcbiAgY29sb3I6ICMyNTg3Y2U7XG4gIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcbn1cbi50ZXh0LWxpbms6aG92ZXIge1xuICB0ZXh0LWRlY29yYXRpb246IHVuZGVybGluZTtcbiAgY3Vyc29yOiBwb2ludGVyO1xufVxuXG4uY3YtbGluayBpbWcge1xuICBoZWlnaHQ6IDEuNWVtO1xufVxuLmN2LWxpbmsgYSB7XG4gIGNvbG9yOiAjMjU4N2NlO1xuICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XG4gIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7XG59XG4uY3YtbGluayBhOmhvdmVyIHtcbiAgdGV4dC1kZWNvcmF0aW9uOiB1bmRlcmxpbmU7XG59XG5cbkBtZWRpYSAobWF4LXdpZHRoOiA4MDBweCkge1xuICAuc2tpbGxzLXNlY3Rpb24ge1xuICAgIHdpZHRoOiA5MCU7XG4gICAgbWFyZ2luLXRvcDogMzBweDtcbiAgfVxuXG4gIC5za2lsbHMtaGVhZGluZy13cmFwcGVyIHtcbiAgICBtYXJnaW4tdG9wOiAzMHB4O1xuICB9XG59Il19 */"], encapsulation: 2, data: { animation: [_shared_animations__WEBPACK_IMPORTED_MODULE_1__["pageTransition"]] } });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](3, 2, ctx.skills$));
+    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_4__["NgIf"], _skills_table_skills_table_component__WEBPACK_IMPORTED_MODULE_5__["SkillsTableComponent"]], pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_4__["AsyncPipe"]], styles: [".page-wrapper {\n  background-color: #f7f7f7;\n}\n\n.content-wrapper {\n  max-width: 1200px;\n  margin: 0 auto;\n  background-color: white;\n  padding: 20px;\n}\n\n.skills-section {\n  max-width: 1000px;\n  margin: 0 auto;\n  margin-top: 100px;\n  margin-bottom: 100px;\n}\n\n.skills-heading-wrapper {\n  margin: 50px 0 30px 0;\n  display: flex;\n  display: -webkit-flex;\n  flex-direction: row;\n  align-items: center;\n  justify-content: left;\n}\n\n.skills-icon {\n  height: 36px;\n}\n\n.skills-heading {\n  margin-left: 18px;\n  font-family: \"Montserrat\", sans-serif;\n}\n\n.skills-text p {\n  margin-bottom: 20px;\n  line-height: 1.8em;\n}\n\n.skills-text p:last-child {\n  margin-bottom: 50px;\n}\n\n.text-link {\n  color: #2587ce;\n  text-decoration: none;\n}\n\n.text-link:hover {\n  text-decoration: underline;\n  cursor: pointer;\n}\n\n.cv-link img {\n  height: 1.5em;\n}\n\n.cv-link a {\n  color: #2587ce;\n  text-decoration: none;\n  text-transform: uppercase;\n}\n\n.cv-link a:hover {\n  text-decoration: underline;\n}\n\n@media (max-width: 800px) {\n  .skills-section {\n    width: 90%;\n    margin-top: 30px;\n  }\n\n  .skills-heading-wrapper {\n    margin-top: 30px;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2tpbGxzL0M6XFxVc2Vyc1xcQWxpc3RhaXJcXERvY3VtZW50c1xcR2l0SHViXFxQcm9qZWN0c1xccG9ydGZvbGlvL3NyY1xcYXBwXFxza2lsbHNcXHNraWxscy5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvc2tpbGxzL0M6XFxVc2Vyc1xcQWxpc3RhaXJcXERvY3VtZW50c1xcR2l0SHViXFxQcm9qZWN0c1xccG9ydGZvbGlvL3NyY1xcc3R5bGVzXFxfdmFyaWFibGVzLnNjc3MiLCJzcmMvYXBwL3NraWxscy9za2lsbHMuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBSUE7RUFDRSx5QkNGc0I7QUNEeEI7O0FGTUE7RUFDRSxpQkFBQTtFQUNBLGNBQUE7RUFDQSx1QkFBQTtFQUNBLGFBQUE7QUVIRjs7QUZNQTtFQUNFLGlCQUFBO0VBQ0EsY0FBQTtFQUNBLGlCQUFBO0VBQ0Esb0JBQUE7QUVIRjs7QUZRQTtFQUNFLHFCQUFBO0VDeUJBLGFBQUE7RUFJQSxxQkFBQTtFRDNCQSxtQkFBQTtFQUNBLG1CQUFBO0VBQ0EscUJBQUE7QUVERjs7QUZLQTtFQUNFLFlBQUE7QUVGRjs7QUZLQTtFQUNFLGlCQUFBO0VBQ0EscUNDbENhO0FDZ0NmOztBRlNFO0VBQ0UsbUJBQUE7RUFDQSxrQkN0Q2U7QUNnQ25COztBRlNFO0VBQ0UsbUJBQUE7QUVQSjs7QUZXQTtFQ2hCRSxjQXRDZ0I7RUF1Q2hCLHFCQUFBO0FDU0Y7O0FEUEU7RUFDRSwwQkFBQTtFQUNBLGVBQUE7QUNTSjs7QUZPRTtFQUNFLGFBQUE7QUVKSjs7QUZPRTtFQUNFLGNDaEVjO0VEaUVkLHFCQUFBO0VBQ0EseUJBQUE7QUVMSjs7QUZPSTtFQUNFLDBCQUFBO0FFTE47O0FGYUE7RUFDRTtJQUNFLFVBQUE7SUFDQSxnQkFBQTtFRVZGOztFRllBO0lBQ0UsZ0JBQUE7RUVURjtBQUNGIiwiZmlsZSI6InNyYy9hcHAvc2tpbGxzL3NraWxscy5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIkBpbXBvcnQgJ3NyYy9zdHlsZXMvdmFyaWFibGVzJztcclxuXHJcbi8vIExBWU9VVCBTVFlMRVMgKioqKioqKipcclxuXHJcbi5wYWdlLXdyYXBwZXIge1xyXG4gIGJhY2tncm91bmQtY29sb3I6ICRsaWdodC1ncmV5LWJhY2tncm91bmQ7XHJcbn1cclxuXHJcbi5jb250ZW50LXdyYXBwZXIge1xyXG4gIG1heC13aWR0aDogMTIwMHB4O1xyXG4gIG1hcmdpbjogMCBhdXRvO1xyXG4gIGJhY2tncm91bmQtY29sb3I6IHdoaXRlO1xyXG4gIHBhZGRpbmc6IDIwcHg7XHJcbn1cclxuXHJcbi5za2lsbHMtc2VjdGlvbiB7XHJcbiAgbWF4LXdpZHRoOiAxMDAwcHg7XHJcbiAgbWFyZ2luOiAwIGF1dG87XHJcbiAgbWFyZ2luLXRvcDogMTAwcHg7XHJcbiAgbWFyZ2luLWJvdHRvbTogMTAwcHg7XHJcbn1cclxuXHJcbi8vIEhFQURJTkcgU1RZTEVTICoqKioqKioqXHJcblxyXG4uc2tpbGxzLWhlYWRpbmctd3JhcHBlciB7XHJcbiAgbWFyZ2luOiA1MHB4IDAgMzBweCAwO1xyXG4gIEBpbmNsdWRlIGZsZXgoKTtcclxuICBmbGV4LWRpcmVjdGlvbjogcm93O1xyXG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XHJcbiAganVzdGlmeS1jb250ZW50OiBsZWZ0O1xyXG5cclxufVxyXG5cclxuLnNraWxscy1pY29uIHtcclxuICBoZWlnaHQ6IDM2cHg7XHJcbn1cclxuXHJcbi5za2lsbHMtaGVhZGluZyB7XHJcbiAgbWFyZ2luLWxlZnQ6IDE4cHg7XHJcbiAgZm9udC1mYW1pbHk6ICRoZWFkaW5nLWZvbnQ7XHJcbn1cclxuXHJcbi8vIFRFWFQgU1RZTEVTICoqKioqKioqXHJcblxyXG4uc2tpbGxzLXRleHQge1xyXG5cclxuICBwIHtcclxuICAgIG1hcmdpbi1ib3R0b206IDIwcHg7XHJcbiAgICBsaW5lLWhlaWdodDogJHRhbGwtbGluZS1oZWlnaHQ7XHJcbiAgfVxyXG5cclxuICBwOmxhc3QtY2hpbGQge1xyXG4gICAgbWFyZ2luLWJvdHRvbTogNTBweDtcclxuICB9XHJcbn1cclxuXHJcbi50ZXh0LWxpbmsge1xyXG4gQGluY2x1ZGUgcHJvamVjdC1saW5rcztcclxufVxyXG5cclxuLmN2LWxpbmsge1xyXG4gIGltZyB7XHJcbiAgICBoZWlnaHQ6IDEuNWVtO1xyXG4gIH1cclxuXHJcbiAgYSB7XHJcbiAgICBjb2xvcjogJGhpZ2hsaWdodC1jb2xvcjtcclxuICAgIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcclxuICAgIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7XHJcblxyXG4gICAgJjpob3ZlciB7XHJcbiAgICAgIHRleHQtZGVjb3JhdGlvbjogdW5kZXJsaW5lO1xyXG4gICAgfVxyXG4gIH1cclxufVxyXG5cclxuXHJcblxyXG5cclxuQG1lZGlhIChtYXgtd2lkdGg6IDgwMHB4KSB7XHJcbiAgLnNraWxscy1zZWN0aW9uIHtcclxuICAgIHdpZHRoOiA5MCU7XHJcbiAgICBtYXJnaW4tdG9wOiAzMHB4O1xyXG4gIH1cclxuICAuc2tpbGxzLWhlYWRpbmctd3JhcHBlciB7XHJcbiAgICBtYXJnaW4tdG9wOiAzMHB4O1xyXG4gIH1cclxufVxyXG5cclxuXHJcblxyXG5cclxuXHJcbiIsIlxyXG4kbWF4LWNvbnRlbnQtd2lkdGg6IDEyMDBweDtcclxuJGhpZ2hsaWdodC1jb2xvcjogIzI1ODdjZTtcclxuJGxpZ2h0LWdyZXktYmFja2dyb3VuZDogI2Y3ZjdmNztcclxuJG11c3RhcmQteWVsbG93OiAjRkZDODU3O1xyXG4kaGVhZGluZy1mb250OiAnTW9udHNlcnJhdCcsIHNhbnMtc2VyaWY7XHJcbiRsaW5rZWRpbi1jb2xvdXI6IHJnYigwLCAxMTksIDE4MSk7XHJcblxyXG4kYm94LXNoYWRvdy1zdHlsZTogMHB4IDFweCAzcHggcmdiYSgwLDAsMCwwLjQpO1xyXG4kYm94LXNoYWRvdy1zdHlsZS1zbWFsbDogMHB4IDFweCAzcHggcmdiYSgwLDAsMCwwLjQpO1xyXG4kdGFsbC1saW5lLWhlaWdodDogMS44ZW07XHJcblxyXG5AbWl4aW4gcHJvamVjdC1idXR0b25zKCRjb2xvdXIpIHtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiAjRkZGO1xyXG4gIGNvbG9yOiAjMjIyO1xyXG4gIGxldHRlci1zcGFjaW5nOiAxcHg7XHJcbiAgZm9udC1zaXplOiAgMC45cmVtO1xyXG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcclxuICBwYWRkaW5nOiA4cHggMTJweCA4cHggMTJweDtcclxuICBib3JkZXI6IDJweCBzb2xpZCAkY29sb3VyO1xyXG4gIGJvcmRlci1yYWRpdXM6IDNweDtcclxuICBtYXJnaW4tcmlnaHQ6IDVweDtcclxuICBtYXJnaW4tYm90dG9tOiA1cHg7XHJcbiAgZm9udC13ZWlnaHQ6IDUwMDtcclxuICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgLXdlYmtpdC10cmFuc2l0aW9uOiBiYWNrZ3JvdW5kLWNvbG9yIDMwMG1zO1xyXG4gIHRyYW5zaXRpb246IGJhY2tncm91bmQtY29sb3IgMzAwbXM7XHJcblxyXG4gICY6aG92ZXIge1xyXG4gICAgY3Vyc29yOiBwb2ludGVyO1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogJGhpZ2hsaWdodC1jb2xvcjtcclxuICB9XHJcbn1cclxuXHJcbkBtaXhpbiBwcm9qZWN0LWJ1dHRvbi1saW5rKCkge1xyXG4gIEBpbmNsdWRlIHByb2plY3QtYnV0dG9ucygkaGlnaGxpZ2h0LWNvbG9yKTtcclxuICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XHJcbn1cclxuXHJcbkBtaXhpbiBwcm9qZWN0LWxpbmtzKCkge1xyXG4gIGNvbG9yOiAkaGlnaGxpZ2h0LWNvbG9yO1xyXG4gIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcclxuXHJcbiAgJjpob3ZlciB7XHJcbiAgICB0ZXh0LWRlY29yYXRpb246IHVuZGVybGluZTtcclxuICAgIGN1cnNvcjogcG9pbnRlcjtcclxuICB9XHJcbn1cclxuXHJcbkBtaXhpbiBmbGV4KCkge1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbiAgZGlzcGxheTogLXdlYmtpdC1ib3g7XHJcbiAgZGlzcGxheTogLW1vei1ib3g7XHJcbiAgZGlzcGxheTogLW1zLWZsZXhib3g7XHJcbiAgZGlzcGxheTogLXdlYmtpdC1mbGV4O1xyXG59XHJcbiIsIi5wYWdlLXdyYXBwZXIge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZjdmN2Y3O1xufVxuXG4uY29udGVudC13cmFwcGVyIHtcbiAgbWF4LXdpZHRoOiAxMjAwcHg7XG4gIG1hcmdpbjogMCBhdXRvO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB3aGl0ZTtcbiAgcGFkZGluZzogMjBweDtcbn1cblxuLnNraWxscy1zZWN0aW9uIHtcbiAgbWF4LXdpZHRoOiAxMDAwcHg7XG4gIG1hcmdpbjogMCBhdXRvO1xuICBtYXJnaW4tdG9wOiAxMDBweDtcbiAgbWFyZ2luLWJvdHRvbTogMTAwcHg7XG59XG5cbi5za2lsbHMtaGVhZGluZy13cmFwcGVyIHtcbiAgbWFyZ2luOiA1MHB4IDAgMzBweCAwO1xuICBkaXNwbGF5OiBmbGV4O1xuICBkaXNwbGF5OiAtd2Via2l0LWJveDtcbiAgZGlzcGxheTogLW1vei1ib3g7XG4gIGRpc3BsYXk6IC1tcy1mbGV4Ym94O1xuICBkaXNwbGF5OiAtd2Via2l0LWZsZXg7XG4gIGZsZXgtZGlyZWN0aW9uOiByb3c7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGp1c3RpZnktY29udGVudDogbGVmdDtcbn1cblxuLnNraWxscy1pY29uIHtcbiAgaGVpZ2h0OiAzNnB4O1xufVxuXG4uc2tpbGxzLWhlYWRpbmcge1xuICBtYXJnaW4tbGVmdDogMThweDtcbiAgZm9udC1mYW1pbHk6IFwiTW9udHNlcnJhdFwiLCBzYW5zLXNlcmlmO1xufVxuXG4uc2tpbGxzLXRleHQgcCB7XG4gIG1hcmdpbi1ib3R0b206IDIwcHg7XG4gIGxpbmUtaGVpZ2h0OiAxLjhlbTtcbn1cbi5za2lsbHMtdGV4dCBwOmxhc3QtY2hpbGQge1xuICBtYXJnaW4tYm90dG9tOiA1MHB4O1xufVxuXG4udGV4dC1saW5rIHtcbiAgY29sb3I6ICMyNTg3Y2U7XG4gIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcbn1cbi50ZXh0LWxpbms6aG92ZXIge1xuICB0ZXh0LWRlY29yYXRpb246IHVuZGVybGluZTtcbiAgY3Vyc29yOiBwb2ludGVyO1xufVxuXG4uY3YtbGluayBpbWcge1xuICBoZWlnaHQ6IDEuNWVtO1xufVxuLmN2LWxpbmsgYSB7XG4gIGNvbG9yOiAjMjU4N2NlO1xuICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XG4gIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7XG59XG4uY3YtbGluayBhOmhvdmVyIHtcbiAgdGV4dC1kZWNvcmF0aW9uOiB1bmRlcmxpbmU7XG59XG5cbkBtZWRpYSAobWF4LXdpZHRoOiA4MDBweCkge1xuICAuc2tpbGxzLXNlY3Rpb24ge1xuICAgIHdpZHRoOiA5MCU7XG4gICAgbWFyZ2luLXRvcDogMzBweDtcbiAgfVxuXG4gIC5za2lsbHMtaGVhZGluZy13cmFwcGVyIHtcbiAgICBtYXJnaW4tdG9wOiAzMHB4O1xuICB9XG59Il19 */"], encapsulation: 2, data: { animation: [_shared_animations__WEBPACK_IMPORTED_MODULE_1__["pageTransition"]] } });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](SkillsComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
@@ -1788,7 +1744,7 @@ SkillsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCo
                 animations: [_shared_animations__WEBPACK_IMPORTED_MODULE_1__["pageTransition"]],
                 encapsulation: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewEncapsulation"].None
             }]
-    }], function () { return []; }, null); })();
+    }], function () { return [{ type: app_core_services_content_service__WEBPACK_IMPORTED_MODULE_2__["ContentService"] }]; }, null); })();
 
 
 /***/ }),

@@ -1,10 +1,10 @@
-<table class="skills-table">
+<table *ngIf="skillsTable" class="skills-table">
   <tr>
     <th class="category"></th>
     <th class="professional">Professional Skills</th>
     <th class="amateur">Other Experience</th>
   </tr>
-  <tr *ngFor="let skill of skills">
+  <tr *ngFor="let skill of skillsTable">
     <td class="category">{{ skill.category }}</td>
     <td class="professional">{{ skill.professional}}</td>
     <td class="amateur">{{ skill.amateur }}</td>

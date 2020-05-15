@@ -18,6 +18,11 @@
       "es2016",
       "dom"
     ],
-    "module": "esnext"
+    "module": "esnext",
+    "paths": {
+      "@core/*": ["src/app/_core/*"],
+      "@shared/*": ["src/app/_shared/*"],
+      "@services/*": ["src/app/_core/services/*"]
+    }
   }
 }

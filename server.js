@@ -9,6 +9,7 @@ const helmet = require('helmet');
 const projects = require('./content/project-data');
 const overview = require('./content/overview-page');
 const portfolio = require('./content/portfolio-page');
+const skills = require('./content/skills-page');
 
 
 const pingController = require('./ping/ping.controller');
@@ -27,7 +28,7 @@ app.use(express.static(path.join(__dirname, 'dist'), {maxAge: ms('1y')}));
 
 app.get('/content', (req, res) => {
   res.setHeader('Cache-Control', 'public, max-age=86400');
-  res.status(200).send({projects, overview, portfolio});
+  res.status(200).send({projects, overview, portfolio, skills});
 });
 
 app.post('/ping', (req, res) => {

@@ -28,7 +28,7 @@ export class PortfolioComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
+    this.scrollToTop();
     this.pingSvc.ping('primary');
 
     this.contentService.content.pipe(
