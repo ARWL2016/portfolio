@@ -1,7 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-import { Email } from 'app/email/email';
+export interface Email {
+  email: string;
+  message: string;
+  subject?: string;
+}
 
 @Injectable({
   providedIn: 'root'

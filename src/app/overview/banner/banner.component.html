@@ -1,7 +1,7 @@
 <div class="jumbotron">
-  <main>
-    <h1>Full Stack Developer</h1>
-    <p class="banner-text">HTML | CSS | JAVASCRIPT (ES6) | TYPESCRIPT | ANGULAR | NODE | SQL</p>
+  <main *ngIf="overview">
+    <h1>{{ overview.bannerTitle }}</h1>
+    <p class="banner-text">{{ overview.bannerSubtitle }}</p>
     <p>
       <a class="banner-link" href="https://github.com/ARWL2016" target="_blank" rel="noopener noreferrer">
         <i class="banner-icon-link fa fa-github"  title="Open GitHub profile"></i>

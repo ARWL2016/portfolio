@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 
-import { ProjectDataService } from 'app/_core/services/project-data.service';
+import { ContentService } from 'app/_core/services/content.service';
+import { Project } from 'app/_core/types/project';
+import { filter, map } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-featured-apps',
@@ -10,26 +12,18 @@ import { ProjectDataService } from 'app/_core/services/project-data.service';
 })
 export class FeaturedAppsComponent implements OnInit {
 
-  get projectData() {
-    return (this.dataService.projectData || []).filter(project => project.featured === true);
-  }
+  public projects: Observable<Project[]>
 
   constructor(
-    private router: Router,
-    private dataService: ProjectDataService,
+    private contentService: ContentService,
   ) { }
 
   ngOnInit() {
-    console.log('fa init', this.projectData);
+    this.projects = this.contentService.content.pipe(
+      filter(content => content !== null),
+      map(content => content.projects.filter(p => p.featured === true))
+    );
   }
 
-  public navigateTo(page): void {
-    this.router.navigate([page]);
-    this.scrollToTop();
-  }
-
-  public scrollToTop(): void {
-    window.scroll({ top: 0, left: 0, behavior: 'smooth' });
-  }
 
 }

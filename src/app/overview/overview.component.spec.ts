@@ -4,12 +4,12 @@ import { DebugElement } from '@angular/core';
 
 import { OverviewComponent } from './overview.component';
 import { Router } from '@angular/router';
-import { ProjectDataService } from 'app/_core/services/project-data.service';
+import { ContentService } from 'app/_core/services/content.service';
 
 describe('OverviewComponent', () => {
   let comp: OverviewComponent;
   let fixture: ComponentFixture<OverviewComponent>;
-  let projectDataService: ProjectDataService;
+  let projectDataService: ContentService;
   let h1: HTMLElement;
   let bh: DebugElement;
   class RouterStub { navigateByUrl(url: string) { return url; }};
@@ -20,7 +20,7 @@ describe('OverviewComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ OverviewComponent ],
-      providers: [{ provide: Router, useClass: RouterStub }, {provide: ProjectDataService, use: projectDataServiceStub}]
+      providers: [{ provide: Router, useClass: RouterStub }, {provide: ContentService, use: projectDataServiceStub}]
     })
     .compileComponents();
   }));
@@ -28,7 +28,7 @@ describe('OverviewComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(OverviewComponent);
     comp = fixture.componentInstance;
-    projectDataService = fixture.debugElement.injector.get(ProjectDataService);
+    projectDataService = fixture.debugElement.injector.get(ContentService);
     bh = fixture.debugElement.query(By.css('.banner-header'));
     h1 = bh.nativeElement;
   });

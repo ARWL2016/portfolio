@@ -1,6 +1,6 @@
 <div class="page-wrapper" [@showPage]="'on'">
 
-  <app-portfolio-banner></app-portfolio-banner>
+  <app-portfolio-banner [portfolioContent]="portfolioContent"></app-portfolio-banner>
 
   <app-search (searchValueChanged)="onSearchValueChanged($event)" [searchResultsCount]="searchResultsCount">
   </app-search>

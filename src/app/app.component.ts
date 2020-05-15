@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { ProjectDataService } from './_core/services/project-data.service';
+import { ContentService } from './_core/services/content.service';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +10,7 @@ import { ProjectDataService } from './_core/services/project-data.service';
 export class AppComponent implements OnInit {
 
   constructor (
-    private data: ProjectDataService
+    private data: ContentService
   ) {}
 
   ngOnInit() {

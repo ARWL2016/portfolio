@@ -9,14 +9,14 @@
         <h2>FEATURED PROJECTS</h2>
       </header>
       <p>Some are my recent web apps are featured below. You can view all the projects,
-        search by language and framework, and view technical specs, on the <a
-          (click)="navigateTo('/portfolio')">PORTFOLIO</a> page.
+        search by language and framework, and view technical specs, on the
+        <a routerLink="/portfolio">portfolio page</a>.
       </p>
     </section>
 
-    <div *ngIf="projectData">
+    <ng-container *ngIf="projects">
 
-      <article *ngFor="let project of projectData" class="project">
+      <article *ngFor="let project of projects | async" class="project">
         <div class="image-column">
           <a [href]="project.website_link" target="_blank" rel="noopener noreferrer">
             <img [src]="project.image_url" [ngStyle]="{'order': project.image_order}">
@@ -29,10 +29,13 @@
             <p>{{project.summary}}</p>
 
             <div class="project-links">
-              <a target="_blank" [href]="project.github_link"><i class="fa fa-github"
-                  ></i>&nbsp;SOURCE&nbsp;CODE</a>
-              <a target="_blank" [href]="project.website_link"><i class="fa fa-external-link-square"
-                  ></i>&nbsp;VIEW&nbsp;WEBSITE</a>
+
+
+              <app-button-link [href]="project.github_link" value="View on GitHub" iconClass="fa fa-github">
+              </app-button-link>
+              <app-button-link [href]="project.website_link" value="Live Site" iconClass="fa fa-external-link-square">
+              </app-button-link>
+
             </div>
           </div>
         </div>
@@ -40,7 +43,7 @@
 
       </article>
 
-    </div>
+    </ng-container>
   </main>
 
 </div>

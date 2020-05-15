@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { EmailService } from 'app/email/email.service';
-import { FormGroup, FormControl, FormBuilder, Validators, AbstractControl } from '@angular/forms';
-import { Email } from 'app/email/email';
+import { FormGroup, FormBuilder, Validators, AbstractControl } from '@angular/forms';
 
 @Component({
   selector: 'app-email',

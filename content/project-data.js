@@ -1,4 +1,4 @@
-const projectData = [
+module.exports = [
   {
     name: 'Book Exchange',
     type: {frontend: true, server: true, database: true},
@@ -335,4 +335,4 @@ const projectData = [
   }
 ];
 
-module.exports = projectData;
+// module.exports = projectData;

@@ -1,9 +1,10 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 
-import { ProjectDataService } from 'app/_core/services/project-data.service';
+import { ContentService, SiteContent } from 'app/_core/services/content.service';
 import { Project } from 'app/_core/types/project';
 import { pageTransition } from '../_shared/animations';
 import { PingService } from 'app/_core/services/ping.service';
+import { filter, take } from 'rxjs/operators';
 
 @Component({
   selector: 'app-portfolio',
@@ -16,37 +17,34 @@ export class PortfolioComponent implements OnInit {
   public displayedProjects: Project[];
   public allProjects: Project[];
   public searchResultsCount = 0;
+  public portfolioContent: any;
 
   public showBackToTopIcon = false;
 
-
   constructor(
-    private dataService: ProjectDataService,
-    private ping: PingService
+    private contentService: ContentService,
+    private pingSvc: PingService
     ) {
   }
 
   ngOnInit(): void {
 
-    this.pingProjects('primary');
+    this.pingSvc.ping('primary');
 
-    this.dataService.data.subscribe((data: Project[]) => {
-      this.displayedProjects = this.allProjects = data;
-    })
+    this.contentService.content.pipe(
+      filter(content => content !== null),
+      take(1),
+    ).subscribe((content: SiteContent) => {
+      this.displayedProjects = this.allProjects = content.projects;
+      this.portfolioContent = content.portfolio;
+    });
   }
 
-
-
-  private pingProjects(type: string): void {
-    if (!this.ping.pinged[type]) {
-      this.ping.postPing(type);
-    }
-  }
 
   @HostListener('window:scroll', [])
   onWindowScroll(): void {
     if (window.scrollY > 2000) {
-      this.pingProjects('secondary');
+      this.pingSvc.ping('secondary');
     }
 
     if (window.scrollY > 1000) {

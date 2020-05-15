@@ -106,14 +106,11 @@ article.project {
     div.project-links {
       margin-top: 40px;
 
-      a {
-        @include project-button-link();
-        text-align: center;
+      app-button-link {
+        margin: 0 5px 0 10px;
       }
 
-      i {
-        font-size: 1.2em;
-      }
+
     }
   }
 }

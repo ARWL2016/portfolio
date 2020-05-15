@@ -1,8 +1,8 @@
-<div [@showPage]="'on'">
+<div [@showPage]="'on'" *ngIf="(overview$ | async) as overview">
 
-  <app-banner></app-banner>
+  <app-banner [overview]="overview"></app-banner>
 
-  <app-skills-summary></app-skills-summary>
+  <app-skills-summary [skillsSummary]="overview.skillsSummary"></app-skills-summary>
 
   <app-featured-apps></app-featured-apps>
 

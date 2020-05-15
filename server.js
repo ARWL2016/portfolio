@@ -6,7 +6,11 @@ const bodyParser = require('body-parser');
 const ms = require('ms');
 const helmet = require('helmet');
 
-const projectData = require('./data/project.data');
+const projects = require('./content/project-data');
+const overview = require('./content/overview-page');
+const portfolio = require('./content/portfolio-page');
+
+
 const pingController = require('./ping/ping.controller');
 
 const app = express();
@@ -21,9 +25,9 @@ const pingSecondary = true;
 
 app.use(express.static(path.join(__dirname, 'dist'), {maxAge: ms('1y')}));
 
-app.get('/data/projects', (req, res) => {
+app.get('/content', (req, res) => {
   res.setHeader('Cache-Control', 'public, max-age=86400');
-  res.status(200).send(projectData);
+  res.status(200).send({projects, overview, portfolio});
 });
 
 app.post('/ping', (req, res) => {
