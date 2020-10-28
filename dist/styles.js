@@ -11,7 +11,7 @@
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(true);
 // Module
-exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\n* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\nbody {\n  background-color: #000;\n  font-family: \"Roboto\", sans-serif;\n  font-size: 16px;\n}\nh1, h2, h3, p {\n  margin: 0;\n}", "",{"version":3,"sources":["C:\\Users\\Alistair\\Documents\\GitHub\\Projects\\portfolio/src\\styles\\index.scss","index.scss"],"names":[],"mappings":"AAAA,8EAAA;AACA;EACE,sBAAA;EACA,SAAA;EACA,UAAA;ACCF;ADEA;EACE,sBAAA;EACA,iCAAA;EAEA,eAAA;ACAF;ADGA;EACE,SAAA;ACAF","file":"index.scss","sourcesContent":["/* You can add global styles to this file, and also import other style files */\r\n* {\r\n  box-sizing: border-box;\r\n  margin: 0;\r\n  padding: 0;\r\n}\r\n\r\nbody {\r\n  background-color: #000;\r\n  font-family: 'Roboto', sans-serif;\r\n  // font-family: 'Raleway', sans-serif;\r\n  font-size: 16px;\r\n}\r\n\r\nh1, h2, h3, p {\r\n  margin: 0;\r\n}\r\n\r\n\r\n\r\n","/* You can add global styles to this file, and also import other style files */\n* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\nbody {\n  background-color: #000;\n  font-family: \"Roboto\", sans-serif;\n  font-size: 16px;\n}\n\nh1, h2, h3, p {\n  margin: 0;\n}"]}]);
+exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\n* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\nbody {\n  background-color: #000;\n  font-family: \"Roboto\", sans-serif;\n  font-size: 16px;\n}\nh1, h2, h3, p {\n  margin: 0;\n}", "",{"version":3,"sources":["C:\\Users\\alist\\GitHub\\Private\\portfolio/src\\styles\\index.scss","index.scss"],"names":[],"mappings":"AAAA,8EAAA;AACA;EACE,sBAAA;EACA,SAAA;EACA,UAAA;ACCF;ADEA;EACE,sBAAA;EACA,iCAAA;EAEA,eAAA;ACAF;ADGA;EACE,SAAA;ACAF","file":"index.scss","sourcesContent":["/* You can add global styles to this file, and also import other style files */\r\n* {\r\n  box-sizing: border-box;\r\n  margin: 0;\r\n  padding: 0;\r\n}\r\n\r\nbody {\r\n  background-color: #000;\r\n  font-family: 'Roboto', sans-serif;\r\n  // font-family: 'Raleway', sans-serif;\r\n  font-size: 16px;\r\n}\r\n\r\nh1, h2, h3, p {\r\n  margin: 0;\r\n}\r\n\r\n\r\n\r\n","/* You can add global styles to this file, and also import other style files */\n* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\nbody {\n  background-color: #000;\n  font-family: \"Roboto\", sans-serif;\n  font-size: 16px;\n}\n\nh1, h2, h3, p {\n  margin: 0;\n}"]}]);
 // Exports
 module.exports = exports;
 
@@ -441,7 +441,7 @@ module.exports = exported;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Alistair\Documents\GitHub\Projects\portfolio\src\styles\index.scss */"./src/styles/index.scss");
+module.exports = __webpack_require__(/*! C:\Users\alist\GitHub\Private\portfolio\src\styles\index.scss */"./src/styles/index.scss");
 
 
 /***/ })

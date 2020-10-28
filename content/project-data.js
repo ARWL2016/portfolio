@@ -218,8 +218,37 @@ module.exports = [
     pingdom_average_load_time: 2.73,
     mozilla_security_grade: 'C'
   },
+
   {
-    name: 'JS-Calculator',
+    name: 'Redux Calculator',
+    type: {frontend: true, server: false, database: false},
+    tech: 'JavaScript, React, Redux, Sass',
+    tags: 'React, Redux, Sass, JavaScript, ES6',
+    featured: false,
+    summary: `
+      This is a rewrite of the original JavaScript app written to explore Redux as a state management tool.
+      `,
+    user_stories: `
+      Browser based calculator with basic arithmetic operators and a memory function. Operations can be chained
+      and the correct order of operations will be followed. The interface permits keyboard or mouse input.
+     `,
+    highlights: [
+      'Uses React 16.13 and Redux for clean separation of user interface and business logic',
+      'Uses Redux store to guarantee immutable data updates',
+      'Utilises Sass imports for a modular style architecture'
+    ],
+    image_url: 'assets/images/calculator.png',
+    image_order: 0,
+    github_link: 'https://github.com/ARWL2016/react-calculator',
+    website_link: 'https://arwl2016.github.io/react-calculator/',
+    google_page_speed_score: 97,
+    pingdom_page_size_kb: 59.7,
+    pingdom_average_load_time: 0.29,
+    mozilla_security_grade: 'D'
+  },
+
+  {
+    name: 'JavaScript Calculator',
     type: {frontend: true, server: false, database: false},
     tech: 'HTML, Sass, ES6, Webpack',
     tags: 'HTML, CSS, Javascript, Sass, ES6, Webpack,',
@@ -246,8 +275,40 @@ module.exports = [
     pingdom_average_load_time: 1.44,
     mozilla_security_grade: 'C'
   },
+
+ 
+
   {
-    name: 'Noughts and Crosses Game',
+    name: 'React Noughts and Crosses',
+    type: {frontend: true, server: false, database: false},
+    tech: 'React, TypeScript, Sass',
+    tags: 'Sass, TypeScript, React, JavaScript, CSS',
+    featured: false,
+    summary: `
+      This is a noughts-and-crosses implementation built with React, TypeScript and Sass. The algorithm consists of three general
+      strategy functions augmented by a small number of hard-coded moves.`,
+    user_stories: `
+      This is a noughts-and-crosses implementation with an unbeatable AI. Users can play against the computer
+      as O or X, play against another human, or watch a game between two computer players. The application will
+      keep score until the players change sides.
+     `,
+    highlights: [
+      'React 16.13 using Functional Components and Hooks API',
+      'Utilizes TypeScript for a robust and maintainable code base',
+      'Sass variables and color functions used to ensure consistent color design',
+      ],
+    image_url: 'assets/images/tictactoe-300.jpg',
+    image_order: 0,
+    github_link: 'https://github.com/ARWL2016/react-noughts-and-crosses',
+    website_link: 'https://arwl2016.github.io/react-noughts-and-crosses/',
+    google_page_speed_score: 99,
+    pingdom_page_size_kb: 139,
+    pingdom_average_load_time: 0.416,
+    mozilla_security_grade: 'D'
+  },
+
+  {
+    name: 'JavaScript Noughts and Crosses',
     type: {frontend: true, server: false, database: false},
     tech: 'HTML, Sass, Javascript, JQuery, Babel, Webpack',
     tags: 'HTML, CSS, Javascript, Sass, ES6, JQuery, Babel, Webpack,',
@@ -277,6 +338,7 @@ module.exports = [
     pingdom_average_load_time: 1.43,
     mozilla_security_grade: 'A+'
   },
+
   {
     name: 'Game of Life Simulation',
     type: {frontend: true, server: false, database: false},
@@ -306,6 +368,7 @@ module.exports = [
     pingdom_average_load_time: 1.34,
     mozilla_security_grade: 'F'
   },
+
   {
     name: 'Image Search Abstraction Layer',
     type: {frontend: true, server: true, database: false},
@@ -332,7 +395,35 @@ module.exports = [
     pingdom_page_size_kb: 25,
     pingdom_average_load_time: 0.72,
     mozilla_security_grade: 'B+'
-  }
+  },
+
+  {
+    name: 'React Forms Proof of Concept',
+    type: {frontend: true, server: false, database: false},
+    tech: 'React, TypeScript, Semantic-UI, Formik, React Hooks',
+    tags: 'React, TypeScript, Semantic-UI, Formik, React Hooks',
+    featured: false,
+    summary: ``,
+    user_stories: `
+      This proof of concept app demonstrates different approaches to handling forms in React, using traditional 
+      class-based components, functional components with the Hooks API, and the Formik library.
+     `,
+    highlights: [
+      'demonstrates class-based vs functional components',
+      'uses TypeScript for improved code base maintenance', 
+      'shows tracking of validation state in native React'
+      ],
+    image_url: 'assets/images/react-forms-demo-300.png',
+    image_order: 0,
+    github_link: 'https://github.com/ARWL2016/react-forms-demo',
+    website_link: 'https://arwl2016.github.io/react-forms-demo/',
+    google_page_speed_score: 86,
+    pingdom_page_size_kb: 244,
+    pingdom_average_load_time: 0.59,
+    mozilla_security_grade: 'D'
+  },
+
+ 
 ];
 
 // module.exports = projectData;
