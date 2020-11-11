@@ -51,7 +51,7 @@
       <div class="button-container">
 
         <app-button-link [href]="project.github_link" value="Source Code" iconClass="fa fa-github"></app-button-link>
-        <app-button-link [href]="project.website_link" value="Live Site" iconClass="fa fa-external-link-square"></app-button-link>
+        <app-button-link *ngIf="project.website_link" [href]="project.website_link" value="Live Site" iconClass="fa fa-external-link-square"></app-button-link>
 
       </div>
 

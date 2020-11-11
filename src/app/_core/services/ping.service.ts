@@ -14,11 +14,12 @@ export class PingService {
   public async ping(type: 'primary' | 'secondary') {
 
     if (this[type] === false) {
+      console.log('ping', type);
       try {
-        // await this.http.post('/ping', {type}).toPromise();
+        await this.http.post('/ping', {type}).toPromise();
         this[type] = true;
       } catch (err) {
-        console.log('Heroku request error');
+        console.log('Heroku request error', err);
       }
     }
 

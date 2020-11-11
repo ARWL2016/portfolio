@@ -30,6 +30,7 @@ export class PortfolioComponent implements OnInit {
   ngOnInit(): void {
     this.scrollToTop();
     this.pingSvc.ping('primary');
+    this.pingSvc.ping('secondary');
 
     this.contentService.content.pipe(
       filter(content => content !== null),
@@ -43,9 +44,9 @@ export class PortfolioComponent implements OnInit {
 
   @HostListener('window:scroll', [])
   onWindowScroll(): void {
-    if (window.scrollY > 2000) {
-      this.pingSvc.ping('secondary');
-    }
+    // if (window.scrollY > 2000) {
+      
+    // }
 
     if (window.scrollY > 1000) {
       this.showBackToTopIcon = true;

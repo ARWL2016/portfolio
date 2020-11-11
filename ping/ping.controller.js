@@ -1,6 +1,7 @@
 const rp = require('request-promise');
 
   function pingPrimaryProjects() {
+    console.log('ping primary');
     rp.get("https://pathfinder-2017.herokuapp.com");
     rp.get("https://arwl-book-exchange.herokuapp.com/browse");
     rp.get("https://arwl-stock-tracker.herokuapp.com/main");
@@ -8,6 +9,7 @@ const rp = require('request-promise');
   }
 
   function pingSecondaryProjects() {
+    console.log('ping secondary');
     rp.get("https://ng-recipe-book.herokuapp.com");
     rp.get("https://arwl-weather.herokuapp.com")
     rp.get("https://calculator-arwl.herokuapp.com");

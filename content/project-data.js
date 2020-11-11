@@ -6,7 +6,7 @@ module.exports = [
     tags: `
       HTML, CSS, Javascript, Angular, Typescript, Materialize,
       Node, Express, MongoDB, Mongo, Mongoose, BCrypt, JSON Web Tokens,`,
-    featured: true,
+    featured: false,
     summary: `
       Book Exchange is a book trading app that allows authenticated users to search for books on the Google Books API,
       build a book collection, view other users' collections, and send and receive requests for books.
@@ -29,7 +29,7 @@ module.exports = [
     image_url: 'assets/images/book-exchange-300.png',
     image_order: 0,
     github_link: 'https://github.com/ARWL2016/book-trading-club',
-    website_link: 'https://arwl-book-exchange.herokuapp.com/browse',
+    // website_link: 'https://arwl-book-exchange.herokuapp.com/browse',
     google_page_speed_score: 84,
     pingdom_page_size_kb: 683,
     pingdom_average_load_time: 2.59,
@@ -64,7 +64,8 @@ module.exports = [
     image_url: 'assets/images/pathfinder-300.png',
     image_order: 0,
     github_link: 'https://github.com/ARWL2016/nightlife',
-    website_link: 'https://pathfinder-2017.herokuapp.com/',
+    // website_link: 'https://pathfinder-2017.herokuapp.com/',
+
     google_page_speed_score: 84,
     pingdom_page_size_kb: 256,
     pingdom_average_load_time: 1.89,
@@ -128,7 +129,7 @@ module.exports = [
     image_url: 'assets/images/stocko-300.jpg',
     image_order: 0,
     github_link: 'https://github.com/ARWL2016/stock-tracker',
-    website_link: 'https://arwl-stock-tracker.herokuapp.com/main',
+    // website_link: 'https://arwl-stock-tracker.herokuapp.com/main',
     google_page_speed_score: 86,
     pingdom_page_size_kb: 261,
     pingdom_average_load_time: 1.45,
@@ -224,7 +225,7 @@ module.exports = [
     type: {frontend: true, server: false, database: false},
     tech: 'JavaScript, React, Redux, Sass',
     tags: 'React, Redux, Sass, JavaScript, ES6',
-    featured: false,
+    featured: true,
     summary: `
       This is a rewrite of the original JavaScript app written to explore Redux as a state management tool.
       `,

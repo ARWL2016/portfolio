@@ -33,15 +33,16 @@ app.get('/content', (req, res) => {
 
 app.post('/ping', (req, res) => {
   const {type} = req.body;
+  console.log(type)
 
   if (type === 'primary' && pingPrimary) {
     pingController.pingPrimaryProjects();
-    res.status(200).send('Primary Projects Pinged');
+    res.status(200).send(JSON.stringify('Primary Projects Pinged'));
   } else if (type === 'secondary' && pingSecondary) {
     pingController.pingSecondaryProjects();
-    res.status(200).send('Secondary Projects Pinged');
+    res.status(200).send(JSON.stringify('Secondary Projects Pinged'));
   } else {
-    res.status(200).send('Ping service is switched off');
+    res.status(200).send(JSON.stringify('Ping service is switched off'));
   }
 });
 
