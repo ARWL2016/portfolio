@@ -76,7 +76,7 @@ module.exports = [
     type: {frontend: true, server: true, database: true},
     tech: 'Angular 4.0, Typescript, Bootstrap, Node, Express, MongoDB, Mongoose',
     tags: 'HTML, CSS, Javascript, Angular, Typescript, Bootstrap, Node, Express, MongoDB, Mongo, Mongoose, Heroku, Mlab,',
-    featured: true,
+    featured: false,
     summary: `
       Votogo is a full stack CRUD application that allows users to create,
       share and view the results of surveys. It was built with Angular, Node, Express and MongoDB
@@ -98,7 +98,8 @@ module.exports = [
     image_url: 'assets/images/votogo-300.png',
     image_order: 0,
     github_link: 'https://github.com/ARWL2016/voting-app',
-    website_link: 'https://votogo.herokuapp.com/home',
+    // website_link: 'https://votogo.herokuapp.com/home',
+    
     google_page_speed_score: 91,
     pingdom_page_size_kb: 479,
     pingdom_average_load_time: 2.11,
@@ -345,7 +346,7 @@ module.exports = [
     type: {frontend: true, server: false, database: false},
     tech: 'HTML, CSS, Foundation, Javascript, JQuery',
     tags: 'HTML, CSS, Javascript, Foundation, JQuery,',
-    featured: false,
+    featured: true,
     summary: `
       This front end web application is an implementation of Conway's game of life using JQuery and Foundation.
       Users can start and stop the simulation, add and remove cells, and change the speed.
@@ -376,7 +377,7 @@ module.exports = [
     tech: 'Node, Express, Mocha, Chai, Heroku, Google Custom Search',
     tags: 'html, css, node, express, mocha, chai, heroku, helmet, winston',
     featured: false,
-    summary: ``,
+    summary: `This API microservice conducts an image search of the https://imgur.com/* domain using Google Custom Search.`,
     user_stories: `
     This API microservice conducts an image search of the https://imgur.com/* domain using Google Custom Search.
     Users can enter a search term and the API will respond with a list of image URLs and alt texts.
@@ -403,8 +404,10 @@ module.exports = [
     type: {frontend: true, server: false, database: false},
     tech: 'React, TypeScript, Semantic-UI, Formik, React Hooks',
     tags: 'React, TypeScript, Semantic-UI, Formik, React Hooks',
-    featured: false,
-    summary: ``,
+    featured: true,
+    summary: `
+    This proof of concept app demonstrates different approaches to handling forms in React, using traditional 
+      class-based components, functional components with the Hooks API, and the Formik library.`,
     user_stories: `
       This proof of concept app demonstrates different approaches to handling forms in React, using traditional 
       class-based components, functional components with the Hooks API, and the Formik library.
